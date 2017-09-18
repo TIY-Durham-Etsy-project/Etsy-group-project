@@ -1,13 +1,38 @@
-
 import React, { Component } from 'react';
 import '../styles/App.css';
-import Products from '../components/Products.js';
+import CustomOrder from './customorder.js';
+import DetailsDropdown from './detailsdropdown.js';
+import FAQs from './faqs.js';
+import FavoriteButton from './favoritebutton.js';
+import Headerleft from './headerleft.js';
+import Headerright from './headerright.js';
+import ImageCarousel from './imagecarousel.js';
+import MeetTheOwner from './meettheowner.js';
+import Overview from './overview.js';
+import ProductDescription from './productdescription.js';
+import RelatedTags from './relatedtags.js';
+import Reviews from './reviews.js';
+import ShopIcons from './shopicons.js';
+import SocialButtons from './socialbuttons.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Products/>
+        <Headerleft/>
+        <Headerright/>
+        <FavoriteButton/>
+        <ImageCarousel/>
+        <CustomOrder/>
+        <DetailsDropdown/>
+        <Reviews/>
+        <MeetTheOwner/>
+        <FAQs/>
+        <ProductDescription/>
+        <Overview/>
+        <SocialButtons/>
+        <ShopIcons/>
+        <RelatedTags/>
       </div>
     );
   }
