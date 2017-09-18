@@ -14,6 +14,7 @@ import RelatedTags from './relatedtags.js';
 import Reviews from './reviews.js';
 import ShopIcons from './shopicons.js';
 import SocialButtons from './socialbuttons.js';
+import Products from './Products.js';
 
 class App extends Component {
   render() {
@@ -33,6 +34,7 @@ class App extends Component {
         <SocialButtons/>
         <ShopIcons/>
         <RelatedTags/>
+        <Products/>
       </div>
     );
   }
