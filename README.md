@@ -1,5 +1,9 @@
 Hi
 
+Alternative Key Information:
+KEYSTRING: xu3t5vf2ok7saualskn524az
+SHARED SECRET: kagd9rhgvz
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
