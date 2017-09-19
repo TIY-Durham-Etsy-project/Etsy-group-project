@@ -22,6 +22,7 @@ class App extends Component {
     this.handlesubmit = this.handlesubmit.bind(this);
     this.state = {
       idvariable: "",
+      listingInventoryData: false,
       listingdata: false,
       imagesdata: false,
       shopdata: false,
@@ -49,16 +50,16 @@ class App extends Component {
       this.setState({ listingdata: data.results });
     })
     //IMAGES FETCH
-    // fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
-    //   return results.json();
-    // }).then(data => {
-    //   this.setState({ imagesdata: data.results });
-    // })
+    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+      return results.json();
+    }).then(data => {
+      this.setState({ imagesdata: data.results });
+    })
     //PERSONALIZATION FETCH
     // fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/inventory?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
     //   return results.json();
     // }).then(data => {
-    //   this.setState({ imagesdata: data.results });
+    //   this.setState({ listingInventoryData: data.results });
     // })
     //SHOP DATA FETCH
     fetch(`https://openapi.etsy.com/v2/shops/listing/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
