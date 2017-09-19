@@ -16,6 +16,34 @@ import SocialButtons from './socialbuttons.js';
 import Products from './Products.js';
 
 class App extends Component {
+  constructor(props) {
+        super(props);
+        this.state = {
+          exVariable: ''
+        };
+        this.exVariableUpdate = this.exVariableUpdate.bind(this);
+
+      }
+
+      exVariableUpdate() {
+        this.setState({
+          exVariable: ''
+        });
+      }
+      // This mounts the page.
+      componentDidMount() {
+        fetch('https://openapi.etsy.com/v2/listings/175112598/images?api_key=xu3t5vf2ok7saualskn524az')
+               .then(results => {
+                 return results.json();
+               })
+                 .then(data => {
+                   console.log(data);
+                   this.setState({exVariable: data});
+                   console.log("state", this.state.exVariable);
+                 })
+      }
+
+
   render() {
     return (
       <div className="App">
