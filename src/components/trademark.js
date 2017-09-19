@@ -9,7 +9,7 @@ class Trademark extends Component {
         <div className="float-left">
           <div className="display-table">
             <div className="display-table-cell">
-              <img src={require('./logo.svg')} alt="Etsy Logo"/>
+              <img src={require('./logo.svg')} alt="Etsy Logo" height="20"/>
             </div>
             <div className="display-table-cell">
               "We make it easier to find your thing."
