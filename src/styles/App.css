@@ -1,3 +1,28 @@
 .App {
-  text-align: center;
+  /*text-align: center;*/
+}
+
+.slider-parent {
+	border: 1px solid #dcdcd9;
+	border-radius: 2px;
+	display: flex;
+}
+
+.slider-child {
+	border: 1px solid #dcdcd9;
+	border-radius: 2px;
+	width: 205px;
+	margin: 10px;
+}
+
+.slider-child h3 {
+	font-family: 'Lato','Arial', sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+	color: #666666;
+	margin: 8px ;
+}
+
+.slider-child a {
+	text-decoration: none;
 }
