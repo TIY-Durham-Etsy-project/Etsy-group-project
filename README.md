@@ -1,8 +1,19 @@
-Hi
-
 Alternative Key Information:
 KEYSTRING: xu3t5vf2ok7saualskn524az
 SHARED SECRET: kagd9rhgvz
+
+09.18.17 - JT
+Today we created a plan for splitting up the single item page. We used a white board to write out all of the user stories we would need.
+- Tivona researched the Etsy website for our user stories.
+- Hannah wrote the main API fetch.
+- JT created the repo on his GitHub and added our user stories to the Trello board.
+- Kevin researched Git merging, fetching, etc.
+09.19.17 - Hannah
+Morning: 
+- JT and Keven made progress on the API
+- Tivona found some Etsy item cases we missed previously
+- Hannah did base styling for header.
+- Goals for the day: get images on the page, and fill the header template.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

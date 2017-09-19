@@ -9,7 +9,7 @@ export default class ItemHeader extends Component {
             <img src = "#" alt = "shop icon"/>
           </div>
           <div className = "shop-name fav-btn">
-            <h2>Shop Name Here</h2>
+            <h2 className = "shop-title">Shop Name Here</h2>
             <button className = "fav-heart">&hearts; Favorite Shop</button>
           </div>
         </div>
