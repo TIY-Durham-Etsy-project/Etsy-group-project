@@ -3,10 +3,57 @@ body{
   background-color: #efefeb;
 }
 
+h2{
+  font-family: 'Bitter', 'Times', serif;
+  text-transform: uppercase;
+}
+
+/* header left/right styles */
+.header-left-items{
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+}
+
+.shop-icon{
+  border: solid 1px #dcdcd9;
+  height: 75px;
+  width: 75px;
+  margin: 20px 10px;
+}
+
+.fav-heart{
+  border: solid 1px #dcdcd9;
+  background-color: white;
+  border-radius: 1%;
+}
+
+.item-header{
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.sample-item{
+  margin: 10px;
+  border: solid 1px #dcdcd9;
+  height: 75px;
+  width: 75px;
+  margin: 20px 10px;
+}
+
+.header-right-items{
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto;
+}
+
+/* wrapper for all data */
 .products-wrapper{
   width: 75%;
   background-color: white;
-  margin: 10% auto;
+  margin: 0 auto;
   border: solid 1px #dcdcd9;
   border-radius: 1%;
   padding: 35px;
