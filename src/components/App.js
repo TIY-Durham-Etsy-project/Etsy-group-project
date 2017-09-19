@@ -114,18 +114,20 @@ class App extends Component {
         shopdata={this.state.shopdata}
         shoplistingdata={this.state.shoplistingdata}
         shoplistingimagesdata={this.state.shoplistingimagesdata}/>
-        <FavoriteButton/>
-        <ImageCarousel imagesdata={this.state.imagesdata}/>
-        <CustomOrder/>
-        <DetailsDropdown/>
-        <Reviews/>
-        <MeetTheOwner/>
-        <FAQs/>
-        <ProductDescription/>
-        <Overview/>
-        <SocialButtons/>
-        <ShopIcons/>
-        <RelatedTags/>
+        <div className = "wrapper">
+          <FavoriteButton/>
+          <ImageCarousel imagesdata={this.state.imagesdata}/>
+          <CustomOrder/>
+          <DetailsDropdown/>
+          <Reviews/>
+          <MeetTheOwner/>
+          <FAQs/>
+          <ProductDescription/>
+          <Overview/>
+          <SocialButtons/>
+          <ShopIcons/>
+          <RelatedTags/>
+        </div>
       </div>
     );
   }

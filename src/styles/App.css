@@ -28,6 +28,10 @@ h2{
   border-radius: 1%;
 }
 
+.single-fav{
+  margin: 20px;
+}
+
 .item-header{
   display: flex;
   justify-content: space-between;
@@ -37,11 +41,14 @@ h2{
 
 .sample-item{
   margin: 10px;
-  border: solid 1px #dcdcd9;
+  border: solid 3px white;
   height: 75px;
   width: 75px;
   margin: 20px 10px;
+  text-align: center;
 }
+
+
 
 .header-right-items{
   display: flex;
@@ -49,13 +56,16 @@ h2{
   margin: 10px auto;
 }
 
-.favorite{
+.favorite-button{
   display: flex;
-  flex-direction: row;
   width: 565px;
   height: 67px;
-  background-color: lightgrey;
+  background-color: #F1F1F1;
+  border-radius: 1%;
+}
 
+.item-like{
+  font-family: 'Lato', 'Arial', sans-serif;
 }
 
 .customorder{
@@ -97,7 +107,7 @@ margin: 15px;
 
 
 /* wrapper for all data */
-.products-wrapper{
+.wrapper{
   width: 75%;
   background-color: white;
   margin: 0 auto;
