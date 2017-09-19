@@ -63,6 +63,34 @@ h2{
 
 }
 
+.add-to{
+  margin: 15px;
+  background-color: white;
+  border: solid 1px #dcdcd9;
+
+}
+
+.fa:hover{
+  opacity: 0.7;
+}
+
+.fa-facebook{
+
+  color: #627AAD;
+  margin: 15px;
+}
+
+.fa-pinterest{
+Color: #D84D54;
+margin: 15px;
+}
+
+.fa-twitter{
+Color: #33C0F1;
+margin: 15px;
+}
+
+
 /* wrapper for all data */
 .products-wrapper{
   width: 75%;
