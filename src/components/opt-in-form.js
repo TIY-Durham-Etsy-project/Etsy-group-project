@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 
 
-class Opt_in_form extends Component {
+class OptInForm extends Component {
   render() {
     return (
-      <div className="Opt_in_form">
+      <div className="OptInForm">
         <p>Opt in form placeholder</p>
       </div>
     );
   }
 }
 
-export default Opt_in_form;
+export default OptInForm;
