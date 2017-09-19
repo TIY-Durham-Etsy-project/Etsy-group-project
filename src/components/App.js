@@ -89,13 +89,6 @@ class App extends Component {
           i++
         }
         this.setState({ shoplistingdata: data, shoplistingimagesdata: array });
-        // fetch(``).then(data => {
-        //   this.setState({ idvariable: " " });
-        // })
-        console.log("ARRAYDONE");
-        if (true){
-          console.log("Array is extra done");
-        }
       })
     })
   }
