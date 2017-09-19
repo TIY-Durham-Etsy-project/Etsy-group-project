@@ -49,6 +49,20 @@ h2{
   margin: 10px auto;
 }
 
+.favorite{
+  display: flex;
+  flex-direction: row;
+  width: 565px;
+  height: 67px;
+  background-color: lightgrey;
+
+}
+
+.customorder{
+  display: flex;
+
+}
+
 /* wrapper for all data */
 .products-wrapper{
   width: 75%;
