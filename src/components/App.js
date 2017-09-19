@@ -19,6 +19,7 @@ class App extends Component {
   constructor(props) {
         super(props);
         this.state = {
+          productListingId: '175112598',
           imageData: '',
           shopData: '',
           shopIcon: '',
@@ -41,7 +42,7 @@ class App extends Component {
       // This mounts the page.
       componentDidMount() {
         // This fetches Images
-        fetch('https://openapi.etsy.com/v2/listings/175112598/images?api_key=xu3t5vf2ok7saualskn524az').then(results => {
+        fetch(`https://openapi.etsy.com/v2/listings/${this.state.productListingId}/images?api_key=xu3t5vf2ok7saualskn524az`).then(results => {
             return results.json();
           }).then(data => {
             console.log(data);
@@ -64,8 +65,6 @@ class App extends Component {
             console.log("state", this.state.imageData);
             console.log("shopTitle", this.state.shopTitle);
         });
-
-
 
       }
 
