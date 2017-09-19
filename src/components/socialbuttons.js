@@ -4,7 +4,7 @@ export default class SocialButtons extends Component {
   render(){
     return(
       <div className="socialbuttons">
-      <div clasName="add-to">
+      <div className="add-to">
       <button className = "fav-heart">&hearts; Favorite </button>
       <button className = "add-to">&#9776; Add to &#9662; </button>
       <hr/>
