@@ -97,6 +97,7 @@ class App extends Component {
         shopdata={this.state.shopdata}
         shoplistingdata={this.state.shoplistingdata}
         shoplistingimagesdata={this.state.shoplistingimagesdata}/>
+        <div className = "wrapper">
         <FavoriteButton/>
         <ImageCarousel imagesdata={this.state.imagesdata}/>
         <CustomOrder/>
@@ -109,6 +110,7 @@ class App extends Component {
         <SocialButtons/>
         <ShopIcons/>
         <RelatedTags/>
+      </div>
       </div>
     );
   }
