@@ -7,17 +7,9 @@ export default class ItemHeader extends Component {
 
     };
   }
-  componentWillReceiveProps(){
-    console.log("componentWillReceiveProps");
-  }
-  componentDidUpdate(){
-    console.log("componentDidUpdate");
-  }
   render(){
-    console.log("render")
-    // console.log(this.props.shopdata);
-    // console.log(this.props.shoplistingdata);
-    // console.log(this.props.shoplistingimagesdata[0]);
+    //Ignore this
+    //{this.props.shoplistingimagesdata ? (<div>true</div>) : (<div>false</div>)}
     return(
       <div className="item-header">
         <div className ='header-left-items'>

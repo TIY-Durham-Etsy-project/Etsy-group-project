@@ -93,6 +93,9 @@ class App extends Component {
         //   this.setState({ idvariable: " " });
         // })
         console.log("ARRAYDONE");
+        if (true){
+          console.log("Array is extra done");
+        }
       })
     })
   }
