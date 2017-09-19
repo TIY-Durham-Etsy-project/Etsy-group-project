@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 
 export default class ItemHeader extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
   render(){
-    //Ignore this
-    //{this.props.shoplistingimagesdata ? (<div>true</div>) : (<div>false</div>)}
     return(
       <div className="item-header">
         <div className ='header-left-items'>

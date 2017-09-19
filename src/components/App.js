@@ -21,7 +21,7 @@ class App extends Component {
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handlesubmit = this.handlesubmit.bind(this);
     this.state = {
-      idvariable: "",
+      idvariable: "510451455",
       listingdata: false,
       listinginventorydata: false,
       imagesdata: false,
@@ -33,7 +33,7 @@ class App extends Component {
   }
   // This mounts the page.
   componentDidMount() {
-
+    // this.fetchData();
   }
   handleTextChange(event){
     event.preventDefault();
@@ -77,18 +77,19 @@ class App extends Component {
       fetch(`https://openapi.etsy.com/v2/shops/${data.results[0].shop_id}/listings/active?limit=5&api_key=nn7mkmoan2c7xamo4c3pnax4`).then(results => {
         return results.json();
       }).then(data => {
-        let array = [];
         let i = 0;
         while (i < 4){
           //THIS FETCHES THE IMAGES OF THE SHOPS FEATURES
           fetch(`https://openapi.etsy.com/v2/listings/${data.results[i].listing_id}/images?api_key=xu3t5vf2ok7saualskn524az`).then(results => {
             return results.json();
           }).then(data => {
-            array.push(data.results[0].url_75x75);
+            this.setState(prevState => ({
+              shoplistingimagesdata: [...prevState.shoplistingimagesdata, data.results[0].url_75x75]
+            }))
           })
           i++
         }
-        this.setState({ shoplistingdata: data, shoplistingimagesdata: array });
+        this.setState({ shoplistingdata: data });
       })
     })
   }
