@@ -13,9 +13,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header/>
+        <Header />
         //FRONT PAGE SHOULD GO HERE
-        <ItemPageApp/>
+        <ItemPageApp />
+        //ADD OTHER GROUPS FOOTER HERE
       </div>
     );
   }
