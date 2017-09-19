@@ -16,7 +16,7 @@ class HelpAndCurrency extends Component {
         </div>
         {this.props.children}
         <div className="float-right">
-          <div className="display-table">
+          <button className="locale-settings-button" onClick={()=>alert("This is your localization button!")}>
             <div className="display-table-cell">
               <img src={require("./logo.svg")} alt="flag" height='20'/>
               United States
@@ -27,7 +27,7 @@ class HelpAndCurrency extends Component {
             <div className="display-table-cell">
               $(USD)
             </div>
-          </div>
+          </button>
         </div>
       </div>
     );
