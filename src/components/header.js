@@ -13,6 +13,7 @@ export default class Header extends Component {
           <button>Sign In</button>
             <div class="verticalLine">
             </div>
+
         </div>
       </div>
 

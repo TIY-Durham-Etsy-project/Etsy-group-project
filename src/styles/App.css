@@ -94,7 +94,14 @@ margin: 15px;
   border-left: thick solid #ff0000;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+}
 
+h4 {
+  color: darkorange;
+}
 
 /* wrapper for all data */
 .products-wrapper{
