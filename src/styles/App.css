@@ -28,7 +28,7 @@ h2{
   border-radius: 1%;
 }
 
-.headerleft{
+.item-header{
   display: flex;
   justify-content: space-between;
   width: 75%;

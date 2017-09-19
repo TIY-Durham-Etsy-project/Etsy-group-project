@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-export default class Headerleft extends Component {
+export default class ItemHeader extends Component {
   render(){
     return(
-      <div className="headerleft">
+      <div className="item-header">
         <div className ='header-left-items'>
           <div className = "shop-icon">
             <img src = "#" alt = "shop icon"/>
