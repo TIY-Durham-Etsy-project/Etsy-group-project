@@ -6,7 +6,12 @@ class OptInForm extends Component {
   render() {
     return (
       <div className="OptInForm">
-        <p>Opt in form placeholder</p>
+        <form>
+          <label>
+          <input type="text" placeholder="Enter your email" />
+          </label>
+          <input type="submit" value="Subscribe" />
+        </form>
       </div>
     );
   }
