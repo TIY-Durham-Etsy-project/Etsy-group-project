@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
 
 export default class ItemHeader extends Component {
-  constructor(props) {
-    super(props);
-
-  }
   render(){
     return(
       <div className="item-header">
         <div className ='header-left-items'>
           <div className = "shop-icon">
-            <img src = {this.props.shopIcon} alt = "shop icon"/>
+            <img src = {this.props.shopdata ? this.props.shopdata[0].icon_url_fullxfull : ""} alt = "shop icon" width="75" height="75"/>
           </div>
           <div className = "shop-name fav-btn">
-            <h2>{this.props.shopTitle}</h2>
+            <h2>{this.props.shopdata ? this.props.shopdata[0].shop_name : ""}</h2>
             <button className = "fav-heart">&hearts; Favorite Shop</button>
           </div>
         </div>

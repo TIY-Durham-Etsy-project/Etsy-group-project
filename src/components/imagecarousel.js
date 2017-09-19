@@ -8,7 +8,7 @@ export default class ImageCarousel extends Component {
   render(){
     let link = "";
     if(this.props.imagesdata[0] !== undefined){
-      console.log(this.props.imagesdata)
+      console.log(this.props.imagesdata);
       link = this.props.imagesdata[0].url_75x75;
     }
     return(

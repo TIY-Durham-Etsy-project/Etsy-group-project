@@ -21,10 +21,9 @@ class App extends Component {
     this.handlesubmit = this.handlesubmit.bind(this);
     this.state = {
       idvariable: "",
-      listingdata: "",
-      imagesdata: "",
-      userdata: "",
-      shopdata: "",
+      listingdata: false,
+      imagesdata: false,
+      shopdata: false
     };
   }
   // This mounts the page.
@@ -40,24 +39,29 @@ class App extends Component {
     this.fetchData();
   }
   fetchData = () => {
+    //LISTING DATA FETCH
     fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
       return results.json();
     }).then(data => {
-      console.log(data.results);
       this.setState({ listingdata: data.results });
     })
-    fetch(`https://openapi.etsy.com/v2/shops/listing/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
-      return results.json();
-    }).then(data => {
-      console.log(data.results);
-      console.log(data.results[2]);
-      this.setState({ shopdata: data.results, userdata: data.results[2] });
-    })
+    //IMAGES FETCH
     // fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
     //   return results.json();
     // }).then(data => {
     //   this.setState({ imagesdata: data.results });
     // })
+    //SHOP DATA FETCH
+    fetch(`https://openapi.etsy.com/v2/shops/listing/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+      return results.json();
+    }).then(data => {
+      this.setState({ shopdata: data.results });
+      fetch(`https://openapi.etsy.com/v2/shops/${data.results[0].shop_id}/listings/active?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+        return results.json();
+      }).then(data => {
+        console.log(data)
+      })
+    })
   }
   render() {
     return (
@@ -69,7 +73,10 @@ class App extends Component {
               <button type="submit">"SUBMIT"</button>
             </form>
           </div>
-        <ItemHeader/>
+        <ItemHeader
+        shopdata={this.state.shopdata}
+        listingdata={this.state.listingdata}
+        imagesdata={this.state.imagesdata}/>
         <FavoriteButton/>
         <ImageCarousel imagesdata={this.state.imagesdata}/>
         <CustomOrder/>
