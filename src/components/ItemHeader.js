@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 
 export default class ItemHeader extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+}
   render(){
     if(this.props.shoplistingimagesdata){
       console.log(this.props);
