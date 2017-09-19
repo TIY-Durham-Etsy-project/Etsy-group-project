@@ -24,7 +24,7 @@ export default class ItemHeader extends Component {
           <div className = "sample-item"><img src = "" alt = "store item img"/></div>
           <div className = "sample-item"><img src = "" alt = "store item img"/></div>
           <div className = "sample-item"><img src = "" alt = "store item img"/></div>
-          <div className = "sample-item sample-item-count">{this.props.sampleItemCount}</div>
+          <div className = "sample-item sample-item-count">{this.props.sampleItemCount} items</div>
         </div>
       </div>
     )
