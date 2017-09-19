@@ -12,7 +12,7 @@ export default class ItemHeader extends Component {
             <img src = {this.props.shopdata ? this.props.shopdata[0].icon_url_fullxfull : ""} alt = "shop icon" width="75" height="75"/>
           </div>
           <div className = "shop-name fav-btn">
-            <h2>{this.props.shopdata ? this.props.shopdata[0].shop_name : ""}</h2>
+            <h2 className = "shop-title">{this.props.shopdata ? this.props.shopdata[0].shop_name : ""}</h2>
             <button className = "fav-heart">&hearts; Favorite Shop</button>
           </div>
         </div>
