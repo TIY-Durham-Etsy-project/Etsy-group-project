@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 
 export default class ItemHeader extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+}
   render(){
     return(
       <div className="item-header">
         <div className ='header-left-items'>
           <div className = "shop-icon">
-            <img src = "#" alt = "shop icon"/>
+            <img src ={this.props.shopIcon}  alt = "shop icon"/>
           </div>
           <div className = "shop-name fav-btn">
             <h2>Shop Name Here</h2>

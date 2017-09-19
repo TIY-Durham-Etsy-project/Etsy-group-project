@@ -19,12 +19,19 @@ class App extends Component {
   constructor(props) {
         super(props);
         this.state = {
-          exVariable: ''
+          exVariable: '',
+          shopIcon: '',
+          shopTitle: '',
+          favHeart: '',
+          sampleItem: '',
+          sampleItemCount:''
+
         };
         this.exVariableUpdate = this.exVariableUpdate.bind(this);
 
       }
 
+      // This function is in case we need to set information based upon data from the homepage.
       exVariableUpdate() {
         this.setState({
           exVariable: ''
@@ -38,8 +45,13 @@ class App extends Component {
                })
                  .then(data => {
                    console.log(data);
-                   this.setState({exVariable: data});
+                   this.setState({
+                     exVariable: data,
+                     shopIcon: data.results[0].url_75x75
+                   });
                    console.log("state", this.state.exVariable);
+                   console.log("shopIcon", this.state.shopIcon);
+
                  })
       }
 
@@ -47,7 +59,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ItemHeader/>
+        <ItemHeader
+         shopIcon={this.state.shopIcon}
+        />
         <FavoriteButton/>
         <ImageCarousel/>
         <CustomOrder/>
