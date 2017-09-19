@@ -4,8 +4,7 @@ import CustomOrder from './customorder.js';
 import DetailsDropdown from './detailsdropdown.js';
 import FAQs from './faqs.js';
 import FavoriteButton from './favoritebutton.js';
-import Headerleft from './headerleft.js';
-import Headerright from './headerright.js';
+import ItemHeader from './ItemHeader.js';
 import ImageCarousel from './imagecarousel.js';
 import MeetTheOwner from './meettheowner.js';
 import Overview from './overview.js';
@@ -20,8 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Headerleft/>
-        <Headerright/>
+        <ItemHeader/>
         <FavoriteButton/>
         <ImageCarousel/>
         <CustomOrder/>
