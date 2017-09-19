@@ -90,6 +90,11 @@ Color: #33C0F1;
 margin: 15px;
 }
 
+.verticalLine {
+  border-left: thick solid #ff0000;
+}
+
+
 
 /* wrapper for all data */
 .products-wrapper{
