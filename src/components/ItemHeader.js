@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 export default class ItemHeader extends Component {
   render(){
+    if(this.props.shoplistingimagesdata){
+      console.log(this.props);
+    }
     return(
       <div className="item-header">
         <div className ='header-left-items'>
@@ -14,10 +17,10 @@ export default class ItemHeader extends Component {
           </div>
         </div>
         <div className = "header-right-items">
-          <div className = "sample-item"><img src = "" alt = "store item img"/></div>
-          <div className = "sample-item"><img src = "" alt = "store item img"/></div>
-          <div className = "sample-item"><img src = "" alt = "store item img"/></div>
-          <div className = "sample-item"><img src = "" alt = "store item img"/></div>
+          <div className = "sample-item"><img src = {this.props.shoplistingimagesdata ? this.props.shoplistingimagesdata[0] : ""} alt = "store item img"/></div>
+          <div className = "sample-item"><img src = {this.props.shoplistingimagesdata ? this.props.shoplistingimagesdata[1] : ""} alt = "store item img"/></div>
+          <div className = "sample-item"><img src = {this.props.shoplistingimagesdata ? this.props.shoplistingimagesdata[2] : ""} alt = "store item img"/></div>
+          <div className = "sample-item"><img src = {this.props.shoplistingimagesdata ? this.props.shoplistingimagesdata[3] : ""} alt = "store item img"/></div>
           <div className = "sample-item sample-item-count">number of items</div>
         </div>
       </div>
