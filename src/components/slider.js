@@ -8,7 +8,7 @@ export default class Slider extends Component {
       	<div className="slider-child">
       		<a href="https://www.etsy.com/c/toys-and-games?anchor_listing_id=521141958&ref=hp">
         		<picture>
-          		<img width="100%" src="https://img1.etsystatic.com/208/0/9581272/il_340x270.1261108935_s445.jpg" alt/>
+          		<img width="100%" src="https://img1.etsystatic.com/208/0/9581272/il_340x270.1261108935_s445.jpg" alt=''/>
             </picture>
         		<div>
         			<h3>Toys & Games</h3>
