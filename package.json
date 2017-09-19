@@ -12,5 +12,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "Group project.",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TIY-Durham-Etsy-project/Etsy-group-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TIY-Durham-Etsy-project/Etsy-group-project/issues"
+  },
+  "homepage": "https://github.com/TIY-Durham-Etsy-project/Etsy-group-project#readme"
 }
