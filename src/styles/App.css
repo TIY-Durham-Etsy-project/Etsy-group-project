@@ -94,13 +94,71 @@ margin: 15px;
   border-left: thick solid #ff0000;
 }
 
-.header {
+.upper-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.upper-nav-left {
   display: flex;
   flex-direction: row;
+  margin: 15px;
+}
+
+.upper-nav-right {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
 }
 
 h4 {
   color: darkorange;
+  margin: 3px 7px 0 0 ;
+  font-size: 35px;
+}
+
+.btn-primary {
+  border: 1px;
+  background-color: darkorange;
+  color: white;
+  width: 82px;
+  height: 32px;
+  margin: 11px 0 0 0 ;
+
+}
+
+.search-input {
+  border: 1px;
+  width: 300px;
+  height: 32px;
+  margin: 10px 0 ;
+}
+
+.header-font {
+  font-size: 10px;
+  color: darkorange;
+  margin: 13px 12px 0 0;
+  padding: 12px;
+
+}
+
+.sign-in {
+  background-color: white;
+  border: 1px solid darkorange;
+  width: 64px;
+  height: 37px;
+  margin: 15px 10px 10px 0 ;
+  padding: 5px;
+  font-size: 10px;
+  color: darkorange;
+}
+
+.fa-shopping-cart{
+  display: flex;
+  flex-direction: column;
+  margin: 7px 10px;
+  padding: 9px;
 }
 
 /* wrapper for all data */
