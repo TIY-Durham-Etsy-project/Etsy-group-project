@@ -23,10 +23,13 @@ class App extends Component {
     this.state = {
       idvariable: "",
       listingdata: false,
+      listinginventorydata: false,
       imagesdata: false,
       shopdata: false,
       shoplistingdata: false,
-      shoplistingimagesdata: false
+      shoplistingimagesdata: false,
+      feedbackdata: false,
+      feedbackdata: false
     };
   }
   // This mounts the page.
@@ -47,19 +50,37 @@ class App extends Component {
       return results.json();
     }).then(data => {
       this.setState({ listingdata: data.results[0] });
+      // FEEDBACK FETCH
+      fetch(`https://openapi.etsy.com/v2/users/${data.results[0].user_id}/feedback/as-buyer?limit=5&api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+        return results.json();
+      }).then(data => {
+        console.log(data);
+        let array = [];
+        let i = 0;
+        while (i < 4){
+          console.log(data.results[i].user_id);
+          // fetch(`https://openapi.etsy.com/v2/users/${data.results[i].user_id}/?limit=5&api_key=2o28zyiccm6dxpspusptspb0`).then(results => {
+          //   return results.json();
+          // }).then(data => {
+          //   console.log(data)
+          // })
+          i++
+        }
+        this.setState({ feedbackdata: data.results });
+      })
     })
-    // IMAGES FETCH
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
-      return results.json();
-    }).then(data => {
-      this.setState({ imagesdata: data.results });
-    })
-    // PERSONALIZATION FETCH
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/inventory?api_key=2o28zyiccm6dxpspusptspb0`).then(results => {
-      return results.json();
-    }).then(data => {
-      this.setState({ imagesdata: data.results });
-    })
+    // // IMAGES FETCH
+    // fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+    //   return results.json();
+    // }).then(data => {
+    //   this.setState({ imagesdata: data.results });
+    // })
+    // // PERSONALIZATION FETCH
+    // fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/inventory?api_key=nn7mkmoan2c7xamo4c3pnax4`).then(results => {
+    //   return results.json();
+    // }).then(data => {
+    //   this.setState({ listinginventorydata: data.results });
+    // })
     //SHOP DATA FETCH
     fetch(`https://openapi.etsy.com/v2/shops/listing/${this.state.idvariable}?api_key=nn7mkmoan2c7xamo4c3pnax4`).then(results => {
       return results.json();
