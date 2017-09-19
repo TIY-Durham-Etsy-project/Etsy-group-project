@@ -31,6 +31,7 @@ export default class ImageCarousel extends Component {
 
   handlePictureChange(event){
     console.log("Event: " + event.currentTarget.id);
+    let value = event.currentTarget.id;
     this.setState({
         mainPicture: event.target.value
       })
