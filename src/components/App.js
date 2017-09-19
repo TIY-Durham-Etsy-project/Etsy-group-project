@@ -13,40 +13,55 @@ import RelatedTags from './relatedtags.js';
 import Reviews from './reviews.js';
 import ShopIcons from './shopicons.js';
 import SocialButtons from './socialbuttons.js';
-import Products from './Products.js';
+// import Products from './Products.js';
 
 class App extends Component {
   constructor(props) {
-        super(props);
-        this.state = {
-          exVariable: ''
-        };
-        this.exVariableUpdate = this.exVariableUpdate.bind(this);
+    super(props);
+    this.handleTextChange = this.handleTextChange.bind(this);
+    this.handlesubmit = this.handlesubmit.bind(this);
+    this.state = {
+      idvariable: "",
+      listingdata: "",
+      imagesdata: ""
+    };
+  }
+  // This mounts the page.
+  componentDidMount() {
 
-      }
-
-      exVariableUpdate() {
-        this.setState({
-          exVariable: ''
-        });
-      }
-      // This mounts the page.
-      componentDidMount() {
-        fetch('https://openapi.etsy.com/v2/listings/175112598/images?api_key=xu3t5vf2ok7saualskn524az')
-               .then(results => {
-                 return results.json();
-               })
-                 .then(data => {
-                   console.log(data);
-                   this.setState({exVariable: data});
-                   console.log("state", this.state.exVariable);
-                 })
-      }
-
-
+  }
+  handleTextChange(event){
+    event.preventDefault();
+    this.setState({idvariable: event.target.value});
+  }
+  handlesubmit(event){
+    event.preventDefault();
+    this.fetchData();
+  }
+  fetchData = () => {
+    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+      return results.json();
+    }).then(data => {
+      console.log(data.results[0]);
+      this.setState({ listingdata: data.results[0] });
+    })
+    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+      return results.json();
+    }).then(data => {
+      console.log(data.results[0]);
+      this.setState({ imagesdata: data.results[0] });
+    })
+  }
   render() {
     return (
       <div className="App">
+          <div className="PlayListForm">
+            <form onSubmit={this.handlesubmit}>
+              <input onChange={this.handleTextChange} type="text" id="idnumber"
+              placeholder="ID" value={this.state.idvariable}/>
+              <button type="submit">"SUBMIT"</button>
+            </form>
+          </div>
         <ItemHeader/>
         <FavoriteButton/>
         <ImageCarousel/>
@@ -60,7 +75,6 @@ class App extends Component {
         <SocialButtons/>
         <ShopIcons/>
         <RelatedTags/>
-        <Products/>
       </div>
     );
   }
