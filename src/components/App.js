@@ -46,26 +46,27 @@ class App extends Component {
     fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
       return results.json();
     }).then(data => {
-      this.setState({ listingdata: data.results });
+      this.setState({ listingdata: data.results[0] });
     })
-    //IMAGES FETCH
-    // fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
-    //   return results.json();
-    // }).then(data => {
-    //   this.setState({ imagesdata: data.results });
-    // })
-    //PERSONALIZATION FETCH
-    // fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/inventory?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
-    //   return results.json();
-    // }).then(data => {
-    //   this.setState({ imagesdata: data.results });
-    // })
-    //SHOP DATA FETCH
-    fetch(`https://openapi.etsy.com/v2/shops/listing/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+    // IMAGES FETCH
+    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
       return results.json();
     }).then(data => {
+      this.setState({ imagesdata: data.results });
+    })
+    // PERSONALIZATION FETCH
+    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/inventory?api_key=2o28zyiccm6dxpspusptspb0`).then(results => {
+      return results.json();
+    }).then(data => {
+      this.setState({ imagesdata: data.results });
+    })
+    //SHOP DATA FETCH
+    fetch(`https://openapi.etsy.com/v2/shops/listing/${this.state.idvariable}?api_key=nn7mkmoan2c7xamo4c3pnax4`).then(results => {
+      return results.json();
+    }).then(data => {
+      //SHOPDATA INCLUDES THE USER DATA
       this.setState({ shopdata: data.results });
-      fetch(`https://openapi.etsy.com/v2/shops/${data.results[0].shop_id}/listings/active?limit=5&api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+      fetch(`https://openapi.etsy.com/v2/shops/${data.results[0].shop_id}/listings/active?limit=5&api_key=nn7mkmoan2c7xamo4c3pnax4`).then(results => {
         return results.json();
       }).then(data => {
         let array = [];

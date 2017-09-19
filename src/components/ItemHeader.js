@@ -6,11 +6,8 @@ export default class ItemHeader extends Component {
     this.state = {
 
     };
-}
+  }
   render(){
-    if(this.props.shoplistingimagesdata){
-      console.log(this.props);
-    }
     return(
       <div className="item-header">
         <div className ='header-left-items'>
