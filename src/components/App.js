@@ -14,9 +14,9 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        //FRONT PAGE SHOULD GO HERE
+        {/* FRONT PAGE SHOULD GO HERE */}
         <ItemPageApp />
-        //ADD OTHER GROUPS FOOTER HERE
+        {/* ADD OTHER GROUPS FOOTER HERE */}
       </div>
     );
   }
