@@ -26,7 +26,8 @@ class App extends Component {
           shopTitle: '',
           favHeart: '',
           sampleItems: {},
-          sampleItemCount:''
+          sampleItemCount:0,
+
 
         };
         this.imageDataUpdate = this.imageDataUpdate.bind(this);
@@ -60,7 +61,8 @@ class App extends Component {
             console.log(data);
             this.setState({
               shopData: data,
-              shopTitle: data.results[0].shop_name
+              shopTitle: data.results[0].shop_name,
+              sampleItemCount: data.results[0].listing_active_count
             });
             console.log("state", this.state.imageData);
             console.log("shopTitle", this.state.shopTitle);
@@ -75,6 +77,7 @@ class App extends Component {
         <ItemHeader
          shopIcon={this.state.shopIcon}
          shopTitle={this.state.shopTitle}
+         sampleItemCount={this.state.sampleItemCount}
         />
         <FavoriteButton/>
         <ImageCarousel/>
