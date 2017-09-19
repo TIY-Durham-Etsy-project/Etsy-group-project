@@ -8,12 +8,12 @@ h2{
   text-transform: uppercase;
 }
 
+/* header left/right styles */
 .header-left-items{
   width: 80%;
-  margin: 30px auto;
+  margin: 10px auto;
   display: flex;
 }
-
 
 .shop-icon{
   border: solid 1px #dcdcd9;
@@ -32,7 +32,7 @@ h2{
   display: flex;
   justify-content: space-between;
   width: 75%;
-  margin: 30px auto;
+  margin: 0 auto;
 }
 
 .sample-item{
@@ -46,17 +46,14 @@ h2{
 .header-right-items{
   display: flex;
   flex-direction: row;
-  margin: 30px auto;
-
-
+  margin: 10px auto;
 }
 
-
-
+/* wrapper for all data */
 .products-wrapper{
   width: 75%;
   background-color: white;
-  margin: 10% auto;
+  margin: 0 auto;
   border: solid 1px #dcdcd9;
   border-radius: 1%;
   padding: 35px;
