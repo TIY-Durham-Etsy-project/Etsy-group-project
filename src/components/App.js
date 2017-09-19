@@ -19,40 +19,54 @@ class App extends Component {
   constructor(props) {
         super(props);
         this.state = {
-          exVariable: '',
+          imageData: '',
+          shopData: '',
           shopIcon: '',
           shopTitle: '',
           favHeart: '',
-          sampleItem: '',
+          sampleItems: {},
           sampleItemCount:''
 
         };
-        this.exVariableUpdate = this.exVariableUpdate.bind(this);
+        this.imageDataUpdate = this.imageDataUpdate.bind(this);
 
       }
 
       // This function is in case we need to set information based upon data from the homepage.
-      exVariableUpdate() {
+      imageDataUpdate() {
         this.setState({
-          exVariable: ''
+          imageData: ''
         });
       }
       // This mounts the page.
       componentDidMount() {
-        fetch('https://openapi.etsy.com/v2/listings/175112598/images?api_key=xu3t5vf2ok7saualskn524az')
-               .then(results => {
-                 return results.json();
-               })
-                 .then(data => {
-                   console.log(data);
-                   this.setState({
-                     exVariable: data,
-                     shopIcon: data.results[0].url_75x75
-                   });
-                   console.log("state", this.state.exVariable);
-                   console.log("shopIcon", this.state.shopIcon);
+        // This fetches Images
+        fetch('https://openapi.etsy.com/v2/listings/175112598/images?api_key=xu3t5vf2ok7saualskn524az').then(results => {
+            return results.json();
+          }).then(data => {
+            console.log(data);
+            this.setState({
+              imageData: data,
+              shopIcon: data.results[0].url_75x75
+            });
+            console.log("state", this.state.imageData);
+            console.log("shopIcon", this.state.shopIcon);
+        });
+        // This fetches the shop information.
+        fetch('https://openapi.etsy.com/v2/shops/savagepunk?api_key=xu3t5vf2ok7saualskn524az').then(results => {
+            return results.json();
+          }).then(data => {
+            console.log(data);
+            this.setState({
+              shopData: data,
+              shopTitle: data.results[0].shop_name
+            });
+            console.log("state", this.state.imageData);
+            console.log("shopTitle", this.state.shopTitle);
+        });
 
-                 })
+
+
       }
 
 
@@ -61,6 +75,7 @@ class App extends Component {
       <div className="App">
         <ItemHeader
          shopIcon={this.state.shopIcon}
+         shopTitle={this.state.shopTitle}
         />
         <FavoriteButton/>
         <ImageCarousel/>

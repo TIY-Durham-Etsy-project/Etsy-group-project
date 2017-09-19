@@ -4,6 +4,7 @@ export default class ItemHeader extends Component {
   constructor(props) {
     super(props);
     this.state = {
+
     };
 }
   render(){
@@ -14,7 +15,7 @@ export default class ItemHeader extends Component {
             <img src ={this.props.shopIcon}  alt = "shop icon"/>
           </div>
           <div className = "shop-name fav-btn">
-            <h2>Shop Name Here</h2>
+            <h2>{this.props.shopTitle}</h2>
             <button className = "fav-heart">&hearts; Favorite Shop</button>
           </div>
         </div>
