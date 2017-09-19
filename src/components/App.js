@@ -4,6 +4,7 @@ import CustomOrder from './customorder.js';
 import DetailsDropdown from './detailsdropdown.js';
 import FAQs from './faqs.js';
 import FavoriteButton from './favoritebutton.js';
+import Header from './header.js';
 import ItemHeader from './ItemHeader.js';
 import ImageCarousel from './imagecarousel.js';
 import MeetTheOwner from './meettheowner.js';
@@ -91,6 +92,7 @@ class App extends Component {
               <button type="submit">"SUBMIT"</button>
             </form>
           </div>
+        <Header/>
         <ItemHeader
         shopdata={this.state.shopdata}
         shoplistingdata={this.state.shoplistingdata}

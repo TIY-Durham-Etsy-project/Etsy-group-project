@@ -49,6 +49,53 @@ h2{
   margin: 10px auto;
 }
 
+.favorite{
+  display: flex;
+  flex-direction: row;
+  width: 565px;
+  height: 67px;
+  background-color: lightgrey;
+
+}
+
+.customorder{
+  display: flex;
+
+}
+
+.add-to{
+  margin: 15px;
+  background-color: white;
+  border: solid 1px #dcdcd9;
+
+}
+
+.fa:hover{
+  opacity: 0.7;
+}
+
+.fa-facebook{
+
+  color: #627AAD;
+  margin: 15px;
+}
+
+.fa-pinterest{
+Color: #D84D54;
+margin: 15px;
+}
+
+.fa-twitter{
+Color: #33C0F1;
+margin: 15px;
+}
+
+.verticalLine {
+  border-left: thick solid #ff0000;
+}
+
+
+
 /* wrapper for all data */
 .products-wrapper{
   width: 75%;
