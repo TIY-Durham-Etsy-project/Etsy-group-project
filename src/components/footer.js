@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import OptInForm from './opt-in-form.js'
+import Trademark from './trademark.js'
 
 class Footer extends Component {
   render() {
@@ -8,6 +9,7 @@ class Footer extends Component {
       <div className="Footer">
         <p>Footer Placeholder</p>
         <OptInForm />
+        <Trademark />
       </div>
     );
   }
