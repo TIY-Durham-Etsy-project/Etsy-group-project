@@ -13,6 +13,7 @@ export default class ImageCarousel extends Component {
     }
     return(
       <div className="imagecarousel">
+
       </div>
     )
   }
