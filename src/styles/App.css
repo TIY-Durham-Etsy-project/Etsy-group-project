@@ -171,8 +171,8 @@ h4 {
   padding: 9px;
 }
 
-/* wrapper for all data */
-.wrapper{
+/* item-page-wrapper for all data */
+.item-page-wrapper{
   width: 75%;
   background-color: white;
   margin: 0 auto;
