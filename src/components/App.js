@@ -13,7 +13,6 @@ import RelatedTags from './relatedtags.js';
 import Reviews from './reviews.js';
 import ShopIcons from './shopicons.js';
 import SocialButtons from './socialbuttons.js';
-// import Products from './Products.js';
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +22,8 @@ class App extends Component {
     this.state = {
       idvariable: "",
       listingdata: "",
-      imagesdata: ""
+      imagesdata: "",
+      userdata: ""
     };
   }
   // This mounts the page.
@@ -31,6 +31,9 @@ class App extends Component {
 
   }
   handleTextChange(event){
+    if (this.state.listingdata !== undefined && this.state.listingdata !== null && this.state.listingdata !== ""){
+      console.log(this.state.listingdata[0].user_id);
+    }
     event.preventDefault();
     this.setState({idvariable: event.target.value});
   }
@@ -42,15 +45,18 @@ class App extends Component {
     fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
       return results.json();
     }).then(data => {
-      console.log(data.results[0]);
-      this.setState({ listingdata: data.results[0] });
+      this.setState({ listingdata: data.results });
+      fetch(`https://openapi.etsy.com/v2/users/${data.results[0].user_id}?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+        return results.json();
+      }).then(data => {
+        this.setState({ userdata: data.results });
+      })
     })
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
-      return results.json();
-    }).then(data => {
-      console.log(data.results[0]);
-      this.setState({ imagesdata: data.results[0] });
-    })
+    // fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+    //   return results.json();
+    // }).then(data => {
+    //   this.setState({ imagesdata: data.results });
+    // })
   }
   render() {
     return (
@@ -64,7 +70,7 @@ class App extends Component {
           </div>
         <ItemHeader/>
         <FavoriteButton/>
-        <ImageCarousel/>
+        <ImageCarousel imagesdata={this.state.imagesdata}/>
         <CustomOrder/>
         <DetailsDropdown/>
         <Reviews/>
