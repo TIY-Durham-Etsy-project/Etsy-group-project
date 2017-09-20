@@ -7,15 +7,15 @@ export default class DetailsDropdown extends Component {
     this.state = {
       initdropdown: false,
       dropdownclassname: "details-dropdown-container-minimized",
-      dropDownButtonText: "More +",
+      dropDownButtonText: "+ More",
     }
   }
   handledropdown(event){
     event.preventDefault();
     if (this.state.dropdownclassname === "details-dropdown-container-full"){
-      this.setState({ dropdownclassname: "details-dropdown-container-minimized", dropDownButtonText: "More +" });
+      this.setState({ dropdownclassname: "details-dropdown-container-minimized", dropDownButtonText: "+ More" });
     } else if (this.state.dropdownclassname === "details-dropdown-container-minimized"){
-      this.setState({ dropdownclassname: "details-dropdown-container-full", dropDownButtonText: "Less -" });
+      this.setState({ dropdownclassname: "details-dropdown-container-full", dropDownButtonText: "- Less" });
     }
   }
   shouldComponentUpdate(nextProps, nextState){
