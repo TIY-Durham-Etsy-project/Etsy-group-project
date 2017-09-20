@@ -3,9 +3,122 @@ body{
   background-color: #efefeb;
 }
 
+/* only to be used for etsy logo */
+h1{
+  font-family: 'Bitter', 'Times', serif;
+  font-weight: lighter;
+  color:#f56400;
+  font-size: 40px;
+}
+
 h2{
   font-family: 'Bitter', 'Times', serif;
-  text-transform: uppercase;
+}
+
+h4 {
+  color: darkorange;
+  margin: 3px 7px 0 0 ;
+  font-size: 35px;
+}
+
+button:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+
+
+/* navigation styles */
+.upper-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  height: 80px;
+  align-items: center;
+}
+
+.upper-nav-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px 35px;
+}
+
+.upper-nav-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 35px;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.etsy-font{
+  margin-right: 20px;
+}
+
+
+
+.sign-in {
+  background-color: white;
+  border: 1px solid #f56400;
+  width: 64px;
+  height: 37px;
+  padding: 5px;
+  font-size: 10px;
+  color:#f56400;
+
+}
+
+.fa-shopping-cart{
+  display: flex;
+  flex-direction: column;
+  margin: 7px 10px;
+  padding: 9px;
+  border-left: solid 1px #efefeb;
+}
+
+.btn-primary {
+  border: 1px;
+  background-color: #f56400;
+  color: white;
+  width: 82px;
+  height: 35px;
+  margin: 11px 0 0 0 ;
+}
+
+.search-input {
+  border: .5px solid grey;
+  width: 300px;
+  height: 32px;
+  margin: 10px 0 ;
+}
+
+.header-font {
+  font-size: 10px;
+  color: #f56400;
+  font-family: 'Lato', 'Arial', sans-serif;
+  border: solid 1px transparent;
+
+
+
+}
+
+/* item-page-wrapper for all data */
+.item-page-wrapper{
+  width: 75%;
+  background-color: white;
+  margin: 10px auto;
+  border: solid 1px #dcdcd9;
+  border-radius: 1%;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-content{
+  width: 400px;
+  margin-left: 23px;
 }
 
 /* header left/right styles */
@@ -48,7 +161,11 @@ h2{
   text-align: center;
 }
 
+.sample-item:hover{
+  opacity: 0.7;
+  cursor: pointer;
 
+}
 
 .header-right-items{
   display: flex;
@@ -68,40 +185,46 @@ h2{
   font-family: 'Lato', 'Arial', sans-serif;
 }
 
+/* customer order */
 .customorder{
   display: flex;
-
 }
 
+/* favorite and add to button div */
 .add-to{
   margin: 15px;
   background-color: white;
   border: solid 1px #dcdcd9;
-
+  width: 360px;
 }
 
+/* social media */
 .fa:hover{
   opacity: 0.7;
 }
 
-.fa-facebook{
-
+.fa-facebook {
   color: #627AAD;
   margin: 15px;
+  text-decoration: none;
 }
 
 .fa-pinterest{
 Color: #D84D54;
 margin: 15px;
+text-decoration: none;
 }
 
 .fa-twitter{
 Color: #33C0F1;
 margin: 15px;
+text-decoration: none;
 }
 
-.verticalLine {
-  border-left: thick solid #ff0000;
+/* carousel */
+.imagecarousel{
+  width: 565px;
+  overflow: hidden;
 }
 
 /*Carousel CSS*/
@@ -258,73 +381,16 @@ margin: 15px;
   margin: auto;*/
 }
 
-.upper-nav-left {
+.productdescription{
+  width: 360px;
+  height: 50px;
+  margin: -20px 15px;
+  display: inline-block;
+}
+
+.item-price{
   display: flex;
   flex-direction: row;
-  margin: 15px;
-}
-
-.upper-nav-right {
-  display: flex;
-  flex-direction: row;
-  margin: 15px;
-}
-
-h4 {
-  color: darkorange;
-  margin: 3px 7px 0 0 ;
-  font-size: 35px;
-}
-
-.btn-primary {
-  border: 1px;
-  background-color: darkorange;
-  color: white;
-  width: 82px;
-  height: 35px;
-  margin: 11px 0 0 0 ;
-
-}
-
-.search-input {
-  border: .5px solid grey;
-  width: 300px;
-  height: 32px;
-  margin: 10px 0 ;
-}
-
-.header-font {
-  font-size: 10px;
-  color: darkorange;
-  margin: 13px 12px 0 0;
-  padding: 12px;
-
-}
-
-.sign-in {
-  background-color: white;
-  border: 1px solid darkorange;
-  width: 64px;
-  height: 37px;
-  margin: 15px 10px 10px 0 ;
-  padding: 5px;
-  font-size: 10px;
-  color: darkorange;
-}
-
-.fa-shopping-cart{
-  display: flex;
-  flex-direction: column;
-  margin: 7px 10px;
-  padding: 9px;
-}
-
-/* item-page-wrapper for all data */
-.item-page-wrapper{
-  width: 75%;
-  background-color: white;
-  margin: 0 auto;
-  border: solid 1px #dcdcd9;
-  border-radius: 1%;
-  padding: 35px;
+  justify-content: space-between;
+  align-items: center;
 }
