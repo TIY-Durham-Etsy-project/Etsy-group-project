@@ -6,7 +6,7 @@ export default class DetailsDropdown extends Component {
     return(
       <div className="detailsdropdown">
       <h3>Details</h3>
-      <p>{this.props.listingdata ? this.innerHTML = this.props.listingdata.description.innerHTML : ""}</p>
+      <p>{this.props.listingdata ? this.innerHTML = this.props.listingdata.description : ""}</p>
       </div>
     )
   }
