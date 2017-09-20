@@ -18,38 +18,25 @@ export default class ImageCarousel extends Component {
     event.preventDefault();
     console.log("handlePictureChange: ", event.currentTarget.id);
     // These set the state to the event specific image array position (id-1)
-    console.log(this.props.imagesdata);
     this.setState({
         mainPicture: this.props.imagesdata[event.currentTarget.id-1].url_570xN,
         imageCarouselValue: event.currentTarget.id-1
     })
     // These set the page items to the event specific image array position (id-1)
-    // this.state.imageCarouselValue = event.currentTarget.id-1;
-    // this.state.mainPicture = this.props.imagesdata[event.currentTarget.id-1].url_570xN;
-    console.log(this.state);
-    // This gets the image by class and the changes the src to the event specific image.
-    let place_Image = document.getElementById('mainPictureForCarousel');
-    place_Image.src = this.state.mainPicture;
   }
 
   plusSlides(){
     // This increases the imageCarouselValue.
     this.state.imageCarouselValue++;
     // The code works without the following setState but the this.state.imageCarouselValue appears unchanged.
-    this.setState({
-        imageCarouselValue: this.state.imageCarouselValue
-    })
-    if(this.props.imagesdata[this.state.imageCarouselValue] === undefined){
+    if (this.state.imageCarouselValue > this.props.imagesdata.length-1){
       this.setState({
           imageCarouselValue: 0
       })
-      // this.state.imageCarouselValue = 0;
-    }
-    // This sets and places the appropriate image from the array.
-    if(this.props.imagesdata[this.state.imageCarouselValue] !== undefined){
-      this.state.mainPicture = this.props.imagesdata[this.state.imageCarouselValue].url_570xN;
-      let place_Image = document.getElementById('mainPictureForCarousel');
-      place_Image.src = this.state.mainPicture;
+    } else {
+      this.setState({
+          imageCarouselValue: this.state.imageCarouselValue
+      })
     }
   }
 
