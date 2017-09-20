@@ -18,7 +18,6 @@ export default class Header extends Component {
               <div><button className="sign-in">Sign In</button></div>
               <div> <i className="fa fa-shopping-cart" aria-hidden="true">Cart</i></div>
             </div>
-
         </div>
       </div>
 
