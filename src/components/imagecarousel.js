@@ -15,6 +15,7 @@ export default class ImageCarousel extends Component {
 
   // This brings up a sub-image to the main image position when clicked.
   handlePictureChange(event){
+    console.log("handlePictureChange: ", event.currentTarget.id);
     // These set the state to the event specific image array position (id-1)
     this.setState({
         mainPicture: this.props.imagesdata[event.currentTarget.id-1].url_570xN,
@@ -94,11 +95,11 @@ export default class ImageCarousel extends Component {
       <div className="imageCarouselAll">
         <div className="slideshow-container">
           {/* <div class="arrow">▻</div> */}
-          <div className="carouselArrowBox">
-            <a className="prev" onclick={this.minusSlides}>&#10094;</a>
+          <div className="carouselArrowBox" onClick={this.minusSlides}>
+            <a className="prev">&#10094;</a>
           </div>
-          <div className="carouselArrowBoxRight">
-            <a className="next" onclick={this.plusSlides}>&#10095;</a>
+          <div className="carouselArrowBoxRight" onClick={this.plusSlides}>
+            <a className="next">&#10095;</a>
           </div>
           <form className="button">
             <button onClick={this.plusSlides} id="countDown" type="button" className="btn btn-success">Up Image: {this.state.imageCarouselValue}</button>

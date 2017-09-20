@@ -150,7 +150,7 @@ margin: 15px;
 
 .prev, .next {
   line-height: 86px;
-  font-size: 24px;
+  font-size: 30px;
   /*color: #F2F1F1;*/
   font-family: "SSStandard";
   font-style: normal;
@@ -172,6 +172,7 @@ margin: 15px;
 .carouselArrowBox:hover, .carouselArrowBoxRight:hover {
   background-color: #aaaaaa;
   color: #E8E8E5;
+  cursor: pointer;
   /*#8F837D;*/
   /*#8B847D;*/
   /*rgba(0,0,0,0.8);*/
