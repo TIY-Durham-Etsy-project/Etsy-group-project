@@ -9,7 +9,7 @@ export default class ProductDescription extends Component {
     };
   }
   shouldComponentUpdate(nextProps, nextState){
-    if (this.props.listinginventorydata !== nextProps.listinginventorydata || this.state.properties !== nextState.properties || this.state.numberofproperties !== nextState.numberofproperties) {
+    if (this.props.listinginventorydata !== nextProps.listinginventorydata || this.state.numberofproperties !== nextState.numberofproperties) {
       return true;
     } else {
       return false;
@@ -17,37 +17,36 @@ export default class ProductDescription extends Component {
   }
   componentDidUpdate(){
     if (this.props.listinginventorydata){
-      this.setState({ properties: this.props.listinginventorydata.products, numberofproperties: this.props.listinginventorydata.products[0].property_values.length})
-      // console.log(this.props.listinginventorydata.products[0].property_values.length);
-      // console.log(this.props.listinginventorydata.products);
-      // console.log(this.props.listinginventorydata.products);
+      let array = [];
+      this.setState({ numberofproperties: this.props.listinginventorydata.products[0].property_values.length})
+      this.props.listinginventorydata.products[0].property_values.map((x, i) => {
+        this.setState(prevState => ({
+          properties: [...prevState.properties, x.property_name]
+        }))
+      })
       // for (let i = 0; i < this.props.listinginventorydata.products.length; i++){
       //   let product = this.props.listinginventorydata.products[i];
+      //   console.log(product)
       // }
+      console.log(this.state);
     }
   }
   render(){
-    let inventorySelects = []
-    for (let i = 0; i < this.statenumberofproperties; i++) {
-      inventorySelects.push(
-        <div>
-        <label for= "quantity-drop-down">Quantity</label><br/>
-        <select className = "quantity-drop-down" placeholder="quantity">
-        </select>
-        </div>
-      );
-    }
-    // let inventorySelects = this.state.properties.map((info, i) =>{
-    //   console.log(info)
-    //   console.log(i)
-    //     return (
-    //       <div className = "options-drop-down-wrapper">
-    //         <label for= "quantity-drop-down">Quantity</label><br/>
-    //             <select className = "quantity-drop-down" placeholder="quantity">
-    //           </select>
+    let inventorySelects = [];
+    // this.state.properties.map((x, i) => {
+    //   x.replace(/ /g, "-");
+    //   let newLabelClassName = x.replace(/ /g, "-");
+    //   inventorySelects.push(
+    //     <div>
+    //       <label for= `${newLabelClassName}-drop-down-menu`>Quantity</label><br/>
+    //       <select className = `${newLabelClassName}-drop-down-menu` placeholder="quantity">
+    //       </select>
     //     </div>
-    //   )
-    //   });
+    //   );
+    // })
+    for (let i = 0; i < this.properties; i++) {
+
+    }
     // let options = this.state.properties.map((info, i) =>{
     //   console.log(info)
     //   console.log(i)
