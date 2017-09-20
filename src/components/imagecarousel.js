@@ -15,15 +15,18 @@ export default class ImageCarousel extends Component {
 
   // This brings up a sub-image to the main image position when clicked.
   handlePictureChange(event){
+    event.preventDefault();
     console.log("handlePictureChange: ", event.currentTarget.id);
     // These set the state to the event specific image array position (id-1)
+    console.log(this.props.imagesdata);
     this.setState({
         mainPicture: this.props.imagesdata[event.currentTarget.id-1].url_570xN,
-        ImageCarouselValue: event.currentTarget.id-1
+        imageCarouselValue: event.currentTarget.id-1
     })
     // These set the page items to the event specific image array position (id-1)
-    this.state.imageCarouselValue = event.currentTarget.id-1;
-    this.state.mainPicture = this.props.imagesdata[event.currentTarget.id-1].url_570xN;
+    // this.state.imageCarouselValue = event.currentTarget.id-1;
+    // this.state.mainPicture = this.props.imagesdata[event.currentTarget.id-1].url_570xN;
+    console.log(this.state);
     // This gets the image by class and the changes the src to the event specific image.
     let place_Image = document.getElementById('mainPictureForCarousel');
     place_Image.src = this.state.mainPicture;
@@ -34,13 +37,13 @@ export default class ImageCarousel extends Component {
     this.state.imageCarouselValue++;
     // The code works without the following setState but the this.state.imageCarouselValue appears unchanged.
     this.setState({
-        ImageCarouselValue: this.state.imageCarouselValue
+        imageCarouselValue: this.state.imageCarouselValue
     })
     if(this.props.imagesdata[this.state.imageCarouselValue] === undefined){
       this.setState({
-          ImageCarouselValue: 0
+          imageCarouselValue: 0
       })
-      this.state.imageCarouselValue = 0;
+      // this.state.imageCarouselValue = 0;
     }
     // This sets and places the appropriate image from the array.
     if(this.props.imagesdata[this.state.imageCarouselValue] !== undefined){
@@ -55,24 +58,25 @@ export default class ImageCarousel extends Component {
     // This decreases the imageCarouselValue.
     this.state.imageCarouselValue--;
     // The code works without the following setState but the this.state.imageCarouselValue appears unchanged.
-    this.setState({
-        ImageCarouselValue: this.state.imageCarouselValue
-    })
-    if(this.props.imagesdata[this.state.imageCarouselValue] === undefined){
+    if (this.state.imageCarouselValue < 0){
       this.setState({
-          ImageCarouselValue: this.props.imagesdata.length-1
+          imageCarouselValue: this.props.imagesdata.length-1
       })
-      this.state.imageCarouselValue = this.props.imagesdata.length-1;
+    } else {
+      this.setState({
+          imageCarouselValue: this.state.imageCarouselValue
+      })
     }
+  }
+
+  render(){
     // This sets and places the appropriate image from the array.
+    //MOVED THIS FROM FUNCTIONS TO RENDER
     if(this.props.imagesdata[this.state.imageCarouselValue] !== undefined){
       this.state.mainPicture = this.props.imagesdata[this.state.imageCarouselValue].url_570xN;
       let place_Image = document.getElementById('mainPictureForCarousel');
       place_Image.src = this.state.mainPicture;
     }
-  }
-
-  render(){
     let imageItem = false;
     if(this.props.imagesdata[0] !== undefined){
       this.state.mainPicture = this.props.imagesdata[0].url_570xN;
@@ -81,10 +85,10 @@ export default class ImageCarousel extends Component {
       imageItem = this.props.imagesdata.map(image => {
         count++;
         return (
-          <div key={image.id} className="itemsBoxesForCarouselImage">
+          <div key={image.url_75x75} className="itemsBoxesForCarouselImage">
             <div className="cardForCarouselImage" id={count} onClick={this.handlePictureChange}>
               <div className="card-blockForCarouselImage">
-                <img className="subCarouselImage" src={image.url_75x75}/>
+                <img alt="subCarouselImage" className="subCarouselImage" src={image.url_75x75}/>
               </div>
             </div>
           </div>
@@ -102,7 +106,7 @@ export default class ImageCarousel extends Component {
             <a className="nextCarouselImage">&#10095;</a>
           </div>
           <div className="mainPictureForCarouselHolder">
-            <img id="mainPictureForCarousel" src={this.state.mainPicture}/>
+            <img alt="mainPictureForCarousel" id="mainPictureForCarousel" src={this.state.mainPicture}/>
           </div>
         </div>
         <div className="subCarouselImageHolder">
