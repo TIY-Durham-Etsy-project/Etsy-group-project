@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 
 export default class ProductDescription extends Component {
   render(){
-    console.log(this.props.listingdata);
+    console.log(this.props);
     return(
       <div className="productdescription">
-        <h2>Product Title Goes Here</h2>
+        <h2>{this.props.listingdata.title}</h2>
         <div className = "item-price ask">
-          <div><h3>$0.00</h3></div>
+          <div><h3>${this.props.listingdata.price}</h3></div>
           <div><button className = "fav-btn">Ask a question</button></div>
         </div>
         <div className = "options-drop-down-wrapper">
@@ -30,7 +30,7 @@ export default class ProductDescription extends Component {
       </button>
       {this.props.listingdata.quantity<50 ? (
         <div className = "limited-availability-section">
-          Don't miss out. There's only number available and number other people have this in their cart right now.
+          Don't miss out. There's only {this.props.listingdata.quantity} available and many other people have this in their cart right now.
         </div>
       ) : (<div></div>)}
       <div className = "etsy-purchase-guarantee">
