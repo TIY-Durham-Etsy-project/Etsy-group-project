@@ -76,7 +76,7 @@ export default class ProductDescription extends Component {
       let newLabelClassName = x.replace(/ /g, "-");
       return(
         <div className="options-drop-down-wrapper" key={newLabelClassName}>
-          <label for= {newLabelClassName+"-drop-down-menu"}>{newLabelClassName}</label><br/>
+          <label htmlFor= {newLabelClassName+"-drop-down-menu"}>{newLabelClassName}</label><br/>
           <select onChange={this.handleChange} className = {newLabelClassName+"-drop-down-menu"}>
           {this.state.propertyOptions[newLabelClassName].map((x, i)=>{
             return (
