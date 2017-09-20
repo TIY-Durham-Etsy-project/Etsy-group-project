@@ -25,7 +25,10 @@ export default class API extends Component {
     });
   }
 
-
+  // filter through itemObjects to remove missing values
+  let filteredObjects = itemObjects.filter((filterObject) => {
+    return filterObject.state = "active" && filterObject.category_path && filterObject.MainImage.url_170x135
+  })
 
     render() {
       return (<div>MyComponent</div>);
