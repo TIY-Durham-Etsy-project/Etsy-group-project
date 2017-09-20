@@ -29,6 +29,7 @@ export default class ProductDescription extends Component {
       </button>
       <div className = "etsy-purchase-guarantee">
         <div className = "etsy-purchase-guarantee-left">
+          <img src = "shield.png"/>
         </div>
         <div className = "etsy-purchase-guarantee-right">
           <h2>Etsy Purchase Guarantee</h2>

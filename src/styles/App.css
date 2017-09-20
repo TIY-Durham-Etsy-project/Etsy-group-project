@@ -427,11 +427,14 @@ text-decoration: none;
 .etsy-purchase-guarantee{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 360px;
+  height: 110px;
   margin: 20px 0;
   background-color: #FAF9F5;
   padding: 10px;
   font-size: 14px;
+  line-height: 1;
 }
 
 .pseudo-link{
