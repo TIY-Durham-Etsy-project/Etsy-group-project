@@ -227,7 +227,158 @@ text-decoration: none;
   overflow: hidden;
 }
 
-/* product description page */
+/*Carousel CSS*/
+/*Carousel CSS*/
+/*Carousel CSS*/
+.mainPictureForCarouselHolder{
+  width: 570px;
+  height: 724px;
+  background-color: #F5F5F1;
+  position: relative;
+  cursor: pointer;
+}
+
+.imageCarouselAll{
+  /*border: 15px;*/
+}
+
+#mainPictureForCarousel{
+  z-index: 20;
+  position: absolute;
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   /*right: 0;
+   left: 0;*/
+}
+
+.subCarouselImage{
+  background-color: #999999;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 10%;
+  display: inline;
+  /*display: flex;
+  flex-direction: row;*/
+  transition: background-color 0.6s ease;
+}
+
+.subCarouselImageHolder{
+  width: 570px;
+  height: 50px;
+  /*display: inline;*/
+  display: flex;
+  flex-direction: inline;
+  align-items: center;
+  justify-content: center;
+  /*align-self: center;*/
+}
+
+.active, .subCarouselImage:hover {
+  background-color: #717171;
+}
+
+.prev, .next {
+  line-height: 86px;
+  font-size: 24px;
+  /*color: #F2F1F1;*/
+  font-family: "SSStandard";
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  text-align: center;
+  /*cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;*/
+}
+
+.carouselArrowBox:hover, .carouselArrowBoxRight:hover {
+  background-color: #aaaaaa;
+  color: #E8E8E5;
+  /*#8F837D;*/
+  /*#8B847D;*/
+  /*rgba(0,0,0,0.8);*/
+}
+
+.carouselArrowBox{
+    background: #97928F;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    margin-top: auto;
+    height: 80px;
+    line-height: 86px;
+    width: 40px;
+    font-size: 24px;
+    position: absolute;
+    z-index: 25;
+    top: 50%;
+    margin-top: 420px;
+    font-family: "SSStandard";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    white-space: nowrap;
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+     color: #F2F1F1;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    text-align: center;
+}
+
+.carouselArrowBoxRight {
+  left: 530px;
+  background: #97928F;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  margin-top: auto;
+  height: 80px;
+  line-height: 86px;
+  width: 40px;
+  font-size: 24px;
+  position: absolute;
+  z-index: 25;
+  top: 50%;
+  margin-top: 420px;
+  font-family: "SSStandard";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+   color: #F2F1F1;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  text-align: center;
+}
+
+.slideshow-container {
+  width: 570px;
+  height: px;
+  /*position: relative;
+  margin: auto;*/
+}
 
 .productdescription{
   width: 360px;

@@ -125,7 +125,6 @@ class ItemPageApp extends Component {
           <ShopIcons/>
         </div>
           <RelatedTags/>
-
         </div>
       </div>
     );
