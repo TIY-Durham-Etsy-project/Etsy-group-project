@@ -81,9 +81,9 @@ export default class ImageCarousel extends Component {
       imageItem = this.props.imagesdata.map(image => {
         count++;
         return (
-          <div key={image.id} className="itemsBoxes">
-            <div className="card" id={count} onClick={this.handlePictureChange}>
-              <div className="card-block">
+          <div key={image.id} className="itemsBoxesForCarouselImage">
+            <div className="cardForCarouselImage" id={count} onClick={this.handlePictureChange}>
+              <div className="card-blockForCarouselImage">
                 <img className="subCarouselImage" src={image.url_75x75}/>
               </div>
             </div>
@@ -96,17 +96,17 @@ export default class ImageCarousel extends Component {
         <div className="slideshow-container">
           {/* <div class="arrow">▻</div> */}
           <div className="carouselArrowBox" onClick={this.minusSlides}>
-            <a className="prev">&#10094;</a>
+            <a className="prevCarouselImage">&#10094;</a>
           </div>
           <div className="carouselArrowBoxRight" onClick={this.plusSlides}>
-            <a className="next">&#10095;</a>
+            <a className="nextCarouselImage">&#10095;</a>
           </div>
-          <form className="button">
+          {/* <form className="button">
             <button onClick={this.plusSlides} id="countDown" type="button" className="btn btn-success">Up Image: {this.state.imageCarouselValue}</button>
           </form>
           <form className="button">
             <button onClick={this.minusSlides} id="countDown" type="button" className="btn btn-success">Down Image: {this.state.imageCarouselValue}</button>
-          </form>
+          </form> */}
           <div className="mainPictureForCarouselHolder">
             <img id="mainPictureForCarousel" src={this.state.mainPicture}/>
           </div>

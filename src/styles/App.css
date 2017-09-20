@@ -281,7 +281,7 @@ text-decoration: none;
   background-color: #717171;
 }
 
-.prev, .next {
+.prevCarouselImage, .nextCarouselImage {
   line-height: 86px;
   font-size: 30px;
   /*color: #F2F1F1;*/
