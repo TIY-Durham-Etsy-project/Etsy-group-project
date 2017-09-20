@@ -5,10 +5,10 @@ export default class ShopIcons extends Component {
     return(
       <div className="shopicons">
         <div className = "shop-icon-small">
-            <img src = "" alt = "sml shop icon"/>
+          <img src = "" alt = "sml shop icon"/>
         </div>
         <div className  = "shopicons-header-text">
-          <h5 className = "shop-icon-shop-name">SHOP NAME HERE</h5>
+          <h5 className = "shop-icon-shop-name">{this.props.shopdata ? this.props.shopdata[0].shop_name : ""}</h5>
           <p className = "shop-icon-shop-location">in <strong>location here</strong></p>
         </div>
         <div className = "shopicons-wrapper">
@@ -30,54 +30,54 @@ export default class ShopIcons extends Component {
               <p>Price</p>
             </div>
           </div>    <div className = "shopicon-box">
-                <div className = "shopicon-photo">
-                  <img src = ""/>
-                </div>
-                <div className = "shopicon-text">
-                  <p>Item Name</p>
-                  <p>Price</p>
-                </div>
-              </div>    <div className = "shopicon-box">
-                    <div className = "shopicon-photo">
-                      <img src = ""/>
-                    </div>
-                    <div className = "shopicon-text">
-                      <p>Item Name</p>
-                      <p>Price</p>
-                    </div>
-                  </div>    <div className = "shopicon-box">
-                        <div className = "shopicon-photo">
-                          <img src = ""/>
-                        </div>
-                        <div className = "shopicon-text">
-                          <p>Item Name</p>
-                          <p>Price</p>
-                        </div>
-                      </div>    <div className = "shopicon-box">
-                            <div className = "shopicon-photo">
-                              <img src = ""/>
-                            </div>
-                            <div className = "shopicon-text">
-                              <p>Item Name</p>
-                              <p>Price</p>
-                            </div>
-                          </div>    <div className = "shopicon-box">
-                                <div className = "shopicon-photo">
-                                  <img src = ""/>
-                                </div>
-                                <div className = "shopicon-text">
-                                  <p>Item Name</p>
-                                  <p>Price</p>
-                                </div>
-                              </div>    <div className = "shopicon-box">
-                                    <div className = "shopicon-photo">
-                                      <img src = ""/>
-                                    </div>
-                                    <div className = "shopicon-text">
-                                      <p>Item Name</p>
-                                      <p>Price</p>
-                                    </div>
-                                  </div>
+            <div className = "shopicon-photo">
+              <img src = ""/>
+            </div>
+            <div className = "shopicon-text">
+              <p>Item Name</p>
+              <p>Price</p>
+            </div>
+          </div>    <div className = "shopicon-box">
+            <div className = "shopicon-photo">
+              <img src = ""/>
+            </div>
+            <div className = "shopicon-text">
+              <p>Item Name</p>
+              <p>Price</p>
+            </div>
+          </div>    <div className = "shopicon-box">
+            <div className = "shopicon-photo">
+              <img src = ""/>
+            </div>
+            <div className = "shopicon-text">
+              <p>Item Name</p>
+              <p>Price</p>
+            </div>
+          </div>    <div className = "shopicon-box">
+            <div className = "shopicon-photo">
+              <img src = ""/>
+            </div>
+            <div className = "shopicon-text">
+              <p>Item Name</p>
+              <p>Price</p>
+            </div>
+          </div>    <div className = "shopicon-box">
+            <div className = "shopicon-photo">
+              <img src = ""/>
+            </div>
+            <div className = "shopicon-text">
+              <p>Item Name</p>
+              <p>Price</p>
+            </div>
+          </div>    <div className = "shopicon-box">
+            <div className = "shopicon-photo">
+              <img src = ""/>
+            </div>
+            <div className = "shopicon-text">
+              <p>Item Name</p>
+              <p>Price</p>
+            </div>
+          </div>
         </div>
       </div>
     )
