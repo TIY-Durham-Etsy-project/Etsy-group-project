@@ -19,7 +19,7 @@ export default class Overview extends Component {
           <li>View <a href = "" className = "etsy-orange-link">shop policies</a></li>
         </ul>
         <div className = "accepts-gift-cards">
-          <div><img src = "giftcard.png"/></div>
+          <div><img alt = "giftcard.png" src = "giftcard.png"/></div>
           <div><span>This shop accepts Etsy gift cards</span></div>
         </div>
       </div>

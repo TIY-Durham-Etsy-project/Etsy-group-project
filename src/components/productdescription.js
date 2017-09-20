@@ -117,7 +117,7 @@ export default class ProductDescription extends Component {
       </button>
       {this.props.listingdata.quantity<50 ? (
         <div className = "limited-availability-section">
-          <div><img src = "hourglass.png"/></div>
+          <div><img alt = "hourglass.png" src = "hourglass.png"/></div>
           <div><span>Almost gone. There is only {this.props.listingdata.quantity} left.</span></div>
         </div>
       ) : (<div></div>)}
