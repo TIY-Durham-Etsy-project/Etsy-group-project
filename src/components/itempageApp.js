@@ -25,6 +25,7 @@ class ItemPageApp extends Component {
       listingdata: false,
       listinginventorydata: false,
       imagesdata: false,
+      shippinginfodata: false,
       shopdata: false,
       shoplistingdata: false,
       shoplistingimagesdata: false,
@@ -56,6 +57,12 @@ class ItemPageApp extends Component {
       }).then(data => {
         this.setState({ feedbackdata: data.results });
       })
+    })
+    // SHIPPING INFO FETCH
+    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/shipping/info?api_key=2o28zyiccm6dxpspusptspb0`).then(results => {
+      return results.json();
+    }).then(data => {
+      this.setState({ shippinginfodata: data.results });
     })
     // IMAGES FETCH
     fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=2o28zyiccm6dxpspusptspb0`).then(results => {
@@ -123,7 +130,10 @@ class ItemPageApp extends Component {
           <ProductDescription
           listingdata={this.state.listingdata}
           listinginventorydata={this.state.listinginventorydata}/>
-          <Overview/>
+          <Overview
+          listingdata={this.state.listingdata}
+          listinginventorydata={this.state.listinginventorydata}
+          shippinginfodata={this.state.shippinginfodata}/>
           <SocialButtons/>
           <ShopIcons/>
         </div>
