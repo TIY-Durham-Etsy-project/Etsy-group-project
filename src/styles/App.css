@@ -457,18 +457,17 @@ text-decoration: none;
 .details-dropdown-container-minimized{
   overflow: hidden;
   height: 150px;
-  -webkit-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
-  -moz-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
-  box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
+  position:relative;
 }
-.details-dropdown-container-minimized p{
-  -webkit-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
-  -moz-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
-  box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
+.details-dropdown-container-minimized:before {
+  content:'';
+  width:100%;
+  height:100%;
+  position:absolute;
+  -webkit-box-shadow: inset 0px -70px 30px -30px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px -70px 30px -30px rgba(255,255,255,1);
+  box-shadow: inset 0px -70px 30px -30px rgba(255,255,255,1);
 }
 .details-dropdown-container-full{
-
-}
-.details-dropdown-button{
 
 }
