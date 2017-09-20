@@ -31,14 +31,12 @@ export default class ProductDescription extends Component {
         productobj = this.props.listinginventorydata.products[i].offerings[0].price.currency_formatted_raw;
       }
     }
-    console.log(productobj)
     this.setState({ price: productobj })
   }
   shouldComponentUpdate(nextProps, nextState){
     if (this.state.initdata !== nextState.initdata || this.state.price !== nextState.price) {
       return true;
     } else if (this.props.listinginventorydata !== nextProps.listinginventorydata) {
-      this.setState({properties: [], propertyOptions: false, initdata: false, price: false});
       return true;
     } else {
       return false;
