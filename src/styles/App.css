@@ -85,10 +85,6 @@
   color: #343434;
 }
 
-/*.slider-child-double {
-  width: 655px;
-}*/
-
 .slider-child a {
 	text-decoration: none;
 }
@@ -101,6 +97,65 @@
 
 .slider-seemore:hover {
   text-decoration: underline;
+}
+
+/*------CAROUSEL STYLES BEGIN------*/
+.carousel-box {
+  margin: 20px 10px 40px 10px;
+  display: flex;
+}
+
+.carousel-parent {
+  width: 66%;
+  height: 315px;
+  border: 1px solid red;
+  display: flex;
+  margin-right: 10px;
+}
+
+.carousel-textbox {
+  width: 33%;
+  background-color: #512526;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-textbox h1 {
+  font-family: "Bitter", "Times", serif;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.carousel-textbox h3 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  margin-top: 5px;
+}
+
+.carousel-banners {
+  width: 34%;
+  border: 1px solid red;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carousel-banner1 {
+  height: 60%;
+  background-color: gray;
+  /*margin-bottom: 20px;*/
+}
+
+.carousel-banner2 {
+  height: 34%;
+  background-color: gray;
+  /*margin-top: 10px;*/
 }
 
 /*-------RESPONSIVE STYLES--------*/
