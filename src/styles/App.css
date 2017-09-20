@@ -458,13 +458,13 @@ text-decoration: none;
   overflow: hidden;
   height: 150px;
   -webkit-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
--moz-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
+  box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
 }
 .details-dropdown-container-minimized p{
   -webkit-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
--moz-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
+  box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
 }
 .details-dropdown-container-full{
 

@@ -6,12 +6,17 @@ export default class DetailsDropdown extends Component {
     this.handledropdown = this.handledropdown.bind(this);
     this.state = {
       initdropdown: false,
-      dropdowninited: false
+      dropdownclassname: "details-dropdown-container-minimized",
+      dropDownButtonText: "More +",
     }
   }
   handledropdown(event){
     event.preventDefault();
-    this.setState({ initdropdown: false });
+    if (this.state.dropdownclassname === "details-dropdown-container-full"){
+      this.setState({ dropdownclassname: "details-dropdown-container-minimized", dropDownButtonText: "More +" });
+    } else if (this.state.dropdownclassname === "details-dropdown-container-minimized"){
+      this.setState({ dropdownclassname: "details-dropdown-container-full", dropDownButtonText: "Less -" });
+    }
   }
   shouldComponentUpdate(nextProps, nextState){
     if (this.props.listingdata !== nextProps.listingdata || this.state.initdropdown !== nextState.initdropdown || this.state.dropdownclassname !== nextState.dropdownclassname) {
@@ -22,26 +27,23 @@ export default class DetailsDropdown extends Component {
   }
   componentDidUpdate(){
     let detailsdropdown = document.getElementsByClassName('detailsdropdown')[0];
-    if (detailsdropdown !== undefined && this.state.initdropdown === false && this.state.dropdowninited === false){
+    if (detailsdropdown !== undefined && this.state.initdropdown === false){
       const lineheight = document.defaultView.getComputedStyle(detailsdropdown, null);
       if (parseInt(lineheight.height) > 150){
-        this.setState({ initdropdown: true, dropdowninited: true });
+        this.setState({ initdropdown: true, dropdownclassname: "details-dropdown-container-minimized" });
       }
     }
   }
   render(){
-    // console.log("RENDER");
     return(
       <div className="detailsdropdown">
       <h3>Details</h3>
       {this.state.initdropdown ? (
         <div>
-          <div className="details-dropdown-container-minimized">
+          <div className={this.state.dropdownclassname}>
             <p>{this.props.listingdata ? this.props.listingdata.description.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") : ""}</p>
           </div>
-          <div className="details-dropdown-button">
-            <button onClick={this.handledropdown}>"More +"</button>
-          </div>
+          <button onClick={this.handledropdown}>{this.state.dropDownButtonText}</button>
         </div>
       ) : (
         <div className="details-dropdown-container-full">
