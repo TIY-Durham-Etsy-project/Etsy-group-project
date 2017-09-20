@@ -43,8 +43,7 @@ export default class ProductDescription extends Component {
           return objectOfPropertyNames
         })
       }
-      this.setState({ propertyOptions:objectOfPropertyNames })
-      console.log(this.state);
+      this.setState({ propertyOptions:objectOfPropertyNames });
     }
   }
   render(){
@@ -54,6 +53,11 @@ export default class ProductDescription extends Component {
         <div className="options-drop-down-wrapper" key={newLabelClassName}>
           <label for= {newLabelClassName+"-drop-down-menu"}>{newLabelClassName}</label><br/>
           <select className = {newLabelClassName+"-drop-down-menu"}>
+          {this.state.propertyOptions[newLabelClassName].map((x, i)=>{
+            return (
+              <option>{x}</option>
+            )
+          })}
           </select>
         </div>
         )
