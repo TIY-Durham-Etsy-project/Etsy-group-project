@@ -20,7 +20,8 @@ class ItemPageApp extends Component {
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handlesubmit = this.handlesubmit.bind(this);
     this.state = {
-      idvariable: "499471843",
+      // idvariable: "499471843",
+      idvariable: "549278375",
       listingdata: false,
       listinginventorydata: false,
       imagesdata: false,
@@ -122,8 +123,7 @@ class ItemPageApp extends Component {
           <ProductDescription
           listingdata={this.state.listingdata}
           listinginventorydata={this.state.listinginventorydata}
-          shopdata={this.state.shopdata}
-          shoplistingdata={this.state.shopdata}/>
+          shopdata={this.state.shopdata}/>
           <Overview/>
           <SocialButtons/>
           <ShopIcons/>

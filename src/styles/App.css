@@ -393,6 +393,8 @@ text-decoration: none;
   margin: auto;*/
 }
 
+/*Product Description*/
+
 .productdescription{
   width: 360px;
   margin: 0 15px;
@@ -451,6 +453,12 @@ text-decoration: none;
 .pseudo-link:hover{
   cursor: pointer;
 }
+
+.limited-availability-section{
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 11px;
+}
+
 
 
 /* overview */

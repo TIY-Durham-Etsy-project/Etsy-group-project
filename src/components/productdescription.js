@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 export default class ProductDescription extends Component {
   render(){
+    console.log(this.props.listingdata);
     return(
       <div className="productdescription">
         <h2>Product Title Goes Here</h2>
@@ -27,6 +28,11 @@ export default class ProductDescription extends Component {
       <button className = "add-to-cart-btn">
         Add to cart
       </button>
+      {this.props.listingdata.quantity<50 ? (
+        <div className = "limited-availability-section">
+          Don't miss out. There's only number available and number other people have this in their cart right now.
+        </div>
+      ) : (<div></div>)}
       <div className = "etsy-purchase-guarantee">
         <div className = "etsy-purchase-guarantee-left">
           <img src = "shield.png"/>
