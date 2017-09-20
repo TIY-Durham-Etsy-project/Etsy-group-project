@@ -1,6 +1,34 @@
 import React, { Component } from 'react';
 
+
+
 class ShareLinks extends Component {
+  constructor(props){
+    super(props);
+
+        this.state= {
+          media: 0,
+          parent: {}
+        }
+
+        this.setMedia = this.setMedia.bind(this)
+
+      };
+
+      setMedia() {
+       this.setState({media: window.innerWidth});
+     }
+
+      componentWillMount() {
+        let media = window.innerWidth;
+        console.log(media);
+        this.setMedia();
+      }
+
+  // setState(){
+  //   media: window.innerWidth;
+  // }
+
   render() {
     return (
       <div className="ShareLinks">
