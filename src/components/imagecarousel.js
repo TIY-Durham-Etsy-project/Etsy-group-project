@@ -93,8 +93,13 @@ export default class ImageCarousel extends Component {
     return (
       <div className="imageCarouselAll">
         <div className="slideshow-container">
-          {/* <a class="prev" onclick={this.minusSlides}>&#10094;</a> */}
-          {/* <a class="next" onclick={this.plusSlides}>&#10095;</a> */}
+          {/* <div class="arrow">▻</div> */}
+          <div className="carouselArrowBox">
+            <a className="prev" onclick={this.minusSlides}>&#10094;</a>
+          </div>
+          <div className="carouselArrowBoxRight">
+            <a className="next" onclick={this.plusSlides}>&#10095;</a>
+          </div>
           <form className="button">
             <button onClick={this.plusSlides} id="countDown" type="button" className="btn btn-success">Up Image: {this.state.imageCarouselValue}</button>
           </form>
