@@ -486,7 +486,9 @@ text-decoration: none;
   font-size: 15px;
 }
 
-
+.option-selection-wrapper{
+  line-height: 20px;
+}
 
 /* overview */
 
