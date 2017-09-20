@@ -122,8 +122,7 @@ class ItemPageApp extends Component {
         <div className = "right-content">
           <ProductDescription
           listingdata={this.state.listingdata}
-          listinginventorydata={this.state.listinginventorydata}
-          shopdata={this.state.shopdata}/>
+          listinginventorydata={this.state.listinginventorydata}/>
           <Overview/>
           <SocialButtons/>
           <ShopIcons/>

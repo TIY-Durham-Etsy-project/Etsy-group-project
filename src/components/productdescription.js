@@ -1,8 +1,64 @@
 import React, { Component } from 'react';
 
 export default class ProductDescription extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      properties: [],
+      numberofproperties: false,
+    };
+  }
+  shouldComponentUpdate(nextProps, nextState){
+    if (this.props.listinginventorydata !== nextProps.listinginventorydata || this.state.properties !== nextState.properties || this.state.numberofproperties !== nextState.numberofproperties) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  componentDidUpdate(){
+    if (this.props.listinginventorydata){
+      this.setState({ properties: this.props.listinginventorydata.products, numberofproperties: this.props.listinginventorydata.products[0].property_values.length})
+      // console.log(this.props.listinginventorydata.products[0].property_values.length);
+      // console.log(this.props.listinginventorydata.products);
+      // console.log(this.props.listinginventorydata.products);
+      // for (let i = 0; i < this.props.listinginventorydata.products.length; i++){
+      //   let product = this.props.listinginventorydata.products[i];
+      // }
+    }
+  }
   render(){
-    console.log(this.props);
+    let inventorySelects = []
+    for (let i = 0; i < this.statenumberofproperties; i++) {
+      inventorySelects.push(
+        <div>
+        <label for= "quantity-drop-down">Quantity</label><br/>
+        <select className = "quantity-drop-down" placeholder="quantity">
+        </select>
+        </div>
+      );
+    }
+    // let inventorySelects = this.state.properties.map((info, i) =>{
+    //   console.log(info)
+    //   console.log(i)
+    //     return (
+    //       <div className = "options-drop-down-wrapper">
+    //         <label for= "quantity-drop-down">Quantity</label><br/>
+    //             <select className = "quantity-drop-down" placeholder="quantity">
+    //           </select>
+    //     </div>
+    //   )
+    //   });
+    // let options = this.state.properties.map((info, i) =>{
+    //   console.log(info)
+    //   console.log(i)
+    //     return (
+    //       <div className = "options-drop-down-wrapper">
+    //         <label for= "quantity-drop-down">Quantity</label><br/>
+    //             <select className = "quantity-drop-down" placeholder="quantity">
+    //           </select>
+    //     </div>
+    //   )
+    //   });
     return(
       <div className="productdescription">
         <h2>{this.props.listingdata.title}</h2>
