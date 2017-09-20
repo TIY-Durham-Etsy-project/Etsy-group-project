@@ -5,7 +5,6 @@ body{
 
 h2{
   font-family: 'Bitter', 'Times', serif;
-  text-transform: uppercase;
 }
 
 /* header left/right styles */
@@ -47,6 +46,8 @@ h2{
   margin: 20px 10px;
   text-align: center;
 }
+
+
 
 
 
