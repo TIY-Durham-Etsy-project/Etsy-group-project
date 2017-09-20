@@ -119,7 +119,11 @@ class ItemPageApp extends Component {
           <FAQs/>
         </div>
         <div className = "right-content">
-          <ProductDescription/>
+          <ProductDescription
+          listingdata={this.state.listingdata}
+          listinginventorydata={this.state.listinginventorydata}
+          shopdata={this.state.shopdata}
+          shoplistingdata={this.state.shopdata}/>
           <Overview/>
           <SocialButtons/>
           <ShopIcons/>
