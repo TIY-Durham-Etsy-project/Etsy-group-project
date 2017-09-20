@@ -10,18 +10,18 @@ export default class SocialButtons extends Component {
         </div>
         <div className = "facebook-pinterest-twitter-icons">
           <button className = "social-fake-buttons">
-          <div><a href="http://fontawesome.io/icon/facebook-official/" className="fa fa-facebook"></a>
+          <div><a href="http://fontawesome.io/icon/facebook-official/" className="fa fa-facebook"> </a>
             <span className = "social-text">Share</span>
           </div>
           </button>
           <button className = "social-fake-buttons">
-          <div><a href="http://fontawesome.io/icon/pinterest/" className="fa fa-pinterest"></a>
+          <div><a href="http://fontawesome.io/icon/pinterest/" className="fa fa-pinterest"> </a>
           <span className = "social-text">Save</span>
           </div>
         </button>
         <button className = "social-fake-buttons">
           <div>
-            <a href="http://fontawesome.io/icon/twitter/" className="fa fa-twitter"></a>
+            <a href="http://fontawesome.io/icon/twitter/" className="fa fa-twitter"> </a>
             <span className = "social-text">Tweet</span>
           </div>
         </button>
