@@ -4,7 +4,6 @@ export default class ImageCarousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mainPicture: false,
       imageCarouselValue: 0
     }
     this.handlePictureChange = this.handlePictureChange.bind(this);
@@ -54,11 +53,6 @@ export default class ImageCarousel extends Component {
   }
 
   render(){
-    // This sets and places the appropriate image from the array.
-    //MOVED THIS FROM FUNCTIONS TO RENDER
-    if(this.props.imagesdata[this.state.imageCarouselValue] !== undefined){
-      this.state.mainPicture = this.props.imagesdata[this.state.imageCarouselValue].url_570xN;
-    }
     let imageItem = false;
     if(this.props.imagesdata[0] !== undefined){
       let count = 0;
