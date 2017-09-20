@@ -221,11 +221,7 @@ margin: 15px;
 text-decoration: none;
 }
 
-/* carousel */
-.imagecarousel{
-  width: 565px;
-  overflow: hidden;
-}
+
 
 /*Carousel CSS*/
 /*Carousel CSS*/
@@ -236,11 +232,9 @@ text-decoration: none;
   background-color: #F5F5F1;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
 
-.imageCarouselAll{
-  /*border: 15px;*/
-}
 
 #mainPictureForCarousel{
   z-index: 20;
