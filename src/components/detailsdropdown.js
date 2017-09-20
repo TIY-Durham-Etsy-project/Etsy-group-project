@@ -41,13 +41,13 @@ export default class DetailsDropdown extends Component {
       {this.state.initdropdown ? (
         <div>
           <div className={this.state.dropdownclassname}>
-            <p>{this.props.listingdata ? this.props.listingdata.description.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/&quot;/g, '"') : ""}</p>
+            <p>{this.props.listingdata ? this.props.listingdata.description.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"') : ""}</p>
           </div>
           <button onClick={this.handledropdown}>{this.state.dropDownButtonText}</button>
         </div>
       ) : (
         <div className="details-dropdown-container-full">
-          <p>{this.props.listingdata ? this.props.listingdata.description.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/&quot;/g, '"') : ""}</p>
+          <p>{this.props.listingdata ? this.props.listingdata.description.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"') : ""}</p>
         </div>
       )}
       </div>
