@@ -94,6 +94,7 @@ class ItemPageApp extends Component {
   }
   render() {
     return (
+
       <div className="ItemPageApp">
       <div className="PlayListForm">
         <form onSubmit={this.handlesubmit}>
@@ -107,6 +108,7 @@ class ItemPageApp extends Component {
         shoplistingdata={this.state.shoplistingdata}
         shoplistingimagesdata={this.state.shoplistingimagesdata}/>
         <div className = "item-page-wrapper">
+          <div className = "left-content">
           <FavoriteButton/>
           <ImageCarousel imagesdata={this.state.imagesdata}/>
           <CustomOrder/>
@@ -115,11 +117,15 @@ class ItemPageApp extends Component {
           <Reviews/>
           <MeetTheOwner/>
           <FAQs/>
+        </div>
+        <div className = "right-content">
           <ProductDescription/>
           <Overview/>
           <SocialButtons/>
           <ShopIcons/>
+        </div>
           <RelatedTags/>
+
         </div>
       </div>
     );
