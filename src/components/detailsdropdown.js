@@ -4,14 +4,23 @@ export default class DetailsDropdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lineheight: 0
+      initdropdown: false
     }
   }
-  componentWillMount(){
+  shouldComponentUpdate(nextProps, nextState){
+    if (this.props.listingdata !== nextProps.listingdata) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  componentDidUpdate(){
     let detailsdropdown = document.getElementsByClassName('detailsdropdown')[0];
     if (detailsdropdown !== undefined){
-      const value = document.defaultView.getComputedStyle(detailsdropdown, null);
-      console.log(value.height)
+      const lineheight = document.defaultView.getComputedStyle(detailsdropdown, null);
+      if (parseInt(lineheight.height) > 150){
+        console.log("ITS TOO BIG")
+      }
     }
   }
   render(){
