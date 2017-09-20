@@ -29,8 +29,8 @@ export default class DetailsDropdown extends Component {
     let detailsdropdown = document.getElementsByClassName('detailsdropdown')[0];
     if (detailsdropdown !== undefined && this.state.initdropdown === false){
       const lineheight = document.defaultView.getComputedStyle(detailsdropdown, null);
-      if (parseInt(lineheight.height) > 150){
-        this.setState({ initdropdown: true, dropdownclassname: "details-dropdown-container-minimized" });
+      if (parseInt(lineheight.height, 10) > 150){
+        this.setState({ initdropdown: true });
       }
     }
   }
@@ -41,13 +41,13 @@ export default class DetailsDropdown extends Component {
       {this.state.initdropdown ? (
         <div>
           <div className={this.state.dropdownclassname}>
-            <p>{this.props.listingdata ? this.props.listingdata.description.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") : ""}</p>
+            <p>{this.props.listingdata ? this.props.listingdata.description.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/&quot;/g, '"') : ""}</p>
           </div>
           <button onClick={this.handledropdown}>{this.state.dropDownButtonText}</button>
         </div>
       ) : (
         <div className="details-dropdown-container-full">
-          <p>{this.props.listingdata ? this.props.listingdata.description.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;") : ""}</p>
+          <p>{this.props.listingdata ? this.props.listingdata.description.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/&quot;/g, '"') : ""}</p>
         </div>
       )}
       </div>
