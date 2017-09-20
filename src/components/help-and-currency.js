@@ -14,7 +14,7 @@ class HelpAndCurrency extends Component {
             <a href="https://www.etsy.com/help?ref=ftr">help center</a>
           </span>
         </div>
-        {this.props.children}
+        {/* This is where ShareLinks will render if @media<600 */}
         <div className="float-right">
           <button className="locale-settings-button" onClick={()=>alert("This is your localization button!")}>
             <div className="display-table-cell">

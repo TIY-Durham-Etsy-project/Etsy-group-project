@@ -11,8 +11,8 @@ class FooterLinks extends Component {
         <ShopLinks />
         <SellLinks />
         <AboutLinks />
+        {/* This is where ShareLinks will render if @media>600 */}
         <ShareLinks />
-        {this.props.children}
       </div>
     );
   }
