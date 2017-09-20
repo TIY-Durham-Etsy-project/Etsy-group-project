@@ -156,7 +156,7 @@ button:hover{
   margin: 20px 10px;
 }
 
-.fav-heart{
+.fav-heart, .add-to-btn{
   background-color: white;
   border-radius: 3px;
   height: 26px;
@@ -216,6 +216,16 @@ button:hover{
   display: flex;
 }
 
+/*favorite and add to buttons (part of social media) */
+.favorite-and-addto-btns{
+  margin-left: 15px;
+  border-bottom: solid 1px #efefeb;
+
+}
+
+.favorite-and-addto-btns button{
+  margin: 20px 5px;
+}
 
 /* social media */
 .fa:hover{
@@ -240,9 +250,7 @@ margin: 15px;
 text-decoration: none;
 }
 
-.socialbuttons{
-  margin-top: 150px;
-}
+
 
 /*Carousel CSS*/
 /*Carousel CSS*/
