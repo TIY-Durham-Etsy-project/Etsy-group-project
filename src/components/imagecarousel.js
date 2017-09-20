@@ -27,31 +27,28 @@ export default class ImageCarousel extends Component {
 
   plusSlides(){
     // This increases the imageCarouselValue.
-    this.state.imageCarouselValue++;
+    this.setState({
+        imageCarouselValue: this.state.imageCarouselValue++
+    })
     // The code works without the following setState but the this.state.imageCarouselValue appears unchanged.
     if (this.state.imageCarouselValue > this.props.imagesdata.length-1){
       this.setState({
-          imageCarouselValue: 0
+        imageCarouselValue: 0,
+        mainPicture: this.props.imagesdata[0].url_570xN
       })
-    } else {
-      this.setState({
-          imageCarouselValue: this.state.imageCarouselValue
-      })
-    }
+    } 
   }
 
   // This function is not working yet.
   minusSlides(){
     // This decreases the imageCarouselValue.
-    this.state.imageCarouselValue--;
+    this.setState({
+        imageCarouselValue: this.state.imageCarouselValue--
+    })
     // The code works without the following setState but the this.state.imageCarouselValue appears unchanged.
     if (this.state.imageCarouselValue < 0){
       this.setState({
           imageCarouselValue: this.props.imagesdata.length-1
-      })
-    } else {
-      this.setState({
-          imageCarouselValue: this.state.imageCarouselValue
       })
     }
   }
