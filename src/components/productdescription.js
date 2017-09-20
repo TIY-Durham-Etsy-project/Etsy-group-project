@@ -8,16 +8,37 @@ export default class ProductDescription extends Component {
       properties: [],
       propertyOptions: false,
       initdata: false,
+      price: false
     };
   }
   handleChange(event){
     event.preventDefault();
-    console.log(this.state.properties)
-    var propertynamewithdash = event.target.className.replace(/-drop-down-menu/g, "")
-    console.log(propertynamewithdash.replace(/-/g, " "));
+    var htmlSelectObjects = document.querySelectorAll("select");
+    var propertyValuesArray = [];
+    for (let i = 0; i < this.state.properties.length; i++){
+      propertyValuesArray.push(htmlSelectObjects[i].value)
+    }
+    let productobj = {};
+    for (let i = 0; i < this.props.listinginventorydata.products.length; i++){
+      var howManyTrue = 0;
+      this.props.listinginventorydata.products[i].property_values.map((x, i)=>{
+        if (x.values[0] === propertyValuesArray[i]){
+          howManyTrue += 1;
+        }
+        return null
+      })
+      if (howManyTrue === this.state.properties.length){
+        productobj = this.props.listinginventorydata.products[i].offerings[0].price.currency_formatted_raw;
+      }
+    }
+    console.log(productobj)
+    this.setState({ price: productobj })
   }
   shouldComponentUpdate(nextProps, nextState){
-    if (this.props.listinginventorydata !== nextProps.listinginventorydata || this.state.initdata !== nextState.initdata) {
+    if (this.state.initdata !== nextState.initdata || this.state.price !== nextState.price) {
+      return true;
+    } else if (this.props.listinginventorydata !== nextProps.listinginventorydata) {
+      this.setState({properties: [], propertyOptions: false, initdata: false, price: false});
       return true;
     } else {
       return false;
@@ -25,7 +46,6 @@ export default class ProductDescription extends Component {
   }
   componentDidUpdate(){
     if (this.props.listinginventorydata && this.state.initdata === false){
-      // console.log(this.props.listinginventorydata.products[0].property_values.length);
       if (this.state.properties.length <= 0){
         this.props.listinginventorydata.products[0].property_values.map((x, i) => {
           return this.setState(prevState => ({
@@ -50,7 +70,7 @@ export default class ProductDescription extends Component {
           return objectOfPropertyNames
         })
       }
-      this.setState({ propertyOptions:objectOfPropertyNames, initdata:true });
+      this.setState({ propertyOptions:objectOfPropertyNames, initdata:true, price: this.props.listingdata.price });
     }
   }
   render(){
@@ -73,7 +93,7 @@ export default class ProductDescription extends Component {
       <div className="productdescription">
         <h2>{this.props.listingdata.title}</h2>
         <div className = "item-price ask">
-          <div><h3>${this.props.listingdata.price}</h3></div>
+          <div><h3>${this.state.price}</h3></div>
           <div><button className = "fav-btn">Ask a question</button></div>
         </div>
         <div className = "option-selection-wrapper">
@@ -104,7 +124,7 @@ export default class ProductDescription extends Component {
       ) : (<div></div>)}
       <div className = "etsy-purchase-guarantee">
         <div className = "etsy-purchase-guarantee-left">
-          <img src = "shield.png"/>
+          <img src = "shield.png" alt="shield.png"/>
         </div>
         <div className = "etsy-purchase-guarantee-right">
           <h2>Etsy Purchase Guarantee</h2>

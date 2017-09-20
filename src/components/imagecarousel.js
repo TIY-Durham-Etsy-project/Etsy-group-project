@@ -100,7 +100,7 @@ export default class ImageCarousel extends Component {
           </div>
           <div className="carouselArrowBoxRight" onClick={this.plusSlides}>
             <a className="nextCarouselImage">&#10095;</a>
-          </div>          
+          </div>
           <div className="mainPictureForCarouselHolder">
             <img id="mainPictureForCarousel" src={this.state.mainPicture}/>
           </div>
