@@ -3,22 +3,29 @@ import React, { Component } from 'react';
 export default class ProductDescription extends Component {
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
       properties: [],
-      propertyOptions: {},
-      numberofproperties: false,
+      propertyOptions: false,
+      initdata: false,
     };
   }
+  handleChange(event){
+    event.preventDefault();
+    console.log(this.state.properties)
+    var propertynamewithdash = event.target.className.replace(/-drop-down-menu/g, "")
+    console.log(propertynamewithdash.replace(/-/g, " "));
+  }
   shouldComponentUpdate(nextProps, nextState){
-    if (this.props.listinginventorydata !== nextProps.listinginventorydata || this.state.numberofproperties !== nextState.numberofproperties) {
+    if (this.props.listinginventorydata !== nextProps.listinginventorydata || this.state.initdata !== nextState.initdata) {
       return true;
     } else {
       return false;
     }
   }
   componentDidUpdate(){
-    if (this.props.listinginventorydata){
-      this.setState({ numberofproperties: this.props.listinginventorydata.products[0].property_values.length});
+    if (this.props.listinginventorydata && this.state.initdata === false){
+      // console.log(this.props.listinginventorydata.products[0].property_values.length);
       if (this.state.properties.length <= 0){
         this.props.listinginventorydata.products[0].property_values.map((x, i) => {
           return this.setState(prevState => ({
@@ -43,7 +50,7 @@ export default class ProductDescription extends Component {
           return objectOfPropertyNames
         })
       }
-      this.setState({ propertyOptions:objectOfPropertyNames });
+      this.setState({ propertyOptions:objectOfPropertyNames, initdata:true });
     }
   }
   render(){
@@ -52,10 +59,10 @@ export default class ProductDescription extends Component {
       return(
         <div className="options-drop-down-wrapper" key={newLabelClassName}>
           <label for= {newLabelClassName+"-drop-down-menu"}>{newLabelClassName}</label><br/>
-          <select className = {newLabelClassName+"-drop-down-menu"}>
+          <select onChange={this.handleChange} className = {newLabelClassName+"-drop-down-menu"}>
           {this.state.propertyOptions[newLabelClassName].map((x, i)=>{
             return (
-              <option>{x}</option>
+              <option value={x} key={x}>{x}</option>
             )
           })}
           </select>
