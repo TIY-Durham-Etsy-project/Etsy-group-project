@@ -8,18 +8,24 @@ export default class API extends Component {
     itemObjects: [],
   }
 
+  let openApi = "https://openapi.etsy.com/v2";
+  let apiKey = "api_key=dza1vj8ckkf1tbkxs30wjahj";
+  let include3 = "&category=clothing";
+
   componentDidMount() {
-    fetch('https://openapi.etsy.com/v2/listings/trending?api_key=dza1vj8ckkf1tbkxs30wjahj&includes=MainImage')
+    // want to change URL with variables for different filters
+    fetch(`${openApi}/listings/trending?${apiKey}&includes=MainImage`)
     .then(r => r.json())
     .then(responseData => {
-      this.setState({itemObjects: responseData.r.results});
+      let dataArray = responseData.r.results
+      this.setState({itemObjects: dataArray});
     })
     .catch((error) => {
       console.log("Error with Fetching : ", error);
     });
   }
 
-  
+
 
     render() {
       return (<div>MyComponent</div>);
