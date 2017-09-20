@@ -37,7 +37,7 @@ export default class DetailsDropdown extends Component {
   render(){
     return(
       <div className="detailsdropdown">
-      <h3>Details</h3>
+      <h3 className = "details-header">Details</h3>
       {this.state.initdropdown ? (
         <div>
           <div className={this.state.dropdownclassname}>

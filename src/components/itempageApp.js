@@ -135,7 +135,10 @@ class ItemPageApp extends Component {
           shippinginfodata={this.state.shippinginfodata}/>
           <SocialButtons/>
           <ShopIcons
-            shopdata={this.state.shopdata}/>
+            shopdata={this.state.shopdata}
+            shoplistingdata={this.state.shoplistingdata}
+            shoplistingimagesdata={this.state.shoplistingimagesdata}
+          />
         </div>
           <RelatedTags/>
 
