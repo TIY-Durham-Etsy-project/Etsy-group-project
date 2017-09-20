@@ -16,7 +16,7 @@ h2{
 }
 
 h4 {
-  color: darkorange;
+  color: #f56400;
   margin: 3px 7px 0 0 ;
   font-size: 35px;
 }
@@ -118,7 +118,7 @@ button:hover{
 
 .right-content{
   width: 400px;
-  margin-left: 23px;
+  margin-left: 10px;
 }
 
 /* header left/right styles */
@@ -175,10 +175,11 @@ button:hover{
 
 .favorite-button{
   display: flex;
-  width: 565px;
+  width: 570px;
   height: 67px;
   background-color: #F1F1F1;
   border-radius: 1%;
+  margin-bottom: 10px;
 }
 
 .item-like{
@@ -190,13 +191,6 @@ button:hover{
   display: flex;
 }
 
-/* favorite and add to button div */
-.add-to{
-  margin: 15px;
-  background-color: white;
-  border: solid 1px #dcdcd9;
-  width: 360px;
-}
 
 /* social media */
 .fa:hover{
@@ -221,10 +215,8 @@ margin: 15px;
 text-decoration: none;
 }
 
-/* carousel */
-.imagecarousel{
-  width: 565px;
-  overflow: hidden;
+.socialbuttons{
+  margin-top: 150px;
 }
 
 /*Carousel CSS*/
@@ -233,14 +225,12 @@ text-decoration: none;
 .mainPictureForCarouselHolder{
   width: 570px;
   height: 724px;
-  background-color: #F5F5F1;
+  background-color: #F1F1F1;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
 }
 
-.imageCarouselAll{
-  /*border: 15px;*/
-}
 
 #mainPictureForCarousel{
   z-index: 20;
@@ -253,7 +243,7 @@ text-decoration: none;
 }
 
 .subCarouselImage{
-  background-color: #999999;
+  background-color: #F5F5F1;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -383,9 +373,30 @@ text-decoration: none;
 
 .productdescription{
   width: 360px;
-  height: 50px;
-  margin: -20px 15px;
-  display: inline-block;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Lato', 'Arial', sans-serif;
+}
+
+.productdescription label{
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.add-to-cart-btn{
+  background-color: #F56400;
+  width: 370px;
+  height: 30px;
+  border: solid 1px #F56400;
+  margin: 20px 0;
+  border-radius: 3px;
+  color: white;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .item-price{
@@ -393,6 +404,26 @@ text-decoration: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+}
+
+.etsy-purchase-guarantee{
+  display: flex;
+  justify-content: space-between;
+  width: 360px;
+  margin: 20px 0;
+  background-color: #FAF9F5;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.pseudo-link{
+  color: #8B8B8A;
+  text-decoration: underline;
+}
+
+.pseudo-link:hover{
+  cursor: pointer;
 }
 
 /* item-page-wrapper for all data */
