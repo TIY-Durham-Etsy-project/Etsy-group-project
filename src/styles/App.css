@@ -394,3 +394,12 @@ text-decoration: none;
   justify-content: space-between;
   align-items: center;
 }
+
+/* item-page-wrapper for all data */
+.item-page-wrapper{
+  width: 75%;
+  background-color: white;
+  margin: 0 auto;
+  border: solid 1px #dcdcd9;
+  border-radius: 1%;
+  padding: 35px;
