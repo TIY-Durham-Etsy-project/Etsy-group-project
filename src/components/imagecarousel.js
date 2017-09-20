@@ -43,9 +43,11 @@ export default class ImageCarousel extends Component {
       this.state.imageCarouselValue = 0;
     }
     // This sets and places the appropriate image from the array.
-    this.state.mainPicture = this.props.imagesdata[this.state.imageCarouselValue].url_570xN;
-    let place_Image = document.getElementById('mainPictureForCarousel');
-    place_Image.src = this.state.mainPicture;
+    if(this.props.imagesdata[this.state.imageCarouselValue] !== undefined){
+      this.state.mainPicture = this.props.imagesdata[this.state.imageCarouselValue].url_570xN;
+      let place_Image = document.getElementById('mainPictureForCarousel');
+      place_Image.src = this.state.mainPicture;
+    }
   }
 
   // This function is not working yet.
@@ -63,45 +65,44 @@ export default class ImageCarousel extends Component {
       this.state.imageCarouselValue = this.props.imagesdata.length-1;
     }
     // This sets and places the appropriate image from the array.
-    this.state.mainPicture = this.props.imagesdata[this.state.imageCarouselValue].url_570xN;
-    let place_Image = document.getElementById('mainPictureForCarousel');
-    place_Image.src = this.state.mainPicture;
+    if(this.props.imagesdata[this.state.imageCarouselValue] !== undefined){
+      this.state.mainPicture = this.props.imagesdata[this.state.imageCarouselValue].url_570xN;
+      let place_Image = document.getElementById('mainPictureForCarousel');
+      place_Image.src = this.state.mainPicture;
+    }
   }
 
   render(){
     let imageItem = false;
     if(this.props.imagesdata[0] !== undefined){
-      console.log(this.props.imagesdata);
       this.state.mainPicture = this.props.imagesdata[0].url_570xN;
       this.state.imageArray = this.props.imagesdata;
-    let count = 0;
-    imageItem = this.props.imagesdata.map(image => {
-      console.log(image);
-      count++;
-      return (
-        <div key = {image.id} className = "itemsBoxes">
-          <div className="card" id={count} onClick={this.handlePictureChange}>
-            <div className="card-block">
-              <img src={image.url_75x75} />
+      let count = 0;
+      imageItem = this.props.imagesdata.map(image => {
+        count++;
+        return (
+          <div key={image.id} className="itemsBoxes">
+            <div className="card" id={count} onClick={this.handlePictureChange}>
+              <div className="card-block">
+                <img src={image.url_75x75}/>
+              </div>
             </div>
           </div>
-        </div>
         )
       })
-      }
-    return(
+    }
+    return (
       <div className="imagecarousel">
-        <p>Carousel:</p>
         <div class="slideshow-container">
-        <img id="mainPictureForCarousel" src={this.state.mainPicture} />
-        {/* <a class="prev" onclick={this.minusSlides}>&#10094;</a>
-        <a class="next" onclick={this.plusSlides}>&#10095;</a> */}
-        <form className="button">
-              <button onClick={this.plusSlides}  id="countDown" type="button" className="btn btn-success">Up Image: {this.state.imageCarouselValue}</button>
-        </form>
-        <form className="button">
-              <button onClick={this.minusSlides}  id="countDown" type="button" className="btn btn-success">Down Image: {this.state.imageCarouselValue}</button>
-        </form>
+          <img id="mainPictureForCarousel" src={this.state.mainPicture}/>
+          {/* <a class="prev" onclick={this.minusSlides}>&#10094;</a> */}
+          {/* <a class="next" onclick={this.plusSlides}>&#10095;</a> */}
+          <form className="button">
+            <button onClick={this.plusSlides} id="countDown" type="button" className="btn btn-success">Up Image: {this.state.imageCarouselValue}</button>
+          </form>
+          <form className="button">
+            <button onClick={this.minusSlides} id="countDown" type="button" className="btn btn-success">Down Image: {this.state.imageCarouselValue}</button>
+          </form>
         </div>
         {imageItem}
       </div>
