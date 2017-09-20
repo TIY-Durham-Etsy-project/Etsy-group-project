@@ -5,36 +5,38 @@ export default class ImageCarousel extends Component {
     super(props);
     this.state = {
       mainPicture: false,
-      imageArray: {}
+      imageArray: {},
+      imageCarouselValue: 0
     }
     this.handlePictureChange = this.handlePictureChange.bind(this);
   }
 
   componentDidMount() {
-    // this.state.pictureslet
-    // let countUp = 0;
-    // if(this.props.imagesdata[0] !== undefined){
-    // let countUp = 0;
-    // let pictures = this.props.imagesdata.map((image) => {
-    //     console.log(image);
-    //     countUp++;
-    //     return (
-    //
-    //       <div className='pic justify-content-center ' key={countUp}>
-    //         <img src={image} />
-    //       </div>
-    //
-    //     )
-    //   })
-    // }
+
+    if(this.props.imagesdata[0] !== undefined){
+      this.setState({
+          mainPicture: this.state.imageCarouselValue
+      })
+    }
   }
 
   handlePictureChange(event){
     console.log("Event: " + event.currentTarget.id);
     let value = event.currentTarget.id;
+    let x = this.props.imagesdata[value-1].url_570xN;
     this.setState({
-        mainPicture: event.target.value
+        mainPicture: this.props.imagesdata[event.currentTarget.id-1].url_570xN,
+        ImageCarouselValue: this.props.imagesdata[event.currentTarget.id-1].url_570xN
       })
+    this.state.imageCarouselValue = this.props.imagesdata[event.currentTarget.id-1].url_570xN
+
+    this.state.mainPicture = this.props.imagesdata[event.currentTarget.id-1].url_570xN;
+    console.log("mainPicture src: ", this.state.mainPicture);
+    // this.setState({
+    //     mainPicture: this.props.imagesdata[event.currentTarget.id-1].url_570xN
+    //   })
+    let play_Song = document.getElementById('music_Here');
+    play_Song.src = this.state.mainPicture;
   }
 
   render(){
@@ -71,7 +73,7 @@ export default class ImageCarousel extends Component {
         <p>Carousel:</p>
         {/* <img src={link[0]} />
         <img src={link[1]} /> */}
-        <img src={this.state.mainPicture} />
+        <img id="music_Here" src={this.state.mainPicture} />
         {imageItem}
         {/* {this.state.imageItems} */}
          {/* {this.state.pictures} */}

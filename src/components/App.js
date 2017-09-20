@@ -72,7 +72,7 @@ class App extends Component {
         let array = [];
         let i = 0;
         while (i < 4){
-          fetch(`https://openapi.etsy.com/v2/listings/${data.results[i].listing_id}/images?api_key=xu3t5vf2ok7saualskn524az`).then(results => {
+          fetch(`https://openapi.etsy.com/v2/listings/${data.results[i].listing_id}/images?api_key=88vhbyb8aqimszfdxfugwgnd`).then(results => {
             return results.json();
           }).then(data => {
             array.push(data.results[0].url_75x75);
