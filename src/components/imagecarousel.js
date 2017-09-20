@@ -5,7 +5,6 @@ export default class ImageCarousel extends Component {
     super(props);
     this.state = {
       mainPicture: false,
-      imageArray: {},
       imageCarouselValue: 0
     }
     this.handlePictureChange = this.handlePictureChange.bind(this);
@@ -59,13 +58,9 @@ export default class ImageCarousel extends Component {
     //MOVED THIS FROM FUNCTIONS TO RENDER
     if(this.props.imagesdata[this.state.imageCarouselValue] !== undefined){
       this.state.mainPicture = this.props.imagesdata[this.state.imageCarouselValue].url_570xN;
-      let place_Image = document.getElementById('mainPictureForCarousel');
-      place_Image.src = this.state.mainPicture;
     }
     let imageItem = false;
     if(this.props.imagesdata[0] !== undefined){
-      this.state.mainPicture = this.props.imagesdata[0].url_570xN;
-      this.state.imageArray = this.props.imagesdata;
       let count = 0;
       imageItem = this.props.imagesdata.map(image => {
         count++;
@@ -91,7 +86,7 @@ export default class ImageCarousel extends Component {
             <a className="nextCarouselImage">&#10095;</a>
           </div>
           <div className="mainPictureForCarouselHolder">
-            <img alt="mainPictureForCarousel" id="mainPictureForCarousel" src={this.state.mainPicture}/>
+            <img alt="mainPictureForCarousel" id="mainPictureForCarousel" src={this.props.imagesdata ? this.props.imagesdata[this.state.imageCarouselValue].url_570xN : ""}/>
           </div>
         </div>
         <div className="subCarouselImageHolder">
