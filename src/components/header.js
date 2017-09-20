@@ -21,16 +21,21 @@ export default class Header extends Component {
         </div>
 
                 <div className="lower-nav">
-                  <ul className="header-list " id="button">
-                  <li className="header-list-item">Clothing & Accessories</li>
-                  <li className="header-list-item">Jewelry</li>
-                  <li className="header-list-item">Craft Supplies & Tools</li>
-                  <li className="header-list-item">Weddings</li>
-                  <li className="header-list-item">Weddings</li>
-                  <li className="header-list-item">Entertainment</li>
-                  <li className="header-list-item">Home & Living</li>
-                  <li className="header-list-item">Kids & Baby</li>
-                  <li className="header-list-item">Vintage</li>
+                  <ul className="header-list dropdown" >
+                    <button className="header-button dropbtn"><li className="header-list-item">Clothing & Accessories</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content">Accessories</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content">Bags & Purses</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content">Clothing</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content">Shoes</li></button>
+
+                    <button className="header-button dropbtn"><li className="header-list-item">Jewelry</li></button>
+                    <button className="header-button dropbtn"><li className="header-list-item">Craft Supplies & Tools</li></button>
+                    <button className="header-button dropbtn"><li className="header-list-item">Weddings</li></button>
+                    <button className="header-button dropbtn"><li className="header-list-item">Weddings</li></button>
+                    <button className="header-button dropbtn"><li className="header-list-item">Entertainment</li></button>
+                    <button className="header-button dropbtn"><li className="header-list-item">Home & Living</li></button>
+                    <button className="header-button dropbtn"><li className="header-list-item">Kids & Baby</li></button>
+                    <button className="header-button dropbtn"><li className="header-list-item">Vintage</li></button>
                   </ul>
                 </div>
 
