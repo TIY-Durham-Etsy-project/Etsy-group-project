@@ -43,6 +43,9 @@ h4 {
 button:hover{
   opacity: 0.7;
   cursor: pointer;
+}
+
+.header-list-item:hover{
   border-bottom: 6px solid #f56400;
 
 }
@@ -244,6 +247,16 @@ button:hover{
 }
 
 /* social media */
+
+.facebook-pinterest-twitter-icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 15px 0;
+  margin-left: 15px;
+  border-bottom: solid 1px #efefeb;
+}
+
 .fa:hover{
   opacity: 0.7;
 }
@@ -252,18 +265,29 @@ button:hover{
   color: #627AAD;
   margin: 15px;
   text-decoration: none;
+  font-size: 25px;
+
 }
 
 .fa-pinterest{
 Color: #D84D54;
 margin: 15px;
 text-decoration: none;
+font-size: 25px;
+
 }
 
 .fa-twitter{
 Color: #33C0F1;
 margin: 15px;
 text-decoration: none;
+font-size: 25px;
+}
+
+.social-fake-buttons{
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
 }
 
 
