@@ -404,3 +404,16 @@ text-decoration: none;
   border-radius: 1%;
   padding: 35px;
 }
+
+/*Item Page Details Dropdown*/
+.details-dropdown-container-minimized{
+  overflow: hidden;
+  height: 150px;
+
+}
+.details-dropdown-container-full{
+
+}
+.details-dropdown-button{
+  
+}
