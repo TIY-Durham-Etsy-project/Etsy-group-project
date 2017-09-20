@@ -21,6 +21,15 @@ h4 {
   font-size: 35px;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 15px;
+}
+
 button:hover{
   opacity: 0.7;
   cursor: pointer;
@@ -51,6 +60,14 @@ button:hover{
   margin-right: 35px;
   width: 300px;
   justify-content: space-between;
+}
+
+.lower-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  height: 80px;
+  align-items: center;
 }
 
 .etsy-font{
@@ -403,3 +420,4 @@ text-decoration: none;
   border: solid 1px #dcdcd9;
   border-radius: 1%;
   padding: 35px;
+}
