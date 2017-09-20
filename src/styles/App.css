@@ -41,7 +41,6 @@ button:hover{
 }
 
 
-
 /* navigation styles */
 .upper-nav {
   display: flex;
@@ -158,9 +157,13 @@ button:hover{
 }
 
 .fav-heart{
-  border: solid 1px #dcdcd9;
   background-color: white;
-  border-radius: 1%;
+  border-radius: 3px;
+  height: 26px;
+  line-height: 24px;
+  font-size: 13px;
+  padding: 0 9px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .single-fav{
@@ -410,7 +413,7 @@ text-decoration: none;
 }
 
 .add-to-cart-btn{
-  background-color: #F56400;
+  background-color:#F56400;
   width: 370px;
   height: 30px;
   border: solid 1px #F56400;
@@ -461,6 +464,38 @@ text-decoration: none;
   font-family: 'Lato', 'Arial', sans-serif;
   border-bottom: solid 1px #efefeb;
 }
+
+.overview-title{
+  font-size: 14px;
+}
+
+.overview-list{
+  color: #666;
+  font-size: 16px;
+  line-height: 20px;
+  padding-left: 20px;
+}
+
+.accepts-gift-cards{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 10px;
+  color: #666;
+}
+
+.etsy-orange-link{
+    text-decoration: none;
+    color: #F56400;
+}
+
+.etsy-orange-link:hover{
+  border-bottom: solid 1px #F56400;
+}
+
+
 
 
 /* item-page-wrapper for all data */

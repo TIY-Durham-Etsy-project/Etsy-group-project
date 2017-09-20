@@ -94,7 +94,6 @@ class ItemPageApp extends Component {
   }
   render() {
     return (
-
       <div className="ItemPageApp">
       <div className="PlayListForm">
         <form onSubmit={this.handlesubmit}>
@@ -125,6 +124,7 @@ class ItemPageApp extends Component {
           <ShopIcons/>
         </div>
           <RelatedTags/>
+
         </div>
       </div>
     );
