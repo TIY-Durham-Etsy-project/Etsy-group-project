@@ -1,5 +1,6 @@
 .App {
   /*text-align: center;*/
+  /*background-color: #efefeb;*/
 }
 
 /*------------ETSY INFO STYLES BEGIN-----------*/
@@ -37,9 +38,15 @@
 }
 
 /*-------------SLIDER STYLES BEGIN-------------*/
+.slider-row{
+  text-align: center;
+  color: #343434;
+  margin: 40px 0;
+}
+
 .slider-parent {
-	border: 1px solid #dcdcd9;
-	border-radius: 2px;
+	/*border: 1px solid #dcdcd9;*/
+	/*border-radius: 2px;*/
 	display: flex;
 }
 
@@ -48,6 +55,7 @@
 	border-radius: 2px;
 	width: 205px;
 	margin: 10px;
+  background: white;
 }
 
 .slider-child h3 {
@@ -60,4 +68,14 @@
 
 .slider-child a {
 	text-decoration: none;
+}
+
+.slider-seemore {
+  color: #f56400;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.slider-seemore:hover {
+  text-decoration: underline;
 }
