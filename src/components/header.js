@@ -19,21 +19,21 @@ export default class Header extends Component {
               <div> <i className="fa fa-shopping-cart" aria-hidden="true">Cart</i></div>
             </div>
         </div>
-                <hr className="lower-nav"/>
-                <div className="lower-nav">
 
-                  <ul>
-                  <li>Clothing & Accessories</li>
-                  <li>Jewelry</li>
-                  <li>Craft Supplies & Tools</li>
-                  <li>Weddings</li>
-                  <li>Entertainment</li>
-                  <li>Home & Living</li>
-                  <li>Kids & Baby</li>
-                  <li>Vintage</li>
+                <div className="lower-nav">
+                  <ul className="header-list " id="button">
+                  <li className="header-list-item">Clothing & Accessories</li>
+                  <li className="header-list-item">Jewelry</li>
+                  <li className="header-list-item">Craft Supplies & Tools</li>
+                  <li className="header-list-item">Weddings</li>
+                  <li className="header-list-item">Weddings</li>
+                  <li className="header-list-item">Entertainment</li>
+                  <li className="header-list-item">Home & Living</li>
+                  <li className="header-list-item">Kids & Baby</li>
+                  <li className="header-list-item">Vintage</li>
                   </ul>
                 </div>
-                <hr/>
+
 
 
       </div>

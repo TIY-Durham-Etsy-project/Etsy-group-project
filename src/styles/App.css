@@ -21,13 +21,18 @@ h4 {
   font-size: 35px;
 }
 
-ul {
+.header-list {
   list-style: none;
   display: flex;
+  text-decoration: none;
 }
 
-li {
-  margin: 15px;
+.header-list-item {
+  margin: 19px;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 12px;
+  color: #666666;
+
 }
 
 button:hover{
