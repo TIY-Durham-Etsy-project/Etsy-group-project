@@ -21,6 +21,15 @@ h4 {
   font-size: 35px;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 15px;
+}
+
 button:hover{
   opacity: 0.7;
   cursor: pointer;
@@ -51,6 +60,14 @@ button:hover{
   margin-right: 35px;
   width: 300px;
   justify-content: space-between;
+}
+
+.lower-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  height: 80px;
+  align-items: center;
 }
 
 .etsy-font{
@@ -435,6 +452,7 @@ text-decoration: none;
   border-radius: 1%;
   padding: 35px;
 }
+<<<<<<< HEAD
 
 /*Item Page Details Dropdown*/
 .details-dropdown-container-minimized{
@@ -455,3 +473,5 @@ box-shadow: inset 0px -87px 40px 10px rgba(255,255,255,1);
 .details-dropdown-button{
 
 }
+=======
+>>>>>>> 0790761676cf1a974ac8bc6ab9dec28c9240cba8
