@@ -176,7 +176,7 @@ button:hover{
   border-radius: 1%;
   padding: 35px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .right-content{
@@ -681,7 +681,7 @@ font-size: 25px;
 .detailsdropdown button{
   font-family: Arial;
   color: #f56400;
-  font-size: 16px;
+  font-size: 14px;
   background: #ffffff;
   border: solid #ffffff 0px;
   text-decoration: none;
@@ -691,4 +691,20 @@ font-size: 25px;
 }
 .detailsdropdown button:hover{
   text-decoration: underline;
+  opacity: 1;
+}
+
+.details-header{
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.detailsdropdown{
+  color: #77777B;
+  font-family: 'Lato', 'Arial', sans-serif;
+  padding-bottom: 25px;
+  border-bottom: solid 1px #efefeb;
+
+
 }
