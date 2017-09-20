@@ -97,7 +97,7 @@ export default class ProductDescription extends Component {
         <div className = "option-selection-wrapper">
         {inventorySelects}
           <div className = "options-drop-down-wrapper">
-            <label for= "quantity-drop-down">Quantity</label><br/>
+            <label htmlFor= "quantity-drop-down">Quantity</label><br/>
                 <select className = "quantity-drop-down" placeholder="quantity">
                 <option>1</option>
                 <option>2</option>
