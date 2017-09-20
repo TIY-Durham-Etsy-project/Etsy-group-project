@@ -94,7 +94,7 @@ export default class ProductDescription extends Component {
         <h2>{this.props.listingdata.title}</h2>
         <div className = "item-price ask">
           <div><h3>${this.state.price}</h3></div>
-          <div><button className = "fav-btn">Ask a question</button></div>
+          <div><button className = "fav-heart">Ask a question</button></div>
         </div>
         <div className = "option-selection-wrapper">
         {inventorySelects}
