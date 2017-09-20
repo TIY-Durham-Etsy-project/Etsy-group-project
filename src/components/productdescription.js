@@ -10,8 +10,7 @@ export default class ProductDescription extends Component {
           <div><button className = "fav-btn">Ask a question</button></div>
         </div>
         <div className = "options-drop-down-wrapper">
-          <p>Quantity</p>
-            <form>
+          <label for= "quantity-drop-down">Quantity</label><br/>
               <select className = "quantity-drop-down" placeholder="quantity">
               <option>1</option>
               <option>2</option>
@@ -24,11 +23,19 @@ export default class ProductDescription extends Component {
               <option>9</option>
               <option>10</option>
             </select>
-        </form>
       </div>
       <button className = "add-to-cart-btn">
         Add to cart
       </button>
+      <div className = "etsy-purchase-guarantee">
+        <div className = "etsy-purchase-guarantee-left">
+        </div>
+        <div className = "etsy-purchase-guarantee-right">
+          <h2>Etsy Purchase Guarantee</h2>
+          <p>Get what you ordered or your money back.</p>
+          <p className = "pseudo-link">Learn More</p>
+        </div>
+      </div>
     </div>
     )
   }
