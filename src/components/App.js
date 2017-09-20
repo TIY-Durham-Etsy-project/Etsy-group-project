@@ -1,37 +1,14 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import CustomOrder from './customorder.js';
-import DetailsDropdown from './detailsdropdown.js';
-import FAQs from './faqs.js';
-import FavoriteButton from './favoritebutton.js';
 import Header from './header.js';
-import ItemHeader from './ItemHeader.js';
-import ImageCarousel from './imagecarousel.js';
-import MeetTheOwner from './meettheowner.js';
-import Overview from './overview.js';
-import ProductDescription from './productdescription.js';
-import RelatedTags from './relatedtags.js';
-import Reviews from './reviews.js';
-import ShopIcons from './shopicons.js';
-import SocialButtons from './socialbuttons.js';
+import ItemPageApp from './itempageApp.js';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.handleTextChange = this.handleTextChange.bind(this);
-    this.handlesubmit = this.handlesubmit.bind(this);
-    this.state = {
-      idvariable: "",
-      listingInventoryData: false,
-      listingdata: false,
-      imagesdata: false,
-      shopdata: false,
-      shoplistingdata: false,
-      shoplistingimagesdata: false
-    };
+    //There should be some kind of "state" that starts empty.
+    //There should be a turnery statement that says "if state is empty, show frontpage. if it has a number, show itempage"
   }
-  // This mounts the page.
-  componentDidMount() {
 
   }
   handleTextChange(event){
@@ -86,30 +63,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <div className="PlayListForm">
-            <form onSubmit={this.handlesubmit}>
-              <input onChange={this.handleTextChange} type="text" id="idnumber"
-              placeholder="ID" value={this.state.idvariable}/>
-              <button type="submit">"SUBMIT"</button>
-            </form>
-          </div>
-        <Header/>
-        <ItemHeader
-        shopdata={this.state.shopdata}
-        shoplistingdata={this.state.shoplistingdata}
-        shoplistingimagesdata={this.state.shoplistingimagesdata}/>
-        <FavoriteButton/>
-        <ImageCarousel imagesdata={this.state.imagesdata}/>
-        <CustomOrder/>
-        <DetailsDropdown/>
-        <Reviews/>
-        <MeetTheOwner/>
-        <FAQs/>
-        <ProductDescription/>
-        <Overview/>
-        <SocialButtons/>
-        <ShopIcons/>
-        <RelatedTags/>
+        <Header />
+        {/* FRONT PAGE SHOULD GO HERE */}
+        <ItemPageApp />
+        {/* ADD OTHER GROUPS FOOTER HERE */}
       </div>
     );
   }
