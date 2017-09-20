@@ -3,83 +3,117 @@ import React, { Component } from 'react';
 export default class ProductDescription extends Component {
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
       properties: [],
-      numberofproperties: false,
+      propertyOptions: false,
+      initdata: false,
+      price: false
     };
   }
+  handleChange(event){
+    event.preventDefault();
+    var htmlSelectObjects = document.querySelectorAll("select");
+    var propertyValuesArray = [];
+    for (let i = 0; i < this.state.properties.length; i++){
+      propertyValuesArray.push(htmlSelectObjects[i].value)
+    }
+    let productobj = {};
+    for (let i = 0; i < this.props.listinginventorydata.products.length; i++){
+      var howManyTrue = 0;
+      this.props.listinginventorydata.products[i].property_values.map((x, i)=>{
+        if (x.values[0] === propertyValuesArray[i]){
+          howManyTrue += 1;
+        }
+        return null
+      })
+      if (howManyTrue === this.state.properties.length){
+        productobj = this.props.listinginventorydata.products[i].offerings[0].price.currency_formatted_raw;
+      }
+    }
+    console.log(productobj)
+    this.setState({ price: productobj })
+  }
   shouldComponentUpdate(nextProps, nextState){
-    if (this.props.listinginventorydata !== nextProps.listinginventorydata || this.state.numberofproperties !== nextState.numberofproperties) {
+    if (this.state.initdata !== nextState.initdata || this.state.price !== nextState.price) {
+      return true;
+    } else if (this.props.listinginventorydata !== nextProps.listinginventorydata) {
+      this.setState({properties: [], propertyOptions: false, initdata: false, price: false});
       return true;
     } else {
       return false;
     }
   }
   componentDidUpdate(){
-    if (this.props.listinginventorydata){
-      let array = [];
-      this.setState({ numberofproperties: this.props.listinginventorydata.products[0].property_values.length})
-      this.props.listinginventorydata.products[0].property_values.map((x, i) => {
-        this.setState(prevState => ({
-          properties: [...prevState.properties, x.property_name]
-        }))
-      })
-      // for (let i = 0; i < this.props.listinginventorydata.products.length; i++){
-      //   let product = this.props.listinginventorydata.products[i];
-      //   console.log(product)
-      // }
-      console.log(this.state);
+    if (this.props.listinginventorydata && this.state.initdata === false){
+      if (this.state.properties.length <= 0){
+        this.props.listinginventorydata.products[0].property_values.map((x, i) => {
+          return this.setState(prevState => ({
+            properties: [...prevState.properties, x.property_name]
+          }))
+        })
+      }
+      let objectOfPropertyNames = {};
+      let arrayOfPropertyNames = [];
+      let arrayOfValues= [];
+      for (let i = 0; i < this.props.listinginventorydata.products.length; i++){
+        let product = this.props.listinginventorydata.products[i];
+        product.property_values.map((x)=>{
+          if (arrayOfPropertyNames.indexOf(x.property_name) === -1) {
+            objectOfPropertyNames[x.property_name.replace(/ /g, "-")] = [];
+            arrayOfPropertyNames.push(x.property_name);
+          }
+          if (arrayOfValues.indexOf(x.values[0]) === -1) {
+            objectOfPropertyNames[x.property_name.replace(/ /g, "-")].push(x.values[0]);
+            arrayOfValues.push(x.values[0]);
+          }
+          return objectOfPropertyNames
+        })
+      }
+      this.setState({ propertyOptions:objectOfPropertyNames, initdata:true, price: this.props.listingdata.price });
     }
   }
   render(){
-    let inventorySelects = [];
-    // this.state.properties.map((x, i) => {
-    //   x.replace(/ /g, "-");
-    //   let newLabelClassName = x.replace(/ /g, "-");
-    //   inventorySelects.push(
-    //     <div>
-    //       <label for= `${newLabelClassName}-drop-down-menu`>Quantity</label><br/>
-    //       <select className = `${newLabelClassName}-drop-down-menu` placeholder="quantity">
-    //       </select>
-    //     </div>
-    //   );
-    // })
-    for (let i = 0; i < this.properties; i++) {
-
-    }
-    // let options = this.state.properties.map((info, i) =>{
-    //   console.log(info)
-    //   console.log(i)
-    //     return (
-    //       <div className = "options-drop-down-wrapper">
-    //         <label for= "quantity-drop-down">Quantity</label><br/>
-    //             <select className = "quantity-drop-down" placeholder="quantity">
-    //           </select>
-    //     </div>
-    //   )
-    //   });
+    let inventorySelects = this.state.properties.map((x, i) => {
+      let newLabelClassName = x.replace(/ /g, "-");
+      return(
+        <div className="options-drop-down-wrapper" key={newLabelClassName}>
+          <label for= {newLabelClassName+"-drop-down-menu"}>{newLabelClassName}</label><br/>
+          <select onChange={this.handleChange} className = {newLabelClassName+"-drop-down-menu"}>
+          {this.state.propertyOptions[newLabelClassName].map((x, i)=>{
+            return (
+              <option value={x} key={x}>{x}</option>
+            )
+          })}
+          </select>
+        </div>
+        )
+    })
     return(
       <div className="productdescription">
         <h2>{this.props.listingdata.title}</h2>
         <div className = "item-price ask">
-          <div><h3>${this.props.listingdata.price}</h3></div>
-          <div><button className = "fav-btn">Ask a question</button></div>
+          <div><h3>${this.state.price}</h3></div>
+          <div><button className = "fav-heart">Ask a question</button></div>
         </div>
-        <div className = "options-drop-down-wrapper">
-          <label for= "quantity-drop-down">Quantity</label><br/>
-              <select className = "quantity-drop-down" placeholder="quantity">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-            </select>
-      </div>
+        <div className = "option-selection-wrapper">
+        {inventorySelects}
+          <div className = "options-drop-down-wrapper">
+            <label for= "quantity-drop-down">Quantity</label><br/>
+                <select className = "quantity-drop-down" placeholder="quantity">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+          </div>
+        </div>
       <button className = "add-to-cart-btn">
         Add to cart
       </button>
@@ -90,7 +124,7 @@ export default class ProductDescription extends Component {
       ) : (<div></div>)}
       <div className = "etsy-purchase-guarantee">
         <div className = "etsy-purchase-guarantee-left">
-          <img src = "shield.png"/>
+          <img src = "shield.png" alt="shield.png"/>
         </div>
         <div className = "etsy-purchase-guarantee-right">
           <h2>Etsy Purchase Guarantee</h2>
