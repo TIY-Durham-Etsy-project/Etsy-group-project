@@ -16,7 +16,7 @@ h2{
 }
 
 h4 {
-  color: darkorange;
+  color: #f56400;
   margin: 3px 7px 0 0 ;
   font-size: 35px;
 }
@@ -118,7 +118,7 @@ button:hover{
 
 .right-content{
   width: 400px;
-  margin-left: 23px;
+  margin-left: 10px;
 }
 
 /* header left/right styles */
@@ -175,10 +175,11 @@ button:hover{
 
 .favorite-button{
   display: flex;
-  width: 565px;
+  width: 570px;
   height: 67px;
   background-color: #F1F1F1;
   border-radius: 1%;
+  margin-bottom: 10px;
 }
 
 .item-like{
@@ -229,7 +230,7 @@ text-decoration: none;
 .mainPictureForCarouselHolder{
   width: 570px;
   height: 724px;
-  background-color: #F5F5F1;
+  background-color: #F1F1F1;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -247,7 +248,7 @@ text-decoration: none;
 }
 
 .subCarouselImage{
-  background-color: #999999;
+  background-color: #F5F5F1;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -380,6 +381,23 @@ text-decoration: none;
   height: 50px;
   margin: -20px 15px;
   display: inline-block;
+  font-family: 'Lato', 'Arial', sans-serif;
+}
+
+.add-to-cart-btn{
+  background-color: #F56400;
+  width: 370px;
+  height: 30px;
+  border: solid 1px #F56400;
+  margin: 20px 0;
+  border-radius: 3px;
+  color: white;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+
+
+
 }
 
 .item-price{
@@ -397,3 +415,4 @@ text-decoration: none;
   border: solid 1px #dcdcd9;
   border-radius: 1%;
   padding: 35px;
+}
