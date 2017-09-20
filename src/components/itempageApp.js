@@ -59,10 +59,10 @@ class ItemPageApp extends Component {
       })
     })
     // SHIPPING INFO FETCH
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/shipping/info?api_key=2o28zyiccm6dxpspusptspb0`).then(results => {
+    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/shipping/info?api_key=88vhbyb8aqimszfdxfugwgnd`).then(results => {
       return results.json();
     }).then(data => {
-      this.setState({ shippinginfodata: data.results });
+      this.setState({ shippinginfodata: data.results[0] });
     })
     // IMAGES FETCH
     fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=2o28zyiccm6dxpspusptspb0`).then(results => {
@@ -132,7 +132,6 @@ class ItemPageApp extends Component {
           listinginventorydata={this.state.listinginventorydata}/>
           <Overview
           listingdata={this.state.listingdata}
-          listinginventorydata={this.state.listinginventorydata}
           shippinginfodata={this.state.shippinginfodata}/>
           <SocialButtons/>
           <ShopIcons/>
