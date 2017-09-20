@@ -32,6 +32,7 @@ h4 {
   font-family: 'Lato', 'Arial', sans-serif;
   font-size: 12px;
   color: #666666;
+  border-bottom: 6px solid transparent;
 
 }
 
