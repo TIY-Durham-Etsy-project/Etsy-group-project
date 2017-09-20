@@ -1,0 +1,37 @@
+import React, { Component } from 'react';
+import '../styles/App.css';
+
+
+class HelpAndCurrency extends Component {
+  render() {
+    return (
+      <div className="HelpAndCurrency">
+        <p>Help and Currency Placeholder</p>
+        <div className="float-left">
+          <img src={require("./logo.svg")} alt="?" height='20'/>
+          <span>
+            Need help? Visit the
+            <a href="https://www.etsy.com/help?ref=ftr">help center</a>
+          </span>
+        </div>
+        {/* This is where ShareLinks will render if @media<600 */}
+        <div className="float-right">
+          <button className="locale-settings-button" onClick={()=>alert("This is your localization button!")}>
+            <div className="display-table-cell">
+              <img src={require("./logo.svg")} alt="flag" height='20'/>
+              United States
+            </div>
+            <div className="display-table-cell">
+              English (USD)
+            </div>
+            <div className="display-table-cell">
+              $(USD)
+            </div>
+          </button>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default HelpAndCurrency;
