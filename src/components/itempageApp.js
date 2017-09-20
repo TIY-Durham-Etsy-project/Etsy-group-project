@@ -124,7 +124,8 @@ class ItemPageApp extends Component {
           listinginventorydata={this.state.listinginventorydata}/>
           <Overview/>
           <SocialButtons/>
-          <ShopIcons/>
+          <ShopIcons
+            shopdata={this.state.shopdata}/>
         </div>
           <RelatedTags/>
 
