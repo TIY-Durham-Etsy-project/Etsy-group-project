@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../styles/App.css';
 
 export default class ImageCarousel extends Component {
   constructor(props) {
@@ -84,7 +83,7 @@ export default class ImageCarousel extends Component {
           <div key={image.id} className="itemsBoxes">
             <div className="card" id={count} onClick={this.handlePictureChange}>
               <div className="card-block">
-                <img src={image.url_75x75}/>
+                <img className="subCarouselImage" src={image.url_75x75}/>
               </div>
             </div>
           </div>
@@ -92,9 +91,8 @@ export default class ImageCarousel extends Component {
       })
     }
     return (
-      <div className="imagecarousel">
-        <div class="slideshow-container">
-          <img id="mainPictureForCarousel" src={this.state.mainPicture}/>
+      <div className="imageCarouselAll">
+        <div className="slideshow-container">
           {/* <a class="prev" onclick={this.minusSlides}>&#10094;</a> */}
           {/* <a class="next" onclick={this.plusSlides}>&#10095;</a> */}
           <form className="button">
@@ -103,8 +101,13 @@ export default class ImageCarousel extends Component {
           <form className="button">
             <button onClick={this.minusSlides} id="countDown" type="button" className="btn btn-success">Down Image: {this.state.imageCarouselValue}</button>
           </form>
+          <div className="mainPictureForCarouselHolder">
+            <img id="mainPictureForCarousel" src={this.state.mainPicture}/>
+          </div>
         </div>
-        {imageItem}
+        <div className="subCarouselImageHolder">
+          {imageItem}
+        </div>
       </div>
     )
   }

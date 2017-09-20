@@ -95,6 +95,57 @@ margin: 15px;
 }
 
 /*Carousel CSS*/
+.mainPictureForCarouselHolder{
+  width: 570px;
+  height: 724px;
+  background-color: #F5F5F1;
+  position: relative;
+  cursor: pointer;
+}
+
+.imageCarouselAll{
+  /*border: 15px;*/
+}
+
+#mainPictureForCarousel{
+  position: absolute;
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   /*right: 0;
+   left: 0;*/
+}
+
+.subCarouselImage{
+  background-color: #999999;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 10%;
+  display: inline;
+  /*display: flex;
+  flex-direction: row;*/
+  transition: background-color 0.6s ease;
+}
+
+.subCarouselImageHolder{
+  width: 570px;
+  height: 50px;
+  /*display: inline;*/
+  display: flex;
+  flex-direction: inline;
+  align-items: center;
+  justify-content: center;
+  /*align-self: center;*/
+}
+
+.active, .subCarouselImage:hover {
+  background-color: #717171;
+}
+
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -109,11 +160,11 @@ margin: 15px;
   border-radius: 0 3px 3px 0;
 }
 
-.slideshow-container {
+/*.slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
+}*/
 
 
 /* wrapper for all data */
