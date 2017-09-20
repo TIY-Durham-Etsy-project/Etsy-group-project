@@ -20,7 +20,8 @@ class ItemPageApp extends Component {
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handlesubmit = this.handlesubmit.bind(this);
     this.state = {
-      idvariable: "499471843",
+      // idvariable: "499471843",
+      idvariable: "549278375",
       listingdata: false,
       listinginventorydata: false,
       imagesdata: false,
@@ -94,7 +95,6 @@ class ItemPageApp extends Component {
   }
   render() {
     return (
-
       <div className="ItemPageApp">
       <div className="PlayListForm">
         <form onSubmit={this.handlesubmit}>
@@ -119,12 +119,15 @@ class ItemPageApp extends Component {
           <FAQs/>
         </div>
         <div className = "right-content">
-          <ProductDescription/>
+          <ProductDescription
+          listingdata={this.state.listingdata}
+          listinginventorydata={this.state.listinginventorydata}/>
           <Overview/>
           <SocialButtons/>
           <ShopIcons/>
         </div>
           <RelatedTags/>
+
         </div>
       </div>
     );
