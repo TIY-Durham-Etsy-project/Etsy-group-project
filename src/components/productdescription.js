@@ -119,7 +119,8 @@ export default class ProductDescription extends Component {
       </button>
       {this.props.listingdata.quantity<50 ? (
         <div className = "limited-availability-section">
-          Don't miss out. There's only {this.props.listingdata.quantity} available and many other people have this in their cart right now.
+          <div><img src = "hourglass.png"/></div>
+          <div><span>Almost gone. There's only {this.props.listingdata.quantity} left.</span></div>
         </div>
       ) : (<div></div>)}
       <div className = "etsy-purchase-guarantee">
