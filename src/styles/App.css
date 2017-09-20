@@ -395,6 +395,7 @@ text-decoration: none;
   flex-direction: row;
   flex-wrap: wrap;
   font-family: 'Lato', 'Arial', sans-serif;
+  border-bottom: solid 1px #efefeb;
 }
 
 .productdescription label{
@@ -445,6 +446,17 @@ text-decoration: none;
 .pseudo-link:hover{
   cursor: pointer;
 }
+
+
+/* overview */
+
+.overview{
+  width: 360px;
+  margin: 0 15px;
+  font-family: 'Lato', 'Arial', sans-serif;
+  border-bottom: solid 1px #efefeb;
+}
+
 
 /* item-page-wrapper for all data */
 .item-page-wrapper{
