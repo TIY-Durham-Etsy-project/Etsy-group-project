@@ -5,6 +5,7 @@
 /*------------ETSY INFO STYLES BEGIN-----------*/
 .etsyinfo-parent {
   display: flex;
+  padding: 10px;
 }
 
 .etsyinfo-child {
