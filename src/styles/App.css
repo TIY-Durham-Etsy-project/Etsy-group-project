@@ -395,6 +395,7 @@ text-decoration: none;
   flex-direction: row;
   flex-wrap: wrap;
   font-family: 'Lato', 'Arial', sans-serif;
+  border-bottom: solid 1px #efefeb;
 }
 
 .productdescription label{
@@ -427,11 +428,14 @@ text-decoration: none;
 .etsy-purchase-guarantee{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 360px;
+  height: 110px;
   margin: 20px 0;
   background-color: #FAF9F5;
   padding: 10px;
   font-size: 14px;
+  line-height: 1;
 }
 
 .pseudo-link{
@@ -442,6 +446,17 @@ text-decoration: none;
 .pseudo-link:hover{
   cursor: pointer;
 }
+
+
+/* overview */
+
+.overview{
+  width: 360px;
+  margin: 0 15px;
+  font-family: 'Lato', 'Arial', sans-serif;
+  border-bottom: solid 1px #efefeb;
+}
+
 
 /* item-page-wrapper for all data */
 .item-page-wrapper{
