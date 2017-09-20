@@ -110,7 +110,8 @@ class ItemPageApp extends Component {
           <FavoriteButton/>
           <ImageCarousel imagesdata={this.state.imagesdata}/>
           <CustomOrder/>
-          <DetailsDropdown/>
+          <DetailsDropdown
+          listingdata={this.state.listingdata}/>
           <Reviews/>
           <MeetTheOwner/>
           <FAQs/>
