@@ -5,6 +5,7 @@ export default class ProductDescription extends Component {
     super(props);
     this.state = {
       properties: [],
+      propertyOptions: {},
       numberofproperties: false,
     };
   }
@@ -32,18 +33,18 @@ export default class ProductDescription extends Component {
         let product = this.props.listinginventorydata.products[i];
         product.property_values.map((x)=>{
           if (arrayOfPropertyNames.indexOf(x.property_name) === -1) {
-            let emptyarray = []
-            objectOfPropertyNames[x.property_name] = emptyarray;
+            objectOfPropertyNames[x.property_name.replace(/ /g, "-")] = [];
             arrayOfPropertyNames.push(x.property_name);
           }
           if (arrayOfValues.indexOf(x.values[0]) === -1) {
-              objectOfPropertyNames[x.property_name].push(x.values[0]);
-              arrayOfValues.push(x.values[0]);
+            objectOfPropertyNames[x.property_name.replace(/ /g, "-")].push(x.values[0]);
+            arrayOfValues.push(x.values[0]);
           }
           return objectOfPropertyNames
         })
       }
-      console.log(objectOfPropertyNames);
+      this.setState({ propertyOptions:objectOfPropertyNames })
+      console.log(this.state);
     }
   }
   render(){
