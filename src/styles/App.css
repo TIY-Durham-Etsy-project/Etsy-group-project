@@ -50,6 +50,19 @@ button:hover{
 
 }
 
+.shop-title{
+  margin-bottom: 8px;
+}
+
+.shop-title:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.shop-name{
+  margin-left: 15px;
+}
+
 
 /* navigation styles */
 .upper-nav {
