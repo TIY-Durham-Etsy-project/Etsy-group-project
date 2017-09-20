@@ -542,6 +542,10 @@ font-size: 25px;
   border-bottom: solid 1px #efefeb;
 }
 
+.productdescription h2{
+  word-break: break-all;
+}
+
 .productdescription label{
   color: #666;
   font-size: 14px;
@@ -698,6 +702,8 @@ font-size: 25px;
   font-size: 16px;
   font-weight: bold;
   color: black;
+  font-family: 'Lato', 'Arial', sans-serif;
+
 }
 
 .detailsdropdown{
@@ -706,5 +712,10 @@ font-size: 25px;
   padding-bottom: 25px;
   border-bottom: solid 1px #efefeb;
 
+}
 
+/* reviews */
+
+.reviews{
+  padding-top: 5px;
 }
