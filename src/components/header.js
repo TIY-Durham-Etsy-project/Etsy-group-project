@@ -263,6 +263,24 @@ export default class Header extends Component {
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Decorations & Décor</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Party Favors & Games</li></button>
                   <button className="header-button dropbtn"><li className="dropdown-content-2">All Paper, Party & Kids</li></button>
+
+                  <button className="header-button dropbtn"><li className="dropdown-content">Sculpting & Forming</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Carving & Whittling</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Ceramics & Pottery</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Glass Art</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Glass Blowing</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Glass Fusing</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Lampworking & Shaping</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Neon Art</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Stained Glass</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Metalworking</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Molding & Casting</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Materials</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Molds</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Mosaic Making</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Robotics</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">All Sculpting & Forming</li></button>
+
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Weddings</li></button>
