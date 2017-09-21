@@ -37,16 +37,7 @@ class ItemPageApp extends Component {
   // This mounts the page.
   componentWillMount() {
     console.log("ComponentWILLmount fired");
-    this.setState({ idvariable: "549278375",
-    listingdata: false,
-    listinginventorydata: false,
-    imagesdata: false,
-    shippinginfodata: false,
-    shopdata: false,
-    shoplistingdata: false,
-    shoplistingimagesdata: false,
-    shoplistingimagesdatalarge: false,
-    feedbackdata: false, });
+    this.setState({ idvariable: "549278375" });
   }
   componentDidMount() {
     console.log("Componentdidmount fired");
@@ -57,7 +48,17 @@ class ItemPageApp extends Component {
   }
   handleIncommingData(value){
     console.log("HANDLEINCOMMINGDATA");
-    console.log(value);
+    this.setState({ idvariable: value,
+    listingdata: false,
+    listinginventorydata: false,
+    imagesdata: false,
+    shippinginfodata: false,
+    shopdata: false,
+    shoplistingdata: false,
+    shoplistingimagesdata: false,
+    shoplistingimagesdatalarge: false,
+    feedbackdata: false, });
+    this.fetchData();
   }
   handleTextChange(event){
     event.preventDefault();
