@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import EtsyInfo from './etsy-info.js';
+import API from './api.js';
 import Slider from './slider.js';
 import Footer from './footer.js';
 
@@ -24,9 +25,9 @@ export default class Homepage extends Component {
         {/* <Header /> */}
         {/* <Carousel /> */}
         <EtsyInfo />
-        <Slider display={this.state.recently}/>
-        <Slider display={this.state.category}/>
-        <Slider display={this.state.gifts}/>
+        {/* <Slider display={this.state.recently}/> */}
+        <API display={this.state.category}/>
+        {/* <Slider display={this.state.gifts}/> */}
         <Footer />
       </div>
     );
