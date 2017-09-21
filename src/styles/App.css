@@ -22,11 +22,13 @@ h4 {
 }
 
 .header-list {
+  /*height: 10000pt;*/
+  position: absolute;
   list-style: none;
   display: flex;
   text-decoration: none;
   justify-content: space-between;
-  align-items: center;
+  /*align-items: center;*/
 }
 
 .header-list-item {
@@ -34,23 +36,29 @@ h4 {
   font-size: 12px;
   color: #666666;
   border-bottom: 6px solid transparent;
-
 }
 
-.header-button {
-  background-color: white;
-  border: none;
-
+.header-list-item-clothing {
+  width: 120pt;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 12px;
+  color: #666666;
+  border-bottom: 6px solid transparent;
 }
+
+
 button:hover{
   opacity: 0.7;
   cursor: pointer;
 }
 
-.header-list-item:hover{
+.header-list-item:hover, .header-list-item-clothing:hover{
   border-bottom: 6px solid #f45800;
-
 }
+
+/*.header-list-item-clothing:hover{
+  border-bottom: 6px solid #f45800;
+}*/
 
 .shop-title{
   margin-bottom: 8px;
@@ -71,7 +79,7 @@ button:hover{
   display: flex;
   justify-content: space-between;
   background-color: white;
-  height: 80px;
+  height: 120pt;
   align-items: center;
 }
 
@@ -95,22 +103,40 @@ button:hover{
   display: flex;
   justify-content: space-between;
   background-color: white;
-  height: 80px;
+  height: 120pt;
   align-items: center;
+}
+
+.header-button {
+  background-color: white;
+  border: none;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
 
-.dropdown:hover .dropdown-content {
+.dropdown-content-clothing{
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+.dropdown:hover .dropdown-content-clothing {
     display: block;
 }
+
+/*.dropdown:hover .dropdown-content {
+    display: block;
+}*/
 
 .dropdown-content-2 {
   display: none;
