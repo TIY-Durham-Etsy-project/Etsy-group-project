@@ -28,13 +28,7 @@ export default class Slider extends Component {
       this.setState({arrayToMap: arrayToMap});
     }
 
-    componentDidMount() {
-      let arrayToMap = [];
-      for (var i = 0; i < 6; i++) {
-        arrayToMap.push(this.props.arrayFromAPI[i]);
-      }
-      this.setState({arrayOfSix: arrayToMap});
-    }
+
 
   render() {
     return (

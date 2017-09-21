@@ -12,19 +12,19 @@ export default class API extends Component {
     // this.props.display.type = "type of Slider" ex: category
   }
 
+  getUrlToCall = (type) =>{
+    if(type==="category"){
+      let UrlArray = ["https://openapi.etsy.com/v2/listings/active?category=home_and_living&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj", "https://openapi.etsy.com/v2/listings/active?keywords=Jewelry&filter=Jewelry&api_key=dza1vj8ckkf1tbkxs30wjahj&includes=MainImage", "https://openapi.etsy.com/v2/listings/active?keywords=Clothing&filter=Clothing&api_key=dza1vj8ckkf1tbkxs30wjahj&includes=MainImage", "https://openapi.etsy.com/v2/listings/active?category=toys&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj",  "https://openapi.etsy.com/v2/listings/active?category=craft_supplies_and_tools&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj", "https://openapi.etsy.com/v2/listings/active?category=weddings&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"];
+    }
+    if(type==="gifts"){
 
-  // let openApi = "https://openapi.etsy.com/v2";
-  // let apiKey = "api_key=dza1vj8ckkf1tbkxs30wjahj";
+    }
+  }
   // // params/filters -- only work with listings/active
-  // let size = "limit=100&offset=0";
   // these might move to category.js
   // if(this.props.display==="category"){
-  //   // maybe change: push to an array to map over -> 6 API calls
-  //   let keywords1 = "";
-  //   let keywords2 = "&keywords=Jewelry";
-  //   let filter2 = "&filter=Jewelry";
-  //   let keywords3 = "&keywords=Clothing";
-  // }
+    // maybe change: push to an array to map over -> 6 API calls
+
 
   // want to change URL with variables for different filters
   componentDidMount() {
@@ -75,6 +75,14 @@ export default class API extends Component {
         // [...somewhere in here I define a variable listInfo which    I think will be useful as data in my ToDoList component...]
         // let listInfo = filterArrayOfMissingData(this.state.itemObjects);
         // return this.props.callbackFromParent(listInfo);
+    }
+
+    trimToSix() {
+      let arrayToMap = [];
+      for (var i = 0; i < 6; i++) {
+        arrayToMap.push(this.props.arrayFromAPI[i]);
+      }
+      this.setState({arrayOfSix: arrayToMap});
     }
 
     render() {
