@@ -33,17 +33,8 @@ export default class ProductDescription extends Component {
     }
     this.setState({ price: productobj })
   }
-  shouldComponentUpdate(nextProps, nextState){
-    if (this.state.initdata !== nextState.initdata || this.state.price !== nextState.price) {
-      return true;
-    } else if (this.props.listinginventorydata !== nextProps.listinginventorydata) {
-      return true;
-    } else {
-      return false;
-    }
-  }
   componentDidUpdate(){
-    if (this.props.listinginventorydata && this.state.initdata === false){
+    if (this.props.listingdata && this.props.listinginventorydata && this.state.initdata === false){
       if (this.state.properties.length <= 0){
         this.props.listinginventorydata.products[0].property_values.map((x, i) => {
           return this.setState(prevState => ({
