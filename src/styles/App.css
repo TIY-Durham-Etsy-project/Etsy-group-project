@@ -111,9 +111,9 @@ button:hover{
   border: none;
 }
 
-.header-list-item:hover, .header-list-item-clothing:hover{
+/*.header-list-item:hover, .header-list-item-clothing:hover{
   border-bottom: 6px solid #f45800;
-}
+}*/
 
 .dropdown-content {
     display: none;
