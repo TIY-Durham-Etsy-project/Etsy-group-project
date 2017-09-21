@@ -458,6 +458,31 @@ export default class Header extends Component {
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Telephones & Handsets</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Video Games</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content-2">All Electronics & Accessories</li></button>
+
+                    <button className="header-button dropbtn"><li className="dropdown-content">Toys & Games</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Games & Puzzles</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Board Games</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Card Games</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Dice & Tile Games</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Marbles</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Sports & Outdooor Recreation</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Fishing</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Juggling & Hula Hoops</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Lawn Games</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Toys</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Baby & Toddler Toys</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Balls</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Dolls & Action Figures</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">"Kids' Costumes"</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">"Kids' Crafts"</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Learning & School</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Miniature Toys</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Play Tents & Playhouses</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Puppets</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Stuffed Animals & Plushies</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Wind-up Toys</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Yo Yos & Tops</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">All Toys & Games</li></button>
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Home & Living</li></button>
