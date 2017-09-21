@@ -724,6 +724,27 @@ export default class Header extends Component {
                             <button className="header-button dropbtn"><li className="dropdown-content-2">Sewing Patterns</li></button>
                             <button className="header-button dropbtn"><li className="dropdown-content-2">All Craft Supplies & Tools</li></button>
 
+                            <button className="header-button dropbtn"><li className="dropdown-content">Home & Living</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Bathroom</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Bedding</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Curtains & Window Treatments</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Floor & Rugs</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Furniture</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Home Décor</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Clocks</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Decorative Pillows</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Globes & Maps</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Mirrors</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Ornaments & Accents</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Picture Frames & Displays</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Vases</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Kitchen & Dining</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Dining & Serving</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Lighting</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Chandeliers & Pendant Lights</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Lamps</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Storage & Organization</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">All Home & Living</li></button>
 
                   </div>
                   </ul>
