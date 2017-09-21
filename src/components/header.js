@@ -706,6 +706,24 @@ export default class Header extends Component {
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Skirts</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Sweaters</li></button>
 
+                          <button className="header-button dropbtn"><li className="header-list-item">Craft Supplies & Tools</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content">Fabric</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Framing</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Jewelry & Beading</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Beads</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Charms</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Findings & Hardware</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pendants</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Scrapbooking</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Scrapbooking Paper</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Sewing & Fiber</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Buttons & Fasteners</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Crochet Patterns</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Knitting Patterns</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Sewing Machines</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Sewing Patterns</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">All Craft Supplies & Tools</li></button>
+
 
                   </div>
                   </ul>
