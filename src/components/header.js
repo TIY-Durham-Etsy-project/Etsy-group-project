@@ -26,10 +26,14 @@ export default class Header extends Component {
 
                     <button className="header-button dropbtn"><li className="header-list-item-clothing">Clothing & Accessories</li></button>
                       {/* <div className="dropdown-content"></div> */}
-                      <button className="header-button dropbtn"><li className="dropdown-content-clothing">Accessories</li></button>
-                        {/* <button className="header-button dropbtn"><li className="dropdown-content-2">Belts & Suspenders</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Gloves & Mittens</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Hair Accessories</li></button>
+                      <button className="header-button dropbtn">
+                        <li className="dropdown-content-clothing">Accessories</li>
+                      </button>
+                        <button className="header-button dropbtn">
+                          <li className="dropdown-content-clothing-2">Belts & Suspenders</li>
+                        </button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-clothing-2">Gloves & Mittens</li></button>
+                        {/* <button className="header-button dropbtn"><li className="dropdown-content-2">Hair Accessories</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Fascinators & Mini Hats</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Headbands</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Ties & Elastics</li></button>
