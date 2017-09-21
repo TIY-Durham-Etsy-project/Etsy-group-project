@@ -409,13 +409,55 @@ export default class Header extends Component {
                       <button className="header-button dropbtn"><li className="dropdown-content-2">Claddagh Rings</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content-2">Engagement Rings</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content-2">Promise Rings</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2"Ring Bearer Pillows</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Ring Bearer Pillows</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content-2">Wedding Bands</li></button>
                   <button className="header-button dropbtn"><li className="dropdown-content-2">All Jewelry</li></button>
 
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Entertainment</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content">Books, Movies & Music</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Books</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Art & Photography Books</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Blank Books</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Book Accessories</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Calendars & Planners</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">"Children's Books"</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Comics & Graphic Novels</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Craft & Hobby Books</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Guides & How Tos</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Literature & Fiction</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Poetry</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Zines & Magazines</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Movies</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Music</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Instrument Straps</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Musical Instruments</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Recorded Audio</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Sheet Music</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">All Books, Movies & Music</li></button>
+
+                      <button className="header-button dropbtn"><li className="dropdown-content">Electronics & Accessories</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Audio</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Cameras</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Flashes & Lighting</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Lenses & Filters</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Photography Accessories</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Car Parts & Accessories</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Cell Phone Accessories</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Computers & Peripherals</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">DIY Kits</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Decals & Skins</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Docking & Stands</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Electronics Cases</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Laptop Bags</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Laptop Sleeves</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Phone Cases</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Tablet & Reader Cases</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Gadgets</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Telephones & Handsets</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Video Games</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">All Electronics & Accessories</li></button>
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Home & Living</li></button>
