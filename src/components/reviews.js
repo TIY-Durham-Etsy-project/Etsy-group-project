@@ -35,14 +35,12 @@ export default class Reviews extends Component {
     }
   }
   render(){
-    // console.log(this.props.feedbackdata);
     let reviewsObjects = false;
     if (this.props.feedbackdata){
       reviewsObjects = this.props.feedbackdata.map((x, i)=>{
-        // console.log(x)
         if (x.message !== null){
           return (
-          <div>
+          <div key={x.transaction_id}>
             <p>User id: {this.props.feedbackdata ? x.transaction_id : ""}</p>
             <p>Stars: {this.props.feedbackdata ? x.value : ""}</p>
             <p>{this.props.feedbackdata ? x.message.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"') : ""}</p>
@@ -50,7 +48,7 @@ export default class Reviews extends Component {
           )
         } else {
           return (
-          <div>
+          <div key={x.transaction_id}>
             <p>User id: {this.props.feedbackdata ? x.transaction_id : ""}</p>
             <p>Stars: {this.props.feedbackdata ? x.value : ""}</p>
           </div>
