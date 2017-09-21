@@ -871,10 +871,9 @@ font-size: 25px;
 
 /* reviews */
 
-.reviews{
+.reviewsdropdown{
   padding-top: 5px;
 }
-
 
 .reviews-dropdown-container-minimized{
   overflow: hidden;
@@ -907,5 +906,7 @@ font-size: 25px;
 }
 .reviews-stars-image-holder{
   height: 20px;
-
+}
+.single-user-review{
+  border-bottom: solid grey 1px;
 }

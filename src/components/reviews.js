@@ -45,12 +45,10 @@ export default class Reviews extends Component {
           stars = "onestarreview.png";
         } else {
           stars = "threestarreview.png";
-          console.log(x.value)
-          console.log(x)
         }
         if (x.message !== null){
           return (
-          <div key={x.transaction_id}>
+          <div className="single-user-review" key={x.transaction_id}>
             <p>User id: {this.props.feedbackdata ? x.transaction_id : ""}</p>
             <p className = "review-stars">Stars: <img alt="" className = "reviews-stars-image-holder" src = {stars ? stars : "no-stars-empty-placeholder-classname"}/></p>
             <p>{this.props.feedbackdata ? x.message.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"') : ""}</p>
@@ -58,7 +56,7 @@ export default class Reviews extends Component {
           )
         } else {
           return (
-          <div key={x.transaction_id}>
+          <div className="single-user-review" key={x.transaction_id}>
             <p>User id: {this.props.feedbackdata ? x.transaction_id : ""}</p>
             <p className = "review-stars">Stars: <img alt="" className = "reviews-stars-image-holder" src = {stars ? stars : "no-stars-empty-placeholder-classname"}/></p>
           </div>
