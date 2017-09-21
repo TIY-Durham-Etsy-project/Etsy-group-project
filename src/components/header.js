@@ -508,7 +508,27 @@ export default class Header extends Component {
                       <button className="header-button dropbtn"><li className="dropdown-content-2">Sculpture</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content-2">All Art & Collectibles</li></button>
 
-
+                      <button className="header-button dropbtn"><li className="dropdown-content">Bath & Beauty</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Bath Accessories</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Essential Oils</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Fragrances</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Hair Care</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Makeup & Cosmetics</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Personal Care</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Deodorant</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Shaving & Grooming</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Skin Care</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Moisturizers</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Salves & Balms</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Soaps</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Bath Bombs</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Bath Oils</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Bath Salts & Scrubs</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Body Washes & Liquid Soaps</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Spa & Relaxation</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Aromatherapy</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Spa Kits & Gifts</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">All Bath & Beauty</li></button>
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Kids & Baby</li></button>
