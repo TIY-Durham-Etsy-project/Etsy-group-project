@@ -22,6 +22,7 @@ export default class Header extends Component {
 
                 <div className="lower-nav">
                   <ul className="header-list dropdown" >
+                    <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Clothing & Accessories</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content">Accessories</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Belts & Suspenders</li></button>
@@ -60,10 +61,7 @@ export default class Header extends Component {
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Pouches & Coin Purses</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Totes</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Wallets & Money Clips</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">All Bags & Purses</li></button>
-
-
-                      <button className="header-button dropbtn"><li className="dropdown-content">Clothing</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">All Bags & Purses</li></button>                      <button className="header-button dropbtn"><li className="dropdown-content">Clothing</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">"Boys' Clothing"</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Pants</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Shorts</li></button>
@@ -93,7 +91,8 @@ export default class Header extends Component {
 
 
                       <button className="header-button dropbtn"><li className="dropdown-content">Shoes</li></button>
-
+                    </div>
+                    <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Jewelry</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content">All Jewelry</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content">Body Jewelry</li></button>
@@ -103,18 +102,25 @@ export default class Header extends Component {
                       <button className="header-button dropbtn"><li className="dropdown-content">Necklaces</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content">Rings</li></button>
 
-
+                    </div>
+                    <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Craft Supplies & Tools</li></button>
-
+                  </div>
+                  <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Weddings</li></button>
-
+                  </div>
+                  <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Entertainment</li></button>
-
+                  </div>
+                  <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Home & Living</li></button>
-
+                  </div>
+                  <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Kids & Baby</li></button>
-
+                  </div>
+                  <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Vintage</li></button>
+                  </div>
                   </ul>
                 </div>
 
