@@ -210,6 +210,27 @@ export default class Header extends Component {
                     </div>
                     <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Craft Supplies & Tools</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content">Home & Hobby</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Candle Making</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Doll & Model Making</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Electronics & Circuitry</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Floral & Garden Crafts</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Basket Weaving</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Floral Arranging</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Gardening & Plants</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Food & Fermenting</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Baking</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Brewing</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Candy Making</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Canning & Preserving</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Dairy & Kombucha</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Winemaking</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Framing</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Home Improvement</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Woodworking & Carpentry</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">All Home & Hobby</li></button>
+
+
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Weddings</li></button>
