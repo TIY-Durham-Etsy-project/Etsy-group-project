@@ -9,7 +9,7 @@ export default class ShopIcons extends Component {
         </div>
         <div className  = "shopicons-header-text">
           <h5 className = "shop-icon-shop-name">{this.props.shopdata ? this.props.shopdata[0].shop_name : ""}</h5>
-          <p className = "shop-icon-shop-location">in <strong>location here</strong></p>
+          <p className = "shop-icon-shop-location">in <strong>{this.props.shopdata ? this.props.shopdata[3].city : ""}</strong></p>
         </div>
         <div className = "shopicons-wrapper">
           <div className = "shopicon-box">
