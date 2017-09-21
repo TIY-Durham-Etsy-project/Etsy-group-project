@@ -342,6 +342,24 @@ export default class Header extends Component {
                       <button className="header-button dropbtn"><li className="dropdown-content-2">Umbrellas</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content-2">Veils</li></button>
                   <button className="header-button dropbtn"><li className="dropdown-content-2">All Accessories</li></button>
+
+                  <button className="header-button dropbtn"><li className="dropdown-content">Clothing</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Dresses</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Bridal Gowns & Separates</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Bridesmaid Dresses</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Flower Girl Dresses</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Mother of the Bride Dresses</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Lingerie & Garters</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Wedding Garters</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Wedding Lingerie</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Suits</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">"Boys' Suits"</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">"Girls' Suits"</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">"Men's Suits"</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">"Women's Suits"</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">All Clothing</li></button>
+
+
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Entertainment</li></button>
