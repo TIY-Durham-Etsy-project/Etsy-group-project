@@ -163,6 +163,7 @@ class ItemPageApp extends Component {
             shippinginfodata={this.state.shippinginfodata}/>
             <SocialButtons/>
             <ShopIcons
+              sendDataUpToParent={this.handleIncommingData}
               shopdata={this.state.shopdata}
               shoplistingdata={this.state.shoplistingdata}
               shoplistingimagesdatalarge={this.state.shoplistingimagesdatalarge}
