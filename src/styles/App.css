@@ -153,9 +153,16 @@ button:hover{
   display: block;
 }*/
 
+.moveLeftSubHeaderItem{
+  display: block;
+  position: absolute;
+  margin-top: -15pt;
+  margin-left: 120pt;
+}
+
 .dropdown-content-clothing-2{
   display: none;
-  position: absolute;
+  position: relative;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
