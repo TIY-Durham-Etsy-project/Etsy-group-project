@@ -438,19 +438,21 @@ font-size: 25px;
 
 .shopicons-wrapper{
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .shopicon-box{
-  width: 185px;
+  width: 170px;
   height: 185px;
   border: solid 1px #dcdcd9;
   margin: 3px;
 }
 
 .shopicon-photo{
-  width: 185px;
-  height: 140px;
+  width: 170px;
+  height: 135px;
+  background-size: contain;
 }
 
 .shopicon-text{
@@ -458,6 +460,12 @@ font-size: 25px;
   margin: 0;
   font-family: 'Lato', 'Arial', sans-serif;
 
+}
+
+.shopicon-text-title{
+  overflow: hidden;
+  width: 160px;
+  height: 15px;
 }
 
 .shopicon-text p{
