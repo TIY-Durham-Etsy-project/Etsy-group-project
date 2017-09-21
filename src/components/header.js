@@ -681,6 +681,31 @@ export default class Header extends Component {
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Wallets</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">All Bags & Purses</li></button>
 
+                          <button className="header-button dropbtn"><li className="dropdown-content">Clothing</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">"Boys' Clothing"</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">"Baby Boys' Clothing"</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Pants</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Tops</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">"Girl's Clothing"</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">"Baby Girls' Clothing"</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Dresses</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Jackets & Coats</li></button>
+
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">"Men's Clothing"</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Jackets & Coats</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Pants</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Shirts</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Suits & Sport Coats</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Sweaters</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">"Women's Clothing"</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Dresses</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Jackets & Coats</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Lingerie</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pants & Capris</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Shorts & Skorts</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Skirts</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Sweaters</li></button>
+
 
                   </div>
                   </ul>
