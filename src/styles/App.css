@@ -112,6 +112,47 @@
 }
 
 /*------FOOTER STYLES BEGIN------*/
+
+/*-------OPT-IN FORM STYLES------*/
+.OptInForm{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  height: 135px;
+  font-size: 14px;
+}
+
+.OptInForm > form{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  height: 38px;
+}
+
+.OptInForm > form > label > input{
+  height: 34px;
+  width: 194px;
+  border: 1px solid grey;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.OptInForm > form > input {
+  border: 1px solid darkorange;
+  background-color: darkorange;
+  width: 94px;
+  color: white;
+  border-left: none;
+  margin-left: -1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/*------FOOTER LINKS STYLES------*/
 .FooterLinks{
   display: flex;
   text-align: left;
