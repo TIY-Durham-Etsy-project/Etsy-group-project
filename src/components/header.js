@@ -21,14 +21,15 @@ export default class Header extends Component {
         </div>
 
                 <div className="lower-nav">
-                  <ul className="header-list dropdown" >
-                    <div>
+                  <ul className="header-list " >
+                    <div className="dropdown">
 
-                    <button className="header-button dropbtn"><li className="header-list-item-clothing">Clothing & Accessories</li></button>
+                    <button className="header-button dropbtn "><li className="header-list-item-clothing">Clothing & Accessories</li></button>
                       {/* <div className="dropdown-content"></div> */}
-                      <button className="header-button dropbtn">
-                        <li className="dropdown-content-clothing">Accessories</li>
-                      </button>
+                      <div className="accessories_sub_items">
+                        <button className="header-button dropbtn">
+                          <li className="dropdown-content-clothing">Accessories</li>
+                        </button>
                         <button className="header-button dropbtn">
                           <li className="dropdown-content-clothing-2">Belts & Suspenders</li>
                         </button>
@@ -44,7 +45,7 @@ export default class Header extends Component {
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Suit & Tie Accessories</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Sunglasses & Eyewear</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Umbrellas & Rain Accessories</li></button> */}
-
+                      </div>
 
                       <button className="header-button dropbtn"><li className="dropdown-content-clothing">Bags & Purses</li></button>
                         {/* <button className="header-button dropbtn"><li className="dropdown-content-2">Backpacks</li></button>
