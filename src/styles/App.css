@@ -111,7 +111,45 @@
   }
 }
 
+/*------FOOTER STYLES BEGIN------*/
+.FooterLinks{
+  display: flex;
+  text-align: left;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  align-content: space-around;
+}
+.FooterLinks > div{
+  flex-grow: 1;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  display:flex;
+  flex-direction: column;
+}
+.FooterLinks > span{
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: flex-start;
+}
+.FooterLinks > a{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  text-decoration: none;
+}
+
 /*---SOCIAL MEDIA STYLES BEGIN---*/
 svg{
+  float: left;
   height: 30px;
+}
+.social_media_name{
+  float: left;
+  margin: 6px auto;
 }

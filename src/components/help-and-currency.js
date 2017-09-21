@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import ShareLinks from './share-links.js'
-const snapSize = 500;
+const snapSize = 650;
 
 
 class HelpAndCurrency extends Component {

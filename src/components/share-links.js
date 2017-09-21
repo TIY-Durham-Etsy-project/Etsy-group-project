@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const snapSize = 500;
+const snapSize = 650;
 
 
 
@@ -56,68 +56,84 @@ class ShareLinks extends Component {
     if (this.state.media< snapSize+1){
       return (
         <div className="ShareLinks">
-          <ul>
-            <li>
+
+
               <a href="https://www.facebook.com/Etsy">
                 <span className="lone_share_icon">
                   {facebookSvg}
                 </span>
               </a>
-            </li>
-            <li>
+
+
               <a href="https://www.instagram.com/etsy">
                 <span className="lone_share_icon">
                   {instagramSvg}
                 </span>
               </a>
-            </li>
-            <li>
+
+
               <a href="https://www.pinterest.com/etsy">
                 <span className="lone_share_icon">
                   {pinterestSvg}
                 </span>
               </a>
-            </li>
-            <li>
+
+
               <a href="https://www.twitter.com/etsy">
                 <span className="lone_share_icon">
                   {twitterSvg}
                 </span>
               </a>
-            </li>
-          </ul>
+
+
         </div>
     );
     } else if (this.state.media > snapSize){
       return(
         <div className="ShareLinks">
           <h3>Follow Etsy</h3>
-          <ul>
-            <li>
+
+
+          <a href="https://www.facebook.com/Etsy">
               <span className="share_icon">
                 {facebookSvg}
+                <div className="social_media_name">
+                  Facebook
+                </div>
               </span>
-              <a href="https://www.facebook.com/Etsy">Facebook</a>
-            </li>
-            <li>
+              </a>
+
+
+              <a href="https://www.instagram.com/etsy">
               <span className="share_icon">
                 {instagramSvg}
+                <div className="social_media_name">
+                  Instagram
+                </div>
               </span>
-              <a href="https://www.instagram.com/etsy">Instagram</a>
-            </li>
-            <li>
+              </a>
+
+
+              <a href="https://www.pinterest.com/etsy">
               <span className="share_icon">
                 {pinterestSvg}
+                <div className="social_media_name">
+                  Pinterest
+                </div>
               </span>
-              <a href="https://www.pinterest.com/etsy">Pinterest</a>
-            </li>
-            <li>
+              </a>
+
+
+              <a href="https://www.twitter.com/etsy">
               <span className="share_icon">
                 {twitterSvg}
+                <div className="social_media_name">
+                  Twitter
+                </div>
               </span>
-              <a href="https://www.twitter.com/etsy">Twitter</a>
-            </li>
-          </ul>
+              </a>
+
+
         </div>
       )
     }

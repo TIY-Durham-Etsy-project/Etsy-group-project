@@ -5,17 +5,21 @@ class SellLinks extends Component {
     return (
       <div className="SellLinks">
         <h3>Sell</h3>
-        <ul>
-          <li>
-            <a href="https://www.etsy.com/sell?ref=ftr">Sell on Etsy</a>
-          </li>
-          <li>
-            <a href="https://www.etsy.com/teams?ref=ftr">Teams</a>
-          </li>
-          <li>
-            <a href="https://www.etsy.com/forums?ref=ftr">Forums</a>
-          </li>
-        </ul>
+            <a href="https://www.etsy.com/sell?ref=ftr">
+              <span>
+                Sell on Etsy
+              </span>
+            </a>
+            <a href="https://www.etsy.com/teams?ref=ftr">
+              <span>
+                Teams
+              </span>
+            </a>
+            <a href="https://www.etsy.com/forums?ref=ftr">
+              <span>
+                Forums
+              </span>
+            </a>
       </div>
     );
   }
