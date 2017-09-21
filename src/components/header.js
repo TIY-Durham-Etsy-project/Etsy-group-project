@@ -303,6 +303,22 @@ export default class Header extends Component {
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Weaving & Tapestry</li></button>
                   <button className="header-button dropbtn"><li className="dropdown-content-2">All Sewing & Fiber</li></button>
 
+                  <button className="header-button dropbtn"><li className="dropdown-content">Visual Arts</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Calligraphy</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Pens</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Collage</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Drawing & Drafting</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Dyeing & Batik</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Dyes</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Fabric</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Painting</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Photography</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Cameras</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Cases</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Frames</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Printing & Printmaking</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">All Visual Arts</li></button>
+
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Weddings</li></button>
