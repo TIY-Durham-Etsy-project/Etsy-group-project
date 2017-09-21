@@ -6,28 +6,10 @@ export default class Slider extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // listDataFromChild: null,
-            arrayOfSix: []
+
         };
         // this.props.arrayFromAPI has an array from API.
     }
-
-
-    myCallback = (dataFromChild) => {
-        this.setState({ listDataFromChild: dataFromChild });
-        // listDataFromChild is now a (large) array
-        this.otherFn();
-    }
-
-    otherFn = () => {
-        // [...within this other function now I still have access to this.state.listDataFromChild...]
-        let arrayToMap = [];
-        for (var i = 0; i < 6; i++) {
-          arrayToMap.push(this.state.listDataFromChild[i]);
-        }
-      this.setState({arrayToMap: arrayToMap});
-    }
-
 
 
   render() {
@@ -36,7 +18,7 @@ export default class Slider extends Component {
         <h2>Headline Goes Here</h2>
         {/* <API callbackFromParent={this.myCallback} display={this.state.type}/> */}
         <div className="slider-parent">
-          {this.state.arrayOfSix.map((thing) =>{
+          {this.props.arrayOfSix.map((thing) =>{
             return (
               < div key={thing._id} className="slider-child">
                 <a href={thing.url}>
