@@ -579,7 +579,7 @@ font-size: 25px;
   margin: 1px;
 }
 
-.meettheowner a {
+.meettheowner-header-text a {
   margin: 1px;
   font-family: 'Lato', 'Arial', sans-serif;
   color: black;
@@ -590,12 +590,13 @@ font-size: 25px;
   text-decoration: underline;
 }
 
-.meettheowner h6{
+.meettheowner h6 a{
   font-family: 'Lato', 'Arial', sans-serif;
   margin: 5px;
   color: #8B8B8B;
   font-size: 14px;
   font-weight: bold;
+  text-decoration: none;
 
 }
 
@@ -603,7 +604,6 @@ font-size: 25px;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  border: solid 1px black;
   overflow: hidden;
 }
 
@@ -613,6 +613,8 @@ font-size: 25px;
   width: 100px;
   padding: 0;
 }
+
+
 
 /*Product Description*/
 
