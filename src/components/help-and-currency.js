@@ -37,7 +37,6 @@ class HelpAndCurrency extends Component {
 
     return (
       <div className="HelpAndCurrency">
-        <p>Help and Currency Placeholder</p>
         <div className="float-left">
           <img src={require("./logo.svg")} alt="?" height='20'/>
           <span>

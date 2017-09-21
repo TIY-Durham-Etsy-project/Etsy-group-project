@@ -29,7 +29,6 @@ class Footer extends Component {
   render() {
     return (
       <div className="Footer">
-        <p>Footer Placeholder</p>
         <OptInForm />
         <FooterLinks />
         <HelpAndCurrency />
