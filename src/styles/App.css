@@ -25,10 +25,11 @@ h4 {
   list-style: none;
   display: flex;
   text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-list-item {
-  margin: 19px;
   font-family: 'Lato', 'Arial', sans-serif;
   font-size: 12px;
   color: #666666;
