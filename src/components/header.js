@@ -127,10 +127,52 @@ export default class Header extends Component {
                     <button className="header-button dropbtn"><li className="header-list-item">Jewelry</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content">All Jewelry</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content">Body Jewelry</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Anklets</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Arm Bands</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Barbells</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Belly Chains</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Belly Rings</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Gauge & Plug Earrings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Hair Jewelry</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Lip Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Nipple Jewelry</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Nose Rings & Studs</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Pinchers & Spirals</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Shoulder Jewelry</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Toe Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">All Body Jewelry</li></button>
 
                       <button className="header-button dropbtn"><li className="dropdown-content">Bracelets</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Bangles</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Beaded Bracelets</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Chain & Link Bracelets</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Charm Bracelets</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Cuff Bracelets</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">ID & Medical Bracelets</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Woven & Braided Bracelets</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">All Bracelets</li></button>
+
                       <button className="header-button dropbtn"><li className="dropdown-content">Cuff Links & Tie Clips</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Cuff Links</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Shirt Studs</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Tie Clips & Tacks</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">All Cuff Links & Tie Clips</li></button>
+
                       <button className="header-button dropbtn"><li className="dropdown-content">Earrings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Chandelier Earrings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Clip On Earrings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Cluster Earrings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Cuff & Wrap Earrings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Dangle & Drop Earrings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Ear Jacks & Climbers</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Ear Weights</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Gauge & Plug Earrings</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Hoop Earrings</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Screw Back Earrings</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Stud Earrings</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Threader Earrings</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">All Earrings</li></button>
+
                       <button className="header-button dropbtn"><li className="dropdown-content">Necklaces</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content">Rings</li></button>
 
