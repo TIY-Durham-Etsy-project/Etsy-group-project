@@ -32,6 +32,13 @@ Afternoon:
 - Kevin wrote up the CSS and classNames list and shared with all React Devs.
 
 09.21.17 - Tivona
+Today we have decided to...
+- Locate an old project that may provide guidance on how to implement the dropdown function of the header (Tivona)
+- Add dropdown features to the header (Kevin)
+- Update and Complete the overview section (JT)
+- Complete shop icons and ensure that images, names, locations, and price are visible (Hannah)
+- Debug the problem where the Item title and price does not refresh or work for each page (JT)
+- Complete the "Meet the Owner" section (Hannah)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
