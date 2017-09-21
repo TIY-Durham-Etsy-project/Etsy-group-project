@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 
 export default class ItemHeader extends Component {
+  constructor(props) {
+    super(props);
+    this.sendData = this.sendData.bind(this);
+  }
+  sendData(value){
+    this.props.sendDataUpToParent(value);
+  }
   render(){
     let shopimage = false
     if (this.props.shopdata){

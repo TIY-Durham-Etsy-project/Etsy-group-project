@@ -19,6 +19,7 @@ class ItemPageApp extends Component {
     super(props);
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handlesubmit = this.handlesubmit.bind(this);
+    this.handleIncommingData = this.handleIncommingData.bind(this);
     this.state = {
       // idvariable: "499471843",
       idvariable: "",
@@ -53,6 +54,10 @@ class ItemPageApp extends Component {
   }
   componentWillUnmount(){
     console.log("COMPONENT IS NOW UNMOUNTING");
+  }
+  handleIncommingData(value){
+    console.log("HANDLEINCOMMINGDATA");
+    console.log(value);
   }
   handleTextChange(event){
     event.preventDefault();
@@ -131,6 +136,7 @@ class ItemPageApp extends Component {
           </form>
         </div>
         <ItemHeader
+        sendDataUpToParent={this.handleIncommingData}
         shopdata={this.state.shopdata}
         shoplistingdata={this.state.shoplistingdata}
         shoplistingimagesdata={this.state.shoplistingimagesdata}/>
