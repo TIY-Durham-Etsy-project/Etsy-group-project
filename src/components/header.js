@@ -23,6 +23,7 @@ export default class Header extends Component {
                 <div className="lower-nav">
                   <ul className="header-list dropdown" >
                     <div>
+
                     <button className="header-button dropbtn"><li className="header-list-item">Clothing & Accessories</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content">Accessories</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Belts & Suspenders</li></button>

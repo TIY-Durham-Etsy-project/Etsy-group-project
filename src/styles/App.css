@@ -108,6 +108,10 @@ button:hover{
     z-index: 1;
   }
 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .dropdown-content-2 {
   display: none;
   position: absolute;
