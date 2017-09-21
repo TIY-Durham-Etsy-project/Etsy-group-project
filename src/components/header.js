@@ -636,6 +636,26 @@ export default class Header extends Component {
                       <button className="header-button dropbtn"><li className="dropdown-content-2">Glasses</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content-2">Sunglasses</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content-2">All Accessories</li></button>
+
+                      <button className="header-button dropbtn"><li className="dropdown-content">Art & Collectibles</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Artist Trading Cards</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Collectibles</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Coins & Money</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Collectible Glass</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Collectible Plates</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Dolls & Miniatures</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Figurines</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Music Boxes</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Postage Stamps</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Drawing & Illustration</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Fiber Arts</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Glass Art</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Mixed Media & Collage</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Painting</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Photography</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Prints</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Music & Movie Posters</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">All Art & Collectibles</li></button>
                   </div>
                   </ul>
                 </div>
