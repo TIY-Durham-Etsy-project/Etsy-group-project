@@ -9,9 +9,9 @@ export default class Homepage extends Component {
     super(props);
 
     this.state = {
-      recently: {},
-      category: {},
-      gifts: {}
+      recently: {type: "recently"},
+      category: {type: "category"},
+      gifts: {type: "gifts"}
       // needed in each object: MainImage.url, meta tag (taxonomy_path or custom), listing Id, source, price
     }
   }

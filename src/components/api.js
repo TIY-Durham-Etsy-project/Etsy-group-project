@@ -14,12 +14,17 @@ export default class API extends Component {
   // params/filters -- only work with listings/active
   let size = "limit=100&offset=0";
   // these might move to category.js
-  let keywords2 = "&keywords=Jewelry";
-  let keywords3 = "&keywords=Clothing";
+  if(this.props.display.type==="category"){
+    // maybe change: push to an array to map over -> 6 API calls
+    let keywords1 = ""
+    let keywords2 = "&keywords=Jewelry";
+    let filter2 = "&filter=Jewelry";
+    let keywords3 = "&keywords=Clothing";
+  }
 
   componentDidMount() {
     // want to change URL with variables for different filters
-    fetch(`${openApi}/listings/active?${apiKey}&includes=MainImage`)
+    fetch(`${openApi}/listings/active?${apiKey}&includes=MainImage${keywords2}${filter2}`)
     .then(r => r.json())
     .then(responseData => {
       let dataArray = responseData.r.results
@@ -53,9 +58,18 @@ export default class API extends Component {
 
   // gifts needs ----
 
+    someFn = () => {
+        // [...somewhere in here I define a variable listInfo which    I think will be useful as data in my ToDoList component...]
+        let listInfo = filterArrayOfMissingData(itemObjects);
+        this.props.callbackFromParent(listInfo);
+    },
 
     render() {
-      return (<div>MyComponent</div>);
+      return (
+        <div>
+          <h3>I could return nothing if = false</h3>
+        </div>
+      );
     }
 }
 

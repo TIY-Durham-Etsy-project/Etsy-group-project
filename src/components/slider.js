@@ -1,12 +1,39 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
+import API from './api.js';
 
 export default class Slider extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            listDataFromChild: null
+        };
+        // this.props.display has values
+    },
+
+    myCallback = (dataFromChild) => {
+        this.setState({ listDataFromChild: dataFromChild });
+    },
+    otherFn = () => {
+        // [...within this other function now I still have access to this.state.listDataFromChild...]
+    }
+    render() {
+        return (
+            <div>
+                 <API callbackFromParent={this.myCallback}/>
+                 {/* [...now here I can pass this.state.listDataFromChild as a prop to any other child component...]   */}
+
+            </div>
+        );
+    }
+});
+
   render() {
     return (
       <div className="slider-row">
         <h2>Headline Goes Here</h2>
       <div className="slider-parent">
+
       	<div className="slider-child">
       		<a href="https://www.etsy.com/c/toys-and-games?anchor_listing_id=521141958&ref=hp">
         		<picture>
