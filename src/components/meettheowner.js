@@ -9,11 +9,13 @@ export default class MeetTheOwner extends Component {
           <p><a href = "">Learn more about their shop and process</a></p>
         </div>
         <div className = "shop-owner-profile">
-          <div className = "shop-owner-profile-image">
-            <img src = "" alt = ""/>
-          </div>
+            <img className = "shop-owner-profile-image"src = {this.props.shopdata ? this.props.shopdata[3].image_url_75x75 : ""}/>
           <div className = "shop-owner-profile-name">
-            <h6><a href = "">name</a></h6>
+            <h6><a href = "">
+              {this.props.shopdata ? this.props.shopdata[3].first_name : ""}{" "}
+              {this.props.shopdata ? this.props.shopdata[3].last_name : ""}
+
+            </a></h6>
           </div>
         </div>
       </div>

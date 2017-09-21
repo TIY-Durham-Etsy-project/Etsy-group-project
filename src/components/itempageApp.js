@@ -142,7 +142,8 @@ class ItemPageApp extends Component {
             listingdata={this.state.listingdata}/>
             <Reviews
             feedbackdata={this.state.feedbackdata}/>
-            <MeetTheOwner/>
+            <MeetTheOwner
+              shopdata={this.state.shopdata}/>
             <FAQs/>
           </div>
           <div className = "right-content">
