@@ -39,12 +39,20 @@ export default class Reviews extends Component {
     let reviewsObjects = false;
     if (this.props.feedbackdata){
       reviewsObjects = this.props.feedbackdata.map((x, i)=>{
-        //<p>{this.props.feedbackdata ? this.props.listingdata.message.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"') : ""}</p>
-        return (
-        <div>
+        console.log(x)
+        if (x.message !== null){
+          return (
+          <div>
+            <p>{this.props.feedbackdata ? x.message.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"') : ""}</p>
+          </div>
+          )
+        } else {
+          return (
+          <div>
 
-        </div>
-        )
+          </div>
+          )
+        }
       })
     }
     return(

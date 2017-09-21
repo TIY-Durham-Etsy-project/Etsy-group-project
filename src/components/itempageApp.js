@@ -59,7 +59,7 @@ class ItemPageApp extends Component {
     this.setState({idvariable: event.target.value});
   }
   handlesubmit(event){
-    this.setState({ listingdata: false, listinginventorydata: false, imagesdata: false, shopdata: false, shoplistingdata: false, shoplistingimagesdata: false, feedbackdata: false });
+    this.setState({ listingdata: false, listinginventorydata: false, imagesdata: false, shopdata: false, shoplistingdata: false, shoplistingimagesdata: false, shoplistingimagesdatalarge: false, feedbackdata: false });
     event.preventDefault();
     this.fetchData();
   }
