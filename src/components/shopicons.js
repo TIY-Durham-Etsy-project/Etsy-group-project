@@ -14,7 +14,7 @@ export default class ShopIcons extends Component {
         <div className = "shopicons-wrapper">
           <div className = "shopicon-box">
             <div className = "shopicon-photo">
-              <img src = {this.props.shoplistingimagesdata[0] ? this.props.shoplistingimagesdata[0] : ""} alt = "store item img"/>
+              <img src = {this.props.shoplistingimagesdatalarge[0] ? this.props.shoplistingimagesdatalarge[0] : ""} alt = "store item img"/>
             </div>
             <div className = "shopicon-text">
               <p>Item Name</p>
@@ -23,7 +23,7 @@ export default class ShopIcons extends Component {
           </div>
           <div className = "shopicon-box">
             <div className = "shopicon-photo">
-              <img src = {this.props.shoplistingimagesdata[1] ? this.props.shoplistingimagesdata[1] : ""} alt = "store item img"/>
+              <img src = {this.props.shoplistingimagesdatalarge[1] ? this.props.shoplistingimagesdatalarge[1] : ""} alt = "store item img"/>
             </div>
             <div className = "shopicon-text">
               <p>Item Name</p>
@@ -31,7 +31,7 @@ export default class ShopIcons extends Component {
             </div>
           </div>    <div className = "shopicon-box">
             <div className = "shopicon-photo">
-              <img src = {this.props.shoplistingimagesdata[2] ? this.props.shoplistingimagesdata[2] : ""} alt = "store item img"/>
+              <img src = {this.props.shoplistingimagesdatalarge[2] ? this.props.shoplistingimagesdatalarge[2] : ""} alt = "store item img"/>
             </div>
             <div className = "shopicon-text">
               <p>Item Name</p>
@@ -39,39 +39,7 @@ export default class ShopIcons extends Component {
             </div>
           </div>    <div className = "shopicon-box">
             <div className = "shopicon-photo">
-              <img src = {this.props.shoplistingimagesdata[3] ? this.props.shoplistingimagesdata[3] : ""} alt = "store item img"/>
-            </div>
-            <div className = "shopicon-text">
-              <p>Item Name</p>
-              <p>Price</p>
-            </div>
-          </div>    <div className = "shopicon-box">
-            <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
-            </div>
-            <div className = "shopicon-text">
-              <p>Item Name</p>
-              <p>Price</p>
-            </div>
-          </div>    <div className = "shopicon-box">
-            <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
-            </div>
-            <div className = "shopicon-text">
-              <p>Item Name</p>
-              <p>Price</p>
-            </div>
-          </div>    <div className = "shopicon-box">
-            <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
-            </div>
-            <div className = "shopicon-text">
-              <p>Item Name</p>
-              <p>Price</p>
-            </div>
-          </div>    <div className = "shopicon-box">
-            <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
+              <img src = {this.props.shoplistingimagesdatalarge[3] ? this.props.shoplistingimagesdatalarge[3] : ""} alt = "store item img"/>
             </div>
             <div className = "shopicon-text">
               <p>Item Name</p>

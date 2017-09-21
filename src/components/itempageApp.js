@@ -110,7 +110,7 @@ class ItemPageApp extends Component {
           }).then(data => {
             this.setState(prevState => ({
               shoplistingimagesdata: [...prevState.shoplistingimagesdata, data.results[0].url_75x75],
-              shoplistingimagesdatalarge: [...prevState.shoplistingimagesdata, data.results[0].url_170x135]
+              shoplistingimagesdatalarge: [...prevState.shoplistingimagesdatalarge, data.results[0].url_170x135]
             }))
           })
           i++
@@ -156,7 +156,6 @@ class ItemPageApp extends Component {
             <ShopIcons
               shopdata={this.state.shopdata}
               shoplistingdata={this.state.shoplistingdata}
-              shoplistingimagesdata={this.state.shoplistingimagesdata}
               shoplistingimagesdatalarge={this.state.shoplistingimagesdatalarge}
             />
           </div>
