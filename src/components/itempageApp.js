@@ -29,6 +29,7 @@ class ItemPageApp extends Component {
       shopdata: false,
       shoplistingdata: false,
       shoplistingimagesdata: false,
+      shoplistingimagesdatalarge: false,
       feedbackdata: false,
     };
   }
@@ -108,7 +109,8 @@ class ItemPageApp extends Component {
             return results.json();
           }).then(data => {
             this.setState(prevState => ({
-              shoplistingimagesdata: [...prevState.shoplistingimagesdata, data.results[0].url_75x75]
+              shoplistingimagesdata: [...prevState.shoplistingimagesdata, data.results[0].url_75x75],
+              shoplistingimagesdatalarge: [...prevState.shoplistingimagesdata, data.results[0].url_170x135]
             }))
           })
           i++
@@ -154,6 +156,7 @@ class ItemPageApp extends Component {
               shopdata={this.state.shopdata}
               shoplistingdata={this.state.shoplistingdata}
               shoplistingimagesdata={this.state.shoplistingimagesdata}
+              shoplistingimagesdatalarge={this.state.shoplistingimagesdatalarge}
             />
           </div>
           <RelatedTags/>
