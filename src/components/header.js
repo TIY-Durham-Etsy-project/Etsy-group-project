@@ -372,6 +372,26 @@ export default class Header extends Component {
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Wedding Forks</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content-2">All Decorations</li></button>
 
+                    <button className="header-button dropbtn"><li className="dropdown-content">Gifts & Mementos</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Albums & Scrapbooks</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">"Bridesmaids' Gifts"</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Gifts For The Couple</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Groomsmen Gifts</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Guest Books</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Portraits & Frames</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Wedding Favors</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">All Gifts & Mementos</li></button>
+
+                    <button className="header-button dropbtn"><li className="dropdown-content">Invitations & Paper</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Announcements</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Greeting Cards</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Invitation Kits</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Invitations</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Save The Dates</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Templates</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Thank You Cards</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">All Invitations & Paper</li></button>
+
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Entertainment</li></button>
