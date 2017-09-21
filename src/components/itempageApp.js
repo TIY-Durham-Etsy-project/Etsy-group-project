@@ -44,6 +44,7 @@ class ItemPageApp extends Component {
     shopdata: false,
     shoplistingdata: false,
     shoplistingimagesdata: false,
+    shoplistingimagesdatalarge: false,
     feedbackdata: false, });
   }
   componentDidMount() {
