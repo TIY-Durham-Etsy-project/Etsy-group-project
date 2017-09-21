@@ -552,6 +552,21 @@ export default class Header extends Component {
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Outdoor & Gardening</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Storage & Organization</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">All Home & Living</li></button>
+
+                          <button className="header-button dropbtn"><li className="dropdown-content">Paper & Party Supplies</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Paper</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Calendars & Planners</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Calligraphy</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Erasers & Sharpeners</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Gift Wrapping</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Greeting Cards</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Invitations & Announcements</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Stationary</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Stickers, Labels & Tags</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Party Supplies</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Party Décor</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Party Favors & Games</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">All Paper & Party Supplies</li></button>
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Kids & Baby</li></button>
