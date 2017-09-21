@@ -110,3 +110,8 @@
     justify-content: center;
   }
 }
+
+/*---SOCIAL MEDIA STYLES BEGIN---*/
+svg{
+  height: 30px;
+}
