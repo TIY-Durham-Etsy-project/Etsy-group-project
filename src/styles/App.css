@@ -7,7 +7,7 @@ body{
 h1{
   font-family: 'Bitter', 'Times', serif;
   font-weight: lighter;
-  color:#f56400;
+  color:#f45800;
   font-size: 40px;
 }
 
@@ -16,7 +16,7 @@ h2{
 }
 
 h4 {
-  color: #f56400;
+  color: #f45800;
   margin: 3px 7px 0 0 ;
   font-size: 35px;
 }
@@ -25,10 +25,11 @@ h4 {
   list-style: none;
   display: flex;
   text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-list-item {
-  margin: 19px;
   font-family: 'Lato', 'Arial', sans-serif;
   font-size: 12px;
   color: #666666;
@@ -47,7 +48,7 @@ button:hover{
 }
 
 .header-list-item:hover{
-  border-bottom: 6px solid #f56400;
+  border-bottom: 6px solid #f45800;
 
 }
 
@@ -121,50 +122,83 @@ button:hover{
 }
 
 
-
-.sign-in {
-  background-color: white;
-  border: 1px solid #f56400;
-  width: 64px;
-  height: 37px;
-  padding: 5px;
-  font-size: 10px;
-  color:#f56400;
-
-}
-
 .fa-shopping-cart{
   display: flex;
   flex-direction: column;
   margin: 7px 10px;
   padding: 9px;
   border-left: solid 1px #efefeb;
+  color: darkgrey;
 }
 
-.btn-primary {
-  border: 1px;
-  background-color: #f56400;
+.search-button {
+  border: none;
+  background-color: #f45800;
   color: white;
-  width: 82px;
-  height: 35px;
-  margin: 11px 0 0 0 ;
+  width: 20%;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  float: left;
+  height: 100%;
+  outline: none;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 15px;
+
 }
 
 .search-input {
-  border: .5px solid grey;
-  width: 300px;
-  height: 32px;
-  margin: 10px 0 ;
+  border: none;
+  width: 78%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 2%;
+  float: left;
+  display: inline-block;
+  outline: none;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 15px;
+
+
+}
+
+.search-bar{
+  border-radius: 3px;
+  border: solid 1px #dcdcd9;
+  height: 30px;
+  width: 420px;
+  overflow: hidden;
+  font-size: 11px;
+  font-family: 'Lato', 'Arial', sans-serif;
+
+
 }
 
 .header-font {
-  font-size: 10px;
-  color: #f56400;
-  font-family: 'Lato', 'Arial', sans-serif;
+  color: #E55400;
   border: solid 1px transparent;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: lighter;
+}
 
+.header-font:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-
+.sign-in {
+  background-color: white;
+  border: 1px solid #E55400;
+  width: 64px;
+  height: auto;
+  border-radius: 3px;
+  padding: 8px;
+  line-height: 16px;
+  font-size: 14px;
+  color:#E55400;
+  font-weight: lighter;
 }
 
 /* item-page-wrapper for all data */
@@ -311,6 +345,7 @@ font-size: 25px;
   background-color: transparent;
   border: none;
   font-size: 15px;
+  outline: none;
 }
 
 /* shop icons */
@@ -553,10 +588,10 @@ font-size: 25px;
 }
 
 .add-to-cart-btn{
-  background-color:#F56400;
+  background-color:#f45800;
   width: 370px;
   height: 30px;
-  border: solid 1px #F56400;
+  border: solid 1px #f45800;
   margin: 20px 0;
   border-radius: 3px;
   color: white;
@@ -645,11 +680,11 @@ font-size: 25px;
 
 .etsy-orange-link{
     text-decoration: none;
-    color: #F56400;
+    color: #f45800;
 }
 
 .etsy-orange-link:hover{
-  border-bottom: solid 1px #F56400;
+  border-bottom: solid 1px #f45800;
 }
 
 
@@ -684,7 +719,7 @@ font-size: 25px;
 }
 .detailsdropdown button{
   font-family: Arial;
-  color: #f56400;
+  color: #f45800;
   font-size: 14px;
   background: #ffffff;
   border: solid #ffffff 0px;
