@@ -20,8 +20,6 @@ class ShareLinks extends Component {
      }
 
       componentWillMount() {
-        let media = window.innerWidth;
-        console.log(media);
         this.setMedia();
       }
 

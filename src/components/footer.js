@@ -22,10 +22,8 @@ class Footer extends Component {
    this.setState({media: window.innerWidth});
  }
 
-  componentWillMount() {
-    let media = window.innerWidth;
-    console.log(media);
-    this.setMedia();
+  componentDidMount() {
+    window.addEventListener("resize", this.setMedia);
   }
 
   render() {

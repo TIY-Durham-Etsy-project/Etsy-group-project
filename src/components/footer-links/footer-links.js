@@ -4,6 +4,8 @@ import SellLinks from "./sell-links.js";
 import AboutLinks from "./about-links.js";
 import ShareLinks from "../share-links.js";
 
+const snapSize = 500;
+
 class FooterLinks extends Component {
   constructor(props){
     super(props);
@@ -21,10 +23,9 @@ class FooterLinks extends Component {
        this.setState({media: window.innerWidth});
      }
 
-      componentWillMount() {
-        let media = window.innerWidth;
-        console.log(media);
-        this.setMedia();
+
+      componentDidMount(){
+        window.addEventListener("resize", this.setMedia);
       }
 
 
@@ -32,7 +33,7 @@ class FooterLinks extends Component {
     let media = this.state.media;
 
     let shareLinks = null;
-    if (media > 600){
+    if (media > snapSize){
       shareLinks = <ShareLinks />;
     }
 
