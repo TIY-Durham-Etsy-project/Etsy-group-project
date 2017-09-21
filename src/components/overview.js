@@ -2,17 +2,23 @@ import React, { Component } from 'react';
 
 export default class Overview extends Component {
   render(){
-    console.log(this.props.shippinginfodata);
+    console.log(this.props.listingdata)
+    let shipsto = false;
+    if (this.props.shippinginfodata && this.props.shippinginfodata.destination_country_name === "United States"){
+      shipsto = "Only to the United States";
+    } else if (this.props.shippinginfodata){
+      shipsto = "Worldwide";
+    }
     return(
       <div className="overview">
         <h3 className="overview-title">Overview</h3>
         <ul className = "overview-list">
-          <li>Is it handmade?</li>
+          {this.props.listingdata.used_manufacturer ? (<li>Manufactured</li>) : (<li>Handmade Item</li>)}
           <li>Primary Color: </li>
-          <li>Secondary Color: </li>
+          <li>Category: {this.props.listingdata ? this.props.listingdata.category_path[0] : ""}</li>
           <li>Materials: {this.props.listingdata ? this.props.listingdata.materials.join(", ") : ""}</li>
-          <li>{this.props.listingdata ? this.props.listingdata.when_made.replace(/_/g, " ") : ""}</li>
-          <li>Ships From {this.props.listingdata ? this.props.shippinginfodata.origin_country_name : ""} To {this.props.listingdata ? this.props.shippinginfodata.destination_country_name : ""} </li>
+          <li>When Made: {this.props.listingdata ? this.props.listingdata.when_made.replace(/_/g, " ") : ""}</li>
+          <li>Ships {shipsto} From {this.props.listingdata ? this.props.shippinginfodata.origin_country_name : ""} </li>
           <li>Feedback:<a href = "" className = "etsy-orange-link"> {this.props.feedbackdata.length} reviews</a> </li>
           <li>Favorited by: <a href = "" className = "etsy-orange-link">{this.props.listingdata.num_favorers} People</a></li>
           <li>View <a href = "" className = "etsy-orange-link">shop policies</a></li>
