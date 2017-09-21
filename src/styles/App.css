@@ -137,12 +137,12 @@ button:hover{
   display: block;
 }
 
-/*.dropdown:hover .dropdown-content-clothing-2 {
+.accessories_sub_items:hover .dropdown-content-clothing-2 {
   display: block;
-}*/
+}
 
 .header-list-item-clothing:hover .dropdown-content-clothing {
-  display: block;
+  /*display: block !important;*/
 }
 
 .dropdown-content-clothing:hover {
