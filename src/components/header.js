@@ -392,6 +392,27 @@ export default class Header extends Component {
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Thank You Cards</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content-2">All Invitations & Paper</li></button>
 
+                    <button className="header-button dropbtn"><li className="dropdown-content">Jewelry</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Bracelets</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Brooches</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Cuff Links & Tie Clips</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Cuff Links</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Shirt Studs</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Tie Clips & Tacks</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Earrings</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Jewelry Sets</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Necklaces</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Pendants</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Anniversary Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Bridal Sets</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Claddagh Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Engagement Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Promise Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2"Ring Bearer Pillows</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Wedding Bands</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">All Jewelry</li></button>
+
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Entertainment</li></button>
