@@ -21,6 +21,8 @@ h4 {
   font-size: 35px;
 }
 
+
+
 .header-list {
   /*height: 10000pt;*/
   position: absolute;
@@ -257,20 +259,29 @@ button:hover{
 
 /* item-page-wrapper for all data */
 .item-page-wrapper{
-  width: 75%;
+  width: 140vh;
   background-color: white;
   margin: 10px auto;
   border: solid 1px #dcdcd9;
-  border-radius: 1%;
-  padding: 35px;
+  padding: 30px;
   display: flex;
   justify-content: center;
+  margin: 0 auto ;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  border-bottom-color: #e2e2e2;
+}
+
+.left-content{
+  width: 60%;
+  overflow: auto;
 }
 
 .right-content{
-  width: 400px;
-  margin-left: 10px;
+  width: 40%;
+  overflow: auto;
 }
+
 
 /* header left/right styles */
 .header-left-items{
@@ -343,10 +354,7 @@ button:hover{
   font-family: 'Lato', 'Arial', sans-serif;
 }
 
-/* customer order */
-.customorder{
-  display: flex;
-}
+
 
 /*favorite and add to buttons (part of social media) */
 .favorite-and-addto-btns{
@@ -811,16 +819,7 @@ font-size: 25px;
 
 
 /* item-page-wrapper for all data */
-.item-page-wrapper{
-  width: 75%;
-  background-color: white;
-  margin: 28px auto 20px;
-  border: 1px solid #ececec;
-  border-radius: 5px;
-  border-bottom-color: #e2e2e2;
-  padding: 28px;
-  position: relative;
-}
+
 
 /*Item Page Details Dropdown*/
 .details-dropdown-container-minimized{
