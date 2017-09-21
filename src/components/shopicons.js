@@ -45,39 +45,7 @@ export default class ShopIcons extends Component {
               <p>Item Name</p>
               <p>Price</p>
             </div>
-          </div>    <div className = "shopicon-box">
-            <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
-            </div>
-            <div className = "shopicon-text">
-              <p>Item Name</p>
-              <p>Price</p>
-            </div>
-          </div>    <div className = "shopicon-box">
-            <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
-            </div>
-            <div className = "shopicon-text">
-              <p>Item Name</p>
-              <p>Price</p>
-            </div>
-          </div>    <div className = "shopicon-box">
-            <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
-            </div>
-            <div className = "shopicon-text">
-              <p>Item Name</p>
-              <p>Price</p>
-            </div>
-          </div>    <div className = "shopicon-box">
-            <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
-            </div>
-            <div className = "shopicon-text">
-              <p>Item Name</p>
-              <p>Price</p>
-            </div>
-          </div>
+          </div>    
         </div>
       </div>
     )
