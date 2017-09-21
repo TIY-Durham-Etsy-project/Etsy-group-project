@@ -631,9 +631,13 @@ font-size: 25px;
   border-bottom: solid 1px #efefeb;
 }
 
-.productdescription h2{
-  word-break: break-all;
+.item-title-header{
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  word-wrap: break-word;
 }
+
 
 .productdescription label{
   color: #666;
