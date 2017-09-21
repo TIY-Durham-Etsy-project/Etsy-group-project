@@ -814,12 +814,13 @@ font-size: 25px;
 .item-page-wrapper{
   width: 75%;
   background-color: white;
-  margin: 28px auto 20px;
+  margin: 0 auto ;
   border: 1px solid #ececec;
   border-radius: 5px;
   border-bottom-color: #e2e2e2;
   padding: 28px;
-  position: relative;
+  overflow: auto;
+
 }
 
 /*Item Page Details Dropdown*/
