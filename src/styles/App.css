@@ -327,12 +327,13 @@ button:hover{
   width: 75px;
   margin: 20px 10px;
   text-align: center;
+  transition: all 1s;
 }
 
 .sample-item:hover{
   opacity: 0.7;
   cursor: pointer;
-
+  border: solid 3px grey;
 }
 
 .header-right-items{
@@ -455,12 +456,22 @@ font-size: 25px;
   height: 185px;
   border: solid 1px #dcdcd9;
   margin: 3px;
+  transition: all 1s;
 }
 
 .shopicon-photo{
   width: 170px;
   height: 135px;
   background-size: contain;
+  transition: all 1s;
+}
+.shopicon-box:hover{
+  border: solid 1px #000000;
+}
+
+.shopicon-photo:hover{
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .shopicon-text{
