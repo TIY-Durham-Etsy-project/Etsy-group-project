@@ -605,9 +605,37 @@ export default class Header extends Component {
                       <button className="header-button dropbtn"><li className="dropdown-content-2">"Girls' Shoes"</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content-2">"Kids' Crafts"</li></button>
                       <button className="header-button dropbtn"><li className="dropdown-content-2">"Kids' Furniture"</li></button>
+
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Vintage</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content">Accessories</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Belts & Suspenders</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Belt Buckles</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Gloves & Mittens</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Evening & Formal Gloves</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Hair Accessories</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Barrettes & Clips</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Decorative Combs</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Hats & Caps</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Baseball & Trucker Caps</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Fedoras</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Formal Hats</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Keychains & Lanyards</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Patches & Pins</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Scarves & Wraps</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Collars & Bibs</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Handkerchiefs</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Scarves</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Shawls & Wraps</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Suit & Tie Accessories</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Bolo Ties</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Cufflinks & Tie Clips</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Neckties</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Sunglasses & Eyewear</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Glasses</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Sunglasses</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">All Accessories</li></button>
                   </div>
                   </ul>
                 </div>
