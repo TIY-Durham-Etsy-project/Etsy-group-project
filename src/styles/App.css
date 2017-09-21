@@ -113,6 +113,21 @@
   margin-right: 10px;
 }
 
+.carousel-back, .carousel-forward {
+  font-size: 36px;
+  color: #666666;
+  position: relative;
+  align-self: center;
+}
+
+.carousel-back {
+  left: 1px;
+}
+
+.carousel-forward {
+  left: 200px;
+}
+
 .carousel-textbox {
   width: 33%;
   background-color: #512526;
