@@ -21,6 +21,8 @@ h4 {
   font-size: 35px;
 }
 
+
+
 .header-list {
   /*height: 10000pt;*/
   position: absolute;
@@ -257,7 +259,7 @@ button:hover{
 
 /* item-page-wrapper for all data */
 .item-page-wrapper{
-  width: 75%;
+  width: 1000px;
   background-color: white;
   margin: 10px auto;
   border: solid 1px #dcdcd9;
@@ -265,6 +267,18 @@ button:hover{
   padding: 35px;
   display: flex;
   justify-content: center;
+}
+
+.left-content{
+  min-width: 60%;
+  resize: both;
+  overflow: auto;
+}
+
+.right-content{
+  min-width: 40%;
+  resize: both;
+  overflow: auto;
 }
 
 .right-content{
@@ -814,13 +828,12 @@ font-size: 25px;
 .item-page-wrapper{
   width: 75%;
   background-color: white;
-  margin: 0 auto ;
+  margin: 28px auto 20px;
   border: 1px solid #ececec;
   border-radius: 5px;
   border-bottom-color: #e2e2e2;
   padding: 28px;
-  overflow: auto;
-
+  position: relative;
 }
 
 /*Item Page Details Dropdown*/
