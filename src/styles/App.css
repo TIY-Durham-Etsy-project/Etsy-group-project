@@ -111,9 +111,9 @@ button:hover{
   border: none;
 }
 
-/*.header-list-item:hover, .header-list-item-clothing:hover{
+.header-list-item:hover, .header-list-item-clothing:hover{
   border-bottom: 6px solid #f45800;
-}*/
+}
 
 .dropdown-content {
     display: none;
@@ -137,12 +137,12 @@ button:hover{
   display: block;
 }
 
-/*.dropdown:hover .dropdown-content-clothing-2 {
+.accessories_sub_items:hover .dropdown-content-clothing-2 {
   display: block;
-}*/
+}
 
 .header-list-item-clothing:hover .dropdown-content-clothing {
-  display: block;
+  /*display: block !important;*/
 }
 
 .dropdown-content-clothing:hover {
