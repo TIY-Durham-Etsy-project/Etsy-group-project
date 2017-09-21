@@ -11,8 +11,8 @@ export default class ShopIcons extends Component {
             <img src = {x} alt = "store item img"/>
           </div>
           <div className = "shopicon-text">
-            <p className="shopicon-text-title">{this.props.shoplistingdata.results[i].title}</p>
-            <p>${this.props.shoplistingdata.results[i].price}</p>
+            <p className="shopicon-text-title">{this.props.shoplistingdata ? this.props.shoplistingdata.results[i].title : ""}</p>
+            <p>${this.props.shoplistingdata ? this.props.shoplistingdata.results[i].price : ""}</p>
           </div>
         </div>
         )
