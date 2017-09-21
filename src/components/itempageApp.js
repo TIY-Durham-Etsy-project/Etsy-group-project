@@ -168,8 +168,8 @@ class ItemPageApp extends Component {
               shoplistingimagesdatalarge={this.state.shoplistingimagesdatalarge}
             />
           </div>
-          <RelatedTags/>
         </div>
+        <RelatedTags/>
       </div>
     );
   }
