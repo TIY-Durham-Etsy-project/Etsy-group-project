@@ -259,11 +259,11 @@ button:hover{
 
 /* item-page-wrapper for all data */
 .item-page-wrapper{
-  width: 150vh;
+  width: 140vh;
   background-color: white;
   margin: 10px auto;
   border: solid 1px #dcdcd9;
-  padding: 25px;
+  padding: 30px;
   display: flex;
   justify-content: center;
   margin: 0 auto ;
