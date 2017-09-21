@@ -565,6 +565,53 @@ font-size: 25px;
   margin: auto;*/
 }
 
+/* meet the owner */
+.meettheowner-header-text{
+  text-align: center;
+  padding: 60px;
+  padding-bottom: 20px;
+  border-top: solid 1px #efefeb;
+}
+
+.meettheowner p , .meettheowner h6{
+  margin: 1px;
+}
+
+.meettheowner a {
+  margin: 1px;
+  font-family: 'Lato', 'Arial', sans-serif;
+  color: black;
+  text-decoration: none;
+}
+
+.meettheowner a:hover{
+  text-decoration: underline;
+}
+
+.meettheowner h6{
+  font-family: 'Lato', 'Arial', sans-serif;
+  margin: 5px;
+  color: #8B8B8B;
+  font-size: 14px;
+  font-weight: bold;
+
+}
+
+.shop-owner-profile-image{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: solid 1px black;
+  overflow: hidden;
+}
+
+.shop-owner-profile{
+  margin: 0 auto;
+  text-align: center;
+  width: 100px;
+  padding: 0;
+}
+
 /*Product Description*/
 
 .productdescription{
