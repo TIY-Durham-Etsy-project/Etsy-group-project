@@ -353,12 +353,24 @@ export default class Header extends Component {
                   <button className="header-button dropbtn"><li className="dropdown-content-2">Wedding Garters</li></button>
                   <button className="header-button dropbtn"><li className="dropdown-content-2">Wedding Lingerie</li></button>
                   <button className="header-button dropbtn"><li className="dropdown-content-2">Suits</li></button>
-                    <button className="header-button dropbtn"><li className="dropdown-content-2">"Boys' Suits"</li></button>
-                    <button className="header-button dropbtn"><li className="dropdown-content-2">"Girls' Suits"</li></button>
-                    <button className="header-button dropbtn"><li className="dropdown-content-2">"Men's Suits"</li></button>
-                    <button className="header-button dropbtn"><li className="dropdown-content-2">"Women's Suits"</li></button>
-                    <button className="header-button dropbtn"><li className="dropdown-content-2">All Clothing</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">"Boys' Suits"</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">"Girls' Suits"</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">"Men's Suits"</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">"Women's Suits"</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">All Clothing</li></button>
 
+                    <button className="header-button dropbtn"><li className="dropdown-content">Decorations</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Baskets & Boxes</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Cake Toppers</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Candles & Holders</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Centerpieces</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Plants</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Ring Bearer Pillows</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Serving & Dining</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Cake Servers & Knives</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Table Décor</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Wedding Forks</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">All Decorations</li></button>
 
                   </div>
                   <div>
