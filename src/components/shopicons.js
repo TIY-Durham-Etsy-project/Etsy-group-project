@@ -14,7 +14,7 @@ export default class ShopIcons extends Component {
         <div className = "shopicons-wrapper">
           <div className = "shopicon-box">
             <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
+              <img src = {this.props.shoplistingimagesdata[0] ? this.props.shoplistingimagesdata[0] : ""} alt = "store item img"/>
             </div>
             <div className = "shopicon-text">
               <p>Item Name</p>
@@ -23,7 +23,7 @@ export default class ShopIcons extends Component {
           </div>
           <div className = "shopicon-box">
             <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
+              <img src = {this.props.shoplistingimagesdata[1] ? this.props.shoplistingimagesdata[1] : ""} alt = "store item img"/>
             </div>
             <div className = "shopicon-text">
               <p>Item Name</p>
@@ -31,7 +31,7 @@ export default class ShopIcons extends Component {
             </div>
           </div>    <div className = "shopicon-box">
             <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
+              <img src = {this.props.shoplistingimagesdata[2] ? this.props.shoplistingimagesdata[2] : ""} alt = "store item img"/>
             </div>
             <div className = "shopicon-text">
               <p>Item Name</p>
@@ -39,7 +39,7 @@ export default class ShopIcons extends Component {
             </div>
           </div>    <div className = "shopicon-box">
             <div className = "shopicon-photo">
-              <img src = "" alt = ""/>
+              <img src = {this.props.shoplistingimagesdata[3] ? this.props.shoplistingimagesdata[3] : ""} alt = "store item img"/>
             </div>
             <div className = "shopicon-text">
               <p>Item Name</p>
