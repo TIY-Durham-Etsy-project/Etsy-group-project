@@ -656,6 +656,32 @@ export default class Header extends Component {
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Prints</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Music & Movie Posters</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">All Art & Collectibles</li></button>
+
+                        <button className="header-button dropbtn"><li className="dropdown-content">Bags & Purses</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Accessory Cases</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Backpacks</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Cosmetic & Toiletry Storage</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Vanity Storage</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Handbags</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Clutches & Evening Bags</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Crossbody Bags</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Hobo Bags</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Shoulder Bags</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Top Handle Bags</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Luggage & Travel</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Briefcases & Attaches</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Duffel Bags</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Overnight Bags</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Suitcases</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Train Cases</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Messenger Bags</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pouches & Coin Purses</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Totes</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Wallets & Money Clips</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Wallets</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">All Bags & Purses</li></button>
+
+
                   </div>
                   </ul>
                 </div>
