@@ -8,7 +8,7 @@ class ShareLinks extends Component {
     super(props);
 
         this.state= {
-          media: 0,
+          media: null,
           parent: {}
         }
 

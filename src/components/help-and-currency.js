@@ -9,7 +9,7 @@ class HelpAndCurrency extends Component {
     super(props);
 
         this.state= {
-          media: 0,
+          media: null,
           parent: {}
         }
 
@@ -21,6 +21,9 @@ class HelpAndCurrency extends Component {
        this.setState({media: window.innerWidth});
      }
 
+     componentWillMount(){
+       this.setMedia();
+     }
 
       componentDidMount(){
         window.addEventListener("resize", this.setMedia);

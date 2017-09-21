@@ -10,7 +10,7 @@ class FooterLinks extends Component {
   constructor(props){
     super(props);
       this.state= {
-        media: 0,
+        media: null,
         parent: {}
       }
       this.setMedia = this.setMedia.bind(this)
@@ -20,6 +20,9 @@ class FooterLinks extends Component {
     this.setState({media: window.innerWidth});
   }
 
+  componentWillMount(){
+    this.setMedia();
+  }
 
   componentDidMount(){
     window.addEventListener("resize", this.setMedia);
