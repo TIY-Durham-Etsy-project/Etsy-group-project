@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 
 export default class ShopIcons extends Component {
   render(){
-    // console.log(this.props.shoplistingdata[0].title);
     let iconboxes = false;
     if (this.props.shoplistingimagesdatalarge){
       iconboxes = this.props.shoplistingimagesdatalarge.map((x, i)=>{
         return (
-        <div className = "shopicon-box">
+        <div className = "shopicon-box" key={x}>
           <div className = "shopicon-photo">
             <img src = {x} alt = "store item img"/>
           </div>

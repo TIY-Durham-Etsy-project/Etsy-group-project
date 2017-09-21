@@ -140,7 +140,8 @@ class ItemPageApp extends Component {
             <CustomOrder/>
             <DetailsDropdown
             listingdata={this.state.listingdata}/>
-            <Reviews/>
+            <Reviews
+            feedbackdata={this.state.feedbackdata}/>
             <MeetTheOwner/>
             <FAQs/>
           </div>
