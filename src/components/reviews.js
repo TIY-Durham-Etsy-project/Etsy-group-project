@@ -39,17 +39,20 @@ export default class Reviews extends Component {
     let reviewsObjects = false;
     if (this.props.feedbackdata){
       reviewsObjects = this.props.feedbackdata.map((x, i)=>{
-        console.log(x)
+        // console.log(x)
         if (x.message !== null){
           return (
           <div>
+            <p>User id: {this.props.feedbackdata ? x.transaction_id : ""}</p>
+            <p>Stars: {this.props.feedbackdata ? x.value : ""}</p>
             <p>{this.props.feedbackdata ? x.message.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"') : ""}</p>
           </div>
           )
         } else {
           return (
           <div>
-
+            <p>User id: {this.props.feedbackdata ? x.transaction_id : ""}</p>
+            <p>Stars: {this.props.feedbackdata ? x.value : ""}</p>
           </div>
           )
         }

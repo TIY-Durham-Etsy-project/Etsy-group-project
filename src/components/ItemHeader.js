@@ -2,11 +2,19 @@ import React, { Component } from 'react';
 
 export default class ItemHeader extends Component {
   render(){
+    let shopimage = false
+    if (this.props.shopdata){
+      if (this.props.shopdata[0].icon_url_fullxfull === null){
+        shopimage = this.props.shopdata[3].image_url_75x75
+      } else {
+        shopimage = this.props.shopdata[0].icon_url_fullxfull
+      }
+    }
     return(
       <div className="item-header">
         <div className ='header-left-items'>
           <div className = "shop-icon">
-            <img src = {this.props.shopdata ? this.props.shopdata[0].icon_url_fullxfull : ""} alt = "shop icon" width="75" height="75"/>
+            <img src = {shopimage ? shopimage : ""} alt = "shop icon" width="75" height="75"/>
           </div>
           <div className = "shop-name fav-btn">
             <h2 className = "shop-title">{this.props.shopdata ? this.props.shopdata[0].shop_name : ""}</h2>

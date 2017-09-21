@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 
 export default class ShopIcons extends Component {
   render(){
+    let shopimage = false
+    if (this.props.shopdata){
+      if (this.props.shopdata[0].icon_url_fullxfull === null){
+        shopimage = this.props.shopdata[3].image_url_75x75
+      } else {
+        shopimage = this.props.shopdata[0].icon_url_fullxfull
+      }
+    }
     let iconboxes = false;
     if (this.props.shoplistingimagesdatalarge && this.props.shoplistingdata && this.props.shoplistingdata.results !== undefined){
       iconboxes = this.props.shoplistingimagesdatalarge.map((x, i)=>{
@@ -21,7 +29,7 @@ export default class ShopIcons extends Component {
     return(
       <div className="shopicons">
         <div className = "shop-icon-small">
-          <img src = {this.props.shopdata ? this.props.shopdata[0].icon_url_fullxfull : ""} alt = "shop icon" width="50" height="50"/>
+          <img src = {shopimage ? shopimage : ""} alt = "shop icon" width="50" height="50"/>
         </div>
         <div className  = "shopicons-header-text">
           <h5 className = "shop-icon-shop-name">{this.props.shopdata ? this.props.shopdata[0].shop_name : ""}</h5>
