@@ -21,7 +21,7 @@ class ItemPageApp extends Component {
     this.handlesubmit = this.handlesubmit.bind(this);
     this.state = {
       // idvariable: "499471843",
-      idvariable: "549278375",
+      idvariable: "",
       listingdata: false,
       listinginventorydata: false,
       imagesdata: false,
@@ -33,8 +33,24 @@ class ItemPageApp extends Component {
     };
   }
   // This mounts the page.
+  componentWillMount() {
+    console.log("ComponentWILLmount fired");
+    this.setState({ idvariable: "549278375",
+    listingdata: false,
+    listinginventorydata: false,
+    imagesdata: false,
+    shippinginfodata: false,
+    shopdata: false,
+    shoplistingdata: false,
+    shoplistingimagesdata: false,
+    feedbackdata: false, });
+  }
   componentDidMount() {
+    console.log("Componentdidmount fired");
     // this.fetchData();
+  }
+  componentWillUnmount(){
+    console.log("COMPONENT IS NOW UNMOUNTING");
   }
   handleTextChange(event){
     event.preventDefault();
@@ -103,45 +119,44 @@ class ItemPageApp extends Component {
   }
   render() {
     return (
-      <div className="ItemPageApp">
-      <div className="PlayListForm">
-        <form onSubmit={this.handlesubmit}>
-          <input onChange={this.handleTextChange} type="text" id="idnumber"
-          placeholder="ID" value={this.state.idvariable}/>
-          <button type="submit">"SUBMIT"</button>
-        </form>
-      </div>
+      <div className="ItemPageApp" key={this.state.idvariable}>
+        <div className="PlayListForm">
+          <form onSubmit={this.handlesubmit}>
+            <input onChange={this.handleTextChange} type="text" id="idnumber"
+            placeholder="ID" value={this.state.idvariable}/>
+            <button type="submit">"SUBMIT"</button>
+          </form>
+        </div>
         <ItemHeader
         shopdata={this.state.shopdata}
         shoplistingdata={this.state.shoplistingdata}
         shoplistingimagesdata={this.state.shoplistingimagesdata}/>
         <div className = "item-page-wrapper">
           <div className = "left-content">
-          <FavoriteButton/>
-          <ImageCarousel imagesdata={this.state.imagesdata}/>
-          <CustomOrder/>
-          <DetailsDropdown
-          listingdata={this.state.listingdata}/>
-          <Reviews/>
-          <MeetTheOwner/>
-          <FAQs/>
-        </div>
-        <div className = "right-content">
-          <ProductDescription
-          listingdata={this.state.listingdata}
-          listinginventorydata={this.state.listinginventorydata}/>
-          <Overview
-          listingdata={this.state.listingdata}
-          shippinginfodata={this.state.shippinginfodata}/>
-          <SocialButtons/>
-          <ShopIcons
-            shopdata={this.state.shopdata}
-            shoplistingdata={this.state.shoplistingdata}
-            shoplistingimagesdata={this.state.shoplistingimagesdata}
-          />
-        </div>
+            <FavoriteButton/>
+            <ImageCarousel imagesdata={this.state.imagesdata}/>
+            <CustomOrder/>
+            <DetailsDropdown
+            listingdata={this.state.listingdata}/>
+            <Reviews/>
+            <MeetTheOwner/>
+            <FAQs/>
+          </div>
+          <div className = "right-content">
+            <ProductDescription
+            listingdata={this.state.listingdata}
+            listinginventorydata={this.state.listinginventorydata}/>
+            <Overview
+            listingdata={this.state.listingdata}
+            shippinginfodata={this.state.shippinginfodata}/>
+            <SocialButtons/>
+            <ShopIcons
+              shopdata={this.state.shopdata}
+              shoplistingdata={this.state.shoplistingdata}
+              shoplistingimagesdata={this.state.shoplistingimagesdata}
+            />
+          </div>
           <RelatedTags/>
-
         </div>
       </div>
     );
