@@ -97,7 +97,6 @@ class ItemPageApp extends Component {
     fetch(`https://openapi.etsy.com/v2/shops/listing/${this.state.idvariable}?api_key=nn7mkmoan2c7xamo4c3pnax4`).then(results => {
       return results.json();
     }).then(data => {
-      console.log(data.results)
       this.setState({ shopdata: data.results });
       //FETCHES ACTIVE SHOP LISTINGS
       fetch(`https://openapi.etsy.com/v2/shops/${data.results[0].shop_id}/listings/active?limit=5&api_key=nn7mkmoan2c7xamo4c3pnax4`).then(results => {
