@@ -438,19 +438,21 @@ font-size: 25px;
 
 .shopicons-wrapper{
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .shopicon-box{
-  width: 185px;
+  width: 170px;
   height: 185px;
   border: solid 1px #dcdcd9;
   margin: 3px;
 }
 
 .shopicon-photo{
-  width: 185px;
-  height: 140px;
+  width: 170px;
+  height: 135px;
+  background-size: contain;
 }
 
 .shopicon-text{
@@ -458,6 +460,12 @@ font-size: 25px;
   margin: 0;
   font-family: 'Lato', 'Arial', sans-serif;
 
+}
+
+.shopicon-text-title{
+  overflow: hidden;
+  width: 160px;
+  height: 15px;
 }
 
 .shopicon-text p{
@@ -622,6 +630,8 @@ font-size: 25px;
 }
 
 /* meet the owner */
+
+
 .meettheowner-header-text{
   text-align: center;
   padding: 60px;
@@ -633,7 +643,7 @@ font-size: 25px;
   margin: 1px;
 }
 
-.meettheowner a {
+.meettheowner-header-text a {
   margin: 1px;
   font-family: 'Lato', 'Arial', sans-serif;
   color: black;
@@ -644,12 +654,13 @@ font-size: 25px;
   text-decoration: underline;
 }
 
-.meettheowner h6{
+.meettheowner h6 a{
   font-family: 'Lato', 'Arial', sans-serif;
   margin: 5px;
   color: #8B8B8B;
   font-size: 14px;
   font-weight: bold;
+  text-decoration: none;
 
 }
 
@@ -657,16 +668,18 @@ font-size: 25px;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  border: solid 1px black;
   overflow: hidden;
 }
 
 .shop-owner-profile{
   margin: 0 auto;
   text-align: center;
-  width: 100px;
   padding: 0;
 }
+
+
+
+
 
 /*Product Description*/
 
@@ -680,9 +693,13 @@ font-size: 25px;
   border-bottom: solid 1px #efefeb;
 }
 
-.productdescription h2{
-  word-break: break-all;
+.item-title-header{
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
+  word-wrap: break-word;
 }
+
 
 .productdescription label{
   color: #666;
