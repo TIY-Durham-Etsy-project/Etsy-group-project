@@ -281,6 +281,28 @@ export default class Header extends Component {
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Robotics</li></button>
                   <button className="header-button dropbtn"><li className="dropdown-content-2">All Sculpting & Forming</li></button>
 
+                  <button className="header-button dropbtn"><li className="dropdown-content">Sewing & Fiber</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Crochet</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Knitting</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Leatherworking</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Macrame</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Rug Making</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Sewing & Needlecraft</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">Crewel</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Cross Stitch</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Embroidery</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Felting</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Needlepoint</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Plastic Canvas</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Quilting</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Sewing</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Tatting & Lacemaking</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Shoemaking</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Spinning</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Upholstery</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Weaving & Tapestry</li></button>
+                  <button className="header-button dropbtn"><li className="dropdown-content-2">All Sewing & Fiber</li></button>
+
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Weddings</li></button>
