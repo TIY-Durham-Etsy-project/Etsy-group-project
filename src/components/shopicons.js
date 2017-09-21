@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 export default class ShopIcons extends Component {
   render(){
-    console.log(this.props.shoplistingimagesdatalarge);
     let iconboxes = false;
     if (this.props.shoplistingimagesdatalarge && this.props.shoplistingdata && this.props.shoplistingdata.results !== undefined){
       iconboxes = this.props.shoplistingimagesdatalarge.map((x, i)=>{
