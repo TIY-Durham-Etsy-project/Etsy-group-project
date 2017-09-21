@@ -69,7 +69,7 @@ class ItemPageApp extends Component {
     }).then(data => {
       this.setState({ listingdata: data.results[0] });
       // FEEDBACK FETCH
-      fetch(`https://openapi.etsy.com/v2/users/${data.results[0].user_id}/feedback/as-subject?limit=5&api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+      fetch(`https://openapi.etsy.com/v2/users/${data.results[0].user_id}/feedback/as-subject?limit=100&api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
         return results.json();
       }).then(data => {
         this.setState({ feedbackdata: data.results });
@@ -150,7 +150,8 @@ class ItemPageApp extends Component {
             listinginventorydata={this.state.listinginventorydata}/>
             <Overview
             listingdata={this.state.listingdata}
-            shippinginfodata={this.state.shippinginfodata}/>
+            shippinginfodata={this.state.shippinginfodata}
+            feedbackdata={this.state.feedbackdata}/>
             <SocialButtons/>
             <ShopIcons
               shopdata={this.state.shopdata}
