@@ -123,6 +123,9 @@
   height: 135px;
   font-size: 14px;
 }
+.OptInForm>p{
+  font-weight: 300;
+}
 
 .OptInForm > form{
   display: flex;
@@ -142,8 +145,8 @@
   padding-right: 12px;
 }
 .OptInForm > form > input {
-  border: 1px solid darkorange;
-  background-color: darkorange;
+  border: 1px solid #ff6905;
+  background-color: #ff6905;
   width: 94px;
   color: white;
   border-left: none;
@@ -161,6 +164,8 @@
   padding-left: 12px;
   padding-right: 12px;
   align-content: space-around;
+  color: #222;
+  font-size: 11px;
 }
 .FooterLinks > div{
   flex-grow: 1;
@@ -171,11 +176,30 @@
   display:flex;
   flex-direction: column;
 }
+.FooterLinks > div > a{
+  text-decoration: none;
+  color: #222;
+  font-weight: 100;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.FooterLinks > div > a :hover{
+  text-decoration: underline;
+}
+.FooterLinks > div > a :visited{
+}
+.FooterLinks > div > a :link{
+}
+.FooterLinks > div > a :active{
+}
+
 .FooterLinks > span{
   display: flex;
   flex-direction: row;
   align-content: space-around;
   justify-content: flex-start;
+  text-decoration: none;
+  /*color: black;*/
 }
 .FooterLinks > a{
   display:flex;
@@ -184,14 +208,24 @@
   align-content: center;
   text-decoration: none;
   text-decoration-style: wavy;
+  /*color: black;*/
+
+}
+.FooterLinks > a span{
+  text-decoration: none;
+  /*color: black;*/
+  /*font-weight: 100;*/
 }
 
 /*---SOCIAL MEDIA STYLES BEGIN---*/
+.ShareLinks a{
+  padding: 0;
+}
 svg{
   float: left;
-  height: 30px;
+  height: 24px;
 }
 .social_media_name{
   float: left;
-  margin: 6px auto;
+  margin: 5px auto;
 }
