@@ -174,7 +174,38 @@ export default class Header extends Component {
                     <button className="header-button dropbtn"><li className="dropdown-content-2">All Earrings</li></button>
 
                       <button className="header-button dropbtn"><li className="dropdown-content">Necklaces</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Beaded Necklaces</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Bib Necklaces</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Cameo Necklaces</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Chains</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Charm Necklaces</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Chokers</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Crystal Necklaces</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Lariat & Y Necklaces</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Lockets</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Monogram & Name Necklaces</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Multi Strand Necklaces</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Pendants</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">Tassel Necklaces</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">All Necklaces</li></button>
+
                       <button className="header-button dropbtn"><li className="dropdown-content">Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Bands</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Midi Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Multistone Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Ring Guards & Spacers</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Signet Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Solitaire Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Stackable Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Statement Rings</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2">Wedding & Engagement</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Anniversary Rings</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Bridal Sets</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Claddagh Rings</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Engagement Rings</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Promise Rings</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2">Wedding Bands</li></button>
+                    <button className="header-button dropbtn"><li className="dropdown-content-2">All Rings</li></button>
 
                     </div>
                     <div>
