@@ -769,6 +769,22 @@ export default class Header extends Component {
                               <button className="header-button dropbtn"><li className="dropdown-content-2">Watches</li></button>
                               <button className="header-button dropbtn"><li className="dropdown-content-2">All Jewelry</li></button>
 
+                              <button className="header-button dropbtn"><li className="dropdown-content">Toys & Games</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Games & Puzzles</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Board Games</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Dice & Tile Games</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Marbles</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Video Games</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Sports & Outdooor Recreation</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Bikes & Cycling</li></button>
+                              <button className="header-button dropbtn"><li className="dropdown-content-2">Kites & Pinwheels</li></button>
+                                <button className="header-button dropbtn"><li className="dropdown-content-2">Toys</li></button>
+                                <button className="header-button dropbtn"><li className="dropdown-content-2">Dolls & Action Figures</li></button>
+                                <button className="header-button dropbtn"><li className="dropdown-content-2">Puppets</li></button>
+                                <button className="header-button dropbtn"><li className="dropdown-content-2">Ride On & Rocking Toys</li></button>
+                                <button className="header-button dropbtn"><li className="dropdown-content-2">Stuffed Animals & Plushies</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">All Toys & Games</li></button>
+
                   </div>
                   </ul>
                 </div>
