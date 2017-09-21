@@ -567,6 +567,26 @@ export default class Header extends Component {
                             <button className="header-button dropbtn"><li className="dropdown-content-2">Party Décor</li></button>
                             <button className="header-button dropbtn"><li className="dropdown-content-2">Party Favors & Games</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">All Paper & Party Supplies</li></button>
+
+                          <button className="header-button dropbtn"><li className="dropdown-content">Pet Supplies</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Bedding</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Blankets</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Mats & Pads</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Carriers & Houses</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Clothing, Accessories & Shoes</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Accessories</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Clothing</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Shoes & Booties</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Collars & Leashes</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Feeding</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Furniture</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Health & Wellness</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Pet Toys</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Bird Toys</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Cat Toys</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Dog Toys</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-2">Urns & Memorials</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2">All Pet Supplies</li></button>
                   </div>
                   <div>
                     <button className="header-button dropbtn"><li className="header-list-item">Kids & Baby</li></button>
