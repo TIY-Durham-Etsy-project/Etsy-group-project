@@ -1747,8 +1747,10 @@ font-size: 25px;
 }
 
 .backbutton-item-page{
+  position: relative;
   text-align: center;
   margin: 10px auto;
+  z-index: 500;
 }
 
 .customorder-wrapper{
