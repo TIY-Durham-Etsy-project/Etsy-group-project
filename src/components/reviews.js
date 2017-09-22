@@ -70,17 +70,35 @@ export default class Reviews extends Component {
         if (x.message !== null){
           return (
           <div className="single-user-review" key={x.transaction_id}>
-            <p>User id: {this.props.feedbackdata ? x.transaction_id : ""}</p>
-            <p className = "review-stars">Stars: <img alt="" className = "reviews-stars-image-holder" src = {stars ? stars : ""}/></p>
-            <p>{this.props.feedbackdata ? x.message.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"').replace(/&#39;/g, "'") : ""}</p>
+            <div className = "single-user-left">
+              <div className = "single-user-review-circle"><p></p></div>
+              <div className  ="single-user-reviewed-by"><p>Reviewed By</p></div>
+              <div className = 'orange-user'><a href = ""><p>{this.props.feedbackdata ? x.transaction_id : ""}</p></a></div>
+            </div>
+            <div className = "single-user-right">
+              <div className = "review-stars-and-date">
+                <div><p className = "review-stars"><img alt="" className = "reviews-stars-image-holder" src = {stars ? stars : ""}/></p></div>
+                <div className = "review-date"><p>Date goes here</p></div>
+              </div>
+                <div><p>{this.props.feedbackdata ? x.message.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"').replace(/&#39;/g, "'") : ""}</p></div>
           </div>
+        </div>
           )
         } else {
           return (
           <div className="single-user-review" key={x.transaction_id}>
-            <p>User id: {this.props.feedbackdata ? x.transaction_id : ""}</p>
-            <p className = "review-stars">Stars: <img alt="" className = "reviews-stars-image-holder" src = {stars ? stars : ""}/></p>
+            <div className = "single-user-left">
+              <div className = "single-user-review-circle"><p></p></div>
+              <div className  ="single-user-reviewed-by"><p>Reviewed By</p></div>
+              <div className = 'orange-user'><a href = ""><p>{this.props.feedbackdata ? x.transaction_id : ""}</p></a></div>
+            </div>
+            <div className = "single-user-right">
+              <div className = "review-stars-and-date">
+                <div><p className = "review-stars"><img alt="" className = "reviews-stars-image-holder" src = {stars ? stars : ""}/></p></div>
+                <div className = "review-date"><p>Date goes here</p></div>
+              </div>
           </div>
+        </div>
           )
         }
       })

@@ -11,13 +11,15 @@ export default class CustomOrder extends Component {
       }
     }
     return(
+      <div className = "customorder-wrapper">
         <div className="customorder-pic">
           <img src = {shopimage ? shopimage : ""} alt = "shop icon" width="49" height="49"/>
             <div className="customorder">
               <p><a href = "">Request a custom order <br/></a></p>
-              <p>and have somethng made just for you.</p>
+              <p>and have something made just for you.</p>
             </div>
         </div>
+      </div>
 
     )
   }
