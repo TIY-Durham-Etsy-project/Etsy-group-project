@@ -23,9 +23,11 @@ Morning:
 
 09.20.17 - Kevin
 Goals for the day: Address Merge Issues, generate a CSS/classNames List, Finish MVP Wire-frame for the Product Page, begin work on the Header, and to make progress on the Product Page Components.
-Morning:
+
+- Morning:
 - We all meet with the Homepage group to coordinate for the future merge.
-Afternoon:
+
+- Afternoon:
 - Tivona started work on the header and header drop-down.
 - Hannah continued wire-framing and styling for the product page.
 - JT began work on the details and faq sections.

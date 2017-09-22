@@ -19,56 +19,75 @@ export default class Header extends Component {
               <div> <i className="fa fa-shopping-cart" aria-hidden="true">Cart</i></div>
             </div>
         </div>
-
+                <div className="upper-and-lower-nav-lines">
                 <div className="lower-nav">
                   <ul className="header-list " >
-                    <div className="dropdown">
 
+                    <div className="dropdown">
                     <button className="header-button dropbtn "><li className="header-list-item-clothing">Clothing & Accessories</li></button>
                       {/* <div className="dropdown-content"></div> */}
+                      <div className="white-box-header-dropdown-clothes">
+
                       <div className="accessories_sub_items">
                         <button className="header-button dropbtn">
                           <li className="dropdown-content-clothing">Accessories</li>
                         </button>
-                        <button className="header-button dropbtn">
-                          <li className="dropdown-content-clothing-2">Belts & Suspenders</li>
-                        </button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-clothing-2">Gloves & Mittens</li></button>
-                        {/* <button className="header-button dropbtn"><li className="dropdown-content-2">Hair Accessories</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Fascinators & Mini Hats</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Headbands</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Ties & Elastics</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Hats & Caps</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Keychains & Lanyards</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Patches & Pins</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Scarves & Wraps</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Suit & Tie Accessories</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Sunglasses & Eyewear</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Umbrellas & Rain Accessories</li></button> */}
+                        <div className="moveLeftSubHeaderItem">
+                          <button className="header-button dropbtn">
+                            <li className="dropdown-content-clothing-2">Belts & Suspenders</li>
+                          </button>
+                          <button className="header-button dropbtn">
+                            <li className="dropdown-content-clothing-2">Gloves & Mittens</li>
+                          </button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-clothing-2">Hair Accessories</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-clothing-3">Fascinators & Mini Hats</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-clothing-3">Headbands</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-clothing-3">Ties & Elastics</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-clothing-2">Hats & Caps</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-clothing-2">Keychains & Lanyards</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-clothing-2">Patches & Pins</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-clothing-2">Scarves & Wraps</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-clothing-2">Suit & Tie Accessories</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-clothing-2">Sunglasses & Eyewear</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-clothing-2">Umbrellas & Rain Accessories</li></button>
+                        </div>
                       </div>
 
-                      <button className="header-button dropbtn"><li className="dropdown-content-clothing">Bags & Purses</li></button>
-                        {/* <button className="header-button dropbtn"><li className="dropdown-content-2">Backpacks</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Diaper Bags</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Electronic Cases</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Laptop Bags</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Laptop Sleeves</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Phone Cases</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Handbags</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Clutches & Evening Bags</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Shoulder Bags</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Keychains & Lanyards</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Luggage & Travel</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Briefcases & Attaches</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Duffel Bags</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Luggage Tags</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Suitcases</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Suitcases</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Messenger Bags</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Pouches & Coin Purses</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Totes</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Wallets & Money Clips</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">All Bags & Purses</li></button> */}
+                      <div className="bags-purses_sub_items">
+                      <button className="header-button dropbtn">
+                        <li className="dropdown-content-clothing">Bags & Purses</li>
+                      </button>
+                      <div className="moveLeftSubHeaderItem-bags-purses">
+                        <div>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Backpacks</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Diaper Bags</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Electronic Cases</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Laptop Bags</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Laptop Sleeves</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Phone Cases</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Handbags</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Clutches & Evening Bags</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Shoulder Bags</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Keychains & Lanyards</li></button>
+                      </div>
+
+                        <div className="sub-moveLeftSubHeaderItem-bags-purses">
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Luggage & Travel</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Briefcases & Attaches</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Duffel Bags</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Luggage Tags</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Suitcases</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Suitcases</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Messenger Bags</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Pouches & Coin Purses</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Totes</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Wallets & Money Clips</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">All Bags & Purses</li></button>
+                      </div>
+                      </div>
+                    </div>
+
+
 
                         <button className="header-button dropbtn"><li className="dropdown-content-clothing">Clothing</li></button>
                         {/* <button className="header-button dropbtn"><li className="dropdown-content-2">"Boys' Clothing"</li></button>
@@ -129,6 +148,7 @@ export default class Header extends Component {
 
 
 
+                    </div>
                     </div>
 
                     <div>
@@ -217,7 +237,7 @@ export default class Header extends Component {
 
                     </div>
                     <div>
-                    <button className="header-button dropbtn"><li className="header-list-item">Craft Supplies & Tools</li></button>
+                    <button className="header-button dropbtn"><li className="header-list-item-clothing">Craft Supplies & Tools</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content">Home & Hobby</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Candle Making</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Doll & Model Making</li></button>
@@ -493,7 +513,7 @@ export default class Header extends Component {
                   <button className="header-button dropbtn"><li className="dropdown-content-2">All Toys & Games</li></button>
                   </div>
                   <div>
-                    <button className="header-button dropbtn"><li className="header-list-item">Home & Living</li></button>
+                    <button className="header-button dropbtn"><li className="header-list-item-home">Home & Living</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content">Art & Collectibles</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Artist Trading Cards</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Clip Art</li></button>
@@ -597,7 +617,7 @@ export default class Header extends Component {
                           <button className="header-button dropbtn"><li className="dropdown-content-2">All Pet Supplies</li></button>
                   </div>
                   <div>
-                    <button className="header-button dropbtn"><li className="header-list-item">Kids & Baby</li></button>
+                    <button className="header-button dropbtn"><li className="header-list-item-home">Kids & Baby</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Baby & Child Care</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Baby & Toddler Toys</li></button>
                     <button className="header-button dropbtn"><li className="dropdown-content-2">Baby Accessories</li></button>
@@ -714,7 +734,7 @@ export default class Header extends Component {
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Skirts</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Sweaters</li></button>
 
-                          <button className="header-button dropbtn"><li className="header-list-item">Craft Supplies & Tools</li></button>
+                          {/* <button className="header-button dropbtn"><li className="header-list-item">Craft Supplies & Tools</li></button> */}
                           <button className="header-button dropbtn"><li className="dropdown-content">Fabric</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Framing</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Jewelry & Beading</li></button>
@@ -795,6 +815,7 @@ export default class Header extends Component {
 
                   </div>
                   </ul>
+                </div>
                 </div>
 
 
