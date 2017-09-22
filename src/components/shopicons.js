@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 
 export default class ShopIcons extends Component {
+  constructor(props) {
+    super(props);
+    this.sendData = this.sendData.bind(this);
+  }
+  sendData(event){
+    event.preventDefault();
+    if (event.target.id !== "" && event.target.id !== undefined && this.props.shopdata){
+      this.props.sendDataUpToParent(event.target.id);
+    }
+  }
   render(){
     let shopimage = false
     if (this.props.shopdata){
@@ -16,7 +26,7 @@ export default class ShopIcons extends Component {
         return (
         <div className = "shopicon-box" key={x}>
           <div className = "shopicon-photo">
-            <img src = {x} alt = "store item img"/>
+            <img onClick ={this.sendData} id={this.props.shoplistingdata.results[i].listing_id} src = {x} alt = "store item img"/>
           </div>
           <div className = "shopicon-text">
             <p className="shopicon-text-title">{this.props.shoplistingdata ? this.props.shoplistingdata.results[i].title : ""}</p>

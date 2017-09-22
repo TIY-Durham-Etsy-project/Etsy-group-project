@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import CustomOrder from './customorder.js';
 import DetailsDropdown from './detailsdropdown.js';
-import FAQs from './faqs.js';
 import FavoriteButton from './favoritebutton.js';
 import ItemHeader from './ItemHeader.js';
 import ImageCarousel from './imagecarousel.js';
@@ -13,13 +12,13 @@ import RelatedTags from './relatedtags.js';
 import Reviews from './reviews.js';
 import ShopIcons from './shopicons.js';
 import SocialButtons from './socialbuttons.js';
+import LoadingPage from './loadingpage.js';
 
 class ItemPageApp extends Component {
   constructor(props) {
     super(props);
-    this.handleTextChange = this.handleTextChange.bind(this);
-    this.handlesubmit = this.handlesubmit.bind(this);
     this.handleIncommingData = this.handleIncommingData.bind(this);
+    this.goBacktoHome = this.goBacktoHome.bind(this);
     this.state = {
       // idvariable: "499471843",
       idvariable: "",
@@ -36,8 +35,7 @@ class ItemPageApp extends Component {
   }
   // This mounts the page.
   componentWillMount() {
-    console.log("ComponentWILLmount fired");
-    this.setState({ idvariable: "549278375",
+    this.setState({ idvariable: this.props.idvariable,
     listingdata: false,
     listinginventorydata: false,
     imagesdata: false,
@@ -49,24 +47,28 @@ class ItemPageApp extends Component {
     feedbackdata: false, });
   }
   componentDidMount() {
-    console.log("Componentdidmount fired");
-    // this.fetchData();
+    this.fetchData();
   }
-  componentWillUnmount(){
-    console.log("COMPONENT IS NOW UNMOUNTING");
+  componentDidUpdate(prevProps, prevState){
+    if (this.state.idvariable !== prevState.idvariable){
+      this.fetchData();
+    }
   }
   handleIncommingData(value){
-    console.log("HANDLEINCOMMINGDATA");
-    console.log(value);
+    this.setState({ idvariable: value,
+    listingdata: false,
+    listinginventorydata: false,
+    imagesdata: false,
+    shippinginfodata: false,
+    shopdata: false,
+    shoplistingdata: false,
+    shoplistingimagesdata: false,
+    shoplistingimagesdatalarge: false,
+    feedbackdata: false, });
+    // this.fetchData();
   }
-  handleTextChange(event){
-    event.preventDefault();
-    this.setState({idvariable: event.target.value});
-  }
-  handlesubmit(event){
-    this.setState({ listingdata: false, listinginventorydata: false, imagesdata: false, shopdata: false, shoplistingdata: false, shoplistingimagesdata: false, shoplistingimagesdatalarge: false, feedbackdata: false });
-    event.preventDefault();
-    this.fetchData();
+  goBacktoHome(){
+    this.props.sendDataUpToParent(false);
   }
   fetchData = () => {
     //LISTING DATA FETCH
@@ -127,50 +129,53 @@ class ItemPageApp extends Component {
   }
   render() {
     return (
-      <div className="ItemPageApp" key={this.state.idvariable}>
-        <div className="PlayListForm">
-          <form onSubmit={this.handlesubmit}>
-            <input onChange={this.handleTextChange} type="text" id="idnumber"
-            placeholder="ID" value={this.state.idvariable}/>
-            <button type="submit">"SUBMIT"</button>
-          </form>
-        </div>
-        <ItemHeader
-        sendDataUpToParent={this.handleIncommingData}
-        shopdata={this.state.shopdata}
-        shoplistingdata={this.state.shoplistingdata}
-        shoplistingimagesdata={this.state.shoplistingimagesdata}/>
-        <div className = "item-page-wrapper">
-          <div className = "left-content">
-            <FavoriteButton/>
-            <ImageCarousel imagesdata={this.state.imagesdata}/>
-            <CustomOrder
-            shopdata={this.state.shopdata}/>
-            <DetailsDropdown
-            listingdata={this.state.listingdata}/>
-            <Reviews
-            feedbackdata={this.state.feedbackdata}/>
-            <MeetTheOwner
+      <div>
+      {this.state.shoplistingdata ? (
+        <div className="ItemPageApp" key={this.state.idvariable}>
+          <div className="backbutton-item-page">
+            <form onSubmit={this.goBacktoHome}>
+              <button type="submit">"GoBack"</button>
+            </form>
+          </div>
+          <ItemHeader
+          sendDataUpToParent={this.handleIncommingData}
+          shopdata={this.state.shopdata}
+          shoplistingdata={this.state.shoplistingdata}
+          shoplistingimagesdata={this.state.shoplistingimagesdata}/>
+          <div className = "item-page-wrapper">
+            <div className = "left-content">
+              <FavoriteButton/>
+              <ImageCarousel imagesdata={this.state.imagesdata}/>
+              <CustomOrder
               shopdata={this.state.shopdata}/>
-            <FAQs/>
-          </div>
-          <div className = "right-content">
-            <ProductDescription
-            listingdata={this.state.listingdata}
-            listinginventorydata={this.state.listinginventorydata}/>
-            <Overview
-            shopdata={this.state.shopdata}
-            listingdata={this.state.listingdata}
-            shippinginfodata={this.state.shippinginfodata}/>
-            <SocialButtons/>
-            <ShopIcons
+              <DetailsDropdown
+              listingdata={this.state.listingdata}/>
+              <Reviews
               shopdata={this.state.shopdata}
-              shoplistingdata={this.state.shoplistingdata}
-              shoplistingimagesdatalarge={this.state.shoplistingimagesdatalarge}
-            />
+              feedbackdata={this.state.feedbackdata}/>
+              <MeetTheOwner
+                shopdata={this.state.shopdata}/>
+            </div>
+            <div className = "right-content">
+              <ProductDescription
+              listingdata={this.state.listingdata}
+              listinginventorydata={this.state.listinginventorydata}/>
+              <Overview
+              shopdata={this.state.shopdata}
+              listingdata={this.state.listingdata}
+              shippinginfodata={this.state.shippinginfodata}/>
+              <SocialButtons/>
+              <ShopIcons
+                sendDataUpToParent={this.handleIncommingData}
+                shopdata={this.state.shopdata}
+                shoplistingdata={this.state.shoplistingdata}
+                shoplistingimagesdatalarge={this.state.shoplistingimagesdatalarge}
+              />
+            </div>
           </div>
+          <RelatedTags listingdata={this.state.listingdata}/>
         </div>
-        <RelatedTags/>
+      ) : (<div><LoadingPage/></div>)}
       </div>
     );
   }
