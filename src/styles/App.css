@@ -399,11 +399,13 @@ button:hover{
 
 .left-content{
   width: 45vw;
+  min-width: 580px;
   overflow: auto;
 }
 
 .right-content{
   width: 30vw;
+  min-width: 400px;
   overflow: auto;
 }
 
