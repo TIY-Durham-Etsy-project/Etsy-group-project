@@ -617,15 +617,29 @@ font-size: 25px;
   transition: background-color 0.6s ease;
 }
 
+
 .subCarouselImageHolder{
+  text-align: center;
+}
+.images-within-carousel-holder{
   width: 570px;
   height: 50px;
-  /*display: inline;*/
   display: flex;
   flex-direction: inline;
   align-items: center;
   justify-content: center;
-  /*align-self: center;*/
+}
+.carousel-button-holder{
+  display: inline;
+  float: right;
+}
+.carousel-button-holder button{
+  font-family: Arial;
+  color: #f45800;
+  font-size: 14px;
+  background: #ffffff;
+  border: solid #ffffff 0px;
+  text-decoration: none;
 }
 
 .active, .subCarouselImage:hover {
@@ -731,6 +745,35 @@ font-size: 25px;
   /*position: relative;
   margin: auto;*/
 }
+
+.zoom-image-clickfunction-div{
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+}
+
+.zoom-image-overtake-outside-div{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 900;
+}
+.zoom-image-inside-div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 901;
+}
+.zoom-image-inside-div img{
+  width: 1024px;
+  border: 5px solid #666666;
+}
+
 
 /* meet the owner */
 
