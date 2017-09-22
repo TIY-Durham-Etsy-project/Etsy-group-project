@@ -32,9 +32,8 @@ export default class API extends Component {
 
   }
   sendDataUp(id){
-    console.log(id);
+    this.props.sendDataUp(id);
   }
-
 
   // takes this.props.display.type to use for flow control.
   componentWillMount() {
