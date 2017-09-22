@@ -108,11 +108,12 @@ export default class API extends Component {
     let randomNumber = 0;
     for (var i = 0; i < fxnArray.length; i++) {
       let trojan = fxnArray[i].stateArray;
-      randomNumber = Math.floor(Math.random() *
-      [`this.state.${trojan}.length`])
+      console.log(trojan);
+      console.log(fxnArray[i].stateArray);
+      randomNumber = Math.floor(Math.random() * eval(`this.state.${trojan}.length`))
       console.log(randomNumber);
-      console.log(`this.state.${trojan}.[${randomNumber}]`);
-      bsArray.push(`this.state.${trojan}.[${randomNumber}]`);
+      console.log(eval(`this.state.${trojan}[${randomNumber}]`));
+      bsArray.push(eval(`this.state.${trojan}[${randomNumber}]`));
     }
     // let arrayToSet = this.state.sixArrays;
     this.setState({sixArrays: bsArray});

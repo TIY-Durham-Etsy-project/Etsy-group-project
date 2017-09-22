@@ -28,8 +28,8 @@ export default class Homepage extends Component {
         <Carousel />
         <EtsyInfo />
         {/* <Slider display={this.state.recently}/> */}
+        <API sendDataUp={this.sendDataUp} display={this.state.category}/>
         <API sendDataUp={this.sendDataUp} display={this.state.gifts}/>
-        {/* <Slider display={this.state.gifts}/> */}
       </div>
     );
   }
