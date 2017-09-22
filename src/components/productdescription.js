@@ -33,6 +33,10 @@ export default class ProductDescription extends Component {
     }
     this.setState({ price: productobj })
   }
+  componentWillMount(){
+    console.log(this.props.listingdata)
+    console.log("PRODUCT DESCRIPTION IS NOW MOUNTING")
+  }
   componentDidUpdate(){
     if (this.props.listingdata && this.props.listinginventorydata && this.state.initdata === false){
       if (this.state.properties.length <= 0){
@@ -71,7 +75,7 @@ export default class ProductDescription extends Component {
           <select onChange={this.handleChange} className = {newLabelClassName+"-drop-down-menu"}>
           {this.state.propertyOptions[newLabelClassName].map((x, i)=>{
             return (
-              <option value={x} key={x}>{x}</option>
+              <option value={x} key={x}>{x.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"')}</option>
             )
           })}
           </select>

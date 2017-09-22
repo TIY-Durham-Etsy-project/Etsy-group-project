@@ -3,19 +3,24 @@ import '../styles/App.css';
 import Header from './header.js';
 import ItemPageApp from './itempageApp.js';
 
+import TESTHOMEPAGE from './TESTHOMEPAGE.js';
+
 class App extends Component {
   constructor(props) {
     super(props);
-    //There should be some kind of "state" that starts empty.
-    //There should be a turnery statement that says "if state is empty, show frontpage. if it has a number, show itempage"
+    this.handleIncommingData = this.handleIncommingData.bind(this);
+    this.state = {
+      listingidpage: false
+    };
   }
-
+  handleIncommingData(value){
+    this.setState({ listingidpage: value });
+  }
   render() {
     return (
       <div className="App">
         <Header />
-        {/* FRONT PAGE SHOULD GO HERE */}
-        <ItemPageApp />
+        {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<TESTHOMEPAGE sendDataUpToParent={this.handleIncommingData}/>)}
         {/* ADD OTHER GROUPS FOOTER HERE */}
       </div>
     );
