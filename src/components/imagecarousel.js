@@ -105,8 +105,12 @@ export default class ImageCarousel extends Component {
           </div>
         </div>
         <div className="subCarouselImageHolder">
-          {imageItem}
-          <button onClick={this.zoomInCurrentImg}>Zoom</button>
+          <div className="images-within-carousel-holder">
+            {imageItem}
+          </div>
+          <div className="carousel-button-holder">
+            <button onClick={this.zoomInCurrentImg}>Zoom</button>
+          </div>
         </div>
       </div>
     )
