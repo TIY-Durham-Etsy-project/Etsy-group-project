@@ -29,7 +29,7 @@ export default class Carousel extends Component {
 });
 return (
 
-
+  <div className="carousel-container">
     <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
 
       <ol className="carousel-indicators">
@@ -41,7 +41,7 @@ return (
       </ol>
 
 
-      <div className="carousel-inner" role="listbox">
+      <div className="carousel-inner d-flex p-2" role="listbox">
         {sliderArray}
       </div>
 
@@ -55,6 +55,11 @@ return (
       </a>
       </div>
 
+      <div className="carousel-banners">
+        <div className="carousel-banner1"></div>
+        <div className="carousel-banner2"><p>Terrifying (in a fun way) Halloween decorations ></p></div>
+      </div>
+    </div>
      );
   }
 }

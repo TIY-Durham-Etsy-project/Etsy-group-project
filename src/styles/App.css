@@ -100,6 +100,11 @@
 }
 
 /*------CAROUSEL STYLES BEGIN------*/
+.carousel-container {
+  display: flex;
+  height: 315px;
+}
+
 .carousel {
 margin-bottom: 80px;
 background-color: #512526;
@@ -125,12 +130,14 @@ border: 1px solid blue;
   color: white;
   text-align: center;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /*display: flex;*/
+  /*flex-direction: column;
+  justify-content: center;*/
   border: 1px solid green;
   height: 100%;
 }
+
+
 
 #previous-button {
   color: black;
@@ -161,7 +168,6 @@ border: 1px solid blue;
 
 .carousel-banners {
   width: 34%;
-  border: 1px solid red;
   margin-left: 10px;
   display: flex;
   flex-direction: column;
@@ -170,13 +176,22 @@ border: 1px solid blue;
 
 .carousel-banner1 {
   height: 60%;
+  /*width: 34%;*/
   background-color: gray;
+  background-image: url("https://img0.etsystatic.com/site-assets/vesta-homepage-headers-v3/fall/eat/eat_750x640.0.jpg");
+  background-size: cover;
+
   /*margin-bottom: 20px;*/
 }
 
 .carousel-banner2 {
   height: 34%;
-  background-color: gray;
+  color: white;
+  background-color: #512526;
+  text-align: center;
+  padding: 10px;
+  padding-top: 40px;
+
   /*margin-top: 10px;*/
 }
 
