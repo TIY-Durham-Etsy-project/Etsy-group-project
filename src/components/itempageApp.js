@@ -12,6 +12,7 @@ import RelatedTags from './relatedtags.js';
 import Reviews from './reviews.js';
 import ShopIcons from './shopicons.js';
 import SocialButtons from './socialbuttons.js';
+import LoadingPage from './loadingpage.js';
 
 class ItemPageApp extends Component {
   constructor(props) {
@@ -135,7 +136,7 @@ class ItemPageApp extends Component {
   render() {
     return (
       <div>
-      {this.state.shoplistingimagesdatalarge ? (
+      {this.state.shoplistingdata ? (
         <div className="ItemPageApp" key={this.state.idvariable}>
           <div className="backbutton-item-page">
             <form onSubmit={this.goBacktoHome}>
@@ -178,7 +179,7 @@ class ItemPageApp extends Component {
           </div>
           <RelatedTags/>
         </div>
-      ) : (<div></div>)}
+      ) : (<div><LoadingPage/></div>)}
       </div>
     );
   }
