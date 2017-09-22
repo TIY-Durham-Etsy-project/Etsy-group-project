@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import EtsyInfo from './etsy-info.js';
 import API from './api.js';
-import Slider from './slider.js';
-import Footer from './footer.js';
 import Carousel from './carousel.js';
 
 export default class Homepage extends Component {
