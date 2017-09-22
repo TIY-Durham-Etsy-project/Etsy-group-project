@@ -3,7 +3,6 @@ import '../styles/App.css';
 import Header from './header.js';
 import ItemPageApp from './itempageApp.js';
 
-import TESTHOMEPAGE from './TESTHOMEPAGE.js';
 
 class App extends Component {
   constructor(props) {
@@ -20,8 +19,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header sendDataUpToParent={this.handleIncommingData}/>
-        {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<TESTHOMEPAGE sendDataUpToParent={this.handleIncommingData}/>)}
-        {/* ADD OTHER GROUPS FOOTER HERE */}
+        {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<HomePage sendDataUpToParent={this.handleIncommingData}/>)}
+        <Footer/>
       </div>
     );
   }
