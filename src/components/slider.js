@@ -12,15 +12,13 @@ export default class Slider extends Component {
     // fxn callback
     sendDataUp(event){
       if (event.target.id !== "" && event.target.id !== undefined && event.target.id !== null){
-        console.log(event.target.id);
+        this.props.sendDataUp(event.target.id);
       }
     }
   render() {
     let mapper = false;
     if(this.props.arrayOfSix[5] !== undefined){
-
       mapper = this.props.arrayOfSix.map((thing) =>{
-        console.log(thing)
         return (
           < div key={thing.listing_id} className="slider-child">
             <div onClick={this.sendDataUp}>

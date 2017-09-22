@@ -5,7 +5,7 @@ import Slider from './slider.js';
 export default class API extends Component {
   constructor(props) {
     super(props);
-
+    this.sendDataUp = this.sendDataUp.bind(this);
     this.state = {
       // itemObjects: null,
       sixArrays: [],
@@ -31,7 +31,9 @@ export default class API extends Component {
     // this.props.display.type = "type of Slider" ex: category
 
   }
-
+  sendDataUp(id){
+    console.log(id);
+  }
 
 
   // takes this.props.display.type to use for flow control.
@@ -162,14 +164,14 @@ export default class API extends Component {
         <div>
           {this.state.categoryReady ? (
             <div>
-              <Slider arrayOfSix={this.state.sixArrays}
+              <Slider sendDataUp={this.sendDataUp} arrayOfSix={this.state.sixArrays}
               />
             </div>
           ):(<div></div>)
           }
           {this.state.giftsReady ? (
             <div>
-              <Slider arrayOfSix={this.state.sixArrays} />;
+              <Slider sendDataUp={this.sendDataUp} arrayOfSix={this.state.sixArrays} />;
             </div>
           ):(<div></div>)
           }
