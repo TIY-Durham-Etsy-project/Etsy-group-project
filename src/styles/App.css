@@ -369,7 +369,7 @@ button:hover{
 
 /* header left/right styles */
 .header-left-items{
-  width: 80%;
+  /*width: 80%;*/
   margin: 10px auto;
   display: flex;
 }
@@ -401,6 +401,7 @@ button:hover{
   display: flex;
   justify-content: space-between;
   width: 75%;
+  min-width: 750px;
   margin: 0 auto;
 }
 
