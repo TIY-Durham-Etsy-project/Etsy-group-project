@@ -47,20 +47,14 @@ class ItemPageApp extends Component {
     feedbackdata: false, });
   }
   componentDidMount() {
-    console.log("Componentdidmount fired");
     this.fetchData();
   }
   componentDidUpdate(prevProps, prevState){
     if (this.state.idvariable !== prevState.idvariable){
-      console.log("IDVARIABLE HAS CHANGED ON DID UPDATE");
       this.fetchData();
     }
   }
-  componentWillUnmount(){
-    console.log("COMPONENT IS NOW UNMOUNTING");
-  }
   handleIncommingData(value){
-    console.log("HANDLEINCOMMINGDATA");
     this.setState({ idvariable: value,
     listingdata: false,
     listinginventorydata: false,
