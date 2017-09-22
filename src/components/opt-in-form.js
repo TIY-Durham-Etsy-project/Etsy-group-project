@@ -6,6 +6,9 @@ class OptInForm extends Component {
   render() {
     return (
       <div className="OptInForm">
+        <p>
+          Get fresh Etsy trends and unique gift ideas delivered right to your inbox.
+        </p>
         <form>
           <label>
           <input type="text" placeholder="Enter your email" />

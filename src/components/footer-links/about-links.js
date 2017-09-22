@@ -6,23 +6,33 @@ class AboutLinks extends Component {
     return (
       <div className="AboutLinks">
         <h3>About</h3>
-        <ul>
-          <li>
-            <a href="https://www.etsy.com/about?ref=ftr">Etsy, Inc.</a>
-          </li>
-          <li>
-            <a href="https://www.etsy.com/legal?ref=ftr">Policies</a>
-          </li>
-          <li>
-            <a href="https://investors.etsy.com/">Investors</a>
-          </li>
-          <li>
-            <a href="https://www.etsy.com/careers?ref=ftr">Careers</a>
-          </li>
-          <li>
-            <a href="https://www.etsy.com/press?ref=ftr">Press</a>
-          </li>
-        </ul>
+
+        
+            <a href="https://www.etsy.com/about?ref=ftr">
+              <span>Etsy, Inc.</span>
+            </a>
+          
+        
+            <a href="https://www.etsy.com/legal?ref=ftr">
+              <span>Policies</span>
+            </a>
+          
+        
+            <a href="https://investors.etsy.com/">
+              <span>Investors</span>
+            </a>
+          
+        
+            <a href="https://www.etsy.com/careers?ref=ftr">
+              <span>Careers</span>
+            </a>
+          
+        
+            <a href="https://www.etsy.com/press?ref=ftr">
+              <span>Press</span>
+            </a>
+          
+
         </div>
     );
   }
