@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 
 export default class CustomOrder extends Component {
   render(){
+    //is_customizable
+    //has_variations STATES WEATHER OR NOT THERE ARE OPTIONS IN THE DROPDOWN
+    //quantity SETS HOW MANY THERE CAN BE IN THE QUANTITY DROPDOWN
+    // let isitcustomizable = false;
+    // if (this.props.shopdata){
+    //
+    // }
     let shopimage = false
     if (this.props.shopdata){
       if (this.props.shopdata[0].icon_url_fullxfull === null){
@@ -12,6 +19,7 @@ export default class CustomOrder extends Component {
     }
     return(
       <div className = "customorder-wrapper">
+      {this.props.listingdata.is_customizable ? (
         <div className="customorder-pic">
           <img src = {shopimage ? shopimage : ""} alt = "shop icon" width="49" height="49"/>
             <div className="customorder">
@@ -19,6 +27,7 @@ export default class CustomOrder extends Component {
               <p>and have something made just for you.</p>
             </div>
         </div>
+      ) : ""}
       </div>
 
     )
