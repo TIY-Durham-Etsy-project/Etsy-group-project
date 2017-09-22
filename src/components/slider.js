@@ -17,13 +17,13 @@ export default class Slider extends Component {
   render() {
     return (
       <div className="slider-row">
-        <h2>{this.props.arrayOfSix.headline}</h2>
+        <h2>{this.props.headline}</h2>
         {/* <API callbackFromParent={this.myCallback} display={this.state.type}/> */}
         <div className="slider-parent">
-          {this.props.arrayOfSix.array.map((thing) =>{
+          {this.props.arrayOfSix.map((thing) =>{
             return (
               < div key={thing._id} className="slider-child">
-              <div onClick=""
+              <div onClick="">
                 <a href={thing.url}>
                   <picture>
                     <img src={thing.MainImage.url_170x135} alt=""/>
