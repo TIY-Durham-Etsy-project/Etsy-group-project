@@ -4,7 +4,17 @@
   /*background-color: #efefeb;*/
 }
 
-/*------------ETSY INFO STYLES BEGIN-----------*/
+.header {
+  width: 100vw;
+  position: relative;
+  /*left: -95px;*/
+}
+
+.homepage-wrapper {
+    margin: 0 20px;
+}
+
+/*------------ETSY HOMEPAGE INFO STYLES BEGIN-----------*/
 .etsyinfo-parent {
   display: flex;
   padding: 10px;
@@ -38,7 +48,7 @@
   font-size: 18px;
 }
 
-/*-------------SLIDER STYLES BEGIN-------------*/
+/*-------------HOMEPAGE SLIDER STYLES BEGIN-------------*/
 .slider-row{
   margin: 40px 0;
   text-align: center;
@@ -100,10 +110,11 @@
   text-decoration: underline;
 }
 
-/*------CAROUSEL STYLES BEGIN------*/
+/*------HOMEPAGE CAROUSEL STYLES BEGIN------*/
 .carousel-container {
   display: flex;
   height: 315px;
+  margin: 20px 0 40px 0;
 }
 
 .carousel {
@@ -116,8 +127,6 @@ width: 66%;
   height: 315px;
 }
 
-
-
 .carousel-caption {
   background-color: #512526;
   color: white;
@@ -125,7 +134,6 @@ width: 66%;
   padding: 95px 20px;
   position: relative;
   left: 0;
-
 }
 
 #previous-button {
@@ -140,6 +148,7 @@ width: 66%;
   font-family: "Bitter", "Times", serif;
   font-weight: 300;
   margin-bottom: 5px;
+  color: white;
 }
 
 .carousel-caption a {
@@ -175,7 +184,7 @@ width: 66%;
   padding-top: 40px;
 }
 
-/*-------RESPONSIVE STYLES--------*/
+/*-------HOMEPAGE RESPONSIVE STYLES--------*/
 @media screen and ( max-width: 820px ){
   .slider-parent {
   	flex-wrap: wrap;
