@@ -24,12 +24,14 @@ h4 {
 
 
 .header-list {
-  /*height: 10000pt;*/
-  position: absolute;
+  height: 40pt;
+  position: relative;
   list-style: none;
   display: flex;
   text-decoration: none;
   justify-content: space-between;
+  background-color: white;
+  margin-top: -10pt;
   /*align-items: center;*/
 }
 
@@ -101,15 +103,19 @@ button:hover{
 }
 
 .lower-nav {
-  display: flex;
+  /*display: flex;
   justify-content: space-between;
   background-color: white;
-  height: 120pt;
-  align-items: center;
+  height: 80pt;
+  align-items: center;*/
 }
 
+/*Header Items*/
+/*Header Items*/
+
 .header-button {
-  background-color: white;
+  /*background-color: white;*/
+  background-color: Transparent;
   border: none;
 }
 
@@ -143,6 +149,13 @@ button:hover{
   display: block;
 }
 
+.accessories_sub_items{
+  /*background-color: #f9f9f9;*/
+  /*To visualize during development.*/
+  /*background-color: green;*/
+
+}
+
 .header-list-item-clothing:hover .dropdown-content-clothing {
   /*display: block !important;*/
 }
@@ -151,20 +164,20 @@ button:hover{
   color: red;
 }
 
-/*.dropdown-content-clothing:hover .dropdown-content-clothing-2{
-  display: block;
-}*/
-
 .moveLeftSubHeaderItem{
   display: block;
   position: absolute;
-  margin-top: -15pt;
-  margin-left: 120pt;
+  margin-top: -12.5pt;
+  margin-left: 125pt;
+}
+
+.moveLeftSubHeaderItem button{
+  display: block;
 }
 
 .dropdown-content-clothing-2{
   display: none;
-  position: relative;
+  /*position: relative;*/
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -179,6 +192,9 @@ button:hover{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+
+/*Header Items*/
+/*Header Items*/
 
 .etsy-font{
   margin-right: 20px;
