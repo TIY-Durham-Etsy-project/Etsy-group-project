@@ -617,25 +617,32 @@ font-size: 25px;
   transition: background-color 0.6s ease;
 }
 
+.i-am-invisible{
+  width: 100px;
+}
 
 .subCarouselImageHolder{
-  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .images-within-carousel-holder{
-  width: 570px;
+  width: 530px;
   height: 50px;
   display: flex;
   flex-direction: inline;
   align-items: center;
   justify-content: center;
 }
+
 .carousel-button-holder{
-  display: inline;
-  float: right;
+  width: 100px;
 }
+
 .carousel-button-holder button{
   font-family: Arial;
-  color: #f45800;
+  color: #A39999;
   font-size: 14px;
   background: #ffffff;
   border: solid #ffffff 0px;
