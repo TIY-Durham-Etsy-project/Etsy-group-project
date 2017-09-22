@@ -1008,3 +1008,17 @@ font-size: 25px;
 .single-user-review{
   border-bottom: solid grey 1px;
 }
+
+.customorder {
+  display: flex;
+  width: 476px;
+  height: 50px ;
+  background-color: #F1F1F1;
+  border-radius: 1%;
+  margin-bottom: 10px;
+  margin: auto;
+}
+
+.customorder-pic {
+  display: flex;
+}
