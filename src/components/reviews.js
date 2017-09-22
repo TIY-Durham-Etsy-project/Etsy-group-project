@@ -36,7 +36,7 @@ export default class Reviews extends Component {
   }
   render(){
     let avgRating = false;
-    if (this.props.shopdata){
+    if (this.props.shopdata && this.props.shopdata.ratings_aggregate !== null){
       switch (Math.round(this.props.shopdata.ratings_aggregate.rating)) {
         case 5:
           avgRating = "fivestarreview.png";
