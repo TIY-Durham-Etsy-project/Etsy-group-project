@@ -33,10 +33,6 @@ export default class ProductDescription extends Component {
     }
     this.setState({ price: productobj })
   }
-  componentWillMount(){
-    console.log(this.props.listingdata)
-    console.log("PRODUCT DESCRIPTION IS NOW MOUNTING")
-  }
   componentDidUpdate(){
     if (this.props.listingdata && this.props.listinginventorydata && this.state.initdata === false){
       if (this.state.properties.length <= 0){

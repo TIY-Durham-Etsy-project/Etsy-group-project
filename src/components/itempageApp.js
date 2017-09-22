@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import CustomOrder from './customorder.js';
 import DetailsDropdown from './detailsdropdown.js';
-import FAQs from './faqs.js';
 import FavoriteButton from './favoritebutton.js';
 import ItemHeader from './ItemHeader.js';
 import ImageCarousel from './imagecarousel.js';
@@ -159,7 +158,6 @@ class ItemPageApp extends Component {
               feedbackdata={this.state.feedbackdata}/>
               <MeetTheOwner
                 shopdata={this.state.shopdata}/>
-              <FAQs/>
             </div>
             <div className = "right-content">
               <ProductDescription
