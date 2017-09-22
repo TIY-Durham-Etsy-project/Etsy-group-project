@@ -11,7 +11,7 @@ export default class Slider extends Component {
 
     // fxn callback
     sendDataUp(event){
-      console.log(this.event.target);
+      console.log(event.target);
     }
   render() {
     let mapper = false;
@@ -20,10 +20,10 @@ export default class Slider extends Component {
       mapper = this.props.arrayOfSix.map((thing) =>{
         console.log(thing)
         return (
-          < div key={thing.url} className="slider-child">
-            <div onClick="">
+          < div key={thing.listing_id} className="slider-child">
+            <div onClick={this.sendDataUp}>
                 <picture>
-                  <img onClick={this.sendDataUp} id={thing.listing_id} src={thing.MainImage.url_170x135} alt=""/>
+                  <img id={thing.listing_id} src={thing.MainImage.url_170x135} alt=""/>
                 </picture>
                 <div className="slider-productinfo">
                   <h3>{thing.taxonomy_path[0]}</h3>
