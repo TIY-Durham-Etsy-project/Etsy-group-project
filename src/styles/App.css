@@ -382,8 +382,8 @@ button:hover{
 
 /* item-page-wrapper for all data */
 .item-page-wrapper{
-  width: 75vw;
-  /*min-width: 1000px;*/
+  /*width: 75vw;*/
+  width: 1000px;
   background-color: white;
   margin: 10px auto;
   border: solid 1px #dcdcd9;
@@ -731,7 +731,8 @@ font-size: 25px;
 }
 
 .arrow-box-wrapper{
-  width: 45vw;
+  /*width: 45vw;*/
+  width: 570px;
   display: flex;
   justify-content: space-between;
   z-index: 25;
