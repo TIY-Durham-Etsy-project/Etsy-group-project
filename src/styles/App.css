@@ -196,6 +196,9 @@
 .OptInForm>p{
   font-weight: 300;
 }
+.OptInForm label{
+  height: 38px;
+}
 .OptInForm > form{
   display: flex;
   align-content: center;
@@ -204,7 +207,7 @@
   height: 38px;
 }
 .OptInForm > form > label > input{
-  height: 34px;
+  height: 38px;
   width: 194px;
   border: 1px solid grey;
   border-top-left-radius: 4px;
@@ -320,6 +323,7 @@ svg{
   flex-direction: row;
   justify-content: space-around;
   border: 1px solid #E1E3DF;
+  font-size: 12px;
 }
 .display-table-cell{
   width:100px;
