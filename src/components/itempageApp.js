@@ -144,7 +144,8 @@ class ItemPageApp extends Component {
           <div className = "left-content">
             <FavoriteButton/>
             <ImageCarousel imagesdata={this.state.imagesdata}/>
-            <CustomOrder/>
+            <CustomOrder
+            shopdata={this.state.shopdata}/>
             <DetailsDropdown
             listingdata={this.state.listingdata}/>
             <Reviews
