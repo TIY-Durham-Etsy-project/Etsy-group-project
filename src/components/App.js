@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import Header from './header.js';
+import Homepage from './homepage.js';
 import ItemPageApp from './itempageApp.js';
-
-import TESTHOMEPAGE from './TESTHOMEPAGE.js';
+import Footer from './footer.js';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.handleIncommingData = this.handleIncommingData.bind(this);
     this.state = {
-      listingidpage: false
+      listingidpage: "520097829"
     };
   }
   handleIncommingData(value){
@@ -20,8 +20,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header sendDataUpToParent={this.handleIncommingData}/>
-        {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<TESTHOMEPAGE sendDataUpToParent={this.handleIncommingData}/>)}
-        {/* ADD OTHER GROUPS FOOTER HERE */}
+        {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<Homepage sendDataUpToParent={this.handleIncommingData}/>)}
+        <Footer/>
       </div>
     );
   }

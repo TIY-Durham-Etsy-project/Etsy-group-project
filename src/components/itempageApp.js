@@ -20,7 +20,6 @@ class ItemPageApp extends Component {
     this.handleIncommingData = this.handleIncommingData.bind(this);
     this.goBacktoHome = this.goBacktoHome.bind(this);
     this.state = {
-      // idvariable: "499471843",
       idvariable: "",
       listingdata: false,
       listinginventorydata: false,

@@ -1,3 +1,530 @@
+
+.App {
+  /*text-align: center;*/
+  /*background-color: #efefeb;*/
+}
+
+/*------------ETSY INFO STYLES BEGIN-----------*/
+.etsyinfo-parent {
+  display: flex;
+  padding: 10px;
+}
+
+.etsyinfo-child {
+  text-align: center;
+  margin: 10px;
+  width: 30%;
+  color: #666666;
+}
+
+.etsyinfo-child h3{
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0;
+  /*display: inline-block;*/
+
+}
+
+.etsyinfo-child p {
+  font-size: 13px;
+  margin-top: 5px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+.etsyinfo-check {
+  color: #f56400;
+  /*float: left;*/
+  font-size: 18px;
+}
+
+/*-------------SLIDER STYLES BEGIN-------------*/
+.slider-row{
+  margin: 40px 0;
+  text-align: center;
+  color: #343434;
+}
+
+.slider-parent {
+	display: flex;
+}
+
+.slider-child {
+	border: 1px solid #dcdcd9;
+	border-radius: 2px;
+	width: 205px;
+	margin: 10px;
+  background: white;
+}
+
+.slider-child img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.slider-child h3 {
+	font-weight: 300;
+	font-size: 13px;
+	color: #666666;
+}
+
+.slider-productinfo h3, .slider-productinfo h4, .slider-productinfo div, .slider-productinfo h5{
+    text-align: left;
+    margin: 0;
+    padding-bottom: 2px;
+    color: #666666;
+}
+
+.slider-productinfo h4, .slider-productinfo div {
+  font-weight: 300;
+  font-size: 12px;
+  color: #aaaaaa;
+}
+
+.slider-productinfo h5 {
+  font-size: 15px;
+  color: #343434;
+}
+
+.slider-child a {
+	text-decoration: none;
+}
+
+.slider-seemore {
+  color: #f56400;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.slider-seemore:hover {
+  text-decoration: underline;
+}
+
+/*------CAROUSEL STYLES BEGIN------*/
+.carousel-container {
+  display: flex;
+  height: 315px;
+}
+
+.carousel {
+background-color: #512526;
+width: 66%;
+}
+
+.img-fluid {
+  width: 100%;
+  height: 315px;
+}
+
+
+
+.carousel-caption {
+  background-color: #512526;
+  color: white;
+  text-align: center;
+  padding: 95px 20px;
+  position: relative;
+  left: 0;
+
+}
+
+#previous-button {
+  color: black;
+}
+
+#previous-next {
+  color: black;
+}
+
+.carousel-caption h1 {
+  font-family: "Bitter", "Times", serif;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.carousel-caption a {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  margin-top: 5px;
+  color: white;
+
+}
+
+.carousel-banners {
+  width: 34%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carousel-banner1 {
+  height: 60%;
+  background-color: gray;
+  background-image: url("https://img0.etsystatic.com/site-assets/vesta-homepage-headers-v3/fall/eat/eat_750x640.0.jpg");
+  background-size: cover;
+}
+
+.carousel-banner2 {
+  height: 34%;
+  color: white;
+  background-color: #512526;
+  text-align: center;
+  padding: 10px;
+  padding-top: 40px;
+}
+
+/*-------RESPONSIVE STYLES--------*/
+@media screen and ( max-width: 820px ){
+  .slider-parent {
+  	flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/*------FOOTER STYLES BEGIN------*/
+
+/*-------OPT-IN FORM STYLES------*/
+.OptInForm{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  height: 135px;
+  font-size: 14px;
+}
+.OptInForm>p{
+  font-weight: 300;
+}
+.OptInForm label{
+  height: 38px;
+}
+.OptInForm > form{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  height: 38px;
+}
+.OptInForm > form > label > input{
+  height: 38px;
+  width: 194px;
+  border: 1px solid grey;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.OptInForm > form > input {
+  border: 1px solid #ff6905;
+  background-color: #ff6905;
+  width: 94px;
+  color: white;
+  border-left: none;
+  margin-left: -1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/*------FOOTER LINKS STYLES------*/
+.FooterLinks{
+  display: flex;
+  text-align: left;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  align-content: space-around;
+  color: #222;
+  font-size: 11px;
+}
+.FooterLinks > div{
+  flex-grow: 1;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  display:flex;
+  flex-direction: column;
+}
+.FooterLinks > div > a{
+  text-decoration: none;
+  color: #222;
+  font-weight: 100;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.FooterLinks > div > a :hover{
+  text-decoration: underline;
+}
+.FooterLinks > span{
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.FooterLinks > a{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  text-decoration: none;
+  text-decoration-style: wavy;
+}
+.FooterLinks > a span{
+  text-decoration: none;
+}
+/*---SOCIAL MEDIA STYLES BEGIN---*/
+.ShareLinks a{
+  padding: 0;
+}
+svg{
+  float: left;
+  height: 24px;
+  width: 36px;
+}
+.social_media_name{
+  float: left;
+  margin: 5px auto;
+}
+/*---HELP CENTER STYLES BEGIN---*/
+.HelpAndCurrency{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 36px;
+  padding-bottom: 24px;
+}
+.float-left{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.float-left>span{
+  font-size: 14px;
+  font-weight: 300;
+}
+.float-left>span>a{
+  padding-left: 2px;
+  color: #222;
+  font-weight: 500;
+}
+.float-right{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.float-right>button{
+  background-color: #F9F8F2;
+  width: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid #E1E3DF;
+  font-size: 12px;
+}
+.display-table-cell{
+  width:100px;
+  font-weight: 300;
+}
+.display-table-cell>svg{
+  position:relative;
+  top: 3px;
+  width:24px;
+}
+.dtc-one{
+  width:130px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dtc-two{
+  border-left: 1px solid #e1e3df;
+  border-right: 1px solid #e1e3df;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+}
+.dtc-three{
+  width:70px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+}
+@media screen and ( max-width: 650px ){
+  .HelpAndCurrency{
+    display: flex;
+    flex-direction: column;
+    height: 203px;
+  }
+  .float-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .ShareLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 36px;
+  }
+  .ShareLinks svg{
+    height: 36px;
+    float:none;
+    margin-left:18px;
+    margin-right:18px;
+    width: 36px;
+  }
+  .float-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .float-right>button{
+    height:36px;
+  }
+}
+/*TRADEMARK STYLES START BELOW*/
+.Trademark{
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #e1e3df;
+  width: 110%;
+  position: absolute;
+  right: 1px;
+  left: 1px;
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+.Trademark>.float-left{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.Trademark>.float-left>.display-table{
+  display: flex;
+  flex-direction: row;
+}
+.dtc-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width:80px;
+  padding-right: 10px;
+}
+.dtc-tag{
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+}
+.Trademark>.float-right{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width:50%;
+}
+.Trademark>.float-right>.display-table{
+  flex-grow: .5;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.dtc-copyright{
+  font-size: 12px;
+  height: 14px;
+  width: 160px;
+  font-weight: 300;
+  color: #888;
+}
+.dtc-terms{
+  font-size: 12px;
+  height: 14px;
+  width: 80px;
+}
+.dtc-terms>a{
+  color:#222;
+  text-decoration: none;
+}
+.dtc-privacy{
+  font-size: 12px;
+  height: 14px;
+  width: 60px;
+}
+.dtc-privacy>a{
+  color: #222;
+  text-decoration: none;
+}
+.dtc-ads{
+  font-size: 12px;
+  height: 14px;
+  width: 110px;
+}
+.dtc-ads>a{
+  color:#222;
+  text-decoration: none;
+}
+@media screen and ( max-width: 650px ){
+  .Trademark{
+    display: flex;
+    flex-direction: column;
+    border-top: none;
+    justify-content: center;
+  }
+  .Trademark>.float-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 1px solid #e1e3df;
+    border-bottom: 1px solid #e1e3df;
+    padding-top:20px;
+    padding-bottom: 20px;
+  }
+  .Trademark>.float-left>.display-table{
+    display: flex;
+    flex-direction: row;
+  }
+  .dtc-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width:80px;
+    padding-right: 10px;
+  }
+  .dtc-tag{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+  }
+  .Trademark>.float-right{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:100%;
+  }
+  .Trademark>.float-right>.display-table{
+    flex-grow: 0.5;
+  }
+  .dtc-copyright{
+    text-align: right;
+    flex-grow: .2;
+  }
+}
+
 body{
   margin: 0;
   background-color: #efefeb;
@@ -115,6 +642,7 @@ button:hover{
   margin-right: 35px;
   width: 300px;
   justify-content: space-between;
+  align-content: center;
 }
 
 .lower-nav {
@@ -152,6 +680,10 @@ button:hover{
   color: black;
   border-bottom: 4px solid #f45800;
   /*border-bottom: solid 1px #f45800;*/
+}
+
+.header{
+  width: 100%;
 }
 
 .white-box-header-dropdown-clothes{
@@ -500,15 +1032,22 @@ button:hover{
 .favorite-button{
   display: flex;
   width: 570px;
+<<<<<<< HEAD
+=======
+  min-width: 570px;
+>>>>>>> 83585f4dbf56c6fdae51f1f072004d21173fd4d2
   height: 67px;
   background-color: #F1F1F1;
   border-radius: 1%;
   margin-bottom: 10px;
   overflow: hidden;
+  align-items: center;
+  align-content: center;
 }
 
 .item-like{
   font-family: 'Lato', 'Arial', sans-serif;
+  padding-top: 15px;
 }
 
 
@@ -926,10 +1465,13 @@ font-size: 25px;
   height: 110px;
   margin: 20px 0;
   background-color: #FAF9F5;
-  padding: 10px;
+  padding: 15px;
   font-size: 14px;
   line-height: 1;
+}
 
+.etsy-purchase-guarantee h2{
+  font-size: 20px;
 }
 
 .pseudo-link{
@@ -1226,4 +1768,5 @@ font-size: 25px;
 
 .customorder a:hover{
   text-decoration: underline;
+
 }
