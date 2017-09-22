@@ -382,7 +382,7 @@ button:hover{
 
 /* item-page-wrapper for all data */
 .item-page-wrapper{
-  width: 75vw;
+  width: 1000px;
   /*min-width: 1000px;*/
   background-color: white;
   margin: 10px auto;
@@ -393,17 +393,17 @@ button:hover{
   margin: 0 auto ;
   border: 1px solid #ececec;
   border-radius: 5px;
-
-
 }
 
 .left-content{
   width: 45vw;
+  min-width: 580px;
   overflow: auto;
 }
 
 .right-content{
   width: 30vw;
+  min-width: 400px;
   overflow: auto;
 }
 
@@ -470,8 +470,7 @@ button:hover{
 
 .favorite-button{
   display: flex;
-  width: 100%;
-  min-width: 570px;
+  width: 570px;
   height: 67px;
   background-color: #F1F1F1;
   border-radius: 1%;
@@ -729,7 +728,7 @@ font-size: 25px;
 }
 
 .arrow-box-wrapper{
-  width: 45vw;
+  width: 570px;
   display: flex;
   justify-content: space-between;
   z-index: 25;
