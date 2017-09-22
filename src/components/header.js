@@ -22,10 +22,12 @@ export default class Header extends Component {
 
                 <div className="lower-nav">
                   <ul className="header-list " >
-                    <div className="dropdown">
 
+                    <div className="dropdown">
                     <button className="header-button dropbtn "><li className="header-list-item-clothing">Clothing & Accessories</li></button>
                       {/* <div className="dropdown-content"></div> */}
+                      <div className="white-box-header-dropdown-clothes">
+
                       <div className="accessories_sub_items">
                         <button className="header-button dropbtn">
                           <li className="dropdown-content-clothing">Accessories</li>
@@ -133,6 +135,7 @@ export default class Header extends Component {
 
 
 
+                    </div>
                     </div>
 
                     <div>
