@@ -4,7 +4,17 @@
   /*background-color: #efefeb;*/
 }
 
-/*------------ETSY INFO STYLES BEGIN-----------*/
+.header {
+  width: 100vw;
+  position: relative;
+  /*left: -95px;*/
+}
+
+.homepage-wrapper {
+    margin: 0 20px;
+}
+
+/*------------ETSY HOMEPAGE INFO STYLES BEGIN-----------*/
 .etsyinfo-parent {
   display: flex;
   padding: 10px;
@@ -38,7 +48,7 @@
   font-size: 18px;
 }
 
-/*-------------SLIDER STYLES BEGIN-------------*/
+/*-------------HOMEPAGE SLIDER STYLES BEGIN-------------*/
 .slider-row{
   margin: 40px 0;
   text-align: center;
@@ -100,10 +110,11 @@
   text-decoration: underline;
 }
 
-/*------CAROUSEL STYLES BEGIN------*/
+/*------HOMEPAGE CAROUSEL STYLES BEGIN------*/
 .carousel-container {
   display: flex;
   height: 315px;
+  margin: 20px 0 40px 0;
 }
 
 .carousel {
@@ -116,8 +127,6 @@ width: 66%;
   height: 315px;
 }
 
-
-
 .carousel-caption {
   background-color: #512526;
   color: white;
@@ -125,7 +134,6 @@ width: 66%;
   padding: 95px 20px;
   position: relative;
   left: 0;
-
 }
 
 #previous-button {
@@ -140,6 +148,7 @@ width: 66%;
   font-family: "Bitter", "Times", serif;
   font-weight: 300;
   margin-bottom: 5px;
+  color: white;
 }
 
 .carousel-caption a {
@@ -175,7 +184,7 @@ width: 66%;
   padding-top: 40px;
 }
 
-/*-------RESPONSIVE STYLES--------*/
+/*-------HOMEPAGE RESPONSIVE STYLES--------*/
 @media screen and ( max-width: 820px ){
   .slider-parent {
   	flex-wrap: wrap;
@@ -561,7 +570,7 @@ h4 {
   /*align-items: center;*/
 }
 
-.header-list-item, .header-list-item-clothing, .header-list-item-home, .dropdown-content-clothing-2, .dropdown-content-2-bags-purses{
+.header-list-item, .header-list-item-clothing, .header-list-item-home, .dropdown-content-clothing-2, .dropdown-content-2-bags-purses, .dropdown-content-2-x-clothing{
   /*font-family: 'Lato', 'Arial', sans-serif;*/
   font-family: "Graphik Webfont","Arial","Helvetica",sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -579,7 +588,7 @@ h4 {
   width: 70pt;
 }
 
-.dropdown-content-clothing-2, .dropdown-content-2-bags-purses{
+.dropdown-content-clothing-2, .dropdown-content-2-bags-purses, .dropdown-content-2-x-clothing{
   color: #444;
   font-size: 14px;
   line-height: 1.4;
@@ -642,6 +651,7 @@ button:hover{
   margin-right: 35px;
   width: 300px;
   justify-content: space-between;
+  align-content: center;
 }
 
 .lower-nav {
@@ -679,6 +689,10 @@ button:hover{
   color: black;
   border-bottom: 4px solid #f45800;
   /*border-bottom: solid 1px #f45800;*/
+}
+
+.header{
+  width: 100%;
 }
 
 .white-box-header-dropdown-clothes{
@@ -798,6 +812,35 @@ button:hover{
   display: block;
 }
 
+/*For subheader clothing of clothing and accessories.*/
+
+.moveLeftSubHeaderItem-clothing_x{
+  display: none;
+  position: absolute;
+  width: 340pt;
+  /*margin-top: -34pt;*/
+  margin-top: -52pt;
+  margin-left: 125pt;
+  background-color: #f9f9f9;
+}
+
+.sub-moveLeftSubHeaderItem-clothing_x{
+  display: none;
+  margin-top: -200pt;
+  margin-left: 155pt;
+}
+
+.moveLeftSubHeaderItem-clothing_x button{
+  display: block;
+}
+
+.moveLeftSubHeaderItem-clothing_x div{
+  display: block;
+}
+
+.clothing_x_sub_items:hover .moveLeftSubHeaderItem-clothing_x, .sub-moveLeftSubHeaderItem-clothing_x{
+  display: block;
+}
 /*.dropdown-content-clothing-2, .dropdown-content-2-bags-purses{
   display: none;
   background-color: #f9f9f9;
@@ -909,7 +952,7 @@ button:hover{
 
 /* item-page-wrapper for all data */
 .item-page-wrapper{
-  width: 75vw;
+  width: 1000px;
   /*min-width: 1000px;*/
   background-color: white;
   margin: 10px auto;
@@ -920,17 +963,17 @@ button:hover{
   margin: 0 auto ;
   border: 1px solid #ececec;
   border-radius: 5px;
-
-
 }
 
 .left-content{
   width: 45vw;
+  min-width: 580px;
   overflow: auto;
 }
 
 .right-content{
   width: 30vw;
+  min-width: 400px;
   overflow: auto;
 }
 
@@ -997,17 +1040,23 @@ button:hover{
 
 .favorite-button{
   display: flex;
-  width: 100%;
+  width: 570px;
+<<<<<<< HEAD
+=======
   min-width: 570px;
+>>>>>>> 83585f4dbf56c6fdae51f1f072004d21173fd4d2
   height: 67px;
   background-color: #F1F1F1;
   border-radius: 1%;
   margin-bottom: 10px;
   overflow: hidden;
+  align-items: center;
+  align-content: center;
 }
 
 .item-like{
   font-family: 'Lato', 'Arial', sans-serif;
+  padding-top: 15px;
 }
 
 
@@ -1256,7 +1305,7 @@ font-size: 25px;
 }
 
 .arrow-box-wrapper{
-  width: 45vw;
+  width: 570px;
   display: flex;
   justify-content: space-between;
   z-index: 25;
@@ -1425,10 +1474,13 @@ font-size: 25px;
   height: 110px;
   margin: 20px 0;
   background-color: #FAF9F5;
-  padding: 10px;
+  padding: 15px;
   font-size: 14px;
   line-height: 1;
+}
 
+.etsy-purchase-guarantee h2{
+  font-size: 20px;
 }
 
 .pseudo-link{
