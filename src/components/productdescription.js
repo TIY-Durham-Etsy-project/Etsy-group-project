@@ -63,6 +63,8 @@ export default class ProductDescription extends Component {
     }
   }
   render(){
+    //this.props.listingdata.has_variations STATES WEATHER OR NOT THERE ARE OPTIONS IN THE DROPDOWN
+    //this.props.listingdata.quantity SETS HOW MANY THERE CAN BE IN THE QUANTITY DROPDOWN
     let inventorySelects = this.state.properties.map((x, i) => {
       let newLabelClassName = x.replace(/ /g, "-");
       return(

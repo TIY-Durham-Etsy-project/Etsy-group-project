@@ -11,6 +11,8 @@ export default class CustomOrder extends Component {
       }
     }
     return(
+      <div className = "customorder-wrapper">
+      {this.props.listingdata.is_customizable ? (
         <div className="customorder-pic">
           <img src = {shopimage ? shopimage : ""} alt = "shop icon" width="49" height="49"/>
             <div className="customorder">
@@ -18,6 +20,8 @@ export default class CustomOrder extends Component {
               <p>and have something made just for you.</p>
             </div>
         </div>
+      ) : ""}
+      </div>
 
     )
   }
