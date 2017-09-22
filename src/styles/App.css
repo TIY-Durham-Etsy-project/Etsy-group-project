@@ -471,10 +471,7 @@ button:hover{
 .favorite-button{
   display: flex;
   width: 100%;
-<<<<<<< HEAD
-=======
   min-width: 570px;
->>>>>>> 114270719d63e94c2bb46f4e666f8f067691f177
   height: 67px;
   background-color: #F1F1F1;
   border-radius: 1%;
