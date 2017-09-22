@@ -34,13 +34,14 @@ h4 {
   /*align-items: center;*/
 }
 
-.header-list-item, .header-list-item-clothing, .header-list-item-home {
+.header-list-item, .header-list-item-clothing, .header-list-item-home, .dropdown-content-clothing-2, .dropdown-content-2-bags-purses{
   /*font-family: 'Lato', 'Arial', sans-serif;*/
   font-family: "Graphik Webfont","Arial","Helvetica",sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
   color: #777;
   border-bottom: 6px solid transparent;
+  /*line-height: 1.4;*/
 }
 
 .header-list-item-clothing {
@@ -49,6 +50,18 @@ h4 {
 
 .header-list-item-home {
   width: 70pt;
+}
+
+.dropdown-content-clothing-2, .dropdown-content-2-bags-purses{
+  color: #444;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.dropdown-content-clothing-3, .dropdown-content-3-bags-purses{
+  color: #777;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 button:hover{
@@ -141,9 +154,9 @@ button:hover{
 }
 
 .white-box-header-dropdown-clothes{
+  display: none;
   margin-top: 5.5pt;
   height:100pt;
-  display: none;
   background-color: #f9f9f9;
   border: 1pt solid #efefeb;
 }
@@ -165,12 +178,18 @@ button:hover{
     -webkit-font-smoothing: antialiased;
     font-size: 14px;
     color: black;
+    line-height: 2.2;
+
     /*width: 100pt;*/
     /*background-color: #f9f9f9;*/
     /*min-width: 160px;*/
     /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
     z-index: 1;
-  }
+}
+
+.accessories_sub_items:hover, .bags-purses_sub_items:hover, .clothing_x_sub_items:hover, .shoes_sub_items:hover{
+  background-color: #efefeb;
+}
 
 .dropdown:hover .dropdown-content-clothing {
   display: block;
@@ -212,7 +231,7 @@ button:hover{
 .moveLeftSubHeaderItem{
   display: none;
   position: absolute;
-  margin-top: -12.5pt;
+  margin-top: -16.5pt;
   margin-left: 125pt;
   background-color: #f9f9f9;
 }
@@ -229,7 +248,7 @@ button:hover{
   display: none;
   position: absolute;
   width: 340pt;
-  margin-top: -28pt;
+  margin-top: -34pt;
   margin-left: 125pt;
   background-color: #f9f9f9;
 }
@@ -248,14 +267,13 @@ button:hover{
   display: block;
 }
 
-.dropdown-content-clothing-2, .dropdown-content-2-bags-purses{
+/*.dropdown-content-clothing-2, .dropdown-content-2-bags-purses{
   display: none;
-  /*position: relative;*/
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-}
+}*/
 
 .bags-purses_sub_items:hover:hover .dropdown-content-2-bags-purses {
   display: block;
