@@ -126,7 +126,6 @@
 .OptInForm>p{
   font-weight: 300;
 }
-
 .OptInForm > form{
   display: flex;
   align-content: center;
@@ -134,7 +133,6 @@
   margin: auto;
   height: 38px;
 }
-
 .OptInForm > form > label > input{
   height: 34px;
   width: 194px;
@@ -154,7 +152,6 @@
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-
 /*------FOOTER LINKS STYLES------*/
 .FooterLinks{
   display: flex;
@@ -186,20 +183,12 @@
 .FooterLinks > div > a :hover{
   text-decoration: underline;
 }
-.FooterLinks > div > a :visited{
-}
-.FooterLinks > div > a :link{
-}
-.FooterLinks > div > a :active{
-}
-
 .FooterLinks > span{
   display: flex;
   flex-direction: row;
   align-content: space-around;
   justify-content: flex-start;
   text-decoration: none;
-  /*color: black;*/
 }
 .FooterLinks > a{
   display:flex;
@@ -208,15 +197,10 @@
   align-content: center;
   text-decoration: none;
   text-decoration-style: wavy;
-  /*color: black;*/
-
 }
 .FooterLinks > a span{
   text-decoration: none;
-  /*color: black;*/
-  /*font-weight: 100;*/
 }
-
 /*---SOCIAL MEDIA STYLES BEGIN---*/
 .ShareLinks a{
   padding: 0;
@@ -224,8 +208,111 @@
 svg{
   float: left;
   height: 24px;
+  width: 36px;
 }
 .social_media_name{
   float: left;
   margin: 5px auto;
+}
+/*---HELP CENTER STYLES BEGIN---*/
+.HelpAndCurrency{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 36px;
+  padding-bottom: 24px;
+}
+.float-left{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.float-left>span{
+  font-size: 14px;
+  font-weight: 300;
+}
+.float-left>span>a{
+  padding-left: 2px;
+  color: #222;
+  font-weight: 500;
+}
+.float-right{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.float-right>button{
+  background-color: #F9F8F2;
+  width: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid #E1E3DF;
+}
+.display-table-cell{
+  width:100px;
+  font-weight: 300;
+}
+.display-table-cell>svg{
+  position:relative;
+  top: 3px;
+  width:24px;
+}
+.dtc-one{
+  width:130px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dtc-two{
+  border-left: 1px solid #e1e3df;
+  border-right: 1px solid #e1e3df;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+}
+.dtc-three{
+  width:70px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+}
+@media screen and ( max-width: 650px ){
+  .HelpAndCurrency{
+    display: flex;
+    flex-direction: column;
+    height: 203px;
+  }
+  .float-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .ShareLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 36px;
+  }
+  .ShareLinks svg{
+    height: 36px;
+    float:none;
+    margin-left:18px;
+    margin-right:18px;
+    width: 36px;
+  }
+  .float-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .float-right>button{
+    height:36px;
+  }
+
 }
