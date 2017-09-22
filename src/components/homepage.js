@@ -4,6 +4,7 @@ import EtsyInfo from './etsy-info.js';
 import API from './api.js';
 import Slider from './slider.js';
 import Footer from './footer.js';
+import Carousel from './carousel.js';
 
 export default class Homepage extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class Homepage extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Carousel /> */}
+        <Carousel />
         <EtsyInfo />
         {/* <Slider display={this.state.recently}/> */}
         <API display={this.state.gifts}/>
