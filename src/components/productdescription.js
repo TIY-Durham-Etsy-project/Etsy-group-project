@@ -71,7 +71,7 @@ export default class ProductDescription extends Component {
           <select onChange={this.handleChange} className = {newLabelClassName+"-drop-down-menu"}>
           {this.state.propertyOptions[newLabelClassName].map((x, i)=>{
             return (
-              <option value={x} key={x}>{x.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"')}</option>
+              <option value={x} key={x}>{x.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"').replace(/&#39;/g, "'")}</option>
             )
           })}
           </select>

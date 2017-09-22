@@ -72,7 +72,7 @@ export default class Reviews extends Component {
           <div className="single-user-review" key={x.transaction_id}>
             <p>User id: {this.props.feedbackdata ? x.transaction_id : ""}</p>
             <p className = "review-stars">Stars: <img alt="" className = "reviews-stars-image-holder" src = {stars ? stars : ""}/></p>
-            <p>{this.props.feedbackdata ? x.message.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"') : ""}</p>
+            <p>{this.props.feedbackdata ? x.message.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"').replace(/&#39;/g, "'") : ""}</p>
           </div>
           )
         } else {
