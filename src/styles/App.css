@@ -1213,6 +1213,8 @@ font-size: 25px;
 
 .customorder-pic {
   display: flex;
+<<<<<<< HEAD
+=======
 }
 
 .customorder a{
@@ -1222,4 +1224,5 @@ font-size: 25px;
 
 .customorder a:hover{
   text-decoration: underline;
+>>>>>>> master
 }
