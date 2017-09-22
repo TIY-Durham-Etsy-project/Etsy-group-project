@@ -171,7 +171,8 @@ class ItemPageApp extends Component {
               />
             </div>
           </div>
-          <RelatedTags/>
+          <RelatedTags listingdata={this.state.listingdata}
+          shopdata={this.state.shopdata}/>
         </div>
       ) : (<div><LoadingPage/></div>)}
       </div>

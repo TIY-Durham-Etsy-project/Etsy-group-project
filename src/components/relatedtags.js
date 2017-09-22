@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 export default class RelatedTags extends Component {
   render(){
+    let dateForReference = new Date(0);
+    dateForReference.setUTCSeconds(this.props.listingdata.creation_tsz);
     return(
       <div className="relatedtags">
         <div className = "relatedtags-top">
@@ -10,8 +12,8 @@ export default class RelatedTags extends Component {
       </div>
       <div className = "relatedtags-fine-print">
         <div className = "relatedtags-fine-print-left">
-          <span>Listed on DATE HERE </span>
-          <span>NUMBER HERE favorites</span>
+          <span>Listed on {this.props.listingdata ? dateForReference.toDateString() : ""}  </span>
+          <span>  {this.props.shopdata ? this.props.shopdata[2].feedback_info.count : ""} favorites</span>
         </div>
         <div className = "relatedtags-fine-print-right">
           <a href = "">Report this item to Etsy</a>
