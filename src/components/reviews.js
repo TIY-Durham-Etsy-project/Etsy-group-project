@@ -37,7 +37,7 @@ export default class Reviews extends Component {
   render(){
     let avgRating = false;
     if (this.props.shopdata){
-      switch (this.props.shopdata.ratings_aggregate) {
+      switch (Math.round(this.props.shopdata.ratings_aggregate.rating)) {
         case 5:
           avgRating = "fivestarreview.png";
           break;
@@ -87,7 +87,7 @@ export default class Reviews extends Component {
     }
     return(
       <div className="reviewsdropdown">
-        <h3 className = "details-header">Reviews  ({this.props.shopdata ? this.props.shopdata[2].feedback_info.count : ""})<img alt="" className = "reviews-stars-image-holder" src = {avgRating ? avgRating : ""}/></h3>
+        <h3 className = "details-header">Reviews <img alt="" className = "reviews-stars-image-holder" src = {avgRating ? avgRating : ""}/> ({this.props.shopdata ? this.props.shopdata[2].feedback_info.count : ""})</h3>
         <div className={this.state.dropdownclassname}>
         {reviewsObjects ? reviewsObjects : ""}
         </div>
