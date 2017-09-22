@@ -26,7 +26,7 @@ export default class Homepage extends Component {
         {/* <Carousel /> */}
         <EtsyInfo />
         {/* <Slider display={this.state.recently}/> */}
-        <API display={this.state.gifts}/>
+        <API display={this.state.category}/>
         {/* <Slider display={this.state.gifts}/> */}
         <Footer />
       </div>

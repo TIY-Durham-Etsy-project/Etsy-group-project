@@ -10,7 +10,7 @@ export default class API extends Component {
       // itemObjects: null,
       sixArrays: [],
       currentArray: [],
-      gifts: [],
+      gifts: null,
       giftsReady: false,
       homeAndLiving: [],
       jewelry: [],
@@ -35,13 +35,13 @@ export default class API extends Component {
 
 
   // takes this.props.display.type to use for flow control.
-  componentDidMount() {
+  componentWillMount() {
     if(this.props.display.type==="gifts"){
       fetch(this.state.giftUrl)
       .then(r => r.json())
       .then((responseData) => {
         let dataArray = responseData.results;
-        console.log(dataArray);
+        // console.log(dataArray);
         // console.log(this.state.gifts);
         // let currentArray = this.state.gifts.array;
         this.setState({gifts: dataArray});
@@ -57,12 +57,12 @@ export default class API extends Component {
           .then(r => r.json())
           .then((responseData) => {
             let dataArray = responseData.results;
-            console.log(dataArray);
+            // console.log(dataArray);
             let whatever = cat.stateArray;
-            let currentArray = `${whatever}.array`;
-            this.setState({currentArray: dataArray});
-            // this.setState(function(prevState, props){
-            //   return {showForm: !prevState.showForm}
+            // let currentArray = `${whatever}.array`;
+            this.setState({[whatever]: dataArray});
+            // this.setState(function(cat.stateArray, dataArray){
+              // return {cat.stateArray: dataArray}
             // }
           })
           .catch((error) => {
@@ -74,6 +74,15 @@ export default class API extends Component {
     // if(this.props.display.type==="")
   }
 
+  componentDidUpdate() {
+    if(this.state.gifts && this.state.giftsReady===false){
+      this.trimToSix(this.filterArrayOfMissingData(this.state.gifts))
+      this.setState({giftsReady: true});
+    }
+    if(this.state.gifts && this.state.categoryReady===false){
+      this.fxnCombineObjects(this.state.category);    this.setState({categoryReady: true});
+    }
+  }
   // when.all(this.state.gifts).then(function() {
   //   // this.setState({gifts.array: currentArray});
   //   console.log(this.state.gifts);
@@ -129,6 +138,7 @@ export default class API extends Component {
       //   console.log(this.state.sixArrays);
       //   return this.state.sixArrays
       // });
+        return this.state.sixArrays
   }
 
   // function Notification( state ) {
@@ -150,15 +160,14 @@ export default class API extends Component {
         <div>
           {this.state.categoryReady ? (
             <div>
-              <Slider arrayOfSix={this.fxnCombineObjects(this.state.category)}
-              headline={this.props.display.type}
+              <Slider arrayOfSix={this.state.sixArrays}
               />
             </div>
           ):(<div></div>)
           }
-          {this.trimToSix(this.filterArrayOfMissingData(this.state.gifts)) ? (
+          {this.state.giftsReady ? (
             <div>
-              <Slider arrayOfSix={this.trimToSix(this.filterArrayOfMissingData(this.state.gifts))} />;
+              <Slider arrayOfSix={this.state.sixArrays} />;
             </div>
           ):(<div></div>)
           }
