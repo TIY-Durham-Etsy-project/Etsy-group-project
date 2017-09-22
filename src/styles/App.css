@@ -60,8 +60,9 @@ h4 {
 
 .dropdown-content-clothing-3, .dropdown-content-3-bags-purses{
   color: #777;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-left: 10pt;
 }
 
 button:hover{
@@ -248,15 +249,16 @@ button:hover{
   display: none;
   position: absolute;
   width: 340pt;
-  margin-top: -34pt;
+  /*margin-top: -34pt;*/
+  margin-top: -52pt;
   margin-left: 125pt;
   background-color: #f9f9f9;
 }
 
 .sub-moveLeftSubHeaderItem-bags-purses{
   display: none;
-  margin-top: -140pt;
-  margin-left: 125pt;
+  margin-top: -200pt;
+  margin-left: 155pt;
 }
 
 .moveLeftSubHeaderItem-bags-purses button{
