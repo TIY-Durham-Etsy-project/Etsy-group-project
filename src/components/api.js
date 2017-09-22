@@ -12,12 +12,12 @@ export default class API extends Component {
       currentArray: [],
       gifts: null,
       giftsReady: false,
-      homeAndLiving: [],
-      jewelry: [],
-      clothing: [],
-      toysAndGames: [],
-      crafty: [],
-      weddings: [],
+      homeAndLiving: false,
+      jewelry: false,
+      clothing: false,
+      toysAndGames: false,
+      crafty: false,
+      weddings: false,
       categoryReady: false,
       category :[
           {stateArray: "homeAndLiving", url: "https://openapi.etsy.com/v2/listings/active?category=home_and_living&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"},
@@ -79,7 +79,7 @@ export default class API extends Component {
       this.trimToSix(this.filterArrayOfMissingData(this.state.gifts))
       this.setState({giftsReady: true});
     }
-    if(this.state.gifts && this.state.categoryReady===false){
+    if(this.state.homeAndLiving && this.state.jewelry && this.state.clothing && this.state.toysAndGames && this.state.crafty && this.state.weddings && this.state.categoryReady===false){
       this.fxnCombineObjects(this.state.category);    this.setState({categoryReady: true});
     }
   }
@@ -108,8 +108,10 @@ export default class API extends Component {
     for (var i = 0; i < fxnArray.length; i++) {
       let trojan = fxnArray[i].stateArray;
       randomNumber = Math.floor(Math.random() *
-      `this.state.${trojan}.array.length`)
-      bsArray.push(`this.state.${trojan}.array[${randomNumber}]`);
+      [`this.state.${trojan}.length`])
+      console.log(randomNumber);
+      console.log(`this.state.${trojan}.[${randomNumber}]`);
+      bsArray.push(`this.state.${trojan}.[${randomNumber}]`);
     }
     // let arrayToSet = this.state.sixArrays;
     this.setState({sixArrays: bsArray});
