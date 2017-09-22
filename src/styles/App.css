@@ -119,8 +119,9 @@ button:hover{
 }
 
 .upper-and-lower-nav-lines{
-  border-top: black;
-  border-bottom: black;
+  border-top: solid 1pt black;
+  border-bottom: solid 1pt black;
+  height: 29.5pt;
 }
 
 /*Header Items*/
@@ -1063,5 +1064,4 @@ font-size: 25px;
 
 .customorder-pic {
   display: flex;
->>>>>>> master
 }
