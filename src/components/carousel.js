@@ -8,36 +8,36 @@ export default class Carousel extends Component {
 
 
 
+
   render() {
 
     let sliderArray = carouselData.map((slider) => {
 
     return (
 
-        <div className="carousel-parent item">
-          <div className="carousel-textbox">
+        <div className={slider.className}>
+          {/* <div className="carousel-textbox"> */}
             <h1>{slider.headline}</h1>
             <h3>{slider.subhead}</h3>
-          </div>
-          <div className="carousel-image">
-            <img height="100%" src={slider.image} alt=""/>
-          </div>
+          {/* </div> */}
+          {/* <div className="carousel-image"> */}
+            <img className="d-block img-fluid" src={slider.image} alt={slider.alt}/>
+          {/* </div> */}
         </div>
 
   )
 });
 return (
-  <div className="container">
-    <h2>Carousel Example</h2>
-    <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+
+
+    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
 
       <ol className="carousel-indicators">
-        <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="1"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="2"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="3"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="4"></li>
-
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
       </ol>
 
 
@@ -45,16 +45,16 @@ return (
         {sliderArray}
       </div>
 
-      <a className="left carousel-control" href="#carouselExampleControls" data-slide="prev">
-        <span className="glyphicon glyphicon-chevron-left"></span>
+      <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="sr-only">Previous</span>
       </a>
-      <a className="right carousel-control" href="#carouselExampleControls" data-slide="next">
-        <span className="glyphicon glyphicon-chevron-right"></span>
+      <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="sr-only">Next</span>
       </a>
-    </div>
-  </div>
+      </div>
+
     );
   }
 }
