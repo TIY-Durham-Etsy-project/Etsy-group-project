@@ -314,5 +314,137 @@ svg{
   .float-right>button{
     height:36px;
   }
-
+}
+/*TRADEMARK STYLES START BELOW*/
+.Trademark{
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #e1e3df;
+  width: 110%;
+  position: absolute;
+  right: 1px;
+  left: 1px;
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+.Trademark>.float-left{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.Trademark>.float-left>.display-table{
+  display: flex;
+  flex-direction: row;
+}
+.dtc-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width:80px;
+  padding-right: 10px;
+}
+.dtc-tag{
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+}
+.Trademark>.float-right{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width:50%;
+}
+.Trademark>.float-right>.display-table{
+  flex-grow: .5;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.dtc-copyright{
+  font-size: 12px;
+  height: 14px;
+  width: 160px;
+  font-weight: 300;
+  color: #888;
+}
+.dtc-terms{
+  font-size: 12px;
+  height: 14px;
+  width: 80px;
+}
+.dtc-terms>a{
+  color:#222;
+  text-decoration: none;
+}
+.dtc-privacy{
+  font-size: 12px;
+  height: 14px;
+  width: 60px;
+}
+.dtc-privacy>a{
+  color: #222;
+  text-decoration: none;
+}
+.dtc-ads{
+  font-size: 12px;
+  height: 14px;
+  width: 110px;
+}
+.dtc-ads>a{
+  color:#222;
+  text-decoration: none;
+}
+@media screen and ( max-width: 650px ){
+  .Trademark{
+    display: flex;
+    flex-direction: column;
+    border-top: none;
+    justify-content: center;
+  }
+  .Trademark>.float-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 1px solid #e1e3df;
+    border-bottom: 1px solid #e1e3df;
+    padding-top:20px;
+    padding-bottom: 20px;
+  }
+  .Trademark>.float-left>.display-table{
+    display: flex;
+    flex-direction: row;
+  }
+  .dtc-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width:80px;
+    padding-right: 10px;
+  }
+  .dtc-tag{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+  }
+  .Trademark>.float-right{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:100%;
+  }
+  .Trademark>.float-right>.display-table{
+    flex-grow: 0.5;
+  }
+  .dtc-copyright{
+    text-align: right;
+    flex-grow: .2;
+  }
 }
