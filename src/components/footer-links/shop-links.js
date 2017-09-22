@@ -5,17 +5,29 @@ class ShopLinks extends Component {
     return (
       <div className="ShopLinks">
         <h3>Shop</h3>
-        <ul>
-          <li>
-            <a href="https://www.etsy.com/giftcards?ref=ftr">Gift cards</a>
-          </li>
-          <li>
-            <a href="https://blog.etsy.com/en/?ref=ftr">Etsy blog</a>
-          </li>
-          <li>
-            <a href="https://www.etsy.com/wholesale?ref=ftr">Wholesale</a>
-          </li>
-        </ul>
+
+
+            <a href="https://www.etsy.com/giftcards?ref=ftr">
+              <span>
+                Gift cards
+              </span>
+            </a>
+
+
+            <a href="https://blog.etsy.com/en/?ref=ftr">
+              <span>
+                Etsy blog
+              </span>
+            </a>
+
+
+            <a href="https://www.etsy.com/wholesale?ref=ftr">
+              <span>
+                Wholesale
+              </span>
+            </a>
+
+
       </div>
     );
   }

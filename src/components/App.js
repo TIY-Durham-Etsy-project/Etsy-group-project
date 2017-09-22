@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
 import Homepage from './homepage.js';
+import Footer from './footer.js';
+import Slider from './slider.js';
+import EtsyInfo from './etsy-info.js';
+import Carousel from './carousel.js';
 
 class App extends Component {
 
@@ -8,9 +12,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         {/* <Header /> */}
 
         <Homepage />
+
+        <Footer />
 
       </div>
     );
