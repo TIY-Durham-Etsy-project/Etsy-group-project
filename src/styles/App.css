@@ -845,9 +845,30 @@ font-size: 25px;
   justify-content: space-between;
   margin-top: 115px;
   margin-bottom: 50px;
+  color: grey;
 }
-
-
+.related-tags-tag-holder-div{
+  background-color: white;
+  font-size: 14px;
+  display: inline-block;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #c4c4c4;
+}
+.related-tags-tag-holder-div:hover{
+  border: 1px solid #6b6b6b;
+  cursor: pointer;
+}
+.relatedtags-fine-print-right a{
+  color: grey;
+  text-decoration: none;
+}
+.relatedtags-fine-print-right a:hover{
+  text-decoration: underline;
+}
 
 
 /*Item Page Details Dropdown*/
@@ -947,21 +968,4 @@ font-size: 25px;
 .backbutton-item-page{
   text-align: center;
   margin: 10px auto;
-}
-
-.related-tags-tag-holder-div{
-  background-color: white;
-  font-size: 14px;
-  display: inline-block;
-  padding: 4px;
-  margin: 4px;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border: 1px solid #c4c4c4;
-}
-
-.related-tags-tag-holder-div:hover{
-  border: 1px solid #6b6b6b;
-  cursor: pointer;
 }
