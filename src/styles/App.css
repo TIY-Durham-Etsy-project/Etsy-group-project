@@ -854,9 +854,27 @@ font-size: 25px;
 }
 
 
+/*related tags */
+
+.relatedtags-top{
+  width: 130vh;
+  margin: 0 auto;
+  margin-top: 58px;
+  margin-bottom: 48px;
+  font-size: 20px;
+}
+
+.relatedtags-fine-print{
+  width: 130vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 115px;
+  margin-bottom: 50px;
+}
 
 
-/* item-page-wrapper for all data */
 
 
 /*Item Page Details Dropdown*/
