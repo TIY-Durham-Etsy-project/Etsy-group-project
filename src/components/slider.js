@@ -11,7 +11,9 @@ export default class Slider extends Component {
 
     // fxn callback
     sendDataUp(event){
-      console.log(event.target);
+      if (event.target.id !== "" && event.target.id !== undefined && event.target.id !== null){
+        console.log(event.target.id);
+      }
     }
   render() {
     let mapper = false;
