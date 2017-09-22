@@ -53,7 +53,8 @@ export default class ImageCarousel extends Component {
   }
   zoomInCurrentImg(){
     if(this.props.imagesdata){
-      this.setState({ zoomedimg: this.props.imagesdata[this.state.imageCarouselValue].url_570xN })
+      //.url_570xN
+      this.setState({ zoomedimg: this.props.imagesdata[this.state.imageCarouselValue].url_fullxfull })
     }
   }
   unZoomCurrentImg(){
@@ -62,7 +63,6 @@ export default class ImageCarousel extends Component {
     }
   }
   render(){
-    console.log(this.props.imagesdata[this.state.imageCarouselValue])
     let imageItem = false;
     if(this.props.imagesdata[0] !== undefined){
       let count = 0;
@@ -82,7 +82,11 @@ export default class ImageCarousel extends Component {
     return (
       <div className="imageCarouselAll">
       {this.state.zoomedimg ? (
-        <div onClick={this.unZoomCurrentImg} className="zoom-image-overtake-outside-div">
+          <div onClick={this.unZoomCurrentImg} className="zoom-image-clickfunction-div">
+          </div>
+      ) : ("")}
+      {this.state.zoomedimg ? (
+        <div className="zoom-image-overtake-outside-div" >
           <div className="zoom-image-inside-div" >
             <img alt="" src={this.props.imagesdata ? this.state.zoomedimg : ""}/>
           </div>
