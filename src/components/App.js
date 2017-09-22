@@ -4,13 +4,16 @@ import Homepage from './homepage.js';
 
 class App extends Component {
 
-  
+
   render() {
     return (
       <div className="App">
-
-        <Homepage />
-
+        {/* <Header /> */}
+        {           ?
+        <Homepage /> :
+        <itemPageApp />
+        }
+        <Footer />
       </div>
     );
   }
