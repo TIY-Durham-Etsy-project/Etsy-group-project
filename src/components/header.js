@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 
 export default class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.goBacktoHome = this.goBacktoHome.bind(this);
-  }
-  goBacktoHome(){
-    this.props.sendDataUpToParent(false);
-  }
   render(){
     return(
       <div className="header">
         <div className="upper-nav">
           <div className="upper-nav-left">
-          <div> <h1 onClick={this.goBacktoHome} className="etsy-font"> Etsy </h1></div>
+          <div> <h1 className="etsy-font"> Etsy </h1></div>
           <div className = "search-bar">
           <input className="search-input clearable dropdown-relative-positioned rounded" type="text" placeholder="Search for items or shops"></input>
           <button className="search-button" type="submit" value="Search">Search</button>
@@ -37,7 +30,8 @@ export default class Header extends Component {
 
                       <div className="accessories_sub_items">
                         <button className="header-button dropbtn">
-                          <li className="dropdown-content-clothing">Accessories</li>
+                          <li className="dropdown-content-clothing">Accessories &#10095;</li>
+                          {/* <li className="dropdown-content-clothing">&#10095;</li> */}
                         </button>
                         <div className="moveLeftSubHeaderItem">
                           <button className="header-button dropbtn">
@@ -62,7 +56,7 @@ export default class Header extends Component {
 
                       <div className="bags-purses_sub_items">
                       <button className="header-button dropbtn">
-                        <li className="dropdown-content-clothing">Bags & Purses</li>
+                        <li className="dropdown-content-clothing">Bags & Purses           &#10095;</li>
                       </button>
                       <div className="moveLeftSubHeaderItem-bags-purses">
                         <div>
@@ -84,7 +78,6 @@ export default class Header extends Component {
                           <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Duffel Bags</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Luggage Tags</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-3-bags-purses">Suitcases</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Suitcases</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Messenger Bags</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Pouches & Coin Purses</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2-bags-purses">Totes</li></button>
@@ -96,7 +89,7 @@ export default class Header extends Component {
 
 
                     <div className="clothing_x_sub_items">
-                        <button className="header-button dropbtn"><li className="dropdown-content-clothing">Clothing</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-clothing">Clothing           &#10095;</li></button>
                         {/* <button className="header-button dropbtn"><li className="dropdown-content-2">"Boys' Clothing"</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Pants</li></button>
                           <button className="header-button dropbtn"><li className="dropdown-content-2">Shorts</li></button>
@@ -127,7 +120,7 @@ export default class Header extends Component {
 
 
                     <div className="shoes_sub_items">
-                      <button className="header-button dropbtn"><li className="dropdown-content-clothing">Shoes</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-clothing">Shoes           &#10095;</li></button>
                       {/* <button className="header-button dropbtn"><li className="dropdown-content-2">"Boys' Shoes"</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Booties & Crib Shoes</li></button>
                         <button className="header-button dropbtn"><li className="dropdown-content-2">Boots</li></button>

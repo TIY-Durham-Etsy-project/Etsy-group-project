@@ -94,12 +94,14 @@ export default class ImageCarousel extends Component {
       ) : ("")}
         <div className="slideshow-container">
           {/* <div class="arrow">▻</div> */}
-          <div className="carouselArrowBox" onClick={this.minusSlides}>
+          <div className = "arrow-box-wrapper">
+            <div className="carouselArrowBox" onClick={this.minusSlides}>
             <a className="prevCarouselImage">&#10094;</a>
           </div>
-          <div className="carouselArrowBoxRight" onClick={this.plusSlides}>
+          <div className="carouselArrowBox" onClick={this.plusSlides}>
             <a className="nextCarouselImage">&#10095;</a>
           </div>
+        </div>
           <div className="mainPictureForCarouselHolder">
             <img alt="mainPictureForCarousel" id="mainPictureForCarousel" src={this.props.imagesdata ? this.props.imagesdata[this.state.imageCarouselValue].url_570xN : ""}/>
           </div>

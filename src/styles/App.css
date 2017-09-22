@@ -60,8 +60,9 @@ h4 {
 
 .dropdown-content-clothing-3, .dropdown-content-3-bags-purses{
   color: #777;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-left: 10pt;
 }
 
 button:hover{
@@ -211,6 +212,7 @@ button:hover{
 
 .accessories_sub_items{
   background-color: #f9f9f9;
+  color: #444;
   /*align-items: left;*/
   /*To visualize during development.*/
   /*background-color: green;*/
@@ -220,9 +222,9 @@ button:hover{
   /*display: block !important;*/
 }
 
-.dropdown-content-clothing:hover {
-  color: red;
-}
+/*.dropdown-content-clothing:hover {
+  color: #444;
+}*/
 
 .accessories_sub_items:hover .moveLeftSubHeaderItem{
   display: block;
@@ -231,9 +233,10 @@ button:hover{
 .moveLeftSubHeaderItem{
   display: none;
   position: absolute;
-  margin-top: -16.5pt;
+  margin-top: -25.5pt;
   margin-left: 125pt;
   background-color: #f9f9f9;
+  z-index: 2000;
 }
 
 .moveLeftSubHeaderItem button{
@@ -248,15 +251,16 @@ button:hover{
   display: none;
   position: absolute;
   width: 340pt;
-  margin-top: -34pt;
+  /*margin-top: -34pt;*/
+  margin-top: -52pt;
   margin-left: 125pt;
   background-color: #f9f9f9;
 }
 
 .sub-moveLeftSubHeaderItem-bags-purses{
   display: none;
-  margin-top: -140pt;
-  margin-left: 125pt;
+  margin-top: -200pt;
+  margin-left: 155pt;
 }
 
 .moveLeftSubHeaderItem-bags-purses button{
@@ -379,6 +383,7 @@ button:hover{
 /* item-page-wrapper for all data */
 .item-page-wrapper{
   width: 75vw;
+  /*min-width: 1000px;*/
   background-color: white;
   margin: 10px auto;
   border: solid 1px #dcdcd9;
@@ -466,10 +471,15 @@ button:hover{
 .favorite-button{
   display: flex;
   width: 100%;
+<<<<<<< HEAD
+=======
+  min-width: 570px;
+>>>>>>> 114270719d63e94c2bb46f4e666f8f067691f177
   height: 67px;
   background-color: #F1F1F1;
   border-radius: 1%;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .item-like{
@@ -630,7 +640,7 @@ font-size: 25px;
 
 
 #mainPictureForCarousel{
-  z-index: 20;
+  z-index: 1;
   position: absolute;
    margin: auto;
    top: 0;
@@ -658,6 +668,8 @@ font-size: 25px;
 }
 
 .subCarouselImageHolder{
+  width: 100%;
+  min-width: 570px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -719,71 +731,38 @@ font-size: 25px;
   /*rgba(0,0,0,0.8);*/
 }
 
-.carouselArrowBox{
-    background: #97928F;
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    margin-top: auto;
-    height: 80px;
-    line-height: 86px;
-    width: 40px;
-    font-size: 24px;
-    position: absolute;
-    z-index: 25;
-    top: 50%;
-    margin-top: 420px;
-    font-family: "SSStandard";
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: none;
-    text-rendering: optimizeLegibility;
-    white-space: nowrap;
-    -moz-font-feature-settings: "liga=1";
-    -moz-font-feature-settings: "liga";
-    -ms-font-feature-settings: "liga" 1;
-    -o-font-feature-settings: "liga";
-    font-feature-settings: "liga";
-    -webkit-font-smoothing: antialiased;
-     color: #F2F1F1;
-    transition: all 0.1s;
-    -webkit-transition: all 0.1s;
-    text-align: center;
+.arrow-box-wrapper{
+  width: 45vw;
+  display: flex;
+  justify-content: space-between;
+  z-index: 25;
+  align-items:center;
+  align-content: center;
+  flex-direction: row;
+  position: absolute;
+  margin-top: 350px;
+
+
 }
 
-.carouselArrowBoxRight {
-  margin-left: 530px;
+.carouselArrowBox{
   background: #97928F;
   opacity: 0.4;
   filter: alpha(opacity=40);
-  margin-top: auto;
   height: 80px;
   line-height: 86px;
   width: 40px;
-  font-size: 24px;
-  position: absolute;
   z-index: 25;
-  top: 50%;
-  margin-top: 420px;
-  font-family: "SSStandard";
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: none;
-  text-rendering: optimizeLegibility;
-  white-space: nowrap;
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  -o-font-feature-settings: "liga";
-  font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
-   color: #F2F1F1;
+  color: #F2F1F1;
   transition: all 0.1s;
   -webkit-transition: all 0.1s;
   text-align: center;
 }
 
+
 .slideshow-container {
-  width: 570px;
+  width: 100%;
+  min-width: 570px;
   height: px;
   /*position: relative;
   margin: auto;*/
