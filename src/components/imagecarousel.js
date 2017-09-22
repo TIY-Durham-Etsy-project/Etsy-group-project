@@ -11,6 +11,7 @@ export default class ImageCarousel extends Component {
     this.minusSlides = this.minusSlides.bind(this);
     this.plusSlides = this.plusSlides.bind(this);
     this.zoomInCurrentImg = this.zoomInCurrentImg.bind(this);
+    this.unZoomCurrentImg = this.unZoomCurrentImg.bind(this);
   }
 
   // This brings up a sub-image to the main image position when clicked.
@@ -51,11 +52,17 @@ export default class ImageCarousel extends Component {
     }
   }
   zoomInCurrentImg(){
-    // if(this.props.imagesdata){
-    //   this.setState({ zoomedimg: this.props.imagesdata[this.state.imageCarouselValue].url_fullxfull })
-    // }
+    if(this.props.imagesdata){
+      this.setState({ zoomedimg: this.props.imagesdata[this.state.imageCarouselValue].url_570xN })
+    }
+  }
+  unZoomCurrentImg(){
+    if(this.props.imagesdata){
+      this.setState({ zoomedimg: false })
+    }
   }
   render(){
+    console.log(this.props.imagesdata[this.state.imageCarouselValue])
     let imageItem = false;
     if(this.props.imagesdata[0] !== undefined){
       let count = 0;
@@ -75,9 +82,9 @@ export default class ImageCarousel extends Component {
     return (
       <div className="imageCarouselAll">
       {this.state.zoomedimg ? (
-        <div className="zoom-image-overtake-outside-div">
-          <div>
-            <img alt="" id="" src={this.props.imagesdata ? this.state.zoomedimg : ""}/>
+        <div onClick={this.unZoomCurrentImg} className="zoom-image-overtake-outside-div">
+          <div className="zoom-image-inside-div" >
+            <img alt="" src={this.props.imagesdata ? this.state.zoomedimg : ""}/>
           </div>
         </div>
       ) : ("")}
