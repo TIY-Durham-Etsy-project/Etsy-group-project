@@ -41,7 +41,7 @@ return (
       </ol>
 
 
-      <div className="carousel-inner d-flex p-2" role="listbox">
+      <div className="carousel-inner d-flex" role="listbox">
         {sliderArray}
       </div>
 
