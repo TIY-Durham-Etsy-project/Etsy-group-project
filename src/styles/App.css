@@ -24,13 +24,14 @@ h4 {
 
 
 .header-list {
+  max-width: 1000px;
   height: 40pt;
   position: relative;
   list-style: none;
   display: flex;
   text-decoration: none;
   justify-content: space-between;
-  background-color: white;
+  /*background-color: white;*/
   margin-top: -10pt;
   /*align-items: center;*/
 }
@@ -108,6 +109,8 @@ button:hover{
 
 .lower-nav {
   border-top: black 3pt;
+  background-color: white;
+
   /*display: flex;
   justify-content: space-between;
   background-color: white;
