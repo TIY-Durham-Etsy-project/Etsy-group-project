@@ -380,13 +380,13 @@ button:hover{
 
 /* item-page-wrapper for all data */
 .item-page-wrapper{
-  width: 140vh;
+  width: 75vw;
   background-color: white;
   margin: 10px auto;
   border: solid 1px #dcdcd9;
   padding: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto ;
   border: 1px solid #ececec;
   border-radius: 5px;
@@ -395,12 +395,12 @@ button:hover{
 }
 
 .left-content{
-  width: 60%;
+  width: 45vw;
   overflow: auto;
 }
 
 .right-content{
-  width: 40%;
+  width: 30vw;
   overflow: auto;
 }
 
