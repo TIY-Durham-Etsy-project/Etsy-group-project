@@ -958,5 +958,10 @@ font-size: 25px;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  border: 1px solid #b5b5b5;
+  border: 1px solid #c4c4c4;
+}
+
+.related-tags-tag-holder-div:hover{
+  border: 1px solid #6b6b6b;
+  cursor: pointer;
 }
