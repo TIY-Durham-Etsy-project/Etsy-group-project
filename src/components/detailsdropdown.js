@@ -26,11 +26,9 @@ export default class DetailsDropdown extends Component {
     }
   }
   componentDidMount(){
-    console.log("HELLO YOU FUCKING FUCK?");
     let detailsdropdown = document.getElementsByClassName('detailsdropdown')[0];
     if (detailsdropdown !== undefined && this.state.initdropdown === false){
       const lineheight = document.defaultView.getComputedStyle(detailsdropdown, null);
-      console.log(parseInt(lineheight.height, 10));
       if (parseInt(lineheight.height, 10) > 150){
         this.setState({ initdropdown: true });
       }
