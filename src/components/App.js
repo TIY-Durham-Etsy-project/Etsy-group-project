@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.handleIncommingData = this.handleIncommingData.bind(this);
     this.state = {
-      listingidpage: false
+      listingidpage: "520097829"
     };
   }
   handleIncommingData(value){
@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header sendDataUpToParent={this.handleIncommingData}/>
-        {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<HomePage sendDataUpToParent={this.handleIncommingData}/>)}
+        {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<Homepage sendDataUpToParent={this.handleIncommingData}/>)}
         <Footer/>
       </div>
     );
