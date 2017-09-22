@@ -67,6 +67,8 @@ export default class Reviews extends Component {
         } else {
           stars = "threestarreview.png";
         }
+        let dateForReference = new Date(0);
+        dateForReference.setUTCSeconds(x.creation_tsz);
         if (x.message !== null){
           return (
           <div className="single-user-review" key={x.transaction_id}>
@@ -78,7 +80,7 @@ export default class Reviews extends Component {
             <div className = "single-user-right">
               <div className = "review-stars-and-date">
                 <div><p className = "review-stars"><img alt="" className = "reviews-stars-image-holder" src = {stars ? stars : ""}/></p></div>
-                <div className = "review-date"><p>Date goes here</p></div>
+                <div className = "review-date"><p>{dateForReference.toDateString()}</p></div>
               </div>
                 <div><p>{this.props.feedbackdata ? x.message.replace(/&amp;/g, "&").replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&quot;/g, '"').replace(/&#39;/g, "'") : ""}</p></div>
           </div>
@@ -95,7 +97,7 @@ export default class Reviews extends Component {
             <div className = "single-user-right">
               <div className = "review-stars-and-date">
                 <div><p className = "review-stars"><img alt="" className = "reviews-stars-image-holder" src = {stars ? stars : ""}/></p></div>
-                <div className = "review-date"><p>Date goes here</p></div>
+                <div className = "review-date"><p>{dateForReference.toDateString()}</p></div>
               </div>
           </div>
         </div>
