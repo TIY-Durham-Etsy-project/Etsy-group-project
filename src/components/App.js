@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
+import Header from './header.js';
 import Homepage from './homepage.js';
+import ItemPageApp from './itempageApp.js';
 import Footer from './footer.js';
-import Slider from './slider.js';
-import EtsyInfo from './etsy-info.js';
-import Carousel from './carousel.js';
 
 class App extends Component {
-
-
+  constructor(props) {
+    super(props);
+    this.handleIncommingData = this.handleIncommingData.bind(this);
+    this.state = {
+      listingidpage: false
+    };
+  }
+  handleIncommingData(value){
+    this.setState({ listingidpage: value });
+  }
   render() {
     return (
       <div className="App">
-
-        {/* <Header /> */}
-
-        <Homepage />
-
-        <Footer />
-
+        <Header sendDataUpToParent={this.handleIncommingData}/>
+        {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<HomePage sendDataUpToParent={this.handleIncommingData}/>)}
+        <Footer/>
       </div>
     );
   }
