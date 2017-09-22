@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 
 export default class CustomOrder extends Component {
   render(){
-    //is_customizable
-    //has_variations STATES WEATHER OR NOT THERE ARE OPTIONS IN THE DROPDOWN
-    //quantity SETS HOW MANY THERE CAN BE IN THE QUANTITY DROPDOWN
-    // let isitcustomizable = false;
-    // if (this.props.shopdata){
-    //
-    // }
     let shopimage = false
     if (this.props.shopdata){
       if (this.props.shopdata[0].icon_url_fullxfull === null){

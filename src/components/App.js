@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header sendDataUpToParent={this.handleIncommingData}/>
         {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<TESTHOMEPAGE sendDataUpToParent={this.handleIncommingData}/>)}
         {/* ADD OTHER GROUPS FOOTER HERE */}
       </div>
