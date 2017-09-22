@@ -642,6 +642,7 @@ button:hover{
   margin-right: 35px;
   width: 300px;
   justify-content: space-between;
+  align-content: center;
 }
 
 .lower-nav {
@@ -679,6 +680,10 @@ button:hover{
   color: black;
   border-bottom: 4px solid #f45800;
   /*border-bottom: solid 1px #f45800;*/
+}
+
+.header{
+  width: 100%;
 }
 
 .white-box-header-dropdown-clothes{
@@ -909,7 +914,7 @@ button:hover{
 
 /* item-page-wrapper for all data */
 .item-page-wrapper{
-  width: 75vw;
+  width: 1000px;
   /*min-width: 1000px;*/
   background-color: white;
   margin: 10px auto;
@@ -926,11 +931,13 @@ button:hover{
 
 .left-content{
   width: 45vw;
+  min-width: 580px;
   overflow: auto;
 }
 
 .right-content{
   width: 30vw;
+  min-width: 400px;
   overflow: auto;
 }
 
@@ -997,17 +1004,20 @@ button:hover{
 
 .favorite-button{
   display: flex;
-  width: 100%;
+  width: 570px;
   min-width: 570px;
   height: 67px;
   background-color: #F1F1F1;
   border-radius: 1%;
   margin-bottom: 10px;
   overflow: hidden;
+  align-items: center;
+  align-content: center;
 }
 
 .item-like{
   font-family: 'Lato', 'Arial', sans-serif;
+  padding-top: 15px;
 }
 
 
@@ -1256,7 +1266,7 @@ font-size: 25px;
 }
 
 .arrow-box-wrapper{
-  width: 45vw;
+  width: 570px;
   display: flex;
   justify-content: space-between;
   z-index: 25;
@@ -1425,10 +1435,13 @@ font-size: 25px;
   height: 110px;
   margin: 20px 0;
   background-color: #FAF9F5;
-  padding: 10px;
+  padding: 15px;
   font-size: 14px;
   line-height: 1;
+}
 
+.etsy-purchase-guarantee h2{
+  font-size: 20px;
 }
 
 .pseudo-link{
