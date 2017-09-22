@@ -4,20 +4,20 @@ export default class ImageCarousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      imageCarouselValue: 0
+      imageCarouselValue: 0,
+      zoomedimg: false
     }
     this.handlePictureChange = this.handlePictureChange.bind(this);
     this.minusSlides = this.minusSlides.bind(this);
     this.plusSlides = this.plusSlides.bind(this);
+    this.zoomInCurrentImg = this.zoomInCurrentImg.bind(this);
   }
 
   // This brings up a sub-image to the main image position when clicked.
   handlePictureChange(event){
     event.preventDefault();
-    console.log("handlePictureChange: ", event.currentTarget.id);
     // These set the state to the event specific image array position (id-1)
     this.setState({
-        mainPicture: this.props.imagesdata[event.currentTarget.id-1].url_570xN,
         imageCarouselValue: event.currentTarget.id-1
     })
     // These set the page items to the event specific image array position (id-1)
@@ -27,8 +27,7 @@ export default class ImageCarousel extends Component {
     // The code works without the following setState but the this.state.imageCarouselValue appears unchanged.
     if (this.state.imageCarouselValue+1 > this.props.imagesdata.length-1){
       this.setState({
-        imageCarouselValue: 0,
-        mainPicture: this.props.imagesdata[0].url_570xN
+        imageCarouselValue: 0
       })
     } else {
       // This increases the imageCarouselValue.
@@ -51,7 +50,11 @@ export default class ImageCarousel extends Component {
       })
     }
   }
-
+  zoomInCurrentImg(){
+    // if(this.props.imagesdata){
+    //   this.setState({ zoomedimg: this.props.imagesdata[this.state.imageCarouselValue].url_fullxfull })
+    // }
+  }
   render(){
     let imageItem = false;
     if(this.props.imagesdata[0] !== undefined){
@@ -71,6 +74,13 @@ export default class ImageCarousel extends Component {
     }
     return (
       <div className="imageCarouselAll">
+      {this.state.zoomedimg ? (
+        <div className="zoom-image-overtake-outside-div">
+          <div>
+            <img alt="" id="" src={this.props.imagesdata ? this.state.zoomedimg : ""}/>
+          </div>
+        </div>
+      ) : ("")}
         <div className="slideshow-container">
           {/* <div class="arrow">▻</div> */}
           <div className="carouselArrowBox" onClick={this.minusSlides}>
@@ -85,6 +95,7 @@ export default class ImageCarousel extends Component {
         </div>
         <div className="subCarouselImageHolder">
           {imageItem}
+          <button onClick={this.zoomInCurrentImg}>Zoom</button>
         </div>
       </div>
     )
