@@ -10,7 +10,7 @@ class App extends Component {
     super(props);
     this.handleIncommingData = this.handleIncommingData.bind(this);
     this.state = {
-      listingidpage: false
+      listingidpage: "520097829"
     };
   }
   handleIncommingData(value){

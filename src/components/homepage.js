@@ -24,7 +24,7 @@ export default class Homepage extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App homepage-wrapper">
         <Carousel />
         <EtsyInfo />
         {/* <Slider display={this.state.recently}/> */}
