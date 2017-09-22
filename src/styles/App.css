@@ -930,17 +930,21 @@ font-size: 25px;
   margin-top: 115px;
   margin-bottom: 50px;
   color: grey;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 12px;
 }
 .related-tags-tag-holder-div{
   background-color: white;
   font-size: 14px;
   display: inline-block;
-  padding: 4px;
+  padding: 8px;
   margin: 4px;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border: 1px solid #c4c4c4;
+  font-family: 'Lato', 'Arial', sans-serif;
+
 }
 .related-tags-tag-holder-div:hover{
   border: 1px solid #6b6b6b;
