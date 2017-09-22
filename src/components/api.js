@@ -9,13 +9,13 @@ export default class API extends Component {
       // itemObjects: null,
       sixArrays: [],
       listInfo: [],
-      gifts: [],
-      homeAndLiving: [],
-      jewelry: [],
-      clothing: [],
-      toysAndGames: [],
-      crafty: [],
-      weddings: []
+      gifts: [{array: []}],
+      homeAndLiving: [{array: []}],
+      jewelry: [{array: []}],
+      clothing: [{array: []}],
+      toysAndGames: [{array: []}],
+      crafty: [{array: []}],
+      weddings: [{array: []}]
     }
     // this.props.display.type = "type of Slider" ex: category
   }
@@ -50,7 +50,7 @@ export default class API extends Component {
       .then((responseData) => {
         let dataArray = responseData.results;
         console.log(dataArray);
-        this.setState({giftApiData.array: dataArray});
+        this.setState({gifts.array: dataArray});
       })
       .catch((error) => {
         console.log("Error with Fetching : ", error);
@@ -102,21 +102,45 @@ export default class API extends Component {
 
 
     // needs to take an array and reduce to 6 objects (randomly)
-  trimToSix() {
+  trimToSix(trimArray) {
+    this.state.sixArrays.push({headline: this.props.display.type});
       let arrayToMap = [];
+      let randomNumber = 0;
       for (var i = 0; i < 6; i++) {
-        arrayToMap.push(this.props.arrayFromAPI[i]);
+        randomNumber = Math.floor(Math.random() * trimArray.length);
+        arrayToMap.push(trimArray[randomNumber]);
+        // may induce duplicates
       }
-      this.setState({arrayOfSix: arrayToMap});
+      this.state.sixArrays.push({array: arrayToMap});
+      console.log(this.state.sixArrays);
+      return this.state.sixArrays
   }
 
+  function Notification( state ) {
+    switch(state) {
+        case 'gifts':
+            return <Slider arrayOfSix={this.trimToSix(this.filterArrayOfMissingData(this.state.gifts.array))} />;
+        case 'category':
+            return <Slider arrayOfSix={this.fxnCombineObjects(this.getUrlToCall(this.props.display.type))} />;
+        case 'error':
+            return <Slider arrayOfSix={text} />;
+        default:
+            return null;
+    }
+  }
     // need to pass header to Slider arrayOfSix = [{header: "HeaderName", array: [{},{}...]}]
   render() {
       return (
         <div>
-          {this.state.itemObjects ? (
+          {this.state.weddings.array ? (
             <div>
-              <Slider arrayOfSix={this.filterArrayOfMissingData(this.state.itemObjects)}/>
+              <Slider arrayOfSix={this.fxnCombineObjects(this.getUrlToCall(this.props.display.type))} />
+            </div>
+          ):(<div></div>)
+          }
+          {this.state.gifts.array ? (
+            <div>
+              <Slider arrayOfSix={this.trimToSix(this.filterArrayOfMissingData(this.state.gifts.array))} />;
             </div>
           ):(<div></div>)
           }

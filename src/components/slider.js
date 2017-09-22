@@ -6,21 +6,24 @@ export default class Slider extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+          // changes routes
+          // listing ID
         };
         // this.props.arrayFromAPI has an array from API.
     }
 
+    // fxn callback
 
   render() {
     return (
       <div className="slider-row">
-        <h2>Headline Goes Here</h2>
+        <h2>{this.props.arrayOfSix.headline}</h2>
         {/* <API callbackFromParent={this.myCallback} display={this.state.type}/> */}
         <div className="slider-parent">
-          {this.props.arrayOfSix.map((thing) =>{
+          {this.props.arrayOfSix.array.map((thing) =>{
             return (
               < div key={thing._id} className="slider-child">
+              <div onClick=""
                 <a href={thing.url}>
                   <picture>
                     <img src={thing.MainImage.url_170x135} alt=""/>
@@ -32,6 +35,7 @@ export default class Slider extends Component {
                     <h5>{thing.price}</h5>
                   </div>
                 </a>
+              </div>
               </div>
             )
           })}
