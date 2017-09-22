@@ -23,7 +23,7 @@ export default class Slider extends Component {
           < div key={thing.listing_id} className="slider-child">
             <div onClick={this.sendDataUp}>
                 <picture>
-                  <img id={thing.listing_id} src={thing.MainImage.url_170x135} alt=""/>
+                  <img className="hover-frontpage-image-add-pointer" id={thing.listing_id} src={thing.MainImage.url_170x135} alt=""/>
                 </picture>
                 <div className="slider-productinfo">
                   <h3>{thing.taxonomy_path[0]}</h3>

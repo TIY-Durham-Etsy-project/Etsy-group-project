@@ -68,6 +68,10 @@
 	color: #666666;
 }
 
+.hover-frontpage-image-add-pointer{
+  cursor: pointer;
+}
+
 .slider-productinfo h3, .slider-productinfo h4, .slider-productinfo div, .slider-productinfo h5{
     text-align: left;
     margin: 0;
