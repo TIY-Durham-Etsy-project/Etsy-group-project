@@ -66,7 +66,7 @@ export default class Reviews extends Component {
     }
     return(
       <div className="reviewsdropdown">
-        <h3 className = "details-header">Reviews</h3>
+        <h3 className = "details-header">Reviews  ({this.props.shopdata ? this.props.shopdata[2].feedback_info.count : ""})</h3>
         <div className={this.state.dropdownclassname}>
         {reviewsObjects ? reviewsObjects : ""}
         </div>

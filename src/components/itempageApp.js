@@ -150,6 +150,7 @@ class ItemPageApp extends Component {
               <DetailsDropdown
               listingdata={this.state.listingdata}/>
               <Reviews
+              shopdata={this.state.shopdata}
               feedbackdata={this.state.feedbackdata}/>
               <MeetTheOwner
                 shopdata={this.state.shopdata}/>
@@ -171,8 +172,7 @@ class ItemPageApp extends Component {
               />
             </div>
           </div>
-          <RelatedTags listingdata={this.state.listingdata}
-          shopdata={this.state.shopdata}/>
+          <RelatedTags listingdata={this.state.listingdata}/>
         </div>
       ) : (<div><LoadingPage/></div>)}
       </div>

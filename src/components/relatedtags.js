@@ -13,7 +13,7 @@ export default class RelatedTags extends Component {
       <div className = "relatedtags-fine-print">
         <div className = "relatedtags-fine-print-left">
           <span>Listed on {this.props.listingdata ? dateForReference.toDateString() : ""}  </span>
-          <span>  {this.props.shopdata ? this.props.shopdata[2].feedback_info.count : ""} favorites</span>
+          <span>  {this.props.listingdata ? this.props.listingdata.num_favorers : ""} favorites</span>
         </div>
         <div className = "relatedtags-fine-print-right">
           <a href = "">Report this item to Etsy</a>
