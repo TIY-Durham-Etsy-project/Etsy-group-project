@@ -5,7 +5,7 @@ import Slider from './slider.js';
 export default class API extends Component {
   constructor(props) {
     super(props);
-
+    this.sendDataUp = this.sendDataUp.bind(this);
     this.state = {
       // itemObjects: null,
       sixArrays: [],
@@ -31,8 +31,9 @@ export default class API extends Component {
     // this.props.display.type = "type of Slider" ex: category
 
   }
-
-
+  sendDataUp(id){
+    this.props.sendDataUp(id);
+  }
 
   // takes this.props.display.type to use for flow control.
   componentWillMount() {
@@ -107,11 +108,12 @@ export default class API extends Component {
     let randomNumber = 0;
     for (var i = 0; i < fxnArray.length; i++) {
       let trojan = fxnArray[i].stateArray;
-      randomNumber = Math.floor(Math.random() *
-      [`this.state.${trojan}.length`])
+      console.log(trojan);
+      console.log(fxnArray[i].stateArray);
+      randomNumber = Math.floor(Math.random() * eval(`this.state.${trojan}.length`))
       console.log(randomNumber);
-      console.log(`this.state.${trojan}.[${randomNumber}]`);
-      bsArray.push(`this.state.${trojan}.[${randomNumber}]`);
+      console.log(eval(`this.state.${trojan}[${randomNumber}]`));
+      bsArray.push(eval(`this.state.${trojan}[${randomNumber}]`));
     }
     // let arrayToSet = this.state.sixArrays;
     this.setState({sixArrays: bsArray});
@@ -162,14 +164,14 @@ export default class API extends Component {
         <div>
           {this.state.categoryReady ? (
             <div>
-              <Slider arrayOfSix={this.state.sixArrays}
+              <Slider sendDataUp={this.sendDataUp} arrayOfSix={this.state.sixArrays}
               />
             </div>
           ):(<div></div>)
           }
           {this.state.giftsReady ? (
             <div>
-              <Slider arrayOfSix={this.state.sixArrays} />;
+              <Slider sendDataUp={this.sendDataUp} arrayOfSix={this.state.sixArrays} />;
             </div>
           ):(<div></div>)
           }

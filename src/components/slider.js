@@ -5,26 +5,25 @@ import '../styles/App.css';
 export default class Slider extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-          // changes routes
-          // listing ID
-        };
+        this.sendDataUp = this.sendDataUp.bind(this);
         // this.props.arrayFromAPI has an array from API.
     }
 
     // fxn callback
-
+    sendDataUp(event){
+      if (event.target.id !== "" && event.target.id !== undefined && event.target.id !== null){
+        this.props.sendDataUp(event.target.id);
+      }
+    }
   render() {
     let mapper = false;
     if(this.props.arrayOfSix[5] !== undefined){
-
       mapper = this.props.arrayOfSix.map((thing) =>{
         return (
-          < div key={thing.url} className="slider-child">
-            <div onClick="">
-              <a href={thing.url}>
+          < div key={thing.listing_id} className="slider-child">
+            <div onClick={this.sendDataUp}>
                 <picture>
-                  <img src={thing.MainImage.url_170x135} alt=""/>
+                  <img className="hover-frontpage-image-add-pointer" id={thing.listing_id} src={thing.MainImage.url_170x135} alt=""/>
                 </picture>
                 <div className="slider-productinfo">
                   <h3>{thing.taxonomy_path[0]}</h3>
@@ -32,7 +31,6 @@ export default class Slider extends Component {
                   <div>Rating</div>
                   <h5>{thing.price}</h5>
                 </div>
-              </a>
             </div>
           </div>
         )

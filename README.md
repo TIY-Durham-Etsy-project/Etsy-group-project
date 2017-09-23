@@ -38,8 +38,9 @@ on your branch press [Pull Request]
 select Base: production, compare: <component name>
 leave a comment
 click [Create pull Request]
-=======
 Triple Fetch
+=======
+================================
 
 Team Lead Daily Notes:
 09.18.17 - JT
@@ -77,4 +78,5 @@ Today we have decided to...
 - Debug the problem where the Item title and price does not refresh or work for each page (JT)
 - Complete the "Meet the Owner" section (Hannah)
 
-09.22.17 - Merge Successful
+09.22.17 - Tivona
+- Today we agreed to complete any tasks that we had left open and to remove all API keys from the README file.  We completed reviews, updated CSS, continued to work on the header ( Kevin) made a LOT of progress on the header, but there is still a LOT to do.  Made sure all pictures were where they were supposed to be.  Made the page more Responsive and prepared for merging with the Home Page/Footer group.  We successfully merged both pieces (after JT and Sam worked through some merge conflicts). CSS was off a bit after the merge, but (Hannah and Katie worked to resolve those).  There are a few items that need tweaking after the merge, but we are confident that they will be complete by deadline.
