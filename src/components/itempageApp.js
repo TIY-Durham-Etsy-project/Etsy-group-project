@@ -64,55 +64,64 @@ class ItemPageApp extends Component {
     shoplistingimagesdata: false,
     shoplistingimagesdatalarge: false,
     feedbackdata: false, });
-    // this.fetchData();
   }
   goBacktoHome(){
     this.props.sendDataUpToParent(false);
   }
   fetchData = () => {
+    var headers = new Headers();
+    headers['access-control-allow-origin'] = '*';
+    var fetchConfig = { method: 'GET',
+                   headers: headers,
+                   mode: 'cors',
+                   cache: 'default' };
     //LISTING DATA FETCH
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+    //const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    //Add below to fetches to add proxyurl
+    //${proxyurl}
+    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`, fetchConfig).then(results => {
+      console.log(results);
       return results.json();
     }).then(data => {
       this.setState({ listingdata: data.results[0] });
       // FEEDBACK FETCH
-      fetch(`https://openapi.etsy.com/v2/users/${data.results[0].user_id}/feedback/as-subject?limit=100&api_key=4o6v874o0s0w78131mpf9ni0`).then(results => {
+      fetch(`https://openapi.etsy.com/v2/users/${data.results[0].user_id}/feedback/as-subject?limit=100&api_key=4o6v874o0s0w78131mpf9ni0`, fetchConfig).then(results => {
         return results.json();
       }).then(data => {
         this.setState({ feedbackdata: data.results });
       })
     })
     // SHIPPING INFO FETCH
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/shipping/info?api_key=88vhbyb8aqimszfdxfugwgnd`).then(results => {
+    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/shipping/info?api_key=88vhbyb8aqimszfdxfugwgnd`, fetchConfig).then(results => {
       return results.json();
     }).then(data => {
       this.setState({ shippinginfodata: data.results[0] });
     })
     // IMAGES FETCH
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=2o28zyiccm6dxpspusptspb0`).then(results => {
+    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=2o28zyiccm6dxpspusptspb0`, fetchConfig).then(results => {
       return results.json();
     }).then(data => {
       this.setState({ imagesdata: data.results });
     })
     // PERSONALIZATION FETCH
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/inventory?api_key=2o28zyiccm6dxpspusptspb0`).then(results => {
+    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/inventory?api_key=2o28zyiccm6dxpspusptspb0`, fetchConfig).then(results => {
       return results.json();
     }).then(data => {
       this.setState({ listinginventorydata: data.results });
     })
     //SHOP DATA FETCH (INCLUDES USERDATA)
-    fetch(`https://openapi.etsy.com/v2/shops/listing/${this.state.idvariable}?api_key=nn7mkmoan2c7xamo4c3pnax4`).then(results => {
+    fetch(`https://openapi.etsy.com/v2/shops/listing/${this.state.idvariable}?api_key=nn7mkmoan2c7xamo4c3pnax4`, fetchConfig).then(results => {
       return results.json();
     }).then(data => {
       this.setState({ shopdata: data.results });
       //FETCHES ACTIVE SHOP LISTINGS
-      fetch(`https://openapi.etsy.com/v2/shops/${data.results[0].shop_id}/listings/active?limit=5&api_key=nn7mkmoan2c7xamo4c3pnax4`).then(results => {
+      fetch(`https://openapi.etsy.com/v2/shops/${data.results[0].shop_id}/listings/active?limit=5&api_key=nn7mkmoan2c7xamo4c3pnax4`, fetchConfig).then(results => {
         return results.json();
       }).then(data => {
         let i = 0;
         while (i < 4){
           //THIS FETCHES THE IMAGES OF THE SHOPS FEATURES
-          fetch(`https://openapi.etsy.com/v2/listings/${data.results[i].listing_id}/images?api_key=xu3t5vf2ok7saualskn524az`).then(results => {
+          fetch(`https://openapi.etsy.com/v2/listings/${data.results[i].listing_id}/images?api_key=xu3t5vf2ok7saualskn524az`, fetchConfig).then(results => {
             return results.json();
           }).then(data => {
             this.setState(prevState => ({
@@ -133,7 +142,7 @@ class ItemPageApp extends Component {
         <div className="ItemPageApp" key={this.state.idvariable}>
           <div className="backbutton-item-page">
             <form onSubmit={this.goBacktoHome}>
-              <button type="submit">"GoBack"</button>
+              <button type="submit" className = "go-back-home-btn">&#8592; home</button>
             </form>
           </div>
           <ItemHeader
