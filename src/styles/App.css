@@ -1824,14 +1824,12 @@ font-size: 25px;
 
 .customorder {
   display: flex;
-  width: 476px;
+  width: 520px;
   height: 50px ;
   background-color: #F1F1F1;
   border-radius: 1%;
-  margin-bottom: 10px;
   margin: auto;
   font-family: 'Lato', 'Arial', sans-serif;
-  padding: 5px 15px;
   color: #666666;
 }
 
@@ -1839,9 +1837,12 @@ font-size: 25px;
   display: flex;
 }
 
+
+
 .customorder a{
   text-decoration: none;
   color: #F45831;
+  margin-left: 15px;
 }
 
 .customorder a:hover{
@@ -1849,5 +1850,5 @@ font-size: 25px;
 }
 
 .customorder p{
-  margin-top: 10px;
+  margin-top: 13px;
 }
