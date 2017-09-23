@@ -1,4 +1,16 @@
 
+/*This undoes some global styling.*/
+*, ::after, ::before {
+ /*-webkit-box-sizing: inherit; */
+ box-sizing: content-box;
+}
+
+.container{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+
 .App {
   /*text-align: center;*/
   /*background-color: #efefeb;*/
@@ -621,6 +633,9 @@ button:hover{
 
 /* navigation styles */
 .upper-nav {
+  /*margin-left: -80vw;*/
+  width: 100%;
+  /*position: absolute;*/
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -658,8 +673,11 @@ button:hover{
 }
 
 .upper-and-lower-nav-lines{
+  width:100%;
+  /*margin-left: -10pt;*/
   margin-top: 0pt;
-  padding: 10pt;
+  padding-bottom: 10pt;
+  padding-top: 10pt;
   border-top: 1pt solid #efefeb;
   border-bottom: 1pt solid #efefeb;
   height: 10pt;
@@ -683,7 +701,7 @@ button:hover{
 }
 
 .header{
-  width: 100%;
+  width: 100vw;
 }
 
 .white-box-header-dropdown-clothes{

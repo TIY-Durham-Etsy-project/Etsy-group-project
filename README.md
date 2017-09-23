@@ -39,13 +39,7 @@ select Base: production, compare: <component name>
 leave a comment
 click [Create pull Request]
 =======
-Alternative Key Information:
-KEYSTRING: xu3t5vf2ok7saualskn524az
-SHARED SECRET: kagd9rhgvz
-
-KEYSTRING: nn7mkmoan2c7xamo4c3pnax4
-KEYSTRING: 4o6v874o0s0w78131mpf9ni0
-KEYSTRING 2o28zyiccm6dxpspusptspb0
+Triple Fetch
 
 Team Lead Daily Notes:
 09.18.17 - JT
@@ -82,3 +76,5 @@ Today we have decided to...
 - Complete shop icons and ensure that images, names, locations, and price are visible (Hannah)
 - Debug the problem where the Item title and price does not refresh or work for each page (JT)
 - Complete the "Meet the Owner" section (Hannah)
+
+09.22.17 - Merge Successful
