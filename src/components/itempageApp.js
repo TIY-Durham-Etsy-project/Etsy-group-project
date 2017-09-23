@@ -142,7 +142,7 @@ class ItemPageApp extends Component {
         <div className="ItemPageApp" key={this.state.idvariable}>
           <div className="backbutton-item-page">
             <form onSubmit={this.goBacktoHome}>
-              <button type="submit">"Go Back"</button>
+              <button type="submit" className = "go-back-home-btn">&#8592; home</button>
             </form>
           </div>
           <ItemHeader

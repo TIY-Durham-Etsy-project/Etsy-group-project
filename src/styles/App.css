@@ -6,8 +6,8 @@
 }
 
 .container{
-  padding-right: 0px;
-  padding-left: 0px;
+  margin: 0 auto;
+  width: 1200px;
 }
 
 
@@ -23,7 +23,6 @@
 }
 
 .homepage-wrapper {
-    margin: 0 20px;
 }
 
 /*------------ETSY HOMEPAGE INFO STYLES BEGIN-----------*/
@@ -631,7 +630,8 @@ button:hover{
 }*/
 
 .shop-title{
-  margin-bottom: 8px;
+  font-size: 18px;
+  margin-top: 30px;
 }
 
 .shop-title:hover{
@@ -1005,6 +1005,7 @@ button:hover{
   /*width: 80%;*/
   margin: 10px auto;
   display: flex;
+  align-content:
 }
 
 .shop-icon{
@@ -1026,6 +1027,10 @@ button:hover{
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+.fav-heart:hover{
+  opacity: .7;
+}
+
 .single-fav{
   margin: 20px;
 }
@@ -1033,7 +1038,7 @@ button:hover{
 .item-header{
   display: flex;
   justify-content: space-between;
-  width: 75%;
+  width: 100%;
   min-width: 750px;
   margin: 0 auto;
 }
@@ -1046,6 +1051,11 @@ button:hover{
   margin: 20px 10px;
   text-align: center;
   transition: all 1s;
+}
+
+.sample-item-count p{
+  margin-top: 20px;
+  line-height: 1;
 }
 
 .sample-item:hover{
@@ -1077,6 +1087,21 @@ button:hover{
   font-family: 'Lato', 'Arial', sans-serif;
   padding-top: 15px;
 }
+
+.go-back-home-btn{
+  border: none;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 15px;
+  float: left;
+  background-color: transparent;
+  color: #77777B;
+
+  }
+
+.go-back-home-btn:hover{
+  text-decoration: underline;
+}
+
 
 
 
@@ -1477,6 +1502,10 @@ font-size: 25px;
   font-weight: 400;
 }
 
+.add-to-cart-btn:hover{
+  opacity: .7;
+}
+
 .item-price{
   display: flex;
   flex-direction: row;
@@ -1509,6 +1538,7 @@ font-size: 25px;
 
 .pseudo-link:hover{
   cursor: pointer;
+  opacity: .7;
 }
 
 .limited-availability-section{
