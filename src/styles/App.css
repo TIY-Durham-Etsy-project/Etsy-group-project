@@ -890,16 +890,20 @@ button:hover{
 .etsy-font{
   margin-right: 20px;
   cursor: pointer;
+  margin-bottom: 0;
 }
 
 
-.fa-shopping-cart{
+.shopping-cart{
   display: flex;
   flex-direction: column;
-  margin: 7px 10px;
-  padding: 9px;
   border-left: solid 1px #efefeb;
-  color: darkgrey;
+  color: #666666;
+}
+
+.shopping-cart:hover{
+  opacity: .7;
+  cursor: pointer;
 }
 
 .search-button {
@@ -949,9 +953,12 @@ button:hover{
 .header-font {
   color: #E55400;
   border: solid 1px transparent;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 15px;
+  padding-right: 8px;
   font-weight: lighter;
+  margin-bottom: 0;
+  font-family: 'Lato', 'Arial', sans-serif;
+
 }
 
 .header-font:hover{
@@ -965,11 +972,14 @@ button:hover{
   width: 64px;
   height: auto;
   border-radius: 3px;
-  padding: 8px;
-  line-height: 16px;
-  font-size: 14px;
+  padding: 5px;
+  font-size: 15px;
   color:#E55400;
-  font-weight: lighter;
+}
+
+.sign-in:hover{
+  background-color: #EFEFEB;
+  text-decoration: none;
 }
 
 /* item-page-wrapper for all data */
@@ -1051,6 +1061,7 @@ button:hover{
   margin: 20px 10px;
   text-align: center;
   transition: all 1s;
+  background-color: white;
 }
 
 .sample-item-count p{
@@ -1092,9 +1103,10 @@ button:hover{
   border: none;
   font-family: 'Lato', 'Arial', sans-serif;
   font-size: 15px;
-  float: left;
+  float: right;
   background-color: transparent;
   color: #77777B;
+  padding-right: 25px;
 
   }
 
@@ -1514,6 +1526,10 @@ font-size: 25px;
   width: 100%;
 }
 
+.item-price-header{
+  font-size: 20px;
+}
+
 .etsy-purchase-guarantee{
   display: flex;
   justify-content: space-between;
@@ -1595,6 +1611,8 @@ font-size: 25px;
 
 .etsy-orange-link:hover{
   border-bottom: solid 1px #f45800;
+  text-decoration: none;
+  color: #f45800;
 }
 
 
@@ -1828,5 +1846,8 @@ font-size: 25px;
 
 .customorder a:hover{
   text-decoration: underline;
+}
 
+.customorder p{
+  margin-top: 10px;
 }
