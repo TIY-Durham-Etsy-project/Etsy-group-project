@@ -84,7 +84,7 @@ export default class ProductDescription extends Component {
       <div className="productdescription">
         <h2 className = "item-title-header">{this.props.listingdata.title}</h2>
         <div className = "item-price ask">
-          <div><h3>${this.state.price}</h3></div>
+          <div><h3 className = "item-price-header">${this.state.price}</h3></div>
           <div><button className = "fav-heart">Ask a question</button></div>
         </div>
         <div className = "option-selection-wrapper">
