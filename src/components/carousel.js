@@ -12,10 +12,9 @@ export default class Carousel extends Component {
   render() {
 
     let sliderArray = carouselData.map((slider) => {
-
     return (
 
-        <div className={slider.className}>
+        <div key={slider.link} className={slider.className}>
           <div className="carousel-caption d-inline-block">
             <h1>{slider.headline}</h1>
             <a href={slider.link}>{slider.subhead}</a>
