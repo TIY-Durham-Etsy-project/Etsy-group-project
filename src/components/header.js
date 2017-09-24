@@ -91,67 +91,87 @@ export default class Header extends Component {
 
 
                     <div className="clothing_x_sub_items">
-                        <button className="header-button dropbtn"><li className="dropdown-content-clothing">Clothing           &#10095;</li></button>
-                        {/* <button className="header-button dropbtn"><li className="dropdown-content-2">"Boys' Clothing"</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pants</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Shorts</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Sweaters</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Tops</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">"Girl's Clothing"</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Dresses</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pants</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Shorts</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Skirts</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Sweaters</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Tops</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">"Men's Clothing"</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Pants</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Shirts</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Shorts</li></button>
-                          <button className="header-button dropbtn"><li className="dropdown-content-2">Sweaters</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2">"Women's Clothing"</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Dresses</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Jackets & Coats</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Pants & Capris</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Skirts</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Sweaters</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Swimwear</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Tops & Tees</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2">All Clothing</li></button> */}
-                    </div>
+                          <button className="header-button dropbtn"><li className="dropdown-content-clothing">Clothing &#10095;</li></button>
+                          <div className="moveLeftSubHeaderItem-clothing_x">
+
+
+                            <div>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2-x-clothing">Boys' Clothing</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Pants</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Shorts</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Sweaters</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Tops</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-2-x-clothing">Girl's Clothing</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Dresses</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Pants</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Shorts</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Skirts</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Sweaters</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Tops</li></button>
+                          </div>
+
+                            <div className="sub-moveLeftSubHeaderItem-clothing_x">
+                          <button className="header-button dropbtn"><li className="dropdown-content-2-x-clothing">Men's Clothing</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Pants</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Shirts</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Shorts</li></button>
+                            <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Sweaters</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-x-clothing">Women's Clothing</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Dresses</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Jackets & Coats</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Pants & Capris</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Skirts</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Sweaters</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Swimwear</li></button>
+                          <button className="header-button dropbtn"><li className="dropdown-content-3-x-clothing">Tops & Tees</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-2-x-clothing">All Clothing</li></button>
+                      </div>
+
+                      </div>
+                      </div>
 
 
                     <div className="shoes_sub_items">
-                      <button className="header-button dropbtn"><li className="dropdown-content-clothing">Shoes           &#10095;</li></button>
-                      {/* <button className="header-button dropbtn"><li className="dropdown-content-2">"Boys' Shoes"</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Booties & Crib Shoes</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Boots</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Loafers & Slip Ons</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Sandals</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Slippers</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2">"Girls' Shoes"</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Booties & Crib Shoes</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Boots</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Mary Janes</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Sandals</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Slippers</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2">"Men's Shoes"</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Boots</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Costume Shoes</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Oxfords & Wingtips</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Sandals</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Slippers</li></button>
-                        <button className="header-button dropbtn"><li className="dropdown-content-2">Sneakers & Athletic Shoes</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2">"Women's Shoes"</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2">Boots</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2">Oxfords & Tie Shoes</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2">Pumps</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2">Sandals</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2">Slippers</li></button>
-                      <button className="header-button dropbtn"><li className="dropdown-content-2">All Shoes</li></button> */}
+                      <button className="header-button dropbtn"><li className="dropdown-content-clothing">Shoes &#10095;</li></button>
+                      <div className="moveLeftSubHeaderItem-shoes">
+
+                      <div>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2-shoes">Boys' Shoes</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Booties & Crib Shoes</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Boots</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Loafers & Slip Ons</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Sandals</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Slippers</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2-shoes">Girls' Shoes</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Booties & Crib Shoes</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Boots</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Mary Janes</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Sandals</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Slippers</li></button>
+                      </div>
+
+
+
+                        <div className="sub-moveLeftSubHeaderItem-shoes">
+                      <button className="header-button dropbtn"><li className="dropdown-content-2-shoes">Men's Shoes</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Boots</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Costume Shoes</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Oxfords & Wingtips</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Sandals</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Slippers</li></button>
+                        <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Sneakers & Athletic Shoes</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2-shoes">Women's Shoes</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Boots</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Oxfords & Tie Shoes</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Pumps</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Sandals</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-3-shoes">Slippers</li></button>
+                      <button className="header-button dropbtn"><li className="dropdown-content-2-shoes">All Shoes</li></button>
+                    </div>
                     </div>
 
 
+                    </div>
                     </div>
                     </div>
 
