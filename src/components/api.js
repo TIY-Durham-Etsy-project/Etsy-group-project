@@ -10,7 +10,9 @@ export default class API extends Component {
       // itemObjects: null,
       sixArrays: [],
       currentArray: [],
-      gifts: null,
+      trending: false,
+      trendingReady: false,
+      gifts: false,
       giftsReady: false,
       homeAndLiving: false,
       jewelry: false,
@@ -19,6 +21,7 @@ export default class API extends Component {
       crafty: false,
       weddings: false,
       categoryReady: false,
+      trendingUrl: "https://openapi.etsy.com/v2/listings/trending?includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj",
       category :[
           {stateArray: "homeAndLiving", url: "https://openapi.etsy.com/v2/listings/active?category=home_and_living&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"},
           {stateArray: "jewelry", url: "https://openapi.etsy.com/v2/listings/active?keywords=Jewelry&filter=Jewelry&api_key=dza1vj8ckkf1tbkxs30wjahj&includes=MainImage"},
@@ -35,36 +38,38 @@ export default class API extends Component {
     this.props.sendDataUp(id);
   }
 
-  // takes this.props.display.type to use for flow control.
   componentWillMount() {
-    if(this.props.display.type==="gifts"){
+    if(this.props.display.type==="Trending"){
+      fetch(this.state.trendingUrl)
+      .then(r => r.json())
+      .then((responseData) => {
+        let dataArray = responseData.results;
+        this.setState({trending: dataArray});
+      })
+      .catch((error) => {
+        console.log("Error with Fetching : ", error);
+      });
+    }
+    if(this.props.display.type==="Gifts"){
       fetch(this.state.giftUrl)
       .then(r => r.json())
       .then((responseData) => {
         let dataArray = responseData.results;
-        // console.log(dataArray);
-        // console.log(this.state.gifts);
-        // let currentArray = this.state.gifts.array;
         this.setState({gifts: dataArray});
       })
       .catch((error) => {
         console.log("Error with Fetching : ", error);
       });
     }
-    if(this.props.display.type==="category"){
+    if(this.props.display.type==="Category"){
       this.state.category.map((cat) => {
         return (
           fetch(cat.url)
           .then(r => r.json())
           .then((responseData) => {
             let dataArray = responseData.results;
-            // console.log(dataArray);
             let whatever = cat.stateArray;
-            // let currentArray = `${whatever}.array`;
             this.setState({[whatever]: dataArray});
-            // this.setState(function(cat.stateArray, dataArray){
-              // return {cat.stateArray: dataArray}
-            // }
           })
           .catch((error) => {
             console.log("Error with Fetching : ", error);
@@ -76,21 +81,20 @@ export default class API extends Component {
   }
 
   componentDidUpdate() {
+    if(this.state.trending && this.state.trendingReady===false){
+      this.trimToSix(this.filterArrayOfMissingData(this.state.trending))
+      this.setState({trendingReady: true});
+    }
     if(this.state.gifts && this.state.giftsReady===false){
       this.trimToSix(this.filterArrayOfMissingData(this.state.gifts))
       this.setState({giftsReady: true});
     }
     if(this.state.homeAndLiving && this.state.jewelry && this.state.clothing && this.state.toysAndGames && this.state.crafty && this.state.weddings && this.state.categoryReady===false){
-      this.fxnCombineObjects(this.state.category);    this.setState({categoryReady: true});
+      this.fxnCombineObjects(this.state.category);
+      this.setState({categoryReady: true});
     }
   }
-  // when.all(this.state.gifts).then(function() {
-  //   // this.setState({gifts.array: currentArray});
-  //   console.log(this.state.gifts);
-  //   this.setState({giftsReady: true});
-  // });
 
-  // filter through itemObjects to remove missing values
   filterArrayOfMissingData = (array) => {
     let filteredObjects = array.filter((filterObject) => {
       return filterObject.taxonomy_path && filterObject.MainImage.url_170x135
@@ -99,11 +103,7 @@ export default class API extends Component {
     return filteredObjects; //array
   }
 
-
-  // needs to take 6 objects and make one array -- need to wait until fetch promisses are returned
-  // call in turnery with (getUrlToCall(this.props.display.type))
   fxnCombineObjects = (fxnArray) => {
-    // may want this some where else
     let bsArray = [];
     let randomNumber = 0;
     for (var i = 0; i < fxnArray.length; i++) {
@@ -115,17 +115,9 @@ export default class API extends Component {
       console.log(eval(`this.state.${trojan}[${randomNumber}]`));
       bsArray.push(eval(`this.state.${trojan}[${randomNumber}]`));
     }
-    // let arrayToSet = this.state.sixArrays;
     this.setState({sixArrays: bsArray});
-    // when.all(arrayToSet).then(function() {
-    //   // this.setState({gifts.array: currentArray});
-    //   console.log(this.state.sixArrays);
-    //   return this.state.sixArrays
-    // });
   }
 
-
-    // needs to take an array and reduce to 6 objects (randomly)
   trimToSix = (trimArray) => {
       let arrayToMap = [];
       let randomNumber = 0;
@@ -135,43 +127,18 @@ export default class API extends Component {
         arrayToMap.push(trimArray[randomNumber]);
         // may induce duplicates
       }
-      // let arrayToSet = this.state.sixArrays;
       this.setState({sixArrays: arrayToMap});
-      // when.all(arrayToSet).then(function() {
-      //   // this.setState({gifts.array: currentArray});
-      //   console.log(this.state.sixArrays);
-      //   return this.state.sixArrays
-      // });
         return this.state.sixArrays
   }
 
-  // function Notification( state ) {
-  //   switch(state) {
-  //       case 'gifts':
-  //           return <Slider arrayOfSix={this.trimToSix(this.filterArrayOfMissingData(this.state.gifts.array))} />;
-  //       case 'category':
-  //           return <Slider arrayOfSix={this.fxnCombineObjects(this.getUrlToCall(this.props.display.type))} />;
-  //       case 'error':
-  //           return <Slider arrayOfSix={text} />;
-  //       default:
-  //           return null;
-  //   }
-  // }
-
-    // need to pass header to Slider objectWithArrayOfSix = {headline: "HeaderName", array: [{},{}...]}
   render() {
       return (
         <div>
-          {this.state.categoryReady ? (
+          {(this.state.trendingReady || this.state.categoryReady || this.state.giftsReady) ? (
             <div>
               <Slider sendDataUp={this.sendDataUp} arrayOfSix={this.state.sixArrays}
+              headline={this.props.display.type}
               />
-            </div>
-          ):(<div></div>)
-          }
-          {this.state.giftsReady ? (
-            <div>
-              <Slider sendDataUp={this.sendDataUp} arrayOfSix={this.state.sixArrays} />;
             </div>
           ):(<div></div>)
           }

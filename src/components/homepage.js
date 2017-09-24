@@ -9,9 +9,9 @@ export default class Homepage extends Component {
     super(props);
     this.sendDataUp = this.sendDataUp.bind(this);
     this.state = {
-      recently: {type: "recently"},
-      category: {type: "category"},
-      gifts: {type: "gifts"}
+      trending: {type: "Trending"},
+      category: {type: "Category"},
+      gifts: {type: "Gifts"}
       // needed in each object: MainImage.url, meta tag (taxonomy_path or custom), listing Id, source, price
     }
   }
@@ -25,7 +25,7 @@ export default class Homepage extends Component {
       <div className="App homepage-wrapper container">
         <Carousel />
         <EtsyInfo />
-        {/* <Slider display={this.state.recently}/> */}
+        <API sendDataUp={this.sendDataUp} display={this.state.trending}/>
         <API sendDataUp={this.sendDataUp} display={this.state.category}/>
         <API sendDataUp={this.sendDataUp} display={this.state.gifts}/>
       </div>
