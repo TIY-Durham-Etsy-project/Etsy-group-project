@@ -6,6 +6,7 @@ export default class Slider extends Component {
     constructor(props) {
         super(props);
         this.sendDataUp = this.sendDataUp.bind(this);
+        this.reloadSlider = this.reloadSlider.bind(this);
         // this.props.arrayFromAPI has an array from API.
     }
 
@@ -14,6 +15,11 @@ export default class Slider extends Component {
       if (event.target.id !== "" && event.target.id !== undefined && event.target.id !== null){
         this.props.sendDataUp(event.target.id);
       }
+    }
+
+    reloadSlider(e){
+      e.preventDefault();
+      this.props.reloadSlider(e);
     }
 
     addKeys(arr) {
@@ -43,9 +49,8 @@ export default class Slider extends Component {
                       <h4>Username</h4>,
                       <div>Rating</div>,
                       <h5>{thing.price}</h5>
-                    ]) : (
+                    ]) :
                       <div></div>
-                    )
                   }
                 </div>
             </div>
@@ -60,8 +65,10 @@ export default class Slider extends Component {
           {mapper}
         </div>
         {this.props.headline==="Gifts" ?
-
-          <p className="slider-seemore">See more ></p> :
+          this.addKeys([<div onClick={this.reloadSlider}>
+            <p className="slider-seemore">See more ></p>
+          </div>
+        ]) :
           <div></div>
         }
       </div>

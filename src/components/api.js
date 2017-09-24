@@ -6,6 +6,7 @@ export default class API extends Component {
   constructor(props) {
     super(props);
     this.sendDataUp = this.sendDataUp.bind(this);
+    this.reloadSlider = this.reloadSlider.bind(this);
     this.state = {
       // itemObjects: null,
       sixArrays: [],
@@ -36,6 +37,11 @@ export default class API extends Component {
   }
   sendDataUp(id){
     this.props.sendDataUp(id);
+  }
+
+  reloadSlider(e){
+    e.preventDefault();
+    this.setState({giftsReady: false});
   }
 
   componentWillMount() {
@@ -99,7 +105,6 @@ export default class API extends Component {
     let filteredObjects = array.filter((filterObject) => {
       return filterObject.taxonomy_path && filterObject.MainImage.url_170x135
     })
-    console.log(filteredObjects);
     return filteredObjects; //array
   }
 
@@ -108,11 +113,7 @@ export default class API extends Component {
     let randomNumber = 0;
     for (var i = 0; i < fxnArray.length; i++) {
       let trojan = fxnArray[i].stateArray;
-      console.log(trojan);
-      console.log(fxnArray[i].stateArray);
       randomNumber = Math.floor(Math.random() * eval(`this.state.${trojan}.length`))
-      console.log(randomNumber);
-      console.log(eval(`this.state.${trojan}[${randomNumber}]`));
       bsArray.push(eval(`this.state.${trojan}[${randomNumber}]`));
     }
     this.setState({sixArrays: bsArray});
@@ -121,7 +122,6 @@ export default class API extends Component {
   trimToSix = (trimArray) => {
       let arrayToMap = [];
       let randomNumber = 0;
-      console.log(trimArray.length);
       for (var i = 0; i < 6; i++) {
         randomNumber = Math.floor(Math.random() * trimArray.length);
         arrayToMap.push(trimArray[randomNumber]);
@@ -136,7 +136,9 @@ export default class API extends Component {
         <div>
           {(this.state.trendingReady || this.state.categoryReady || this.state.giftsReady) ? (
             <div>
-              <Slider sendDataUp={this.sendDataUp} arrayOfSix={this.state.sixArrays}
+              <Slider sendDataUp={this.sendDataUp}
+              reloadSlider={this.reloadSlider}
+              arrayOfSix={this.state.sixArrays}
               headline={this.props.display.type}
               />
             </div>
