@@ -717,12 +717,17 @@ button:hover{
   width: 100vw;
 }
 
+.dropdown {
+  z-index: 1999;
+}
+
 .white-box-header-dropdown-clothes{
   display: none;
   margin-top: 5.5pt;
   height:100pt;
   background-color: #f9f9f9;
   border: 1pt solid #efefeb;
+  /*z-index: 1999;*/
 }
 
 .dropdown-content {
@@ -731,7 +736,7 @@ button:hover{
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1999;
   }
 
 .dropdown-content-clothing{
@@ -748,7 +753,7 @@ button:hover{
     /*background-color: #f9f9f9;*/
     /*min-width: 160px;*/
     /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-    z-index: 1;
+    z-index: 1000;
 }
 
 .accessories_sub_items:hover, .bags-purses_sub_items:hover, .clothing_x_sub_items:hover, .shoes_sub_items:hover{
@@ -881,7 +886,7 @@ button:hover{
   background-color: none;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 1999;
 }
 
 /*Header Items*/
