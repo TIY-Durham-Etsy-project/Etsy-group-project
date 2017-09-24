@@ -30,7 +30,7 @@ export default class API extends Component {
           {stateArray: "toysAndGames", url: "https://openapi.etsy.com/v2/listings/active?category=toys&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"},
           {stateArray: "crafty", url:  "https://openapi.etsy.com/v2/listings/active?category=craft_supplies_and_tools&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"},
           {stateArray: "weddings", url: "https://openapi.etsy.com/v2/listings/active?category=weddings&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"}],
-      giftUrl : "https://openapi.etsy.com/v2/listings/active?keywords=gifts&filter=gifts&api_key=dza1vj8ckkf1tbkxs30wjahj&includes=MainImage"
+      giftUrl : "https://openapi.etsy.com/v2/listings/active?keywords=gifts&filter=gifts&limit=100&offset=0&api_key=dza1vj8ckkf1tbkxs30wjahj&includes=MainImage"
     };
     // this.props.display.type = "type of Slider" ex: category
 
@@ -122,10 +122,15 @@ export default class API extends Component {
   trimToSix = (trimArray) => {
       let arrayToMap = [];
       let randomNumber = 0;
+      let randomNumArray = [];
       for (var i = 0; i < 6; i++) {
         randomNumber = Math.floor(Math.random() * trimArray.length);
-        arrayToMap.push(trimArray[randomNumber]);
-        // may induce duplicates
+        if(!randomNumArray.includes(randomNumber)){
+          arrayToMap.push(trimArray[randomNumber]);
+          randomNumArray.push(randomNumber);
+        }else{
+          i -= 1;
+        }
       }
       this.setState({sixArrays: arrayToMap});
         return this.state.sixArrays
