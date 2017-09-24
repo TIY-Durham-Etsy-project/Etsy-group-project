@@ -609,7 +609,7 @@ h4 {
   line-height: 1.4;
 }
 
-.dropdown-content-clothing-3, .dropdown-content-3-bags-purses{
+.dropdown-content-clothing-3, .dropdown-content-3-bags-purses, .dropdown-content-3-x-clothing{
   color: #777;
   font-size: 13px;
   line-height: 1.4;
@@ -854,7 +854,7 @@ button:hover{
 
 .sub-moveLeftSubHeaderItem-clothing_x{
   display: none;
-  margin-top: -270pt;
+  margin-top: -220pt;
   margin-left: 155pt;
 }
 
