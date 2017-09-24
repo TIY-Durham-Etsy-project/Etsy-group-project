@@ -15,6 +15,8 @@ class App extends Component {
   }
   handleIncommingData(value){
     this.setState({ listingidpage: value });
+    console.log("listingidpage has changes. New value is:")
+    console.log(this.state.listingidpage);
   }
   render() {
     return (
