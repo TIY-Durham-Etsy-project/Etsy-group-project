@@ -38,7 +38,7 @@ export default class Slider extends Component {
                 </picture>
                 <div className="slider-productinfo">
                   <h3>{thing.taxonomy_path[0]}</h3>
-                  {this.props.headline==="recently" ?
+                  {this.props.headline==="Trending" ?
                     this.addKeys([
                       <h4>Username</h4>,
                       <div>Rating</div>,
@@ -59,7 +59,7 @@ export default class Slider extends Component {
         <div className="slider-parent">
           {mapper}
         </div>
-        {this.props.headline==="gifts" ?
+        {this.props.headline==="Gifts" ?
 
           <p className="slider-seemore">See more ></p> :
           <div></div>
