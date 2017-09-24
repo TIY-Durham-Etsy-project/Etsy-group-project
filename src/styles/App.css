@@ -68,6 +68,8 @@
 
 .slider-parent {
 	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .slider-child {
@@ -93,22 +95,35 @@
   cursor: pointer;
 }
 
-.slider-productinfo h3, .slider-productinfo h4, .slider-productinfo div, .slider-productinfo h5{
+.slider-productinfo {
+  margin: 6px;
+}
+
+.slider-productinfo h3, .slider-productinfo h4,  .slider-productinfo h5{
+  font-family: "Graphik Webfont","Arial","Helvetica",sans-serif;
     text-align: left;
+    font-weight: normal;
     margin: 0;
+    font-size: 12px;
     padding-bottom: 2px;
     color: #666666;
+    line-height: 16.8px;
 }
 
-.slider-productinfo h4, .slider-productinfo div {
+.slider-productinfo h4 {
   font-weight: 300;
-  font-size: 12px;
   color: #aaaaaa;
+  float: left;
 }
 
-.slider-productinfo h5 {
+.slider-productinfo div h5 {
   font-size: 15px;
   color: #343434;
+  float: right;
+}
+
+.disp-inl div {
+  display: inline;
 }
 
 .slider-child a {

@@ -43,14 +43,16 @@ export default class Slider extends Component {
                   <img className="hover-frontpage-image-add-pointer" id={thing.listing_id} src={thing.MainImage.url_170x135} alt=""/>
                 </picture>
                 <div className="slider-productinfo">
-                  <h3>{thing.taxonomy_path[0]}</h3>
+
                   {this.props.headline==="Trending" ?
                     this.addKeys([
-                      <h4>Username</h4>,
-                      <div>Rating</div>,
-                      <h5>{thing.price}</h5>
+                      <h3 className="overflow-hidden text-truncate ">{thing.title}</h3>,
+                      <div className="slider-productinfo disp-inl">
+                        <h4>Shop name</h4>
+                        <h5>{thing.price}</h5>
+                      </div>
                     ]) :
-                      <div></div>
+                      <h3>{thing.taxonomy_path[0]}</h3>
                   }
                 </div>
             </div>
