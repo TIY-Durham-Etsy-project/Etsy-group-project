@@ -600,7 +600,7 @@ h4 {
   /*align-items: center;*/
 }
 
-.header-list-item, .header-list-item-clothing, .header-list-item-home, .dropdown-content-clothing-2, .dropdown-content-2-bags-purses, .dropdown-content-2-x-clothing{
+.header-list-item, .header-list-item-clothing, .header-list-item-home, .dropdown-content-clothing-2, .dropdown-content-2-bags-purses, .dropdown-content-2-x-clothing, .dropdown-content-2-shoes{
   /*font-family: 'Lato', 'Arial', sans-serif;*/
   font-family: "Graphik Webfont","Arial","Helvetica",sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -618,13 +618,13 @@ h4 {
   width: 70pt;
 }
 
-.dropdown-content-clothing-2, .dropdown-content-2-bags-purses, .dropdown-content-2-x-clothing{
+.dropdown-content-clothing-2, .dropdown-content-2-bags-purses, .dropdown-content-2-x-clothing, .dropdown-content-2-shoes{
   color: #444;
   font-size: 14px;
   line-height: 1.4;
 }
 
-.dropdown-content-clothing-3, .dropdown-content-3-bags-purses{
+.dropdown-content-clothing-3, .dropdown-content-3-bags-purses, .dropdown-content-3-x-clothing, .dropdown-content-3-shoes{
   color: #777;
   font-size: 13px;
   line-height: 1.4;
@@ -732,12 +732,17 @@ button:hover{
   width: 100vw;
 }
 
+.dropdown {
+  z-index: 1999;
+}
+
 .white-box-header-dropdown-clothes{
   display: none;
   margin-top: 5.5pt;
   height:100pt;
   background-color: #f9f9f9;
   border: 1pt solid #efefeb;
+  /*z-index: 1999;*/
 }
 
 .dropdown-content {
@@ -746,7 +751,7 @@ button:hover{
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1999;
   }
 
 .dropdown-content-clothing{
@@ -763,10 +768,10 @@ button:hover{
     /*background-color: #f9f9f9;*/
     /*min-width: 160px;*/
     /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-    z-index: 1;
+    z-index: 1000;
 }
 
-.accessories_sub_items:hover, .bags-purses_sub_items:hover, .clothing_x_sub_items:hover, .shoes_sub_items:hover{
+.accessories_sub_items:hover, .bags-purses_sub_items:hover, .clothing_x_sub_items:hover, .shoes_sub_items:hover, .shoes_sub_items:hover{
   background-color: #efefeb;
 }
 
@@ -815,6 +820,7 @@ button:hover{
   margin-left: 125pt;
   background-color: #f9f9f9;
   z-index: 2000;
+  width: 160pt;
 }
 
 .moveLeftSubHeaderItem button{
@@ -856,16 +862,48 @@ button:hover{
   position: absolute;
   width: 340pt;
   /*margin-top: -34pt;*/
-  margin-top: -52pt;
+  margin-top: -78pt;
   margin-left: 125pt;
   background-color: #f9f9f9;
 }
 
 .sub-moveLeftSubHeaderItem-clothing_x{
   display: none;
-  margin-top: -200pt;
+  margin-top: -220pt;
   margin-left: 155pt;
 }
+
+
+
+
+
+.moveLeftSubHeaderItem-shoes{
+  display: none;
+  position: absolute;
+  width: 340pt;
+  /*width: 140pt;*/
+  /*margin-top: -34pt;*/
+  margin-top: -104pt;
+  margin-left: 125pt;
+  background-color: #f9f9f9;
+}
+
+.sub-moveLeftSubHeaderItem-shoes{
+  width: 140pt;
+  display: none;
+  margin-left: 155pt;
+  /*margin-left: 120pt;*/
+  margin-top: -220pt;
+  /*background-color: #f9f9f9;*/
+}
+.moveLeftSubHeaderItem-shoes button{
+  display: block;
+}
+
+.moveLeftSubHeaderItem-shoes div{
+  display: block;
+}
+
 
 .moveLeftSubHeaderItem-clothing_x button{
   display: block;
@@ -876,6 +914,10 @@ button:hover{
 }
 
 .clothing_x_sub_items:hover .moveLeftSubHeaderItem-clothing_x, .sub-moveLeftSubHeaderItem-clothing_x{
+  display: block;
+}
+
+.shoes_sub_items:hover .moveLeftSubHeaderItem-shoes, .sub-moveLeftSubHeaderItem-shoes{
   display: block;
 }
 /*.dropdown-content-clothing-2, .dropdown-content-2-bags-purses{
@@ -889,6 +931,10 @@ button:hover{
 .bags-purses_sub_items:hover:hover .dropdown-content-2-bags-purses {
   display: block;
 }
+/*
+.shoes_sub_items:hover:hover .dropdown-content-2-shoes {
+  display: block;
+}*/
 
 .dropdown-content-2 {
   display: none;
@@ -896,7 +942,7 @@ button:hover{
   background-color: none;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 1999;
 }
 
 /*Header Items*/
