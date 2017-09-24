@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header sendDataUpToParent={this.handleIncommingData}/>
+        {/* <Header sendDataUpToParent={this.handleIncommingData}/> */}
         {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<Homepage sendDataUp={this.handleIncommingData} sendDataUpToParent={this.handleIncommingData}/>)}
         <Footer/>
       </div>

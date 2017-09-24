@@ -30,7 +30,12 @@ export default class API extends Component {
           {stateArray: "toysAndGames", url: "https://openapi.etsy.com/v2/listings/active?category=toys&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"},
           {stateArray: "crafty", url:  "https://openapi.etsy.com/v2/listings/active?category=craft_supplies_and_tools&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"},
           {stateArray: "weddings", url: "https://openapi.etsy.com/v2/listings/active?category=weddings&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"}],
-      giftUrl : "https://openapi.etsy.com/v2/listings/active?keywords=gifts&filter=gifts&limit=100&offset=0&api_key=dza1vj8ckkf1tbkxs30wjahj&includes=MainImage"
+      giftUrl :[
+          {stateArray: "gifts", url: "https://openapi.etsy.com/v2/listings/active?keywords=gifts&filter=gifts&limit=100&offset=0&api_key=dza1vj8ckkf1tbkxs30wjahj&includes=MainImage"},
+          {stateArray: "Fall entertaining and decor", url: ""},
+          {stateArray: "Gifts for him under $30"},
+
+      ]
     };
     // this.props.display.type = "type of Slider" ex: category
 
@@ -61,7 +66,8 @@ export default class API extends Component {
       .then(r => r.json())
       .then((responseData) => {
         let dataArray = responseData.results;
-        this.setState({gifts: dataArray});
+        let forNow = this.state.giftUrl[0].url;
+        this.setState({[gifts]: dataArray});
       })
       .catch((error) => {
         console.log("Error with Fetching : ", error);
