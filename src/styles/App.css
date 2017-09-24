@@ -805,6 +805,7 @@ button:hover{
   margin-left: 125pt;
   background-color: #f9f9f9;
   z-index: 2000;
+  width: 160pt;
 }
 
 .moveLeftSubHeaderItem button{
@@ -846,14 +847,14 @@ button:hover{
   position: absolute;
   width: 340pt;
   /*margin-top: -34pt;*/
-  margin-top: -52pt;
+  margin-top: -78pt;
   margin-left: 125pt;
   background-color: #f9f9f9;
 }
 
 .sub-moveLeftSubHeaderItem-clothing_x{
   display: none;
-  margin-top: -200pt;
+  margin-top: -270pt;
   margin-left: 155pt;
 }
 
