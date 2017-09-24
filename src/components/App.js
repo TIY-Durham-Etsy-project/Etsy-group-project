@@ -10,12 +10,7 @@ class App extends Component {
     super(props);
     this.handleIncommingData = this.handleIncommingData.bind(this);
     this.state = {
-      // Put in listing id here to see product page. Number in quotes
-      //false to go to home page
-      //"175112598"
-      listingidpage: "175112598"
-      // listingidpage: false
-
+      listingidpage: false
     };
   }
   handleIncommingData(value){
