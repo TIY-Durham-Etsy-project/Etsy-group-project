@@ -158,20 +158,23 @@ export default class API extends Component {
   //   }
   // }
 
-    // need to pass header to Slider objectWithArrayOfSix = {headline: "HeaderName", array: [{},{}...]}
+    //  pass headline
   render() {
       return (
         <div>
           {this.state.categoryReady ? (
             <div>
               <Slider sendDataUp={this.sendDataUp} arrayOfSix={this.state.sixArrays}
+              headline={this.props.display.type}
               />
             </div>
           ):(<div></div>)
           }
           {this.state.giftsReady ? (
             <div>
-              <Slider sendDataUp={this.sendDataUp} arrayOfSix={this.state.sixArrays} />;
+              <Slider sendDataUp={this.sendDataUp} arrayOfSix={this.state.sixArrays}
+              headline={this.props.display.type}
+              />;
             </div>
           ):(<div></div>)
           }

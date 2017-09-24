@@ -15,6 +15,17 @@ export default class Slider extends Component {
         this.props.sendDataUp(event.target.id);
       }
     }
+
+    addKeys(arr) {
+      return arr.map((obj, idx) => {
+        if (obj instanceof Object && obj.hasOwnProperty('key') && obj.key === null) {
+          return React.cloneElement(obj, {key: idx});
+        }
+        return obj;
+      });
+    };
+
+  // want to make "see more" link refresh gifts slider since there is no "gift-ideas" page
   render() {
     let mapper = false;
     if(this.props.arrayOfSix[5] !== undefined){
@@ -27,9 +38,15 @@ export default class Slider extends Component {
                 </picture>
                 <div className="slider-productinfo">
                   <h3>{thing.taxonomy_path[0]}</h3>
-                  <h4>Username</h4>
-                  <div>Rating</div>
-                  <h5>{thing.price}</h5>
+                  {this.props.headline==="recently" ?
+                    this.addKeys([
+                      <h4>Username</h4>,
+                      <div>Rating</div>,
+                      <h5>{thing.price}</h5>
+                    ]) : (
+                      <div></div>
+                    )
+                  }
                 </div>
             </div>
           </div>
@@ -39,11 +56,14 @@ export default class Slider extends Component {
     return (
       <div className="slider-row">
         <h2>{this.props.headline}</h2>
-        {/* <API callbackFromParent={this.myCallback} display={this.state.type}/> */}
         <div className="slider-parent">
           {mapper}
-          </div>
-        <p className="slider-seemore">See more ></p>
+        </div>
+        {this.props.headline==="gifts" ?
+
+          <p className="slider-seemore">See more ></p> :
+          <div></div>
+        }
       </div>
     )
   }
