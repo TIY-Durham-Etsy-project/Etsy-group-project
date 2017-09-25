@@ -16,13 +16,10 @@ class App extends Component {
   }
   handleIncommingData(value){
     this.setState({ listingidpage: value });
-    console.log("listingidpage has changes. New value is:");
-    console.log(value);
     if(!value===false&&!this.state.visitedIdsArray.includes(value)){
         let holderArray = this.state.visitedIdsArray;
         holderArray.push(value);
       this.setState({visitedIdsArray: holderArray});
-      console.log(this.state.visitedIdsArray);
     }
   }
 
