@@ -16,12 +16,12 @@ class App extends Component {
   }
   handleIncommingData(value){
     this.setState({ listingidpage: value });
-    console.log("listingidpage has changes. New value is:")
+    console.log("listingidpage has changes. New value is:");
     console.log(value);
     if(!value===false&&!this.state.visitedIdsArray.includes(value)){
         let holderArray = this.state.visitedIdsArray;
         holderArray.push(value);
-      this.setState({visitedIdsArray: holderArray})
+      this.setState({visitedIdsArray: holderArray});
       console.log(this.state.visitedIdsArray);
     }
   }
@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header sendDataUpToParent={this.handleIncommingData}/>
-        {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<Homepage sendDataUp={this.handleIncommingData} sendDataUpToParent={this.handleIncommingData}/>)}
+        {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<Homepage sendDataUp={this.handleIncommingData} idsOfVisitedPages={this.state.visitedIdsArray}/>)}
         <Footer/>
       </div>
     );

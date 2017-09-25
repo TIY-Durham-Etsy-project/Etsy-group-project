@@ -25,7 +25,7 @@ export default class Homepage extends Component {
       <div className="App homepage-wrapper container">
         <Carousel />
         <EtsyInfo />
-        <API sendDataUp={this.sendDataUp} display={this.state.trending}/>
+        <API sendDataUp={this.sendDataUp} display={this.state.trending} idsOfVisitedPages={this.props.idsOfVisitedPages}/>
         <API sendDataUp={this.sendDataUp} display={this.state.category}/>
         <API sendDataUp={this.sendDataUp} display={this.state.gifts}/>
       </div>

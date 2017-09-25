@@ -10,7 +10,11 @@ export default class API extends Component {
     this.state = {
       // itemObjects: null,
       sixArrays: [],
-      currentArray: [],
+      mergedArray: [],
+      visitedIdsArray: [],
+      visitedIdsAlreadyFetched: [],
+      visited: [],
+      visitedReady: false,
       trending: false,
       trendingReady: false,
       gifts: false,
@@ -50,55 +54,96 @@ export default class API extends Component {
   }
 
   componentWillMount() {
-    if(this.props.display.type==="Trending"){
-      fetch(this.state.trendingUrl)
-      .then(r => r.json())
-      .then((responseData) => {
-        let dataArray = responseData.results;
-        this.setState({trending: dataArray});
-      })
-      .catch((error) => {
-        console.log("Error with Fetching : ", error);
-      });
-    }
-    if(this.props.display.type==="Gifts"){
-      fetch(this.state.giftUrl[0].url)
-      .then(r => r.json())
-      .then((responseData) => {
-        let dataArray = responseData.results;
-        let forNow = this.state.giftUrl[0].url;
-        this.setState({gifts: dataArray});
-      })
-      .catch((error) => {
-        console.log("Error with Fetching : ", error);
-      });
-    }
-    if(this.props.display.type==="Category"){
-      this.state.category.map((cat) => {
-        return (
-          fetch(cat.url)
+    var headers = new Headers();
+    headers['access-control-allow-origin'] = '*';
+    var fetchConfig = { method: 'GET',
+                   headers: headers,
+                   mode: 'cors',
+                   cache: 'default' };
+        if(this.props.idsOfVisitedPages){
+          this.props.idsOfVisitedPages.map((id) => {
+            if(!this.state.visitedIdsAlreadyFetched.includes(id)){
+              return (
+                fetch(`https://openapi.etsy.com/v2/listings/${id}?includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj`, fetchConfig)
+                .then(r => r.json())
+                .then((responseData) => {
+                  let dataArray = responseData.results;
+                  let holderArray = this.state.visited;
+                  holderArray.push(dataArray[0]);
+                  this.setState({visited: holderArray});
+                  console.log(this.state.visitedIdsAlreadyFetched);
+                  let idHolder = this.state.visitedIdsAlreadyFetched;
+                  idHolder.push(id);
+                  this.setState({visitedIdsAlreadyFetched: idHolder});
+                  this.setState({visitedReady: false});
+                })
+                .catch((error) => {
+                  console.log("Error with Fetching : ", error);
+                })
+              )
+            }
+          })
+        }
+        if(this.props.display.type==="Trending"){
+          fetch(this.state.trendingUrl, fetchConfig)
           .then(r => r.json())
           .then((responseData) => {
-            let dataArray = responseData.results;
-            let whatever = cat.stateArray;
-            this.setState({[whatever]: dataArray});
+            let dataArray = this.filterArrayOfMissingData(responseData.results);
+            this.setState({trending: dataArray});
           })
           .catch((error) => {
             console.log("Error with Fetching : ", error);
+          });
+        }
+        if(this.props.display.type==="Gifts"){
+          fetch(this.state.giftUrl[0].url, fetchConfig)
+          .then(r => r.json())
+          .then((responseData) => {
+            let dataArray = this.filterArrayOfMissingData(responseData.results);
+            // let forNow = this.state.giftUrl[0].url;
+            this.setState({gifts: dataArray});
           })
-        )
-      })
-    }
-    // if(this.props.display.type==="")
+          .catch((error) => {
+            console.log("Error with Fetching : ", error);
+          });
+        }
+        if(this.props.display.type==="Category"){
+          this.state.category.map((cat) => {
+            return (
+              fetch(cat.url, fetchConfig)
+              .then(r => r.json())
+              .then((responseData) => {
+                let dataArray = this.filterArrayOfMissingData(responseData.results);
+                let currentArray = cat.stateArray;
+                this.setState({[currentArray]: dataArray});
+              })
+              .catch((error) => {
+                console.log("Error with Fetching : ", error);
+              })
+            )
+          })
+        }
   }
 
   componentDidUpdate() {
+    console.log(this.state.visited);
+    if(this.state.visited[0] && this.state.visited.length===this.props.idsOfVisitedPages.length && this.state.visitedReady===false){
+      this.setState({display: "Recently viewed & more"});
+      if(this.state.visited.length>=6){
+        this.trimToSix(this.state.visited);
+        this.setState({visitedReady: true});
+      }
+      if(this.state.visited.length<6 && this.state.trending){
+        this.mergeVisitedAndTrending(this.state.visited, this.state.trending);
+        this.setState({visitedReady: true});
+      }
+    }
     if(this.state.trending && this.state.trendingReady===false){
-      this.trimToSix(this.filterArrayOfMissingData(this.state.trending))
+      this.trimToSix(this.state.trending);
       this.setState({trendingReady: true});
     }
     if(this.state.gifts && this.state.giftsReady===false){
-      this.trimToSix(this.filterArrayOfMissingData(this.state.gifts))
+      this.trimToSix(this.state.gifts);
       this.setState({giftsReady: true});
     }
     if(this.state.homeAndLiving && this.state.jewelry && this.state.clothing && this.state.toysAndGames && this.state.crafty && this.state.weddings && this.state.categoryReady===false){
@@ -117,10 +162,16 @@ export default class API extends Component {
   fxnCombineObjects = (fxnArray) => {
     let bsArray = [];
     let randomNumber = 0;
+    let randomNumArray = [];
     for (var i = 0; i < fxnArray.length; i++) {
       let trojan = fxnArray[i].stateArray;
-      randomNumber = Math.floor(Math.random() * eval(`this.state.${trojan}.length`))
-      bsArray.push(eval(`this.state.${trojan}[${randomNumber}]`));
+      randomNumber = Math.floor(Math.random() * eval(`this.state.${trojan}.length`));
+      if(!randomNumArray.includes(randomNumber)){
+        bsArray.push(eval(`this.state.${trojan}[${randomNumber}]`));
+        randomNumArray.push(randomNumber);
+      }else{
+        i -= 1;
+      }
     }
     this.setState({sixArrays: bsArray});
   }
@@ -142,6 +193,30 @@ export default class API extends Component {
         return this.state.sixArrays
   }
 
+  mergeVisitedAndTrending = (visited, trending) =>{
+    let arrayToMap = [];
+    let randomNumber = 0;
+    let randomNumArray = [];
+    for (var i = 0; i < visited.length; i++) {
+      console.log(visited[i]);
+      arrayToMap.push(visited[i]);
+    }
+    for (var j = 0; j < (6-visited.length); j++) {
+      randomNumber = Math.floor(Math.random() * trending.length);
+      if(!randomNumArray.includes(randomNumber)){
+        console.log(trending[randomNumber]);
+        arrayToMap.push(trending[randomNumber]);
+        randomNumArray.push(randomNumber);
+      }else{
+        j -= 1;
+      }
+    }
+    console.log(arrayToMap);
+    this.setState({mergedArray: arrayToMap});
+    console.log(this.state.sixArrays);
+      return this.state.mergedArray
+  }
+
   render() {
       return (
         <div>
@@ -149,8 +224,14 @@ export default class API extends Component {
             <div>
               <Slider sendDataUp={this.sendDataUp}
               reloadSlider={this.reloadSlider}
-              arrayOfSix={this.state.sixArrays}
-              headline={this.props.display.type}
+              arrayOfSix={this.state.visitedReady ?
+                this.state.mergedArray :
+                this.state.sixArrays
+              }
+              headline={this.state.visitedReady ?
+                this.state.display :
+                this.props.display.type
+              }
               />
             </div>
           ):(<div></div>)

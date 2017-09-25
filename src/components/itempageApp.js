@@ -56,10 +56,6 @@ class ItemPageApp extends Component {
     }
   }
 
-  sendDataUp(id){
-    this.props.sendDataUp(id);
-  }
-
   handleIncommingData(value){
     this.setState({
     idvariable: value,
