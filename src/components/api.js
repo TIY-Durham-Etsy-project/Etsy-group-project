@@ -62,12 +62,12 @@ export default class API extends Component {
       });
     }
     if(this.props.display.type==="Gifts"){
-      fetch(this.state.giftUrl)
+      fetch(this.state.giftUrl[0].url)
       .then(r => r.json())
       .then((responseData) => {
         let dataArray = responseData.results;
         let forNow = this.state.giftUrl[0].url;
-        this.setState({[gifts]: dataArray});
+        this.setState({gifts: dataArray});
       })
       .catch((error) => {
         console.log("Error with Fetching : ", error);

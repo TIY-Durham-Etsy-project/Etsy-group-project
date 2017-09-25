@@ -19,7 +19,7 @@ class ItemPageApp extends Component {
     super(props);
     this.handleIncommingData = this.handleIncommingData.bind(this);
     this.goBacktoHome = this.goBacktoHome.bind(this);
-    this.updateListIdArray = this.updateListIdArray.bind(this);
+    // this.updateListIdArray = this.updateListIdArray.bind(this);
     this.state = {
       idvariable: "",
       listingdata: false,
@@ -53,13 +53,16 @@ class ItemPageApp extends Component {
   componentDidUpdate(prevProps, prevState){
     if (this.state.idvariable !== prevState.idvariable){
       this.fetchData();
-      // this.setState({usedListingIds: this.state.idvariable,});
     }
   }
+
+  sendDataUp(id){
+    this.props.sendDataUp(id);
+  }
+
   handleIncommingData(value){
     this.setState({
     idvariable: value,
-
     listingdata: false,
     listinginventorydata: false,
     imagesdata: false,
@@ -69,6 +72,7 @@ class ItemPageApp extends Component {
     shoplistingimagesdata: false,
     shoplistingimagesdatalarge: false,
     feedbackdata: false, });
+    this.props.sendDataUpToParent(value);
   }
   goBacktoHome(){
     this.props.sendDataUpToParent(false);

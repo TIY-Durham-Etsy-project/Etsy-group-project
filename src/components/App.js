@@ -10,18 +10,27 @@ class App extends Component {
     super(props);
     this.handleIncommingData = this.handleIncommingData.bind(this);
     this.state = {
-      listingidpage: false
+      listingidpage: false,
+      visitedIdsArray: []
     };
   }
   handleIncommingData(value){
     this.setState({ listingidpage: value });
     console.log("listingidpage has changes. New value is:")
-    console.log(this.state.listingidpage);
+    console.log(value);
+    if(!value===false&&!this.state.visitedIdsArray.includes(value)){
+        let holderArray = this.state.visitedIdsArray;
+        holderArray.push(value);
+      this.setState({visitedIdsArray: holderArray})
+      console.log(this.state.visitedIdsArray);
+    }
   }
+
+  // sendDataUp gets listing IDs from sliders. handleIncommingData gets a
   render() {
     return (
       <div className="App">
-        {/* <Header sendDataUpToParent={this.handleIncommingData}/> */}
+        <Header sendDataUpToParent={this.handleIncommingData}/>
         {this.state.listingidpage ? (<ItemPageApp idvariable={this.state.listingidpage} sendDataUpToParent={this.handleIncommingData}/>) : (<Homepage sendDataUp={this.handleIncommingData} sendDataUpToParent={this.handleIncommingData}/>)}
         <Footer/>
       </div>
