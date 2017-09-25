@@ -31,40 +31,73 @@ export default class Slider extends Component {
       });
     };
 
+
   // want to make "see more" link refresh gifts slider since there is no "gift-ideas" page
   render() {
-    let mapper = false;
+    let mapper1 = false;
+    let mapper2 = false;
     if(this.props.arrayOfSix[5] !== undefined){
-      mapper = this.props.arrayOfSix.map((thing) =>{
-        return (
-          < div key={thing.listing_id} className="slider-child">
-            <div onClick={this.sendDataUp}>
-                <picture>
-                  <img className="hover-frontpage-image-add-pointer" id={thing.listing_id} src={thing.MainImage.url_170x135} alt=""/>
-                </picture>
-                <div className="slider-productinfo">
-
-                  {this.props.displayMeta ?
-                    this.addKeys([
-                      <h3 className="text-truncate ">{thing.title}</h3>,
-                      <div className="slider-productinfo disp-inl">
-                        <h4>Shop name</h4>
-                        <h5>{thing.price}</h5>
-                      </div>
-                    ]) :
-                      <h3>{thing.taxonomy_path[0]}</h3>
-                  }
-                </div>
+      mapper1 = this.props.arrayOfSix.map((thing, index) =>{
+        if(index<=2){
+          return (
+            < div key={thing.listing_id} className="slider-tile">
+              <div onClick={this.sendDataUp}>
+                  <picture>
+                    <img className="hover-frontpage-image-add-pointer" id={thing.listing_id} src={thing.MainImage.url_170x135} alt=""/>
+                  </picture>
+                  <div className="slider-productinfo">
+                    {this.props.displayMeta ?
+                      this.addKeys([
+                        <h3 className="text-truncate ">{thing.title}</h3>,
+                        <div className="slider-productinfo disp-inl">
+                          <h4>Shop name</h4>
+                          <h5>{thing.price}</h5>
+                        </div>
+                      ]) :
+                        <h3>{thing.taxonomy_path[0]}</h3>
+                    }
+                  </div>
+              </div>
             </div>
-          </div>
-        )
+          )
+        }
+      })
+      mapper2 = this.props.arrayOfSix.map((thing, index) =>{
+        if(index>2){
+          return (
+            < div key={thing.listing_id} className="slider-tile">
+              <div onClick={this.sendDataUp}>
+                  <picture>
+                    <img className="hover-frontpage-image-add-pointer" id={thing.listing_id} src={thing.MainImage.url_170x135} alt=""/>
+                  </picture>
+                  <div className="slider-productinfo">
+                    {this.props.displayMeta ?
+                      this.addKeys([
+                        <h3 className="text-truncate ">{thing.title}</h3>,
+                        <div className="slider-productinfo disp-inl">
+                          <h4>Shop name</h4>
+                          <h5>{thing.price}</h5>
+                        </div>
+                      ]) :
+                        <h3>{thing.taxonomy_path[0]}</h3>
+                    }
+                  </div>
+              </div>
+            </div>
+          )
+        }
       })
     }
     return (
       <div className="slider-row">
         <h2>{this.props.headline}</h2>
         <div className="slider-parent">
-          {mapper}
+          <div className="slider-child">
+            {mapper1}
+          </div>
+          <div className="slider-child">
+            {mapper2}
+          </div>
         </div>
         {this.props.headline==="Gifts" ?
           this.addKeys([<div onClick={this.reloadSlider}>
