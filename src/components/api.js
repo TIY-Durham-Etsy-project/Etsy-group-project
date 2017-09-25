@@ -8,6 +8,7 @@ export default class API extends Component {
     this.reloadSlider = this.reloadSlider.bind(this);
     this.state = {
       // itemObjects: null,
+      meta: false,
       sixArrays: [],
       mergedArray: [],
       visitedIdsArray: [],
@@ -129,15 +130,18 @@ export default class API extends Component {
       if(this.state.visited.length>=6){
         this.trimToSix(this.state.visited);
         this.setState({visitedReady: true});
+        this.setState({meta: true});
       }
       if(this.state.visited.length<6 && this.state.trending){
         this.mergeVisitedAndTrending(this.state.visited, this.state.trending);
         this.setState({visitedReady: true});
+        this.setState({meta: true});
       }
     }
     if(this.state.trending && this.state.trendingReady===false){
       this.trimToSix(this.state.trending);
       this.setState({trendingReady: true});
+      this.setState({meta: true});
     }
     if(this.state.gifts && this.state.giftsReady===false){
       this.trimToSix(this.state.gifts);
@@ -217,6 +221,7 @@ export default class API extends Component {
             <div>
               <Slider sendDataUp={this.sendDataUp}
               reloadSlider={this.reloadSlider}
+              displayMeta={this.state.meta}
               arrayOfSix={this.state.visitedReady ?
                 this.state.mergedArray :
                 this.state.sixArrays
