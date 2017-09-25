@@ -17,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy" : "npm run build&&gh-pages -d build"
   },
   "description": "Group project.",
   "main": "./src/index.js",
@@ -30,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/TIY-Durham-Etsy-project/Etsy-group-project/issues"
   },
-  "homepage": "https://github.com/TIY-Durham-Etsy-project/Etsy-group-project#readme"
+  "homepage": "https://github.com/TIY-Durham-Etsy-project/Etsy-group-project",
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
+  }
 }
