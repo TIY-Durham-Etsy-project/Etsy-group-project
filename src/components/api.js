@@ -71,7 +71,6 @@ export default class API extends Component {
                   let holderArray = this.state.visited;
                   holderArray.push(dataArray[0]);
                   this.setState({visited: holderArray});
-                  console.log(this.state.visitedIdsAlreadyFetched);
                   let idHolder = this.state.visitedIdsAlreadyFetched;
                   idHolder.push(id);
                   this.setState({visitedIdsAlreadyFetched: idHolder});
@@ -126,7 +125,6 @@ export default class API extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.state.visited);
     if(this.state.visited[0] && this.state.visited.length===this.props.idsOfVisitedPages.length && this.state.visitedReady===false){
       this.setState({display: "Recently viewed & more"});
       if(this.state.visited.length>=6){
@@ -198,22 +196,18 @@ export default class API extends Component {
     let randomNumber = 0;
     let randomNumArray = [];
     for (var i = 0; i < visited.length; i++) {
-      console.log(visited[i]);
       arrayToMap.push(visited[i]);
     }
     for (var j = 0; j < (6-visited.length); j++) {
       randomNumber = Math.floor(Math.random() * trending.length);
       if(!randomNumArray.includes(randomNumber)){
-        console.log(trending[randomNumber]);
         arrayToMap.push(trending[randomNumber]);
         randomNumArray.push(randomNumber);
       }else{
         j -= 1;
       }
     }
-    console.log(arrayToMap);
     this.setState({mergedArray: arrayToMap});
-    console.log(this.state.sixArrays);
       return this.state.mergedArray
   }
 
