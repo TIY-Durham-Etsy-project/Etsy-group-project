@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import when from 'when';
 import Slider from './slider.js';
 
 export default class API extends Component {

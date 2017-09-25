@@ -46,7 +46,7 @@ export default class Slider extends Component {
 
                   {this.props.headline==="Trending" ?
                     this.addKeys([
-                      <h3 className="overflow-hidden text-truncate ">{thing.title}</h3>,
+                      <h3 className="text-truncate ">{thing.title}</h3>,
                       <div className="slider-productinfo disp-inl">
                         <h4>Shop name</h4>
                         <h5>{thing.price}</h5>
@@ -68,7 +68,7 @@ export default class Slider extends Component {
         </div>
         {this.props.headline==="Gifts" ?
           this.addKeys([<div onClick={this.reloadSlider}>
-            <p className="slider-seemore">See more ></p>
+            <p className="slider-seemore">See more ></p> 
           </div>
         ]) :
           <div></div>
