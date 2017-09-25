@@ -6,6 +6,7 @@ export default class Slider extends Component {
     constructor(props) {
         super(props);
         this.sendDataUp = this.sendDataUp.bind(this);
+        this.reloadSlider = this.reloadSlider.bind(this);
         // this.props.arrayFromAPI has an array from API.
     }
 
@@ -14,6 +15,11 @@ export default class Slider extends Component {
       if (event.target.id !== "" && event.target.id !== undefined && event.target.id !== null){
         this.props.sendDataUp(event.target.id);
       }
+    }
+
+    reloadSlider(e){
+      e.preventDefault();
+      this.props.reloadSlider(e);
     }
 
     addKeys(arr) {
@@ -37,15 +43,16 @@ export default class Slider extends Component {
                   <img className="hover-frontpage-image-add-pointer" id={thing.listing_id} src={thing.MainImage.url_170x135} alt=""/>
                 </picture>
                 <div className="slider-productinfo">
-                  <h3>{thing.taxonomy_path[0]}</h3>
+
                   {this.props.headline==="Trending" ?
                     this.addKeys([
-                      <h4>Username</h4>,
-                      <div>Rating</div>,
-                      <h5>{thing.price}</h5>
-                    ]) : (
-                      <div></div>
-                    )
+                      <h3 className="text-truncate ">{thing.title}</h3>,
+                      <div className="slider-productinfo disp-inl">
+                        <h4>Shop name</h4>
+                        <h5>{thing.price}</h5>
+                      </div>
+                    ]) :
+                      <h3>{thing.taxonomy_path[0]}</h3>
                   }
                 </div>
             </div>
@@ -60,8 +67,10 @@ export default class Slider extends Component {
           {mapper}
         </div>
         {this.props.headline==="Gifts" ?
-
-          <p className="slider-seemore">See more ></p> :
+          this.addKeys([<div onClick={this.reloadSlider}>
+            <p className="slider-seemore">See more ></p> 
+          </div>
+        ]) :
           <div></div>
         }
       </div>
