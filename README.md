@@ -1,5 +1,8 @@
-
 Group project.
+
+Link to Live project:
+https://tiy-durham-etsy-project.github.io/Etsy-group-project/
+(If project does not fetch images, Then we have exceeded our heroku proxy hours)
 
 Don't push to master. Pull or clone production branch. Make a feature branch off of production and push to it. Merge that branch with production when done.
 
