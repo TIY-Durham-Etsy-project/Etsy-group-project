@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/TIY-Durham-Etsy-project/Etsy-group-project/issues"
   },
-  "homepage": "https://github.com/TIY-Durham-Etsy-project/Etsy-group-project",
+  "homepage": "https://tiy-durham-etsy-project.github.io/Etsy-group-project",
   "devDependencies": {
     "gh-pages": "^1.0.0"
   }
