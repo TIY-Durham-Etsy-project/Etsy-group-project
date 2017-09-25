@@ -82,51 +82,52 @@ class ItemPageApp extends Component {
                    cache: 'default' };
     //LISTING DATA FETCH
     //const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    const proxyurl = "https://boiling-castle-73930.herokuapp.com/";
     //Add below to fetches to add proxyurl
-    //${proxyurl}
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`, fetchConfig).then(results => {
+    // ${proxyurl}
+    fetch(`${proxyurl}https://openapi.etsy.com/v2/listings/${this.state.idvariable}?api_key=4o6v874o0s0w78131mpf9ni0`, fetchConfig).then(results => {
       console.log(results);
       return results.json();
     }).then(data => {
       this.setState({ listingdata: data.results[0] });
       // FEEDBACK FETCH
-      fetch(`https://openapi.etsy.com/v2/users/${data.results[0].user_id}/feedback/as-subject?limit=100&api_key=4o6v874o0s0w78131mpf9ni0`, fetchConfig).then(results => {
+      fetch(`${proxyurl}https://openapi.etsy.com/v2/users/${data.results[0].user_id}/feedback/as-subject?limit=100&api_key=4o6v874o0s0w78131mpf9ni0`, fetchConfig).then(results => {
         return results.json();
       }).then(data => {
         this.setState({ feedbackdata: data.results });
       })
     })
     // SHIPPING INFO FETCH
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/shipping/info?api_key=88vhbyb8aqimszfdxfugwgnd`, fetchConfig).then(results => {
+    fetch(`${proxyurl}https://openapi.etsy.com/v2/listings/${this.state.idvariable}/shipping/info?api_key=88vhbyb8aqimszfdxfugwgnd`, fetchConfig).then(results => {
       return results.json();
     }).then(data => {
       this.setState({ shippinginfodata: data.results[0] });
     })
     // IMAGES FETCH
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=2o28zyiccm6dxpspusptspb0`, fetchConfig).then(results => {
+    fetch(`${proxyurl}https://openapi.etsy.com/v2/listings/${this.state.idvariable}/images?api_key=2o28zyiccm6dxpspusptspb0`, fetchConfig).then(results => {
       return results.json();
     }).then(data => {
       this.setState({ imagesdata: data.results });
     })
     // PERSONALIZATION FETCH
-    fetch(`https://openapi.etsy.com/v2/listings/${this.state.idvariable}/inventory?api_key=2o28zyiccm6dxpspusptspb0`, fetchConfig).then(results => {
+    fetch(`${proxyurl}https://openapi.etsy.com/v2/listings/${this.state.idvariable}/inventory?api_key=2o28zyiccm6dxpspusptspb0`, fetchConfig).then(results => {
       return results.json();
     }).then(data => {
       this.setState({ listinginventorydata: data.results });
     })
     //SHOP DATA FETCH (INCLUDES USERDATA)
-    fetch(`https://openapi.etsy.com/v2/shops/listing/${this.state.idvariable}?api_key=nn7mkmoan2c7xamo4c3pnax4`, fetchConfig).then(results => {
+    fetch(`${proxyurl}https://openapi.etsy.com/v2/shops/listing/${this.state.idvariable}?api_key=nn7mkmoan2c7xamo4c3pnax4`, fetchConfig).then(results => {
       return results.json();
     }).then(data => {
       this.setState({ shopdata: data.results });
       //FETCHES ACTIVE SHOP LISTINGS
-      fetch(`https://openapi.etsy.com/v2/shops/${data.results[0].shop_id}/listings/active?limit=5&api_key=nn7mkmoan2c7xamo4c3pnax4`, fetchConfig).then(results => {
+      fetch(`${proxyurl}https://openapi.etsy.com/v2/shops/${data.results[0].shop_id}/listings/active?limit=5&api_key=nn7mkmoan2c7xamo4c3pnax4`, fetchConfig).then(results => {
         return results.json();
       }).then(data => {
         let i = 0;
         while (i < 4){
           //THIS FETCHES THE IMAGES OF THE SHOPS FEATURES
-          fetch(`https://openapi.etsy.com/v2/listings/${data.results[i].listing_id}/images?api_key=xu3t5vf2ok7saualskn524az`, fetchConfig).then(results => {
+          fetch(`${proxyurl}https://openapi.etsy.com/v2/listings/${data.results[i].listing_id}/images?api_key=xu3t5vf2ok7saualskn524az`, fetchConfig).then(results => {
             return results.json();
           }).then(data => {
             this.setState(prevState => ({
