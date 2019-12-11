@@ -25,16 +25,16 @@ export default class API extends Component {
       crafty: false,
       weddings: false,
       categoryReady: false,
-      trendingUrl: "https://openapi.etsy.com/v2/listings/trending?includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj",
+      trendingUrl: "https://openapi.etsy.com/v2/listings/trending?includes=MainImage&api_key=uroo6fmtgaw50lgo141p79us",
       category :[
-          {stateArray: "homeAndLiving", url: "https://openapi.etsy.com/v2/listings/active?category=home_and_living&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"},
-          {stateArray: "jewelry", url: "https://openapi.etsy.com/v2/listings/active?keywords=Jewelry&filter=Jewelry&api_key=dza1vj8ckkf1tbkxs30wjahj&includes=MainImage"},
-          {stateArray: "clothing", url: "https://openapi.etsy.com/v2/listings/active?keywords=Clothing&filter=Clothing&api_key=dza1vj8ckkf1tbkxs30wjahj&includes=MainImage"},
-          {stateArray: "toysAndGames", url: "https://openapi.etsy.com/v2/listings/active?category=toys&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"},
-          {stateArray: "crafty", url:  "https://openapi.etsy.com/v2/listings/active?category=craft_supplies_and_tools&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"},
-          {stateArray: "weddings", url: "https://openapi.etsy.com/v2/listings/active?category=weddings&includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj"}],
+          {stateArray: "homeAndLiving", url: "https://openapi.etsy.com/v2/listings/active?category=home_and_living&includes=MainImage&api_key=uroo6fmtgaw50lgo141p79us"},
+          {stateArray: "jewelry", url: "https://openapi.etsy.com/v2/listings/active?keywords=Jewelry&filter=Jewelry&api_key=uroo6fmtgaw50lgo141p79us&includes=MainImage"},
+          {stateArray: "clothing", url: "https://openapi.etsy.com/v2/listings/active?keywords=Clothing&filter=Clothing&api_key=uroo6fmtgaw50lgo141p79us&includes=MainImage"},
+          {stateArray: "toysAndGames", url: "https://openapi.etsy.com/v2/listings/active?category=toys&includes=MainImage&api_key=uroo6fmtgaw50lgo141p79us"},
+          {stateArray: "crafty", url:  "https://openapi.etsy.com/v2/listings/active?category=craft_supplies_and_tools&includes=MainImage&api_key=uroo6fmtgaw50lgo141p79us"},
+          {stateArray: "weddings", url: "https://openapi.etsy.com/v2/listings/active?category=weddings&includes=MainImage&api_key=uroo6fmtgaw50lgo141p79us"}],
       giftUrl :[
-          {stateArray: "gifts", url: "https://openapi.etsy.com/v2/listings/active?keywords=gifts&filter=gifts&limit=100&offset=0&api_key=dza1vj8ckkf1tbkxs30wjahj&includes=MainImage"},
+          {stateArray: "gifts", url: "https://openapi.etsy.com/v2/listings/active?keywords=gifts&filter=gifts&limit=100&offset=0&api_key=uroo6fmtgaw50lgo141p79us&includes=MainImage"},
           {stateArray: "Fall entertaining and decor", url: ""},
           {stateArray: "Gifts for him under $30"},
 
@@ -63,7 +63,7 @@ export default class API extends Component {
           this.props.idsOfVisitedPages.map((id) => {
             if(!this.state.visitedIdsAlreadyFetched.includes(id)){
               return (
-                fetch(`https://openapi.etsy.com/v2/listings/${id}?includes=MainImage&api_key=dza1vj8ckkf1tbkxs30wjahj`, fetchConfig)
+                fetch(`https://openapi.etsy.com/v2/listings/${id}?includes=MainImage&api_key=uroo6fmtgaw50lgo141p79us`, fetchConfig)
                 .then(r => r.json())
                 .then((responseData) => {
                   let dataArray = responseData.results;
